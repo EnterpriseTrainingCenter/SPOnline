@@ -1,6 +1,6 @@
-# Implementieren und Verwalten von SharePoint Online Lab Guide
+# Implementing and administering SharePoint Online and OneDrive for Business Lab Guide
 
-This repository contains labs for the course [Implementieren und Verwalten von SharePoint Online](https://www.etc.at/training/sponline/). 
+This repository contains labs for the course [Implementing and administering SharePoint Online and OneDrive for Business](https://www.etc.at/training/sponline/). 
 
 See also Issues, not only containing current known issues with possible solutions, but also allows to raise new issues.
 
