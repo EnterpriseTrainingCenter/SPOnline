@@ -6,4 +6,8 @@ See also Issues, not only containing current known issues with possible solution
 
 If you are a trainer or participant of the course, you may fork this repository. Pull requests are accepted after review. Please follow our Guidelines.
 
+## Labs
+
+1. [Get started with SharePoint](Instructions/Labs/Get-started-with-SharePoint-administration.md)
+
 (c) aETC GmbH
