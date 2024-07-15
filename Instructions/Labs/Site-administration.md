@@ -2,8 +2,12 @@
 
 ## Setup
 
-1. On LON-CL1, sign in as Administrator.
-1. Open the **SharePoint admin center** and sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+Students must have finished the following practices before starting this lab:
+
+1. [Install Visual Studio Code](../Practices/Install-Visual-Studio-Code.md)
+1. [Install Microsoft Graph Beta PowerShell module](../Practices/Install-Microsoft-Graph-Beta-PowerShell-module.md)
+
+On LON-CL1, sign in as Administrator.
 
 ## Introduction
 
@@ -13,7 +17,7 @@ To support various projects you want to create team sites for the SharePoint and
 
 1. [Manage sites](#exercise-1-manage-sites)
 1. [Manage site admins](#exercise-2-manage-site-admins)
-1. Manage site creation
+1. [Manage site creation](#exercise-3-manage-site-creation)
 1. Manage storage limits
 1. Change a site address
 1. Manage hub sites
@@ -241,8 +245,8 @@ Perform this task on LON-CL1.
 
 ## Exercise 2: Manage site admins
 
-1. [Add Megan Bowen as site admin to the site](#task-1-add-a-site-admins-to-a-site) Contoso home
-1. [Verify site admin access](#task-2-verify-site-admin-access) by Megan Bowen
+1. [Add Joni Sherman as site admin to the site](#task-1-add-a-site-admins-to-a-site) Contoso home
+1. [Verify site admin access](#task-2-verify-site-admin-access) by Joni Sherman
 
 ### Task 1: Add a site admins to a site
 
@@ -255,10 +259,10 @@ Perform this task on LON-CL1.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select **Contoso home** and click **Membership**.
 1. On the Contoso home panel, on the **Membership** tab, ensure **Site admins is selected**. Click **Add site admins**.
-1. In Add site admins to Contoso home, find and click **Megan Bowen** and click **Add (1)**.
+1. In Add site admins to Contoso home, find and click **Joni Sherman** and click **Add (1)**.
 1. Above Add site admins to Contoso home, click the left arrow.
 
-    Verify that Megan Bowen was added to the Site admins.
+    Verify that Joni Sherman was added to the Site admins.
 
 ### Task 2: Verify site admin access
 
@@ -267,19 +271,19 @@ Perform this task on LON-CL1.
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
 1. In the new Microsoft Edge Guest instance, navigate to **https://\<your tenant\>.sharepoint.com/sites/home**.
-1. Sign in as **MeganB@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
 1. On Contoso home, click the *Settings* icon (the gear icon) and click **Site information**.
 1. On the Site Information panel, click **View all site settings**.
 
-    Verify that, on Site Settings, Megan Bowen has a section Site Collection Administration.
+    Verify that, on Site Settings, Joni Sherman has a section Site Collection Administration.
 
 1. On Site Settings, under **Users and Permissions**, click **Site collection administrators**.
 
-    Verify that Lynne Robbins and Megan Bowen are Site Collection Administrators.
+    Verify that Lynne Robbins and Joni Sherman are Site Collection Administrators.
 
 ## Exercise 3: Manage site creation
 
-1. Verify that users can create Microsoft 365 groups
+1. [Verify that users can create Microsoft 365 groups](#task-1-verify-that-users-can-create-microsoft-365-groups) using Outlook
 1. Limit the users that can create Microsoft 365 groups
 1. Verify that users cannot create Microsoft 365 groups
 1. Verify that users can create SharePoint sites
@@ -287,6 +291,136 @@ Perform this task on LON-CL1.
 1. Verify that users cannot create SharePoint sites
 
 ### Task 1: Verify that users can create Microsoft 365 groups
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
+1. In the new Microsoft Edge Guest instance, navigate to **https://www.microsoft365.com**.
+1. On Login | Microsoft 365, click Sign in.
+1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
+1. On Microsoft 365 home, click the app launcher and click **Outlook**.
+1. In Outlook, on the left, click the *Groups* icon.
+1. Above Groups, click **New group**.
+1. In New group, under **Name**, type **Joni's Group** and click **Create**.
+1. In Add members to Joni's Group, click **Not now**.
+1. In Outlook, under groups, click Joni's Group.
+
+    Verify that the group was created. You may want to explore the features of a group at this point.
+
+### Task 2: Limit the users that can create Microsoft 365 groups
+
+Perform this task on LON-CL1.
+
+1. Open **Visual Studio Code**.
+1. In Visual Studio Code, in the menu, click **File**, **Open Folder...**
+1. In Open folder, navigate to **Documents\\PowerShell** and click **Select folder.**
+1. In **Visual Studio Code**, in Do you trust the authors of the files in this folder?, click **Yes, I trust the authors**.
+1. In Explorer view of Visual Studio Code, in the context-menu of **Scripts**, click **New File...**
+1. Enter **Set-M365GroupCreationAllowedGroups.ps1** as file name.
+1. In the bottom right message Do you want to install the recommended 'PowerShell' extension from Microsoft for the PowerShell language?, click **Install**.
+
+    Wait for the installation to complete. This will take less than a minute. A TERMINAL pane will open at the bottom with a PowerShell prompt.
+
+1. Open **Microsoft Edge**.
+1. In Microsof Edge, navigate to **https://learn.microsoft.com/en-us/microsoft-365/solutions/manage-creation-of-groups?view=o365-worldwide**
+1. On page Manage who can create Microsoft 365 groups, scroll down to the script and click **Copy**. The script is provided for reference here:
+
+    ````powershell
+    Import-Module Microsoft.Graph.Beta.Identity.DirectoryManagement
+    Import-Module Microsoft.Graph.Beta.Groups
+
+    Connect-MgGraph -Scopes "Directory.ReadWrite.All", "Group.Read.All"
+
+    $GroupName = ""
+    $AllowGroupCreation = "False"
+
+    $settingsObjectID = (Get-MgBetaDirectorySetting | Where-object -Property Displayname -Value "Group.Unified" -EQ).id
+
+    if(!$settingsObjectID)
+    {
+        $params = @{
+        templateId = "62375ab9-6b52-47ed-826b-58e47e0e304b"
+        values = @(
+                @{
+                    name = "EnableMSStandardBlockedWords"
+                    value = "true"
+                }
+                )
+            }
+        
+        New-MgBetaDirectorySetting -BodyParameter $params
+        
+        $settingsObjectID = (Get-MgBetaDirectorySetting | Where-object -Property Displayname -Value "Group.Unified" -EQ).Id
+    }
+
+    
+    $groupId = (Get-MgBetaGroup | Where-object {$_.displayname -eq $GroupName}).Id
+
+    $params = @{
+        templateId = "62375ab9-6b52-47ed-826b-58e47e0e304b"
+        values = @(
+            @{
+                name = "EnableGroupCreation"
+                value = $AllowGroupCreation
+            }
+            @{
+                name = "GroupCreationAllowedGroupId"
+                value = $groupId
+            }
+        )
+    }
+
+    Update-MgBetaDirectorySetting -DirectorySettingId $settingsObjectID -BodyParameter $params
+
+    (Get-MgBetaDirectorySetting -DirectorySettingId $settingsObjectID).Values
+    `````
+
+1. Switch to **Visual Studio Code**.
+1. In Visual Studio Code, click the tab **Set-M365GroupCreationAllowedGroups.ps1**.
+1. In Set-M365GroupCreationAllowedGroups.ps1, paste the script from the web site.
+1. In line 6 of the script reading
+
+    ````powershell
+    $GroupName = ""
+    ````
+
+    type **sg-IT** between the quotes. It should read
+
+    ````powershell
+    $GroupName = "sg-IT"
+    ````
+
+    Note: The security group sg-IT was previously created for you.
+
+1. On the menu, click **File**, **Save**.
+
+    Now, you have to wait for the installation of the Microsoft.Graph.Beta module to complete. This can take a few minutes.
+
+1. On the menu, click **Run**, **Run Without Debugging**.
+
+    It make take a few minutes before a sign in window appears.
+
+1. A web browser opens, sign in as Global administrator.
+1. On Permissions requested, click **Accept**.
+1. When you see a page Authentication complete. You can return to the application. Feel free to close this browser tab, close the browser tab.
+1. Switch to **Visual Studio Code**.
+
+    In Visual Studio Code, in TERMINAL, the script should generate various outputs. Verify that the output shows EnableGroupCreation with a value of False and GroupCreationAllowedGroupId with the value of a GUID.
+
+### Task 3: Verify that users cannot create Microsoft 365 groups
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
+1. In the new Microsoft Edge Guest instance, navigate to **https://www.microsoft365.com**.
+1. On Login | Microsoft 365, click Sign in.
+1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
+1. On Microsoft 365 home, click the app launcher and click **Outlook**.
+1. In Outlook, on the left, click the *Groups* icon.
+
+    Verify that you do not see the New group button anymore.
 
 ## Exercise 4: Manage storage limits
 
