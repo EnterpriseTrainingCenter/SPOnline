@@ -11,8 +11,8 @@ To support various projects you want to create team sites for the SharePoint and
 
 ## Exercises
 
-1. Manage sites
-1. Manage site admins
+1. [Manage sites](#exercise-1-manage-sites)
+1. [Manage site admins](#exercise-2-manage-site-admins)
 1. Manage site creation
 1. Manage storage limits
 1. Change a site address
@@ -241,10 +241,10 @@ Perform this task on LON-CL1.
 
 ## Exercise 2: Manage site admins
 
-1. Add site admins to sites
-1. Verify site admin access
+1. [Add Megan Bowen as site admin to the site](#task-1-add-a-site-admins-to-a-site) Contoso home
+1. [Verify site admin access](#task-2-verify-site-admin-access) by Megan Bowen
 
-### Task 1: Add site admins to sites
+### Task 1: Add a site admins to a site
 
 Perform this task on LON-CL1.
 
@@ -285,6 +285,8 @@ Perform this task on LON-CL1.
 1. Verify that users can create SharePoint sites
 1. Disable the creation of SharePoint sites by users and change the default settings for new sites
 1. Verify that users cannot create SharePoint sites
+
+### Task 1: Verify that users can create Microsoft 365 groups
 
 ## Exercise 4: Manage storage limits
 
