@@ -219,10 +219,7 @@ Perform this task on LON-CL1.
 
     If you are signed in as MOD Administrator, click your account icon in the top-right corner, and click **Sign out**. Then close Microsoft Edge and start the task again.
 
-1. Sign using **LynneR@\<your tenant\>.onmicrosoft.com**. The password is the same as the global administrator.
-
-    You might have to update the password of Lynne Robbins. Please take a note.
-
+1. Sign using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, in the left navigation, click **Show all** and click **SharePoint**.
 
     In SharePoint admin center, verify that you are signed in with Lynne Robbins. If you are still signed in with MOD Administrator, click your account icon in the top-right corner, and click **Sign out**. Close the tab and repeat this step.
