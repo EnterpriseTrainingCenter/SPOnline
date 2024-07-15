@@ -6,8 +6,14 @@ See also Issues, not only containing current known issues with possible solution
 
 If you are a trainer or participant of the course, you may fork this repository. Pull requests are accepted after review. Please follow our Guidelines.
 
+## Practices
+
+1. [Install Visual Studio Code](Instructions/Practices/Install-Visual-Studio-Code.md)
+1. [Install Microsoft Graph Beta PowerShell module](Instructions/Practices/Install-Microsoft-Graph-Beta-PowerShell-module.md)
+
 ## Labs
 
 1. [Get started with SharePoint](Instructions/Labs/Get-started-with-SharePoint-administration.md)
+1. [Site administration](Instructions/Labs/Site-administration.md)
 
 (c) aETC GmbH
