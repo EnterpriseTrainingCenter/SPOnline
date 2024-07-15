@@ -535,10 +535,118 @@ Verify that you are redirected to the new URL.
 
 ## Exercise 6: Manage hub sites
 
-1. Register hub sites
-1. Register sites with the hub
-1. Edit the navigation on the hub site
+1. Register sites as hub sites
+
+    * Contoso home
+    * IT department
+    * Executive corner
+    * HR
+
+1. Associate sites with the hub IT department:
+
+    * IT department internal
+    * IT help desk
+    * OneDrive deployment project
+    * SharePoint project
+
+1. Associate hubs with the parent hub Contoso home:
+
+    * IT department
+    * Executive corner
+    * HR
+
 1. Edit the navigation on the top-level hub
+1. Edit the navigation on the hub site
+
+### Task 1: Register hub sites
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Active sites**.
+1. In active sites, select **Contoso home** and click **Hub**, **Register as hub site**.
+1. In the Register as hub site panel, accept the defaults and click **Save**.
+1. Close the panel.
+1. Repat steps 6 - 8 for the site **IT department**.
+1. In active sites, select **Executive Corner** and click **Hub**, **Change hub association**.
+1. In the panel Edit hub association, under **Select a hub**, select **None** and click **Save**.
+1. Close the panel.
+1. With Executive corner still selected, click **Hub**, **Register as hub site**.
+1. In the Register as hub site panel, accept the defaults and click **Save**.
+1. Close the panel.
+1. Repeat steps 10 - 15 for the site HR.
+
+### Task 2: Associate sites with the hub
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Active sites**.
+1. In Active sites, select **IT department internal**, **IT help desk**, **OneDrive deployment project**, and **SharePoint project**. click **Bulk edit**, **Hub association**.
+1. In the panel Edit hub association, under **Select a hub**, select **IT department** and click **Save**.
+
+### Task 3: Associate hubs with a parent hub
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Active sites**.
+1. In Active sites, select **HR** and click **Hub**, **Edit hub site settings**.
+1. In the panel Hub site settings, under **Parent hub association**, select **Contoso home** and click **Save**.
+1. Close the panel.
+1. Repeat steps 6 - 8 for **Executive corner** and **HR**.
+
+### Task 4: Edit the navigation on the top-level hub
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Active sites**.
+1. In active site, beside **Contoso home**, click the URL.
+1. On the site Contoso home, in the hub navigation bar, click **Add link**.
+1. In the Add panel, under **Choose an option**, select **Associated hubs**. Under Display name, type **Hubs** and click **OK**.
+1. In the Edit hub navigation panel, click **Save**.
+
+### Task 5: Edit the navigation on the hub site
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Active sites**.
+1. In active site, beside **IT department**, click the URL.
+1. On the page IT department, in the hub navigation bar, click **Add link**.
+1. In the Add panel, under **Choose an option**, select **Label**. Under Display name, type **Groups and teams** and click **OK**.
+1. In the Edit hub navigation panel, hover the mouse just under the **Group and teams** and click the **+**.
+1. In the Add panel, under **Choose an option**, select **Label**. Under Display name, type **Projects** and click **OK**.
+1. In the Edit hub navigation panel, hover the mouse just under the **Group and teams** and click the **+**.
+1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/IT-internal**.  Under Display name, type **IT internal** and click **OK**.
+1. In the Edit hub navigation panel, to the right of **IT internal**, click the ellipsis and click **Make sub link**.
+1. In the Edit hub navigation panel, hover the mouse just under the **IT internal** and click the **+**.
+1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/IT-helpdesk**.  Under Display name, type **IT help desk** and click **OK**.
+1. In the Edit hub navigation panel, hover the mouse just under the **Projects** and click the **+**.
+1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/Project1Drive**.  Under Display name, type **OneDrive deployment project** and click **OK**.
+1. In the Edit hub navigation panel, to the right of **OneDrive deployment project**, click the ellipsis and click **Make sub link**.
+1. In the Edit hub navigation panel, hover the mouse just under the **OneDrive deployment project** and click the **+**.
+1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/SharePoint-project**.  Under Display name, type **SharePoint project** and click **OK**.
+1. In the Edit hub navigation panel, hover the mouse just under the **SharePoint project** and click the **+**.
+1. In the Add panel, under **Choose an option**, select **Associated child hubs**. Under Display name, type **Hubs** and click **OK**.
+1. In the Edit hub navigation panel, to the right of **Hubs**, click the ellipsis and click **Promote sub link**.
+1. In the Edit hub navigation panel, click **Save**.
 
 ## Exercise 7: Manage the lock state
 
