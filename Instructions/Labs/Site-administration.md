@@ -287,7 +287,7 @@ Perform this task on LON-CL1.
 1. Limit the users that can create Microsoft 365 groups
 1. Verify that users cannot create Microsoft 365 groups
 1. Verify that users can create SharePoint sites
-1. Disable the creation of SharePoint sites by users and change the default settings for new sites
+1. Change settings for site creation
 1. Verify that users cannot create SharePoint sites
 
 ### Task 1: Verify that users can create Microsoft 365 groups
@@ -421,6 +421,12 @@ Perform this task on LON-CL1.
 1. In Outlook, on the left, click the *Groups* icon.
 
     Verify that you do not see the New group button anymore.
+
+### Task 4: Verify that users can create SharePoint sites
+
+### Task 5: Change settings for site creation
+
+## Task 6: Verify that users cannot create SharePoint sites
 
 ## Exercise 4: Manage storage limits
 
