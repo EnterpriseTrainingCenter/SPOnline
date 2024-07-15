@@ -241,8 +241,41 @@ Perform this task on LON-CL1.
 
 ## Exercise 2: Manage site admins
 
-1. Add a site admins to sites
-1. Verify the site admins
+1. Add site admins to sites
+1. Verify site admin access
+
+### Task 1: Add site admins to sites
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Active sites**.
+1. In Active sites, select **Contoso home** and click **Membership**.
+1. On the Contoso home panel, on the **Membership** tab, ensure **Site admins is selected**. Click **Add site admins**.
+1. In Add site admins to Contoso home, find and click **Megan Bowen** and click **Add (1)**.
+1. Above Add site admins to Contoso home, click the left arrow.
+
+    Verify that Megan Bowen was added to the Site admins.
+
+### Task 2: Verify site admin access
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
+1. In the new Microsoft Edge Guest instance, navigate to **https://\<your tenant\>.sharepoint.com/sites/home**.
+1. Sign in as **MeganB@\<your tenant\>.onmicrosoft.com**.
+1. On Contoso home, click the *Settings* icon (the gear icon) and click **Site information**.
+1. On the Site Information panel, click **View all site settings**.
+
+    Verify that, on Site Settings, Megan Bowen has a section Site Collection Administration.
+
+1. On Site Settings, under **Users and Permissions**, click **Site collection administrators**.
+
+    Verify that Lynne Robbins and Megan Bowen are Site Collection Administrators.
 
 ## Exercise 3: Manage site creation
 
