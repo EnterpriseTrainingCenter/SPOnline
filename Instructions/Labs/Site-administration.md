@@ -11,7 +11,11 @@ On LON-CL1, sign in as Administrator.
 
 ## Introduction
 
-To support various projects you want to create team sites for the SharePoint and the OneDrive deployment project, as well as for the IT department. You want to test the upgrade of a site to a Microsoft 365 group and add Teams functionality. Moreover, you want to test the restore functionality of sites and Microsoft 365 group.  Furthermore, you want to create communication sites for the IT department and a new home site for Contoso.
+To support various projects you want to create team sites for the SharePoint and the OneDrive deployment project, as well as for the IT department. You want to test the upgrade of a site to a Microsoft 365 group and add Teams functionality. Moreover, you want to test the restore functionality of sites and Microsoft 365 group.  Furthermore, you want to create communication sites for the IT department and a new home site for Contoso. You want to grant Joni Sherman site admins permissions to the new home site.
+
+Your management asks you to limit the creation of Microsoft 365 groups and SharePoint sites to members of the IT department. Futhermore, new team sites should be created under the /teams/ URL and should have your time zone as default.
+
+Your company wants to manage site storage limits manually. All existing sites should be limited to 1 GB by default.
 
 ## Exercises
 
@@ -284,11 +288,11 @@ Perform this task on LON-CL1.
 ## Exercise 3: Manage site creation
 
 1. [Verify that users can create Microsoft 365 groups](#task-1-verify-that-users-can-create-microsoft-365-groups) using Outlook
-1. Limit the users that can create Microsoft 365 groups
-1. Verify that users cannot create Microsoft 365 groups
-1. Verify that users can create SharePoint sites
-1. Change settings for site creation
-1. Verify that users cannot create SharePoint sites
+1. [Limit the users that can create Microsoft 365 groups](#task-2-limit-the-users-that-can-create-microsoft-365-groups) to members the security group sg-IT
+1. [Verify that users cannot create Microsoft 365 groups](#task-3-verify-that-users-cannot-create-microsoft-365-groups)
+1. [Verify that users can create SharePoint sites](#task-4-verify-that-users-can-create-sharepoint-sites)
+1. [Change settings for site creation](#task-5-change-settings-for-site-creation) to disable site creation for users and create new team sites under /teams/
+1. [Verify that users cannot create SharePoint sites](#task-6-verify-that-users-cannot-create-sharepoint-sites)
 
 ### Task 1: Verify that users can create Microsoft 365 groups
 
@@ -424,19 +428,110 @@ Perform this task on LON-CL1.
 
 ### Task 4: Verify that users can create SharePoint sites
 
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
+1. In the new Microsoft Edge Guest instance, navigate to **https://www.microsoft365.com**.
+1. On Login | Microsoft 365, click Sign in.
+1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
+1. On Microsoft 365 home, click the app launcher and click **SharePoint**.
+1. On the SharePoint start page, click **Create Site**.
+1. On Create a site: Select this site type, click **Team site**.
+1. On Select a template, click **IT help desk**.
+1. On Preview and use 'IT help desk template', click **Use template**.
+1. On Give your site a name, under **site name**, type **IT help desk** and click **Next**.
+1. On Set language and other options, under **Select a language**, ensure **English** is selected and click **Create site**.
+
+    After a few moments, you will be redirected to the new team site. Note, that this is a team site without a Microsoft 365 group, since we disable the Microsoft 365 group creation for users before. If Microsoft 365 group creation is allowed, the same process looks a little different and a Microsoft 365 group would be created.
+
 ### Task 5: Change settings for site creation
 
-## Task 6: Verify that users cannot create SharePoint sites
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Settings**.
+1. In Settings, click **Site creation**.
+1. In Site creation, deactivate **Users can create SharePoint sites**. Under **Create team sites under**, in the drop-down, select **/teams/**. Under **Default time zone**, select your time zone. Click **Save**.
+
+### Task 6: Verify that users cannot create SharePoint sites
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
+1. In the new Microsoft Edge Guest instance, navigate to **https://www.microsoft365.com**.
+1. On Login | Microsoft 365, click Sign in.
+1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
+1. On Microsoft 365 home, click the app launcher and click **SharePoint**.
+
+    Verify that there is no Create site button anymore.
 
 ## Exercise 4: Manage storage limits
 
-1. Change the site storage limits to manual
-1. Change the storage limits of sites
+1. [Change the site storage limits to manual](#task-1-change-the-site-storage-limits-to-manual)
+1. [Change the storage limits of sites](#task-2-change-the-storage-limits-of-sites) to 1 GB
+
+### Task 1: Change the site storage limits to manual
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Settings**.
+1. In Settings, click **Site storage limits**.
+1. In the Site storage limits panel, click **Manual** and click **Save**.
+
+### Task 2: Change the storage limits of sites
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Active sites**.
+1. In Active sites, select **IT department**.
+1. On the toolbar, click Storage. You might have to click the ellipsis (**...***) to see this command.
+1. On the Edit storage limit panel, under **Maximum storage for this site**, type **1** and click **Save**.
+1. Close the **Edit storage limit** panel.
+
+Repeat from step 6 for other sites. For bulk changes of storage limits, PowerShell is much more effective.
 
 ## Exercise 5: Change a site address
 
-1. Change the address of a site
-1. Verify the automatic redirection from the old address to the new address
+1. [Change the address of site](#task-1-change-the-address-of-a-site) SharePoint Project from SharePointproject to SharePoint-project
+1. [Verify automatic redirection](#task-2-verify-automatic-redirection) from the old address to the new address
+
+### Task 1: Change the address of a site
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Active sites**.
+1. In Active sites, click **SharePoint project**.
+1. In the IT help desk panel, on the tab General, under **Site address**, click **Edit**.
+1. In Edit SharePoint site address, under **SharePoint site address**, type **SharePoint-project** and click **Save**.
+1. In the message box Change site name?, click **No**.
+1. Close the panel.
+
+### Task 2: Verify automatic redirection
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/SharePointProject** (the old URL).
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+
+Verify that you are redirected to the new URL.
 
 ## Exercise 6: Manage hub sites
 
