@@ -21,7 +21,7 @@ The address of a site needs to be changed to a more convenient URL. Users should
 
 After the design of the new home site is finished, your company wants you to replace to unused generic root site with the new site. As a next step, your company wants to introduce hubs to have a common navigation between sites.
 
-As site created by a user should be made unavailable. Furthermore, the site of a cancelled project should be made read-only.
+A site created by a user should be made unavailable. Furthermore, the site of a cancelled project should be made read-only.
 
 ## Exercises
 
