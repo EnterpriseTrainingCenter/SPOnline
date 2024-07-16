@@ -621,7 +621,7 @@ Perform this task on LON-CL1.
 1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
-1. In active sites, select **Contoso home** and click **Hub**, **Register as hub site**.
+1. In Active sites, select **Contoso home** and click **Hub**, **Register as hub site**.
 1. In the Register as hub site panel, accept the defaults and click **Save**.
 1. Close the panel.
 1. Repat steps 6 - 8 for the site **IT department**.
