@@ -26,7 +26,7 @@ On **LON-CL1** sign in as **Administrator**.
 1. [Change SharePoint group memberships in site](#task-2-change-sharepoint-group-memberships-site) Work @ Contoso to add Everyone except external users to the visitors group
 1. [Verify and fix permissions](#task-3-verify-and-fix-site-permissions) for site Work @ Contoso
 
-## Task 1: Change SharePoint site permissions in SharePoint admin center
+### Task 1: Change SharePoint site permissions in SharePoint admin center
 
 Perform this task on LON-CL1.
 
@@ -51,7 +51,7 @@ Perform this task on LON-CL1.
 
 1. Close the panel.
 
-## Task 2: Change SharePoint group memberships site
+### Task 2: Change SharePoint group memberships site
 
 Perform this task on LON-CL1.
 
