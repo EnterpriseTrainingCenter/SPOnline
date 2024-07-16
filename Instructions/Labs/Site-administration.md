@@ -17,6 +17,12 @@ Your management asks you to limit the creation of Microsoft 365 groups and Share
 
 Your company wants to manage site storage limits manually. All existing sites should be limited to 1 GB by default.
 
+The address of a site needs to be changed to a more convenient URL. Users should be redirected from the old URL to the new.
+
+After the design of the new home site is finished, your company wants you to replace to unused generic root site with the new site. As a next step, your company wants to introduce hubs to have a common navigation between sites.
+
+As site created by a user should be made unavailable. Furthermore, the site of a cancelled project should be made read-only.
+
 ## Exercises
 
 1. [Manage sites](#exercise-1-manage-sites)
@@ -24,9 +30,9 @@ Your company wants to manage site storage limits manually. All existing sites sh
 1. [Manage site creation](#exercise-3-manage-site-creation)
 1. [Manage storage limits](#exercise-4-manage-storage-limits)
 1. [Change a site address](#exercise-5-change-a-site-address)
-1. [Manage hub sites](#exercise-6-manage-hub-sites)
-1. [Manage the lock state](#exercise-7-manage-the-lock-state)
-1. [Replace the root site](#exercise-8-replace-the-root-site)
+1. [Replace the root site](#exercise-6-replace-the-root-site)
+1. [Manage hub sites](#exercise-7-manage-hub-sites)
+1. [Manage the lock state](#exercise-8-manage-lock-states)
 
 ## Exercise 1: Manage sites
 
@@ -533,7 +539,50 @@ Perform this task on LON-CL1.
 
 Verify that you are redirected to the new URL.
 
-## Exercise 6: Manage hub sites
+## Exercise 6: Replace the root site
+
+1. [Explore the current root site](#task-1-explore-the-current-root-site)
+1. [Replace the root site](#task-2-replace-the-root-site) with the new Contoso home
+1. [Verify the new root site](#task-3-verify-the-new-root-site)
+
+### Task 1: Explore the current root site
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+
+    You should see a generic communication site. You may explore the site further.
+
+### Task 2: Replace the root site
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Active sites**.
+1. In Active sites, select **Communication site** with the root URL. On the toolbar click **Manage home site** (you may have to click the ellipsis to see this command).
+1. In the Home site panel, under **Current home site**, beside the current home site, click the **X** icon to remove it as home site. Click **Save**.
+1. In **Active Sites**, in the row of site **Contoso home**, in the column **URL**, in the context-menu of the URL, click **Copy link**.
+1. Select **Communication site** with the root URL. On the toolbar click **Replace site** (you may have to click the ellipsis to see this command).
+1. In the panel Replace root site, under **URL of the site you want to use**, paste the copied URL of Contoso home. Click **Save**.
+
+    Wait for the action to complete. This may take a minute or two.
+
+### Task 3: Verify the new root site
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+
+    You should see a site using the organization home template with the name Contoso home.
+
+## Exercise 7: Manage hub sites
 
 1. [Register sites as hub sites](#task-1-register-sites-as-hub-sites)
 
@@ -656,7 +705,7 @@ Perform this task on LON-CL1.
 1. In the Edit hub navigation panel, to the right of **Hubs**, click the ellipsis and click **Promote sub link**.
 1. In the Edit hub navigation panel, click **Save**.
 
-## Exercise 7: Manage the lock state
+## Exercise 8: Manage lock states
 
 1. [Add a page](#task-1-add-a-page) to the site Contoso home telling users that the content of the site is unavaible.
 1. [Set the tenant's unavailability page](#task-2-set-the-tenants-unavailability-page) to the page you just created
@@ -818,8 +867,3 @@ Perform this task on LON-CL1.
 1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
 
     You should see a warning message at the top of the page telling you that this site is read-only at the administrator's request. Verify that you cannot add or change any content.
-
-## Exercise 8: Replace the root site
-
-1. Replace the root site with the new Contoso home
-1. Verify the replacement
