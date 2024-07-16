@@ -32,7 +32,7 @@ As site created by a user should be made unavailable. Furthermore, the site of a
 1. [Change a site address](#exercise-5-change-a-site-address)
 1. [Replace the root site](#exercise-6-replace-the-root-site)
 1. [Manage hub sites](#exercise-7-manage-hub-sites)
-1. [Manage the lock state](#exercise-8-manage-lock-states)
+1. [Manage lock states](#exercise-8-manage-lock-states)
 
 ## Exercise 1: Manage sites
 
