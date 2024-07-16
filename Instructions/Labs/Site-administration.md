@@ -22,11 +22,11 @@ Your company wants to manage site storage limits manually. All existing sites sh
 1. [Manage sites](#exercise-1-manage-sites)
 1. [Manage site admins](#exercise-2-manage-site-admins)
 1. [Manage site creation](#exercise-3-manage-site-creation)
-1. Manage storage limits
-1. Change a site address
-1. Manage hub sites
-1. Manage the lock state
-1. Replace the root site
+1. [Manage storage limits](#exercise-4-manage-storage-limits)
+1. [Change a site address](#exercise-5-change-a-site-address)
+1. [Manage hub sites](#exercise-6-manage-hub-sites)
+1. [Manage the lock state](#exercise-7-manage-the-lock-state)
+1. [Replace the root site](#exercise-8-replace-the-root-site)
 
 ## Exercise 1: Manage sites
 
@@ -535,30 +535,38 @@ Verify that you are redirected to the new URL.
 
 ## Exercise 6: Manage hub sites
 
-1. Register sites as hub sites
+1. [Register sites as hub sites](#task-1-register-sites-as-hub-sites)
 
     * Contoso home
     * IT department
     * Executive corner
     * HR
 
-1. Associate sites with the hub IT department:
+1. [Associate sites with the hub](#task-2-associate-sites-with-the-hub) IT department:
 
     * IT department internal
     * IT help desk
     * OneDrive deployment project
     * SharePoint project
 
-1. Associate hubs with the parent hub Contoso home:
+1. [Associate hubs with the parent hub](#task-3-associate-hubs-with-a-parent-hub) Contoso home:
 
     * IT department
     * Executive corner
     * HR
 
-1. Edit the navigation on the top-level hub
-1. Edit the navigation on the hub site
+1. [Edit the navigation on the top-level hub](#task-4-edit-the-navigation-on-the-top-level-hub) by adding all associated hubs under the display name Hubs.
+1. [Edit the navigation on the hub site](#task-5-edit-the-navigation-on-the-hub-site) following the structure below:
 
-### Task 1: Register hub sites
+    * Groups and Teams (label)
+        * IT internal (link to site)
+        * IT help desk (link to site)
+    * Projects (label)
+        * OneDrive deployment project (link to site)
+        * SharePoint project (link to site)
+    * Hubs (associated child hubs)
+
+### Task 1: Register sites as hub sites
 
 Perform this task on LON-CL1.
 
