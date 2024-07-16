@@ -658,12 +658,166 @@ Perform this task on LON-CL1.
 
 ## Exercise 7: Manage the lock state
 
-1. Add a page
-1. Configure the unavailablility message
-1. Make a site unavailable
-1. Verify the user experience for an unavailable site
-1. Make a site read-only
-1. Verify the user expeirence for a read-only site
+1. [Add a page](#task-1-add-a-page) to the site Contoso home telling users that the content of the site is unavaible.
+1. [Set the tenant's unavailability page](#task-2-set-the-tenants-unavailability-page) to the page you just created
+1. [Make a site unavailable](#task-3-make-a-site-unavailable): Joni's group
+1. [Verify the user experience for an unavailable site](#task-4-verify-the-user-experience-for-an-unavailable-site)
+1. [Make a site read-only](#task-5-make-a-site-read-only): OneDrive deployment project
+1. [Verify the user experience for a read-only site](#task-6-verify-the-user-experience-for-a-read-only-site)
+
+### Task 1: Add a page
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Active sites**.
+1. In active site, beside **Contoso home**, click the URL.
+1. On the site Contoso home, click **New**, **Page**.
+1. On Welcome!, click **I've done this before** and **Let's go**.
+1. On Page templates, click **Blank** and click **Create page**.
+1. On the new page, click in **Add a title**, type **Sorry, this site is currently not avaiable**.
+1. In **Add your text here.**, type **An administrator made this site unavailable, because the site need maintenance or the content is outdated. Don't worry! The content is not lost and the site may be available later again.**.
+1. Turn **Comments** **Off**.
+1. Click the full-width banner above the title. A floating toolbar appears. In the toolbar, click the icon *Browse images*.
+1. In the image browser, click **Web search**. Search and select an appropriate image. Try to search for terms like **maintenance** or **out of order**. Click **Insert image**.
+1. When you are satisfied with your page, click **Publish**.
+1. In the Help others find your page, click **Copy link to page** and save the URL anywhere, e.g., in Notepad. Remove the part behind and including the question mark.
+
+Note: In a real-world scenario, you should configure the permissions for the page to be viewable by everyone in your organization. Since permissions are not a topic in this lab, we assume this has already be done at the site level.
+
+### Task 2: Set the tenant's unavailability page
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, click the down chevron and click **Windows PowerShell**.
+1. Connect to Sharepoint Online.
+
+    ````powershell
+    
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
+    ````
+
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Set the no access redirect url.
+
+    ````powershell
+    Set-SPOTenant -NoAccessRedirectUrl '<paste the saved url from the previous task here>'
+    ````
+
+1. Disconnect from SharePoint Online.
+
+    ````powershell
+    Disconnect-SPOService
+    `````
+
+### Task 3: Make a site unavailable
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, click the down chevron and click **Windows PowerShell**.
+1. Connect to Sharepoint Online.
+
+    ````powershell
+    
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
+    ````
+
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Store the site **Joni's group** in a variable
+
+    ````powershell
+    <#
+        You have to type the single quote in the site title twice, because
+        it is part of a string surrounded by single quotes.
+    #>
+    $sPOSite = Get-SPOSite |
+    Where-Object Title -eq 'Joni''s group'
+    ````
+
+1. Make the site unavaible.
+
+    ````powershell
+    $sPOSite | Set-SPOSite -LockState NoAccess
+    ````
+
+1. Copy the URL of the site to the clipboard.
+
+    ````powershell
+    $sPOSite.Url | Set-Clipboard
+    ````
+
+1. Disconnect from SharePoint Online.
+
+    ````powershell
+    Disconnect-SPOService
+    `````
+
+### Task 4: Verify the user experience for an unavailable site
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. Navigate to the URL you copied to the clipboard in the previous task.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+
+    You should get redirected to the page you configured before.
+
+### Task 5: Make a site read-only
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, click the down chevron and click **Windows PowerShell**.
+1. Connect to Sharepoint Online.
+
+    ````powershell
+    
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
+    ````
+
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Store the site **OneDrive deployment project** in a variable
+
+    ````powershell
+    $sPOSite = Get-SPOSite |
+    Where-Object Title -eq 'OneDrive deployment project'
+    ````
+
+1. Make the site read-only.
+
+    ````powershell
+    $sPOSite | Set-SPOSite -LockState ReadOnly
+    ````
+
+1. Copy the URL of the site to the clipboard.
+
+    ````powershell
+    $sPOSite.Url | Set-Clipboard
+    ````
+
+1. Disconnect from SharePoint Online.
+
+    ````powershell
+    Disconnect-SPOService
+    `````
+
+### Task 6: Verify the user experience for a read-only site
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. Navigate to the URL you copied to the clipboard in the previous task.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+
+    You should see a warning message at the top of the page telling you that this site is read-only at the administrator's request. Verify that you cannot add or change any content.
 
 ## Exercise 8: Replace the root site
 
