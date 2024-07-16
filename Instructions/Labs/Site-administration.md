@@ -404,9 +404,6 @@ Perform this task on LON-CL1.
     Note: The security group sg-IT was previously created for you.
 
 1. On the menu, click **File**, **Save**.
-
-    Now, you have to wait for the installation of the Microsoft.Graph.Beta module to complete. This can take a few minutes.
-
 1. On the menu, click **Run**, **Run Without Debugging**.
 
     It make take a few minutes before a sign in window appears.
