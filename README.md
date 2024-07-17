@@ -18,5 +18,6 @@ If you are a trainer or participant of the course, you may fork this repository.
 1. [Get started with SharePoint](Instructions/Labs/Get-started-with-SharePoint-administration.md)
 1. [Site administration](Instructions/Labs/Site-administration.md)
 1. [Manage OneDrive](Instructions/Labs/Manage-OneDrive.md)
+1. [Manage permissions](Instructions/Labs/Manage-permissions.md)
 
 (c) aETC GmbH
