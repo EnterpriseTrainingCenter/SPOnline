@@ -10,7 +10,7 @@ Configure the global sharing settings for Sharepoint and OneDrive as follows:
 * People who use a verification code must reauthenticate after 7 days
 * The sharing default should be specific people and the default permissions should be view
 * Anyone links should expire after 7 days
-* Anyone links shoul allow view and edit on files, but view only on folders
+* Anyone links should allow view and edit on files, but view only on folders
 
 ## Instructions
 
