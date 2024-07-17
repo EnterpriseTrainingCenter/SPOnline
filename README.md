@@ -12,6 +12,8 @@ If you are a trainer or participant of the course, you may fork this repository.
 1. [Install Microsoft Graph Beta PowerShell module](Instructions/Practices/Install-Microsoft-Graph-Beta-PowerShell-module.md)
 1. [Configure OneDrive storage limits](Instructions/Practices/Configure-OneDrive-storage-limits.md)
 1. [Block file types from syncing](Instructions/Practices/Block-file-types-from-syncing.md)
+1. [Enable integration with Entra B2B](Instructions/Practices/Enable-integration-with-Entra-B2B.md)
+1. [Configure sharing settings](Instructions/Practices/Configure-sharing-settings.md)
 
 ## Labs
 
@@ -19,5 +21,6 @@ If you are a trainer or participant of the course, you may fork this repository.
 1. [Site administration](Instructions/Labs/Site-administration.md)
 1. [Manage OneDrive](Instructions/Labs/Manage-OneDrive.md)
 1. [Manage permissions](Instructions/Labs/Manage-permissions.md)
+1. [Manage sharing](Instructions/Labs/Manage-sharing.md)
 
 (c) aETC GmbH
