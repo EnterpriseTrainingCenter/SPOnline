@@ -271,4 +271,10 @@ Perform this task on LON-CL1.
 
     Verify that Alex Wilber, Christie Cline, Lynne Robbins, and Miriam Graham are site admins. If you want, you could add more site admins using the command from the previous step.
 
+1. Disconnect from SharePoint Online.
+
+    ```powershell
+    Disconnect-SPOService
+    ````
+
 [figure 1]:../images/mail-OneDrive-for-Business-contents-will-be-preserved.png
