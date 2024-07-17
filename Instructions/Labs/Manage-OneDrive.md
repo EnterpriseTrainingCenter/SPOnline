@@ -62,12 +62,11 @@ Perform this task on LON-CL1.
 1. On the tab **2 Configuration settings**, click **Add settings**.
 1. On the Settings picker pane, under **Browse by category**, click **OneDrive**. Add the following settings, then close the **Settings picker**.
 
-    * Prompt users to move Windows known folders to OneDrive
     * Silently move Windows know folders to OneDrive
     * Silently sign in users to the OneDrive sync app with their Windows credentials
     * Use OneDrive Files On-Demand
 
-1. On tab **2 Configuration settings**, enable all the selected settings. Under **Silently move Windows known folders to OneDrive**, also enable **Desktop (Device)**, **Documents (Device)**, and **Pictures (Device)**. Beside **Show notification to users after folders have been redirected (Device)**, select **Yes**. Beside **Tenant ID: (Device)**, paste the previously obtained tenant ID. Do this for both settings with this name. Click **Next**.
+1. On tab **2 Configuration settings**, enable all the selected settings. Under **Silently move Windows known folders to OneDrive**, also enable **Desktop (Device)**, **Documents (Device)**, and **Pictures (Device)**. Beside **Show notification to users after folders have been redirected (Device)**, select **Yes**. Beside **Tenant ID: (Device)**, paste the previously obtained tenant ID. Click **Next**.
 1. On tab **3 Scope tags**, click **Next**.
 1. On tab **4 Assignments**, click **Add all devices** and click **Next**.
 1. On tab **Review + create**, click **Create**.
@@ -97,8 +96,16 @@ Perform this task on LON-CL2.
 1. In You're all set!, click **Done**.
 1. Sign out.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com** and follow the prompts to configure Windows Hello.
+1. Open **File Explorer**.
 
-    After the desktop appears, verify that you are signed in to the OneDrive sync app and the known folders have been redirected. This may not work at the first signin, as the device needs some time to get registered to Intune. Continue with the next exercise, where you have the chance to verify the OneDrive sync app again.
+    In File Explorer, verify that Joni has a OneDrive - Contoso folder in the left navigation.
+
+    This may not work at the first signin, as the device needs some time to get registered to Intune. Continue with the next exercise, where you have the chance to verify the OneDrive sync app again.
+
+1. In File Explorer, click **OneDrive - Contoso**.
+
+    Verify that OneDrive contains your Joni's desktop, documents and pictures.
+
 
 ## Exercise 2: Manage the sync of SharePoint libraries using Intune
 
@@ -146,7 +153,9 @@ Perform this task on LON-CL2.
 1. Sign in as **Joni Sherman**.
 1. Open **File Explorer**.
 
-    Verify that you see a folder Contoso and the synced library is in this folder. If this does not work now. Continue with this lab and repeat this task.
+    In File Explorer, verify that you see a folder Contoso and the synced library is in this folder.
+
+    If OneDrive has not been configured automatically yet, you will not see the folders. In this case continue with the lab and repeat this task later.
 
 ## Exercise 3: Manage OneDrive retention
 
