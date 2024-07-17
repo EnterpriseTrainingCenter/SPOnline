@@ -4,13 +4,19 @@
 
 On **LON-CL1** sign in as **Administrator**.
 
+## Introduction
+
+Contoso wants to configure the hub Work @ Contoso and the associated site News @ Contoso so that all users can read and Debra Berger and Irvin Sayers can contribute. Lynne Robbins should be site admin on both sites. Later, a content scheduler list is added to the News @ Contoso site. On this list only Debra should contribute, Irvin should read, and nobody else. Finally, Contoso requires content approval for documents on the News @ Contoso site. Only Debra should approve documents.
+
+In this lab you configure the permissions to meet these requirements.
+
 ## Exercises
 
 1. [Manage site permissions](#exercise-1-manage-site-permissions)
 1. [Manage hub permissions](#exercise-2-manage-hub-permissions)
 1. [Manage list permissions](#exercise-3-manage-list-permissions)
-1. Manage folder permissions
-1. Manage permission levels
+1. [Manage permission levels](#exercise-4-manage-permission-levels)
+1. [Verify permissions user experience](#exercise-5-verify-permissions-user-experience)
 
 ## Exercise 1: Manage site permissions
 
@@ -298,20 +304,95 @@ Perform this task on LON-CL1.
 
 1. Click **Close**
 
-## Exercise 4: Manage folder permissions
+## Exercise 4: Manage permission levels
 
-1. Create a folder in the Documents library of the site Operations
-1. Create SharePoint groups for permssions on the folder
-1. Configure permission on the folder
-1. Add users to the SharePoint groups
-1. Verify permissions
+1. [Create a permission level](#task-1-create-a-permission-level) Approve in site News @ Contoso and enable the Approve items permission
+1. [Create a new SharePoint group](#task-2-create-a-sharepoint-group-grant-a-permission-level-and-add-users) in News @ Contoso with the name Approvers and grant the group Approve permissions on the site; add Debra Berger to the group
+1. [Enable content approval](#task-3-enable-content-approval) on the Documents library together with minor versions; users who can edit items should see draft items
+1. [Verify permissions](#task-4-verify-permissions)
 
-## Exercise 5: Manage permission levels
+### Task 1: Create a permission level
 
-1. Create a permission level Approve in site News @ Contoso and enable the Approve items permission
-1. Create a new SharePoint group in News @ Contoso with the name Approvers and grant the group Approve permissions on the site
-1. Add users to the SharePoint group
-1. Enable approval on the Documents library
-1. Verify permissions
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In site News @ Contoso, click the *Settings* icon and click **Site permissions**.
+1. In the Permissions panel, click the link **Advanced permission settings**.
+1. In Permissions, on the ribbon, click **Permission Levels**.
+1. In Permission Levels, click **Add a Permission Level**.
+1. In Add a Permission Level, under **Name**, type **Approve**. Under **Description**, type **Can view, edit, and approve items**. Under **List Permissions**, activate **Approve items**. Click **Create**.
+
+    Notice that activating Approve items also activates the following permissions:
+
+    * Edit items
+    * View items
+    * View Pages
+    * Open
+
+    If you deactivate any of them, Approve will also gets deactivated again.
+
+### Task 2: Create a SharePoint group, grant a permission level and add users
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In site News @ Contoso, click the *Settings* icon and click **Site contents**.
+1. In Site contents, click **Site settings**.
+1. In Site Settings, click **People and groups** (this is the first link).
+1. In People and Groups, in the left navigation, click **Groups** or **More...**
+1. Click **New**.
+1. In Create Group, under **Name**, type **News _ Contoso Approvers**. Under **About me**, type **Use this group to grant people approve permissions to the site**. Under **Give Group Permission to this Site**, activate **Approve - Can view, edit, and approve items**. Click **Create**.
+1. In News _ Contoso Approvers, click **New**.
+1. In Share 'News @ Contoso', find and click **Debra Berger** and click **Share**.
+
+### Task 3: Enable content approval
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In site News @ Contoso, click the *Settings* icon and click **Site contents**.
+1. In Site contents, click **Documents**.
+1. In Documents, click the *Settings* icon and click **Library settings**.
+1. In the panel Library settings, click **More library settings**.
+1. Settings, under **General Settings**, click **Versioning settings**.
+1. In Versionsing settings, under **Content Approval**, click **Yes**. Under **Document Version History**, click **Create major and minor (draft) versions**. Under **Draft Item Security**, click **Only users who can edit items**. Click **OK**.
+
+### Task 4: Verify permissions
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. In site News @ Contoso, click the *Settings* icon and click **Site contents**.
+1. In Site contents, click **Documents**.
+1. In Documents, click the *Settings* icon and click **Library settings**.
+1. In the panel Library settings, click **More library settings**.
+1. In Settings, under **Permissions and Management**, click **Permissions for this document library**.
+1. In Permissions, click **Check Permissions**.
+1. In Documents: Check Permissions, under **User/Group**, find and click **Irvin Sayers** and click **Check Now**.
+
+    Verify that Irvin has the Edit permission level given through the News _ Contoso Members group. Irvin also has Limited Access throguht the News _ Contoso Content scheduler Members group.
+
+1. In Documents: Check Permissions, under **User/Group**, find and click **Debra Berger** and click **Check Now**.
+
+    Verify that Debra has the Edit permission level given through the News _ Contoso Members group and the Approve permission level given through the News _ Contoso Approvers group. Debra also has Limited Access throguht the News _ Contoso Content scheduler Members group.
+
+1. Click **Close**.
+
+## Exercise 5: Verify permissions user experience
+
+If time allows, you can sign in with various users and try some operations according to the table below.
+
+| User                                   | Location                                          | Operations                                                                                                                  |
+| -------------------------------------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| AdeleV@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/work | Should have read access only                                                                                                |
+|                                        | https://\<your tenant\>.sharepoint.com/sites/news | Should have read access only                                                                                                |
+| IrvinS@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/news | Should have contribute access pages and documents, read access to Content scheduler, can only submit documents for approval |
+| IrvinS@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/news | Should have contribute access to everything including the Content scheduler, can approve documents                          |
 
 [figure 1]:/images/permissions-content-scheduler.png
