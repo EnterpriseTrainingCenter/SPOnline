@@ -106,7 +106,6 @@ Perform this task on LON-CL2.
 
     Verify that OneDrive contains your Joni's desktop, documents and pictures.
 
-
 ## Exercise 2: Manage the sync of SharePoint libraries using Intune
 
 1. [Obtain the ID of the library](#task-1-obtain-the-id-of-a-library) Documents in the site All Company
@@ -161,7 +160,8 @@ Perform this task on LON-CL2.
 
 1. [Configure the settings for retention and access delegation](#task-1-configure-the-settings-for-retention-and-access-delegation) so that OneDrive is retained for the maximum allowed time and Lynne Robbins is added as secondary owner of OneDrives of deleted users (as well as the manager of the user)
 1. [Delete user](#task-2-delete-user): Christie Cline and delegate access to Christie's OneDrive to Alex Wilber
-1. [Verify OneDrive access delegation](#task-3-verify-onedrive-access-delegation)
+1. [Verify OneDrive access delegation user experience](#task-3-verify-onedrive-access-delegation-user-experience) as Miriam Graham
+1. [Verify OneDrive access delegation using PowerShell](#task-4-verify-onedrive-access-delegation-using-powershell)
 
 ### Task 1: Configure the settings for retention and access delegation
 
@@ -198,14 +198,77 @@ Perform this task on LON-CL1.
 
     Note: The text **Give another user access to this user's OneDrive files for 30 days after the user is deleted** is hard-coded and does not reflect your actual retention setting.
 
-### Task 3: Verify OneDrive access delegation
+### Task 3: Verify OneDrive access delegation user experience
 
 *Important:* It takes up to 24 hours for the OneDrive cleanup job to run. Therefore, perform this task on the next course day.
 
 Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://outlook.office.com**.
+1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
+1. In the new Microsoft Edge guest instance, navigate to **https://outlook.office.com**.
 1. Sign in as **MiriamG@\<your tenant\>.onmicrosoft.com**.
 
-    Verify that Miriam received an email, telling her that she now has access to Christie's OneDrive. You may click the link in the email to view Christies OneDrive. It can take up to 24 hours until the email is received.
+    You should receive an email similar to [figure 1]. It can take up to 24 hours until the email arrives.
+
+1. Copy the link in the email.
+1. In the Microsoft Edge guest instance, open a new tab and navigate to the copied link (paste it in the address bar).
+
+    You should see the OneDrive of Christie Clien with some documents and folders.
+
+1. In OneDrive, click the *Settings* icon (the gear icon) and click **OneDrive settings**.
+1. In the left navigation, click **More Settings**.
+1. In More Settings, under **Manage access**, click **Site collection administrators**.
+
+    Verify that Alex Wilber, Christie Cline, and Miriam Graham are site collection administrators.Lynne Robbins would only be added, if Christie Cline had not had a manager assigned. However, Miriam could add or remove users here.
+
+### Task 4: Verify OneDrive access delegation using PowerShell
+
+*Important:* It takes up to 24 hours for the OneDrive cleanup job to run. Therefore, perform this task on the next course day.
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, click the down chevron and click **Windows PowerShell**.
+1. Connect to Sharepoint Online.
+
+    ````powershell
+    
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
+    ````
+
+1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Find Christie's OneDrive and store the reference in a variable.
+
+    ````powershell
+    $sPOSite = Get-SPOSite `
+        -Filter { Owner -eq "christiec@$tenantName.onmicrosoft.com" } `
+        -IncludePersonalSite $true
+    ````
+
+1. Verify that Christie's site was found.
+
+    ````powershell
+    $sPOSite
+    `````
+
+    You should see the URL and the Owner of Christie's OneDrive.
+
+1. Make Lynne Robbins the owner of Christie's OneDrive.
+
+    ````powershell
+    $loginName = "LynneR@$tenantName.onmicrosoft.com"
+    Set-SPOUser `
+        -Site $sPOSite -LoginName $loginName -IsSiteCollectionAdmin $true
+    ````
+
+1. List the site admins of Christie's OneDrive.
+
+    ````powershell
+    Get-SPOUser -Site $sPOSite | Where-Object { $PSItem.IsSiteAdmin }
+    ````
+
+    Verify that Alex Wilber, Christie Cline, Lynne Robbins, and Miriam Graham are site admins. If you want, you could add more site admins using the command from the previous step.
+
+[figure 1]:../images/mail-OneDrive-for-Business-contents-will-be-preserved.png
