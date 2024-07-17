@@ -32,6 +32,8 @@ Perfrom this task on LON-CL1.
     Set-SPOTenant -EnableAzureADB2BIntegration $true
     ````
 
+    Run the command from the previous step again to check the status of the integration.
+
 1. Disconnect from SharePoint Online.
 
     ```powershell
