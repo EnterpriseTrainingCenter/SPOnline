@@ -12,6 +12,7 @@ Contoso wants to build a home site using Viva Connections to enable global navig
 
 1. [Create a new root site](#exercise-1-create-a-new-root-site)
 1. [Configure Viva Connections and global navigation](#exercise-2-configure-viva-connections-and-global-navigation)
+1. [Configure and use the dashboard]
 
 ## Exercise 1: Create a new root site
 
@@ -107,9 +108,6 @@ Perform this task on LON-CL1.
     | /sites/Operations | Operations     |
     | /sites/Work       | Work @ Contoso |
 
-1. [Create a dashboard](#task-3-create-a-dashboard) with cards like News, Events, Assigned Tasks, Approvals, and OneDrive
-1. [Add Viva Connection web parts](#task-4-add-viva-connection-web-parts) Dashboard for Viva Connections and My Feed to the home page of the Contoso home site
-
 ### Task 1: Create a new Viva Connections experience
 
 Perform this task on LON-CL1.
@@ -146,7 +144,12 @@ Perform this task on LON-CL1.
 
 <!-- TODO: Verification of home site -->
 
-### Task 3: Create a dashboard
+## Exercise 3: Configure and use the dashboard
+
+1. [Create a dashboard](#task-2-create-a-dashboard) with cards like News, Events, Assigned Tasks, Approvals, and OneDrive
+1. [Add Viva Connection web parts](#task-2-add-viva-connection-web-parts) Dashboard for Viva Connections and My Feed to the home page of the Contoso home site
+
+### Task 1: Create a dashboard
 
 Perform this task on LON-CL1.
 
@@ -171,7 +174,7 @@ Perform this task on LON-CL1.
 
     In Site pages, verify that page with the name **Dashboard.aspx** exists.
 
-### Task 4: Add Viva Connection web parts
+### Task 2: Add Viva Connection web parts
 
 Perform this task on LON-CL1.
 
