@@ -487,3 +487,5 @@ Perform this task on LON-CL1.
     Verify that Lynne Robbins and Patti Fernandez are Site members.
 
 1. Close the SharePoint project-Governance panel.
+
+[figure 1]:/image

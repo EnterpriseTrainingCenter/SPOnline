@@ -277,4 +277,4 @@ Perform this task on LON-CL1.
     Disconnect-SPOService
     ````
 
-[figure 1]:../images/mail-OneDrive-for-Business-contents-will-be-preserved.png
+[figure 1]:/images/mail-OneDrive-for-Business-contents-will-be-preserved.png

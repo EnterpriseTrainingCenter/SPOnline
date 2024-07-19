@@ -165,5 +165,5 @@ Perform this task on LON-CL1.
 
 If time allows, you may verify that your invitation links do not work anymore.
 
-[figure 1]:../images/mail-sharing-invitation-folder.png
-[figure 2]:../images/mail-sharing-invitation-site.png
+[figure 1]:/images/mail-sharing-invitation-folder.png
+[figure 2]:/images/mail-sharing-invitation-site.png
