@@ -12,7 +12,7 @@ Contoso wants to build a home site using Viva Connections to enable global navig
 
 1. [Create a new root site](#exercise-1-create-a-new-root-site)
 1. [Configure Viva Connections and global navigation](#exercise-2-configure-viva-connections-and-global-navigation)
-1. [Configure and use the dashboard]
+1. [Configure and use the dashboard](#exercise-3-configure-and-use-the-dashboard)
 
 ## Exercise 1: Create a new root site
 
