@@ -46,7 +46,9 @@ Perform this task on LON-CL1.
 
 1. In Microsoft Store, search for **PowerShell**.
 1. In the search results, click **PowerShell**.
-1. In PowerShell, ensure, it is from **Microsoft Corporation** and click **Get**.
+1. In PowerShell, ensure, it is from **Microsoft Corporation** [figure 1] and click **Get**.
+
+You do not have to wait for the installation to complete.
 
 ### Task 2: Install Windows Terminal
 
@@ -55,7 +57,7 @@ Perform this task on LON-CL1.
 1. Open the **Microsoft Store**.
 1. In Microsoft Store, search for **Windows Terminal**.
 1. In the search results, click **Windows Terminal**.
-1. In Windows Terminal, ensure, it is from **Microsoft Corporation** and click **Get**.
+1. In Windows Terminal, ensure, it is from **Microsoft Corporation** [figure 2] and click **Get**.
 
 Wait for PowerShelll and Windows Terminal to finish installing. You can close the Microsoft Store now.
 
@@ -488,4 +490,5 @@ Perform this task on LON-CL1.
 
 1. Close the SharePoint project-Governance panel.
 
-[figure 1]:/image
+[figure 1]:/images/microsoft-store-powershell.png
+[figure 2]:/images/microsoft-store-windows-terminal.png
