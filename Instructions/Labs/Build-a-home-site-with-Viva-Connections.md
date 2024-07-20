@@ -142,7 +142,7 @@ Perform this task on LON-CL1.
 1. In Contoso home site, click the *Settings* icon and click **Global navigation**.
 1. In Global navigation settings panel, set **Enable global navigation** to **On**. You may customize the Logo or the Title, if you want. Under **Navigation source**, ensure **Hub or global navigation** is selected. Click **Save**.
 
-<!-- TODO: Verification of home site -->
+    Verify that in the SharePoint app bar, the SharePoint start page was replaced by the global navigation. It can take up to 24 hours for the changes to take effect.
 
 ## Exercise 3: Configure and use the dashboard
 
