@@ -29,7 +29,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/Mark8ProjectTeam**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the Mark 8 Project team site, click the *Settings* icon (the gear icon) and click **Site contents**.
 1. In Site contents, click **Documents**.
 1. In Documents, select **Compaign Sales Data.xlsx** and, on the toolbar, click **Share**.
@@ -45,7 +45,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select **Mark 8 Project Team** and click **Sharing**.
@@ -63,7 +63,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/Mark8ProjectTeam**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the Mark 8 Project team site, click the *Settings* icon (the gear icon) and click **Site contents**.
 1. In Site contents, click **Documents**.
 1. In Documents, select **Compaign Sales Data.xlsx** and, on the toolbar, click **Share**.
@@ -84,7 +84,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/Mark8ProjectTeam**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the Mark 8 Project team site, click the *Settings* icon (the gear icon) and click **Site contents**.
 1. In Site contents, click **Documents**.
 1. In Documents, select **Design** and click **Share**.
@@ -97,7 +97,7 @@ Check your email for the invitation message and follow the instructions to acces
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/Brand**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the Brand site, click the *Settings* icon (the gear icon) and click **Site permissions**.
 1. In the Permissions panel, click **Share site**.
 1. In the Site access panel, under A**dd users, Microsoft 365 Groups, or security groups to give them access to the site**, type one of your personal email addresses. In this case a non-Microsoft or -Entra account is preferred. Click your email address to confirm. Below your email address, click the drop down (currently **Read**) and select **Edit**. Click **Share**.
@@ -116,7 +116,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/Mark8ProjectTeam**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the Mark 8 Project team site, click the *Settings* icon (the gear icon) and click **Site usage**.
 1. In Site usage analytics, scroll down to the heading **Shared with external users**. If you do not see anything here, click **Run report**.
 
@@ -130,7 +130,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/Mark8ProjectTeam**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the Mark 8 Project team site, click the *Settings* icon (the gear icon) and click **Site contents**.
 1. In Site contents, click **Documents**.
 1. In Documents, in the context-menu of  **Compaign Sales Data.xlsx** click **Manage access**.

@@ -27,7 +27,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Active sites**.
 1. In Active sites, click **Create**.
@@ -43,7 +43,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Active sites**.
 1. Active sites, in the row of **Contoso home site**, in the column **URL**, click **../sites/homesite**.
@@ -60,7 +60,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, click the column header **URL** and click **A to Z** to sort the sites by URL.
@@ -89,7 +89,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select **Contoso home site** and, on the toolbar, click **Hub** and **Register as hub site**.
@@ -114,7 +114,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all**, click **Settings** and click **Viva**.
 1. In Microsoft Viva, click **Viva Connections**.
 1. In Viva Connections, click **Create and manage Viva Connections experiences**.
@@ -130,7 +130,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the hub navigation, click **Add link**.
 1. In Add, under **Address**, type **/sites/HR**. Under **Display Name**, type **HR** and click **OK**.
 1. In the panel Edit Hub navigation, hover the mouse just under **Brand**, and click **+**.
@@ -155,7 +155,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. On Contoso home site, click the *Settings* icon and click **Manage Viva Connections**.
 1. In the panel Manage Viva Connections, click **Create Dashboard**.
 1. Click **Add a card**.
@@ -180,7 +180,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
 1. On Contoso home site (ensure, you are on the empty home page of the site), in the top-right corner, click **Edit**.
 1. In the left column of the second section, click **Add a new web part in column 1** [figure 1] (hover with the mouse near the top of the section and click **+**).
