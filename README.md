@@ -22,5 +22,6 @@ If you are a trainer or participant of the course, you may fork this repository.
 1. [Manage OneDrive](Instructions/Labs/Manage-OneDrive.md)
 1. [Manage permissions](Instructions/Labs/Manage-permissions.md)
 1. [Manage sharing](Instructions/Labs/Manage-sharing.md)
+1. [Build a home site with Viva Connections](Instructions/Labs/Build-a-home-site-with-Viva-Connections.md)
 
 (c) aETC GmbH
