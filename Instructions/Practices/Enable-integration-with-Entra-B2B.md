@@ -19,7 +19,7 @@ Perfrom this task on LON-CL1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
 
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Verify the status of Entra B2B integration.
 
     ````powershell

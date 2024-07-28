@@ -93,7 +93,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Active sites**.
 1. In Active sites, click **Create**.
@@ -114,7 +114,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Active sites**.
 1. In Active sites, click **Create**.
@@ -129,7 +129,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Active sites**.
 1. In Active sites, click **Create**.
@@ -158,7 +158,7 @@ Perform this task on LON-CL1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
 
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Connect the site **OneDrive deployment project** to a new Microsoft 365 group with the same name and the alias **Project1Drive**.
 
     ````powershell
@@ -180,7 +180,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://teams.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the left navigation, click **Teams**.
 1. In Teams, at the top, click **+** and click **Create team**.
 1. In Create a team, click the link **More create team options**.
@@ -197,7 +197,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Active sites**.
 1. In Active sites, select **SharePoint Playground** and click **Delete**.
@@ -209,7 +209,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Active sites**.
 1. In Active sites, select **Onedrive deployment project** and click **Delete**.
@@ -221,7 +221,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Deleted sites**.
 1. In Deleted sites, select **SharePoint Playground** and click **Restore**.
@@ -235,7 +235,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Deleted sites**.
 1. In Deleted sites, select **OneDrive deployment project** and click **Restore**.
@@ -264,7 +264,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select **Contoso home** and click **Membership**.
@@ -454,7 +454,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Settings**.
 1. In Settings, click **Site creation**.
@@ -484,7 +484,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Settings**.
 1. In Settings, click **Site storage limits**.
@@ -496,7 +496,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select **IT department**.
@@ -517,7 +517,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, click **SharePoint project**.
@@ -532,7 +532,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/SharePointProject** (the old URL).
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
 Verify that you are redirected to the new URL.
 
@@ -548,7 +548,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
     You should see a generic communication site. You may explore the site further.
 
@@ -558,7 +558,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select **Communication site** with the root URL. On the toolbar click **Manage home site** (you may have to click the ellipsis to see this command).
@@ -575,7 +575,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
     You should see a site using the organization home template with the name Contoso home.
 
@@ -618,7 +618,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select **Contoso home** and click **Hub**, **Register as hub site**.
@@ -639,7 +639,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select **IT department internal**, **IT help desk**, **OneDrive deployment project**, and **SharePoint project**. click **Bulk edit**, **Hub association**.
@@ -651,7 +651,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select **HR** and click **Hub**, **Edit hub site settings**.
@@ -665,7 +665,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In active site, beside **Contoso home**, click the URL.
@@ -679,7 +679,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In active site, beside **IT department**, click the URL.
@@ -717,7 +717,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In active site, beside **Contoso home**, click the URL.
@@ -748,7 +748,7 @@ Perform this task on LON-CL1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
 
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Set the no access redirect url.
 
     ````powershell
@@ -775,7 +775,7 @@ Perform this task on LON-CL1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
 
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Store the site **Joni's group** in a variable
 
     ````powershell
@@ -811,7 +811,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to the URL you copied to the clipboard in the previous task.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
     You should get redirected to the page you configured before.
 
@@ -829,7 +829,7 @@ Perform this task on LON-CL1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
 
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Store the site **OneDrive deployment project** in a variable
 
     ````powershell
@@ -861,6 +861,6 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to the URL you copied to the clipboard in the previous task.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
     You should see a warning message at the top of the page telling you that this site is read-only at the administrator's request. Verify that you cannot add or change any content.

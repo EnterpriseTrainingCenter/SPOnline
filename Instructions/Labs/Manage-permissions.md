@@ -39,7 +39,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select the site **Work @ Contoso** and click **Membership**.
@@ -64,7 +64,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/work**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the Work @ Contoso site, click the *Settings* icon (the gear icon) and click **Site permissions**.
 
     Take a moment to explore the current site permissions They should be the permissions you just configured in SharePoint admin center.
@@ -81,7 +81,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/work**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the Work @ Contoso site, click the *Settings* icon (the gear icon) and click **Site permissions**.
 1. In the Permissions panel, click the link **Advanced permission settings**.
 
@@ -106,7 +106,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select the site **News @ Contoso** and click **Membership**.
@@ -148,7 +148,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/work**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the Work @ Contoso site, click the *Settings* icon (the gear icon) and click **Site permissions**.
 1. In the Permissions panel, click the tab **Hub**.
 1. Click the switch below **Sync hub permissions to associated sites** to change the status to **On**. Under **Hub visitors** in **Enter a name or group** find and click **sg-Executive**.
@@ -160,7 +160,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the News @ Contoso site, click the *Settings* icon (the gear icon) and click **Site permissions**.
 1. In the Permissions panel, click **Advanced permissions settings**.
 
@@ -179,7 +179,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the News @ Contoso site, click the *Settings* icon (the gear icon) and click **Site permissions**.
 1. In the Permissions panel, click **Advanced permissions settings**.
 
@@ -212,7 +212,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In site News @ Contoso, click the *Settings* icon and click **Site contents**.
 1. In Site contents, cick **New** and click **List**.
 1. In Create a list, click **Content scheduler**.
@@ -226,7 +226,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In site News @ Contoso, click the *Settings* icon and click **Site contents**.
 1. In Site contents, click **Site settings**.
 1. In Site Settings, click **People and groups** (this is the first link).
@@ -246,7 +246,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In site News @ Contoso, click the *Settings* icon and click **Site contents**.
 1. In Site contents, click **Content scheduler**.
 1. In Content scheduler, click the *Settings* icon and click **List settings**.
@@ -269,7 +269,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In site News @ Contoso, click the *Settings* icon and click **Site contents**.
 1. In Site contents, click **Site settings**.
 1. In Site Settings, click **People and groups** (this is the first link).
@@ -288,7 +288,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In site News @ Contoso, click the *Settings* icon and click **Site contents**.
 1. In Site contents, click **Content scheduler**.
 1. In Content scheduler, click the *Settings* icon and click **List settings**.
@@ -317,7 +317,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In site News @ Contoso, click the *Settings* icon and click **Site permissions**.
 1. In the Permissions panel, click the link **Advanced permission settings**.
 1. In Permissions, on the ribbon, click **Permission Levels**.
@@ -339,7 +339,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In site News @ Contoso, click the *Settings* icon and click **Site contents**.
 1. In Site contents, click **Site settings**.
 1. In Site Settings, click **People and groups** (this is the first link).
@@ -353,7 +353,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In site News @ Contoso, click the *Settings* icon and click **Site contents**.
 1. In Site contents, click **Documents**.
 1. In Documents, click the *Settings* icon and click **Library settings**.
@@ -367,7 +367,7 @@ Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
-1. Sign in as **LynnR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In site News @ Contoso, click the *Settings* icon and click **Site contents**.
 1. In Site contents, click **Documents**.
 1. In Documents, click the *Settings* icon and click **Library settings**.
