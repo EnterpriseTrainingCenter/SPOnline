@@ -7,8 +7,7 @@ On **LON-CL1**, sign in as **Administrator**.
 ## Exercises
 
 1. [Manage organization assets libraries](#exercise-1-manage-organization-assets-libraries)
-1. Create an organization news site
-1. Configure and manage the term store
+1. Manage the term store
 1. Manage content types
 
 ## Exercise 1: Manage organization assets libraries
@@ -190,3 +189,17 @@ Perform this task on LON-CL1.
 1. In the image browser, click **Your organization** and click **Images**.
 1. In Images click either **Cats** or **Dogs**, select an image and click **Select**.
 1. Click **Save as draft**.
+
+## Exercise 2: Manage the term store
+
+1. Configure term store permisions
+1. Create a term group
+1. Create a term set
+1. Add a managed metadata column
+1. Add terms to documents
+
+## Exercise 3: Manage content types
+
+1. Create content types
+1. Add content types to a library
+1. Use content types
