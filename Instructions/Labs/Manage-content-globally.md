@@ -7,7 +7,7 @@ On **LON-CL1**, sign in as **Administrator**.
 ## Exercises
 
 1. [Manage organization assets libraries](#exercise-1-manage-organization-assets-libraries)
-1. Manage the term store
+1. [Manage the term store](#exercise-2-manage-the-term-store)
 1. Manage content types
 
 ## Exercise 1: Manage organization assets libraries
@@ -192,14 +192,131 @@ Perform this task on LON-CL1.
 
 ## Exercise 2: Manage the term store
 
-1. Configure term store permisions
-1. Create a term group
-1. Create a term set
-1. Add a managed metadata column
-1. Add terms to documents
+1. [Configure term store permissions](#task-1-configure-term-store-permissions) by adding Lynne Robbins as admin
+1. [Add a term group](#task-2-add-a-term-group) Sales and grant the group Sales and Marketing members the Contribute permission
+1. [Add a term set](#task-3-add-a-term-set) Region to the term group Sales and add terms:
+
+    * Europe
+        * Central Europe
+        * East Europe
+        * North Europe
+        * South Europe
+        * West Europe
+    * North America
+        * Canada
+        * USA
+
+1. A[dd a managed metadata column](#task-4-add-a-managed-metadata-column) for the Region term set to the documents library in the site U. S. Sales. Only terms in the North America region should be selectable.
+1. [Add terms to documents](#task-5-add-terms-to-documents) in the folder Signed Agreements in Sales West of the document library in site U. S. Sales
+
+    | Document                      | Region |
+    | ----------------------------- | ------ |
+    | Fabrikam FY20 Contract.pdf    | USA    |
+    | Litware FY20 Contract.pdf     | USA    |
+    | Northwind FY17 Contract.pdf   | Canada |
+    | Northwind FY18 Contract.pdf   | Canada |
+    | Tailspin FY20 Contract.pdf    | USA    |
+
+### Task 1: Configure term store permissions
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Content services** and **Term store**.
+1. In Term store, with **Taxononmy** selected in the left pane, in the right pane, beside **Admins**, click **Edit**.
+1. In the Edit term store admins panel, find and click **Lynne Robbins** and click **Save**.
+
+### Task 2: Add a term group
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Content services** and **Term store**.
+1. In Term store, beside **Taxonomy**, click the ellipsis and **Add term group**. Enter **Sales**.
+1. With the term group Sales selected, in the right pane, beside **Group managers**, click **Edit**.
+1. In the Edit properties panel, find and click **Sales and Marketing Members**. Ensure that, beside **Sales and Marketing Members**, **Contributor** is selected and click **Save**.
+
+### Task 3: Add a term set
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Content services** and **Term store**.
+1. In Term store, beside **Sales**, click the ellipsis and click **Add term set**. Enter **Regions**.
+1. Beside **Regions**, click the ellipsis and click **Add term**. Enter **North America**. Repeat this step to add the term **Europe**.
+1. Beside **North America**, click the ellipsis and click **Add term**. Enter **Canada**. Repeat this step to add the term **USA**.
+1. Beside **Europe**, click the ellipsis and click **Add term**. Enter **North Europe**. Repeat this step to add the terms **West Europe**, **Central Europe**, **South Europe** and **East Europe**.
+1. Select **Europe** and click the tab **Usage settings**.
+1. On the tab Usage settings, beside **Available for Tagging** click **Edit**.
+1. In the panel Available for tagging, deactivate **Enable** and cick **Save**.
+
+Repeat from step 10 for the term **North America.**
+
+### Task 4: Add a managed metadata column
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/USSales**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. On the U. S. Sales site, click the *Settings* icon (the gear icon) and **Site contents**.
+1. In Contents, click **Documents**.
+1. In Documents, click **Add column**.
+1. In the Create a column fly-out, click **Managed metadata** and **Next**.
+1. In the Create a column panel, under **Name**, type **Region**. Under **Term set or term**, click **Select**.
+1. In the Select term set or term panel, expand **Sales**, **Region** and select **North America**. Click **Save**.
+1. In the **Create a column** panel, click **Save**.
+
+### Task 5: Add terms to documents
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/USSales**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. On the U. S. Sales site, click the *Settings* icon (the gear icon) and **Site contents**.
+1. In Contents, click **Documents**.
+1. In Documents, click **Sales West** and **Signed Agreements**.
+1. In Signed Agreements, in the context menu of **Fabrikam FY20 contract.pdf**, click **Details**.
+1. In the details panel, under **Region**, click the icon right to the text field, select **USA** and click **Apply**. Alternatively, type **USA** and press ENTER or click it.
+
+Repeat steps 7 and 8 for the remaining documents in the folder according to the table above.
 
 ## Exercise 3: Manage content types
 
+1. [Grant permissions on the content type hub site](#task-1-grant-permissions-on-the-content-type-hub-site) to Lynne Robbins
 1. Create content types
 1. Add content types to a library
 1. Use content types
+
+### Task 1: Grant permissions on the content type hub site
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/contentTypeHub**.
+1. Sign in as global administrator.
+1. In the Team site, click the icon *Settings* (the gear icon) and **Site permissions**.
+1. In the Site permissions panel, click **Share site**.
+1. Under Site access, find and click **Lynne Robbins**. Under **Lynne Robbins**, click **Read** and select **Full control**. Click **Add**.
+
+### Task 2: Create content types
+
+Perform this task on LON-CL1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
+1. In SharePoint admin center, click **Content services** and **Content type gallery**.
+1. 
+
