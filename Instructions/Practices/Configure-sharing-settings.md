@@ -16,6 +16,7 @@ Configure the global sharing settings for Sharepoint and OneDrive as follows:
 
 Perform this task on LON-CL1.
 
+1. Sign in to **LON-CL1** as **Administrator**.
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
