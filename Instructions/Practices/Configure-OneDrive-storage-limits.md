@@ -6,7 +6,7 @@ Set the default limit for OneDrive to 100 GB. Change the limit for Patti Fernand
 
 ## Instructions
 
-Perfrom this task on LON-CL1.
+Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
