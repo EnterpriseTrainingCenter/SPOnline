@@ -24,6 +24,7 @@ Perform this task on LON-CL1.
 
     Discuss the results of the tool. Take a note of the **Page load time**, e.g. 2379ms.
 
+    If time allows, repeat the diagnostics several times to get stable results.
 
 [Figure 1]:/images/edge-Add-ons-page-diagnostics-for-sharepoint.png
 [Figure 2]:/images/edge-Page-diagnostics-for-SharePoint.png

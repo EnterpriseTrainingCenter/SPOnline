@@ -14,6 +14,9 @@ If you are a trainer or participant of the course, you may fork this repository.
 1. [Block file types from syncing](Instructions/Practices/Block-file-types-from-syncing.md)
 1. [Enable integration with Entra B2B](Instructions/Practices/Enable-integration-with-Entra-B2B.md)
 1. [Configure sharing settings](Instructions/Practices/Configure-sharing-settings.md)
+1. [Declare an organization news site](Instructions/Practices/Declare-an-organization-news-site.md)
+1. [Explore the Page Diagnostics for SharePoint tool](Instructions/Practices/Explore-the-Page-Diagnostics-for-SharePoint-tool.md)
+1. [Enable the Content Delivery Network](Instructions/Practices/Enable-the-Content-Delivery-Network.md)
 
 ## Labs
 
@@ -25,5 +28,6 @@ If you are a trainer or participant of the course, you may fork this repository.
 1. [Build a home site with Viva Connections](Instructions/Labs/Build-a-home-site-with-Viva-Connections.md)
 1. [Manage Forms and Lists](Instructions/Labs/Manage-forms-and-lists.md)
 1. [Manage Search](Instructions/Labs/Manage-Search.md)
+1. [Manage content globally](Instructions/Labs/Manage-content-globally.md)
 
 (c) aETC GmbH
