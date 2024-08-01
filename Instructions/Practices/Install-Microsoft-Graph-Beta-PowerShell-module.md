@@ -6,7 +6,7 @@ On LON-CL1, install the Microsoft Graph Beta PowerShell module.
 
 ## Instructions
 
-Perfrom this task on LON-CL1.
+Perform this task on LON-CL1.
 
 1. Sign in to **LON-CL1** as **Administrator**.
 1. Open **Terminal**.

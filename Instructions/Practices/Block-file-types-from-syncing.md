@@ -6,7 +6,7 @@ Block the sync of PST files and Access databases.
 
 ## Instructions
 
-Perfrom this task on LON-CL1.
+Perform this task on LON-CL1.
 
 1. Sign in to **LON-CL1** as **Administrator**.
 1. Open **Microsoft Edge**.
