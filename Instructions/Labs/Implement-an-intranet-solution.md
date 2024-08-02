@@ -6,8 +6,8 @@ On **LON-CL1**, sign in as **Administrator**.
 
 You must have created the following sites. If you have completed the lab [Site administration](Site-administration.md), these sites should be present. If you are missing a site, refer to the tasks below to create them.
 
-| Site name                   | URL                                                   | Task
-| --------------------------- | ----------------------------------------------------- |
+| Site name                   | URL                                                   | Task |
+| --------------------------- | ----------------------------------------------------- | ---- |
 | IT department               | /sites/IT                                             | [Create communication sites](Site-administration.md#task-3-create-communication-sites) |
 | IT department internal      | /sites/IT-internal                                    | [Create a team site with a Microsoft 365 group](Site-administration.md#task-1-create-a-team-site-with-a-microsoft-365-group) |
 | IT help desk                | /sites/IThelpdesk                                     | [Verify that users can create SharePoint sites](Site-administration.md#task-4-verify-that-users-can-create-sharepoint-sites) |
