@@ -66,8 +66,8 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 
     | Site name                   | Site description                                                  | Site address            |
     | --------------------------- | ----------------------------------------------------------------- | ----------------------- |
-    | OneDrive deployment project | Plan, deploy and maintain OneDrive                                | ../teams/Project1Drive  |
-    | SharePoint playground       | Team site without Microsoft 365 group to test SharePoint features | ../sites/PlaygroundSite |
+    | OneDrive deployment project | Plan, deploy, and maintain OneDrive                                | ../teams/Project1Drive  |
+    | SharePoint project       | Play, deploy, and maintain OneDrive | ../sites/PlaygroundSite |
 
     For all sites, the language is English, and the primary adminsitrator is Lynne Robbins. Select your local time zone.
 
@@ -82,9 +82,9 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 
 1. [Connect the team site OneDrive deployment project to a new Microsoft 365 group](#task-4-connect-a-team-site-to-a-new-microsoft-365-group) with the alias Project1Drive
 1. [Upgrade the Microsoft 365 group OneDrive deployment project to a team](#task-5-upgrade-a-microsoft-365-group-to-a-team)
-1. [Delete a site without a Microsoft 365 group](#task-6-delete-a-site-without-a-microsoft-365-group), SharePoint Playground
+1. [Delete a site without a Microsoft 365 group](#task-6-delete-a-site-without-a-microsoft-365-group), SharePoint Project
 1. [Delete a Microsoft 365 group-connected site](#task-7-delete-a-microsoft-365-group-connected-site), OneDrive deployment project
-1. [Restore site](#task-8-restore-site) SharePoint Playground
+1. [Restore site](#task-8-restore-site) SharePoint Project
 1. [Restore Microsoft 365 group OneDrive](#task-9-restore-microsoft-365-group) deployment project
 
 ### Task 1: Create a team site with a Microsoft 365 group
@@ -121,7 +121,7 @@ Perform this task on LON-CL1.
 1. In Create a site: Select the site type, click **Browse more sites**.
 1. In Other options, under **Choose a template**, ensure **Team site** is selected. Under **Site name**, type **OneDrive deployment project**. Under **Site description**, type **Plan, deploy and maintain OneDrive**. Under **Site address**, in the drop-down, select **../teams/** and, beside, type **Project1Drive**. Under **Primary administrator**, find and click **Lynne Robbins**. Click **Next**.
 1. Under **Select a language**, ensure **English** is selected. Under **Time zone**, select your time zone. Click **Create site**.
-1. Repeat from step 6 for the site **SharePoint playground**. Take the parameters for this site from the table above.
+1. Repeat from step 6 for the site **SharePoint project**. Take the parameters for this site from the table above.
 
 ### Task 3: Create communication sites
 
@@ -200,8 +200,8 @@ Perform this task on LON-CL1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Active sites**.
-1. In Active sites, select **SharePoint Playground** and click **Delete**.
-1. In the Delete SharePoint Playground? panel, click **Delete**.
+1. In Active sites, select **SharePoint project** and click **Delete**.
+1. In the Delete SharePoint project? panel, click **Delete**.
 
 ### Task 7: Delete a Microsoft 365 group-connected site
 
@@ -213,7 +213,7 @@ Perform this task on LON-CL1.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Active sites**.
 1. In Active sites, select **Onedrive deployment project** and click **Delete**.
-1. In the Delete SharePoint Playground? panel, click **Delete**.
+1. In the Delete Onedrive deployment project? panel, click **Delete**.
 
 ### Task 8: Restore site
 
@@ -224,10 +224,10 @@ Perform this task on LON-CL1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Deleted sites**.
-1. In Deleted sites, select **SharePoint Playground** and click **Restore**.
+1. In Deleted sites, select **SharePoint project** and click **Restore**.
 1. Click **Active sites**.
 
-    Verify that SharePoint Playground is listed in Active sites again.
+    Verify that SharePoint project is listed in Active sites again.
 
 ### Task 9: Restore Microsoft 365 group
 
