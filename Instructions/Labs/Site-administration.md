@@ -19,8 +19,6 @@ Your company wants to manage site storage limits manually. All existing sites sh
 
 The address of a site needs to be changed to a more convenient URL. Users should be redirected from the old URL to the new.
 
-After the design of the new home site is finished, your company wants you to replace to unused generic root site with the new site. As a next step, your company wants to introduce hubs to have a common navigation between sites.
-
 A site created by a user should be made unavailable. Furthermore, the site of a cancelled project should be made read-only.
 
 ## Exercises
@@ -30,9 +28,7 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 1. [Manage site creation](#exercise-3-manage-site-creation)
 1. [Manage storage limits](#exercise-4-manage-storage-limits)
 1. [Change a site address](#exercise-5-change-a-site-address)
-1. [Replace the root site](#exercise-6-replace-the-root-site)
-1. [Manage hub sites](#exercise-7-manage-hub-sites)
-1. [Manage lock states](#exercise-8-manage-lock-states)
+1. [Manage lock states](#exercise-6-manage-lock-states)
 
 ## Exercise 1: Manage sites
 
@@ -67,7 +63,7 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
     | Site name                   | Site description                                                  | Site address            |
     | --------------------------- | ----------------------------------------------------------------- | ----------------------- |
     | OneDrive deployment project | Plan, deploy and maintain OneDrive                                | ../teams/Project1Drive  |
-    | SharePoint playground       | Team site without Microsoft 365 group to test SharePoint features | ../sites/PlaygroundSite |
+    | SharePoint project       | Team site without Microsoft 365 to manage the SharePoint project | ../sites/SharePointProject |
 
     For all sites, the language is English, and the primary adminsitrator is Lynne Robbins. Select your local time zone.
 
@@ -82,9 +78,9 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 
 1. [Connect the team site OneDrive deployment project to a new Microsoft 365 group](#task-4-connect-a-team-site-to-a-new-microsoft-365-group) with the alias Project1Drive
 1. [Upgrade the Microsoft 365 group OneDrive deployment project to a team](#task-5-upgrade-a-microsoft-365-group-to-a-team)
-1. [Delete a site without a Microsoft 365 group](#task-6-delete-a-site-without-a-microsoft-365-group), SharePoint Playground
+1. [Delete a site without a Microsoft 365 group](#task-6-delete-a-site-without-a-microsoft-365-group), SharePoint Project
 1. [Delete a Microsoft 365 group-connected site](#task-7-delete-a-microsoft-365-group-connected-site), OneDrive deployment project
-1. [Restore site](#task-8-restore-site) SharePoint Playground
+1. [Restore site](#task-8-restore-site) SharePoint Project
 1. [Restore Microsoft 365 group OneDrive](#task-9-restore-microsoft-365-group) deployment project
 
 ### Task 1: Create a team site with a Microsoft 365 group
@@ -121,7 +117,7 @@ Perform this task on LON-CL1.
 1. In Create a site: Select the site type, click **Browse more sites**.
 1. In Other options, under **Choose a template**, ensure **Team site** is selected. Under **Site name**, type **OneDrive deployment project**. Under **Site description**, type **Plan, deploy and maintain OneDrive**. Under **Site address**, in the drop-down, select **../teams/** and, beside, type **Project1Drive**. Under **Primary administrator**, find and click **Lynne Robbins**. Click **Next**.
 1. Under **Select a language**, ensure **English** is selected. Under **Time zone**, select your time zone. Click **Create site**.
-1. Repeat from step 6 for the site **SharePoint playground**. Take the parameters for this site from the table above.
+1. Repeat from step 6 for the site **SharePoint Project**. Take the parameters for this site from the table above.
 
 ### Task 3: Create communication sites
 
@@ -200,8 +196,8 @@ Perform this task on LON-CL1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Active sites**.
-1. In Active sites, select **SharePoint Playground** and click **Delete**.
-1. In the Delete SharePoint Playground? panel, click **Delete**.
+1. In Active sites, select **SharePoint Project** and click **Delete**.
+1. In the Delete SharePoint Project? panel, click **Delete**.
 
 ### Task 7: Delete a Microsoft 365 group-connected site
 
@@ -213,7 +209,7 @@ Perform this task on LON-CL1.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Active sites**.
 1. In Active sites, select **Onedrive deployment project** and click **Delete**.
-1. In the Delete SharePoint Playground? panel, click **Delete**.
+1. In the Delete Onedrive deployment project? panel, click **Delete**.
 
 ### Task 8: Restore site
 
@@ -224,10 +220,10 @@ Perform this task on LON-CL1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Deleted sites**.
-1. In Deleted sites, select **SharePoint Playground** and click **Restore**.
+1. In Deleted sites, select **SharePoint Project** and click **Restore**.
 1. Click **Active sites**.
 
-    Verify that SharePoint Playground is listed in Active sites again.
+    Verify that SharePoint Project is listed in Active sites again.
 
 ### Task 9: Restore Microsoft 365 group
 
@@ -521,7 +517,7 @@ Perform this task on LON-CL1.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, click **SharePoint project**.
-1. In the IT help desk panel, on the tab General, under **Site address**, click **Edit**.
+1. In the SharePoint project panel, on the tab General, under **Site address**, click **Edit**.
 1. In Edit SharePoint site address, under **SharePoint site address**, type **SharePoint-project** and click **Save**.
 1. In the message box Change site name?, click **No**.
 1. Close the panel.
@@ -536,173 +532,7 @@ Perform this task on LON-CL1.
 
 Verify that you are redirected to the new URL.
 
-## Exercise 6: Replace the root site
-
-1. [Explore the current root site](#task-1-explore-the-current-root-site)
-1. [Replace the root site](#task-2-replace-the-root-site) with the new Contoso home
-1. [Verify the new root site](#task-3-verify-the-new-root-site)
-
-### Task 1: Explore the current root site
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-
-    You should see a generic communication site. You may explore the site further.
-
-### Task 2: Replace the root site
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
-1. In SharePoint admin center, click **Active sites**.
-1. In Active sites, select **Communication site** with the root URL. On the toolbar click **Manage home site** (you may have to click the ellipsis to see this command).
-1. In the Home site panel, under **Current home site**, beside the current home site, click the **X** icon to remove it as home site. Click **Save**.
-1. In **Active Sites**, in the row of site **Contoso home**, in the column **URL**, in the context-menu of the URL, click **Copy link**.
-1. Select **Communication site** with the root URL. On the toolbar click **Replace site** (you may have to click the ellipsis to see this command).
-1. In the panel Replace root site, under **URL of the site you want to use**, paste the copied URL of Contoso home. Click **Save**.
-
-    Wait for the action to complete. This may take a minute or two.
-
-### Task 3: Verify the new root site
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-
-    You should see a site using the organization home template with the name Contoso home.
-
-## Exercise 7: Manage hub sites
-
-1. [Register sites as hub sites](#task-1-register-sites-as-hub-sites)
-
-    * Contoso home
-    * IT department
-    * Executive corner
-    * HR
-
-1. [Associate sites with the hub](#task-2-associate-sites-with-the-hub) IT department:
-
-    * IT department internal
-    * IT help desk
-    * OneDrive deployment project
-    * SharePoint project
-
-1. [Associate hubs with the parent hub](#task-3-associate-hubs-with-a-parent-hub) Contoso home:
-
-    * IT department
-    * Executive corner
-    * HR
-
-1. [Edit the navigation on the top-level hub](#task-4-edit-the-navigation-on-the-top-level-hub) by adding all associated hubs under the display name Hubs.
-1. [Edit the navigation on the hub site](#task-5-edit-the-navigation-on-the-hub-site) following the structure below:
-
-    * Groups and Teams (label)
-        * IT internal (link to site)
-        * IT help desk (link to site)
-    * Projects (label)
-        * OneDrive deployment project (link to site)
-        * SharePoint project (link to site)
-    * Hubs (associated child hubs)
-
-### Task 1: Register sites as hub sites
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
-1. In SharePoint admin center, click **Active sites**.
-1. In Active sites, select **Contoso home** and click **Hub**, **Register as hub site**.
-1. In the Register as hub site panel, accept the defaults and click **Save**.
-1. Close the panel.
-1. Repat steps 6 - 8 for the site **IT department**.
-1. In active sites, select **Executive Corner** and click **Hub**, **Change hub association**.
-1. In the panel Edit hub association, under **Select a hub**, select **None** and click **Save**.
-1. Close the panel.
-1. With Executive corner still selected, click **Hub**, **Register as hub site**.
-1. In the Register as hub site panel, accept the defaults and click **Save**.
-1. Close the panel.
-1. Repeat steps 10 - 15 for the site HR.
-
-### Task 2: Associate sites with the hub
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
-1. In SharePoint admin center, click **Active sites**.
-1. In Active sites, select **IT department internal**, **IT help desk**, **OneDrive deployment project**, and **SharePoint project**. click **Bulk edit**, **Hub association**.
-1. In the panel Edit hub association, under **Select a hub**, select **IT department** and click **Save**.
-
-### Task 3: Associate hubs with a parent hub
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
-1. In SharePoint admin center, click **Active sites**.
-1. In Active sites, select **HR** and click **Hub**, **Edit hub site settings**.
-1. In the panel Hub site settings, under **Parent hub association**, select **Contoso home** and click **Save**.
-1. Close the panel.
-1. Repeat steps 6 - 8 for **Executive corner** and **HR**.
-
-### Task 4: Edit the navigation on the top-level hub
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
-1. In SharePoint admin center, click **Active sites**.
-1. In active site, beside **Contoso home**, click the URL.
-1. On the site Contoso home, in the hub navigation bar, click **Add link**.
-1. In the Add panel, under **Choose an option**, select **Associated hubs**. Under Display name, type **Hubs** and click **OK**.
-1. In the Edit hub navigation panel, click **Save**.
-
-### Task 5: Edit the navigation on the hub site
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
-1. In SharePoint admin center, click **Active sites**.
-1. In active site, beside **IT department**, click the URL.
-1. On the page IT department, in the hub navigation bar, click **Add link**.
-1. In the Add panel, under **Choose an option**, select **Label**. Under Display name, type **Groups and teams** and click **OK**.
-1. In the Edit hub navigation panel, hover the mouse just under the **Group and teams** and click the **+**.
-1. In the Add panel, under **Choose an option**, select **Label**. Under Display name, type **Projects** and click **OK**.
-1. In the Edit hub navigation panel, hover the mouse just under the **Group and teams** and click the **+**.
-1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/IT-internal**.  Under Display name, type **IT internal** and click **OK**.
-1. In the Edit hub navigation panel, to the right of **IT internal**, click the ellipsis and click **Make sub link**.
-1. In the Edit hub navigation panel, hover the mouse just under the **IT internal** and click the **+**.
-1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/IT-helpdesk**.  Under Display name, type **IT help desk** and click **OK**.
-1. In the Edit hub navigation panel, hover the mouse just under the **Projects** and click the **+**.
-1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/Project1Drive**.  Under Display name, type **OneDrive deployment project** and click **OK**.
-1. In the Edit hub navigation panel, to the right of **OneDrive deployment project**, click the ellipsis and click **Make sub link**.
-1. In the Edit hub navigation panel, hover the mouse just under the **OneDrive deployment project** and click the **+**.
-1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/SharePoint-project**.  Under Display name, type **SharePoint project** and click **OK**.
-1. In the Edit hub navigation panel, hover the mouse just under the **SharePoint project** and click the **+**.
-1. In the Add panel, under **Choose an option**, select **Associated child hubs**. Under Display name, type **Hubs** and click **OK**.
-1. In the Edit hub navigation panel, to the right of **Hubs**, click the ellipsis and click **Promote sub link**.
-1. In the Edit hub navigation panel, click **Save**.
-
-## Exercise 8: Manage lock states
+## Exercise 6: Manage lock states
 
 1. [Add a page](#task-1-add-a-page) to the site Contoso home telling users that the content of the site is unavaible.
 1. [Set the tenant's unavailability page](#task-2-set-the-tenants-unavailability-page) to the page you just created
