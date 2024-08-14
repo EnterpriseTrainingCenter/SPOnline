@@ -47,7 +47,7 @@ You do not have to wait for the installation to complete.
 
 Perform this task on LON-CL1.
 
-1. Open **Windows PowerShell**.
+1. Run **Windows PowerShell** as Administrator.
 1. Download the MSI file of PowerShell.
 
     ````powershell
@@ -69,6 +69,8 @@ Perform this task on LON-CL1.
 
 ### Task 2: Install Windows Terminal
 
+#### Desktop experience
+
 Perform this task on LON-CL1.
 
 1. Open the **Microsoft Store**.
@@ -76,7 +78,57 @@ Perform this task on LON-CL1.
 1. In the search results, click **Windows Terminal**.
 1. In Windows Terminal, ensure, it is from **Microsoft Corporation** [figure 2] and click **Get**.
 
-Wait for PowerShelll and Windows Terminal to finish installing. You can close the Microsoft Store now.
+Wait for PowerShell and Windows Terminal to finish installing. You can close the Microsoft Store now.
+
+#### Windows PowerShell
+
+Perform this task on LON-CL1.
+
+1. Run **Windows PowerShell** as Administrator.
+1. Download the pre-install-kit for Windows 10.
+
+    ````powershell
+    $sourcePath = `
+        'https://github.com/microsoft/terminal/releases/download/v1.20.11781.0'
+    $fileName = `
+        "Microsoft.WindowsTerminal_1.20.11781.0_8wekyb3d8bbwe.msixbundle_Windows10_PreinstallKit.zip"
+    Start-BitsTransfer `
+        -Source "$sourcePath/$fileName" `
+        -Destination  ~\Downloads\$fileName
+    `````
+
+1. Expand the zip file Microsoft.WindowsTerminal_Win10_*PreinstallKit.zip
+
+    ````powershell
+    Set-Location ~\Downloads
+    Expand-Archive `
+        .\Microsoft.WindowsTerminal_*.msixbundle_Windows10_PreinstallKit.zip
+    ````
+
+1. Install the pre-install-kit for Windows 10.
+
+    ````powershell
+    Set-Location `
+        .\Microsoft.WindowsTerminal_*.msixbundle_Windows10_PreinstallKit
+    Add-AppxPackage Microsoft.UI.Xaml.*_x64__*.appx
+    `````
+
+1. Download Windows Terminal.
+
+    ````powershell
+    $fileName = `
+        'Microsoft.WindowsTerminal_1.20.11781.0_8wekyb3d8bbwe.msixbundle'
+    Start-BitsTransfer `
+        -Source "$sourcePath/$fileName" `
+        -Destination  ~\Downloads\$fileName
+    ````
+
+1. Install Windows Terminal.
+
+    ````powershell
+    Set-Location ~\Downloads
+    Add-AppxPackage Microsoft.WindowsTerminal_*.msixbundle
+    ````
 
 ### Task 3: Install PowerShell modules
 
