@@ -22,12 +22,84 @@ To manage the SharePoint project, you create a new Team with a new standard and 
 
 ## Exercise 1: Get started with PowerShell
 
-1. [Install PowerShell](#task-1-install-powershell)
-1. [Install Windows Terminal](#task-2-install-windows-terminal)
-1. [Install PowerShell modules](#task-3-install-powershell-modules) PnP.PowerShell, MicrosoftTeams, Microsoft.Graph, and Microsoft.Online.SharePoint.PowerShell
-1. [Verify the functionality of the PowerShell modules](#task-4-verify-the-functionality-of-the-powershell-modules)
+1. [Install WinGet](#task-1-install-winget)
 
-### Task 1: Install PowerShell
+    This task is only necessary, if you plan to install PowerShell and/or Windows Terminal with Windows PowerShell.
+
+1. [Install PowerShell](#task-2-install-powershell)
+1. [Install Windows Terminal](#task-3-install-windows-terminal)
+1. [Install PowerShell modules](#task-4-install-powershell-modules) PnP.PowerShell, MicrosoftTeams, Microsoft.Graph, and Microsoft.Online.SharePoint.PowerShell
+1. [Verify the functionality of the PowerShell modules](#task-5-verify-the-functionality-of-the-powershell-modules)
+
+### Task 1: Install WinGet
+
+This task is only necessary, if you plan to install PowerShell and/or Windows Terminal with Windows PowerShell.
+
+#### Desktop experience
+
+Perform this task on LON-CL1.
+
+1. Open the **Microsoft Store**.
+
+    Microsoft Store may need an update. This can take a minute or two.
+
+1. In Microsoft Store, in the left navigation bar, click **Library**.
+1. In the Library, find **App Installer** and, beside, click **Update**.
+
+    Wait for the update to complete.
+
+#### Windows PowerShell
+
+Perform this task on LON-CL1.
+
+1. Run **Windows PowerShell** as Administrator.
+1. Download the Microsoft Visual C++ 2015 Redistributable.
+
+    ````powershell
+    $filename = 'Microsoft.VCLibs.x64.14.00.Desktop.appx'
+    Start-BitsTransfer `
+        -Source https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx `
+        -Destination ~\Downloads\$filename
+    `````
+
+1. Install the Microsoft Visual C++ 2015 Redistributable.
+
+    ````powershell
+    Add-AppxPackage -Path ~\Downloads\$filename
+    ````
+
+1. Download WinUI3.
+
+    ````powershell
+    $filename = 'Microsoft.UI.Xaml.2.8.x64.appx'
+    Start-BitsTransfer `
+        -Source `
+            https://github.com/microsoft/microsoft-ui-xaml/releases/download/v2.8.6/Microsoft.UI.Xaml.2.8.x64.appx `
+        -Destination ~\Downloads\$filename
+    ````
+
+1. Install WinUI3.
+
+    ````powershell
+    Add-AppxPackage -Path ~\Downloads\$filename
+    ````
+
+1. Download WinGet.
+
+    ````powershell
+    $filename = 'Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle'
+    Start-BitsTransfer `
+        -Source https://aka.ms/getwinget `
+        -Destination ~\Downloads\$filename
+    ````
+
+1. Install WinGet.
+
+    ````powershell
+        Add-AppxPackage -Path ~\Downloads\$filename
+    ````
+
+### Task 2: Install PowerShell
 
 #### Desktop experience
 
@@ -48,89 +120,45 @@ You do not have to wait for the installation to complete.
 Perform this task on LON-CL1.
 
 1. Run **Windows PowerShell** as Administrator.
-1. Download the MSI file of PowerShell.
+1. Download and install PowerShell.
 
     ````powershell
-    $fileName = 'PowerShell-7.4.4-win-x64.msi'
-    Start-BitsTransfer `
-        -Source `
-            https://github.com/PowerShell/PowerShell/releases/download/v7.4.4/$fileName `
-        -Destination  ~\Downloads\$fileName
+    winget install 9MZ1SNWT0N5D
     ````
 
-1. Install PowerShell.
+1. On the message Do you agree to all source agreements terms, enter **Y**.
+1. On the mesage Do you agree to the terms, enter **Y**.
 
-    ````powershell
-    Set-Location ~\Downloads
-    msiexec.exe /package $filename /qb REGISTER_MANIFEST=1 USE_MU=1 ENABLE_MU=1 ADD_PATH=1
-    ````
-
-    You do not have to wait for the installation to complete.
-
-### Task 2: Install Windows Terminal
+### Task 3: Install Windows Terminal
 
 #### Desktop experience
 
 Perform this task on LON-CL1.
 
 1. Open the **Microsoft Store**.
+
+    Microsoft Store may need an update. This can take a minute or two.
+
 1. In Microsoft Store, search for **Windows Terminal**.
 1. In the search results, click **Windows Terminal**.
 1. In Windows Terminal, ensure, it is from **Microsoft Corporation** [figure 2] and click **Get**.
 
 Wait for PowerShell and Windows Terminal to finish installing. You can close the Microsoft Store now.
 
-#### Windows PowerShell
+#### PowerShell
 
 Perform this task on LON-CL1.
 
-1. Run **Windows PowerShell** as Administrator.
-1. Download the pre-install-kit for Windows 10.
+1. Run **PowerShell** as Administrator.
+1. Download and install PowerShell.
 
     ````powershell
-    $sourcePath = `
-        'https://github.com/microsoft/terminal/releases/download/v1.20.11781.0'
-    $fileName = `
-        "Microsoft.WindowsTerminal_1.20.11781.0_8wekyb3d8bbwe.msixbundle_Windows10_PreinstallKit.zip"
-    Start-BitsTransfer `
-        -Source "$sourcePath/$fileName" `
-        -Destination  ~\Downloads\$fileName
-    `````
-
-1. Expand the zip file Microsoft.WindowsTerminal_Win10_*PreinstallKit.zip
-
-    ````powershell
-    Set-Location ~\Downloads
-    Expand-Archive `
-        .\Microsoft.WindowsTerminal_*.msixbundle_Windows10_PreinstallKit.zip
+    winget install 9N0DX20HK701
     ````
 
-1. Install the pre-install-kit for Windows 10.
+1. On the mesage Do you agree to the terms, enter **Y**.
 
-    ````powershell
-    Set-Location `
-        .\Microsoft.WindowsTerminal_*.msixbundle_Windows10_PreinstallKit
-    Add-AppxPackage Microsoft.UI.Xaml.*_x64__*.appx
-    `````
-
-1. Download Windows Terminal.
-
-    ````powershell
-    $fileName = `
-        'Microsoft.WindowsTerminal_1.20.11781.0_8wekyb3d8bbwe.msixbundle'
-    Start-BitsTransfer `
-        -Source "$sourcePath/$fileName" `
-        -Destination  ~\Downloads\$fileName
-    ````
-
-1. Install Windows Terminal.
-
-    ````powershell
-    Set-Location ~\Downloads
-    Add-AppxPackage Microsoft.WindowsTerminal_*.msixbundle
-    ````
-
-### Task 3: Install PowerShell modules
+### Task 4: Install PowerShell modules
 
 Perform this task on LON-CL1.
 
@@ -168,7 +196,7 @@ Perform this task on LON-CL1.
 
 1. On the message Untrusted repository, enter **y**.
 
-### Task 4: Verify the functionality of the PowerShell modules
+### Task 5: Verify the functionality of the PowerShell modules
 
 Perform this task on LON-CL1.
 
