@@ -29,6 +29,8 @@ To manage the SharePoint project, you create a new Team with a new standard and 
 
 ### Task 1: Install PowerShell
 
+#### Desktop experience
+
 Perform this task on LON-CL1.
 
 1. Open the **Microsoft Store**.
@@ -40,6 +42,30 @@ Perform this task on LON-CL1.
 1. In PowerShell, ensure, it is from **Microsoft Corporation** [figure 1] and click **Get**.
 
 You do not have to wait for the installation to complete.
+
+#### Windows PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Windows PowerShell**.
+1. Download the MSI file of PowerShell.
+
+    ````powershell
+    $fileName = 'PowerShell-7.4.4-win-x64.msi'
+    Start-BitsTransfer `
+        -Source `
+            https://github.com/PowerShell/PowerShell/releases/download/v7.4.4/$fileName `
+        -Destination  ~\Downloads\$fileName
+    ````
+
+1. Install PowerShell.
+
+    ````powershell
+    Set-Location ~\Downloads
+    msiexec.exe /package $filename /qb REGISTER_MANIFEST=1 USE_MU=1 ENABLE_MU=1 ADD_PATH=1
+    ````
+
+    You do not have to wait for the installation to complete.
 
 ### Task 2: Install Windows Terminal
 
