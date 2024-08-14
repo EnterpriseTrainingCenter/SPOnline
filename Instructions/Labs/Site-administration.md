@@ -64,10 +64,10 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 
 1. [Create team sites without a Microsoft 365 group](#task-2-create-team-sites-without-a-microsoft-365-group)
 
-    | Site name                   | Site description                                                  | Site address            |
-    | --------------------------- | ----------------------------------------------------------------- | ----------------------- |
+    | Site name                   | Site description                                                   | Site address            |
+    | --------------------------- | ------------------------------------------------------------------ | ----------------------- |
     | OneDrive deployment project | Plan, deploy, and maintain OneDrive                                | ../teams/Project1Drive  |
-    | SharePoint project       | Play, deploy, and maintain OneDrive | ../sites/PlaygroundSite |
+    | SharePoint playground       | Play around with SharePoint features, not intented for production  | ../sites/PlaygroundSite |
 
     For all sites, the language is English, and the primary adminsitrator is Lynne Robbins. Select your local time zone.
 
@@ -121,7 +121,7 @@ Perform this task on LON-CL1.
 1. In Create a site: Select the site type, click **Browse more sites**.
 1. In Other options, under **Choose a template**, ensure **Team site** is selected. Under **Site name**, type **OneDrive deployment project**. Under **Site description**, type **Plan, deploy and maintain OneDrive**. Under **Site address**, in the drop-down, select **../teams/** and, beside, type **Project1Drive**. Under **Primary administrator**, find and click **Lynne Robbins**. Click **Next**.
 1. Under **Select a language**, ensure **English** is selected. Under **Time zone**, select your time zone. Click **Create site**.
-1. Repeat from step 6 for the site **SharePoint project**. Take the parameters for this site from the table above.
+1. Repeat from step 6 for the site **SharePoint playground**. Take the parameters for this site from the table above.
 
 ### Task 3: Create communication sites
 
@@ -200,8 +200,8 @@ Perform this task on LON-CL1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Active sites**.
-1. In Active sites, select **SharePoint project** and click **Delete**.
-1. In the Delete SharePoint project? panel, click **Delete**.
+1. In Active sites, select **SharePoint playground** and click **Delete**.
+1. In the Delete SharePoint playground? panel, click **Delete**.
 
 ### Task 7: Delete a Microsoft 365 group-connected site
 
@@ -224,10 +224,10 @@ Perform this task on LON-CL1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Deleted sites**.
-1. In Deleted sites, select **SharePoint project** and click **Restore**.
+1. In Deleted sites, select **SharePoint playground** and click **Restore**.
 1. Click **Active sites**.
 
-    Verify that SharePoint project is listed in Active sites again.
+    Verify that SharePoint playground is listed in Active sites again.
 
 ### Task 9: Restore Microsoft 365 group
 
@@ -508,7 +508,7 @@ Repeat from step 6 for other sites. For bulk changes of storage limits, PowerShe
 
 ## Exercise 5: Change a site address
 
-1. [Change the address of site](#task-1-change-the-address-of-a-site) SharePoint Project from SharePointproject to SharePoint-project
+1. [Change the address of site](#task-1-change-the-address-of-a-site) SharePoint playground from PlaygroundSite to SharePoint-playground
 1. [Verify automatic redirection](#task-2-verify-automatic-redirection) from the old address to the new address
 
 ### Task 1: Change the address of a site
@@ -520,9 +520,9 @@ Perform this task on LON-CL1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
-1. In Active sites, click **SharePoint project**.
+1. In Active sites, click **SharePoint playground**.
 1. In the IT help desk panel, on the tab General, under **Site address**, click **Edit**.
-1. In Edit SharePoint site address, under **SharePoint site address**, type **SharePoint-project** and click **Save**.
+1. In Edit SharePoint site address, under **SharePoint site address**, type **SharePoint-playground** and click **Save**.
 1. In the message box Change site name?, click **No**.
 1. Close the panel.
 
@@ -531,7 +531,7 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/SharePointProject** (the old URL).
+1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/SharePointPlayground** (the old URL).
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
 Verify that you are redirected to the new URL.
