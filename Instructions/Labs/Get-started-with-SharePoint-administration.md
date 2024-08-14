@@ -283,6 +283,8 @@ Perform this task on LON-CL1.
 
 ### Task 1: Assign the SharePoint Administrator role
 
+#### Web UI
+
 Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
@@ -294,7 +296,59 @@ Perform this task on LON-CL1.
 1. In Manage admin roles, click **Admin center access** and **SharePoint Administrator**. Click **Save changes**.
 1. Close the panel **Manage admin roles**.
 
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. Sign in to Microsoft Graph.
+
+    ````powershell
+    Connect-MgGraph -Scopes 'RoleManagement.ReadWrite.Directory'
+    ````
+
+1. In Microsoft Edge, sign in using your Office 365 Tenant Credentials for the Global Admin.
+1. In the dialog Permissions requests, click **Accept**.
+1. Close **Microsoft Edge** and return to **Terminal**.
+1. Get the SharePoint Administrator role.
+
+    ````powershell
+    $roleName = 'SharePoint Administrator'
+    $role = Get-MgDirectoryRole -Filter "Displayname eq '$roleName'"
+    ````
+
+1. Add role from template if role is not present yet.
+
+    ````powershell
+    if ($role -eq $null) {
+        $roleTemplate = Get-MgDirectoryRoleTemplate |
+            Where-Object { $PSItem.Displayname -eq $roleName }
+        New-MgDirectoryRole `
+            -DisplayName $roleName -RoleTemplateId $roleTemplate.Id
+        $role = Get-MgDirectoryRole -Filter "Displayname eq '$roleName'"
+    }
+
+1. Find and store the user **Lynne Robbins** in a variable.
+
+    ````powershell
+    $displayname = 'Lynne Robbins'
+    $mgUser = Get-MgUser -Filter "Displayname eq '$displayname'"
+    $userId = ( Get-MgUser -Filter { userPrincipalName eq $userPrincipalName }).Id
+    New-MgDirectoryRoleMemberByRef `
+        -DirectoryRoleId $role.Id `
+        –OdataId "https://graph.microsoft.com/v1.0/users/$($mgUser.Id)"
+    ````
+
+1. Verify that **Lynne Robbins** is SharePoint Administrator.
+
+    ````powershell
+    (Get-MgDirectoryRoleMember -DirectoryRoleId $role.Id).Id `
+        -contains $mgUser.Id
+    ````
+
 ### Task 2: Verify the SharePoint Administrator role holders
+
+#### Web UI
 
 Perform this task on LON-CL1.
 
@@ -308,6 +362,41 @@ Perform this task on LON-CL1.
     Verify that Lynne Robbins is has the SharePoint Administrator role assigned.
 
 1. Close the SharePoint Administrator panel.
+
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. Sign in to Microsoft Graph.
+
+    ````powershell
+    Connect-MgGraph -Scopes 'RoleManagement.Read.Directory'
+    ````
+
+1. In Microsoft Edge, sign in using your Office 365 Tenant Credentials for the Global Admin.
+1. In the dialog Permissions requests, click **Accept**.
+1. Close **Microsoft Edge** and return to **Terminal**.
+1. Get the SharePoint Administrator role.
+
+    ````powershell
+    $roleName = 'SharePoint Administrator'
+    $role = Get-MgDirectoryRole -Filter "Displayname eq '$roleName'"
+    ````
+
+1. Get the role members and store them in a variable.
+
+    ````powershell
+    $mgDirectoryRoleMember = Get-MgDirectoryRoleMember -DirectoryRoleId $role.Id
+    `````
+
+1. Retrieve the users for the role member ids.
+
+    ````powershell
+    $mgDirectoryRoleMember | ForEach-Object { Get-MgUser -UserId $PSItem.Id }
+    `````
+
+    Verify that Lynne Robbins is has the SharePoint Administrator role assigned.
 
 ### Task 3: Verify access to the SharePoint admin center
 
