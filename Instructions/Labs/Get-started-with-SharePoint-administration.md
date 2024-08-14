@@ -610,7 +610,7 @@ Perform this taks on LON-CL1.
 1. Create a team with the name **SharePoint project**.
 
     ````powershell
-    New-Team -DisplayName 'SharePoint Project'
+    New-Team -DisplayName 'SharePoint Project' -MailNickName SharePointProject
     ````
 
 1. Add **Megan Bowen** to the team.
