@@ -26,7 +26,8 @@ On LON-CL1, update the Microsoft Store app, install the lab resources and soluti
         -Path '.\main\SPOnline-solutions-main\LabResources\' `
         -Destination 'c:\' `
         -Container `
-        -Recurse
+        -Recurse `
+        -Force
     ````
 
 1. Open **Microsoft Edge**.
