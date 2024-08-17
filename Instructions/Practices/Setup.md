@@ -21,7 +21,7 @@ On LON-CL1, update the Microsoft Store app, install the lab resources and soluti
             'https://github.com/EnterpriseTrainingCenter/SPOnline-solutions/archive/refs/heads/main.zip' `
         -Dynamic
     Unblock-File 'main.zip'
-    Expand-Archive 'main.zip'
+    Expand-Archive 'main.zip' -Force
     Copy-Item `
         -Path '.\main\SPOnline-solutions-main\LabResources\' `
         -Destination 'c:\' `
