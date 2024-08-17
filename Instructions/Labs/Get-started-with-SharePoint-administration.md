@@ -3,15 +3,6 @@
 ## Setup
 
 1. Sign in to LON-CL1 as Administrator.
-1. Open **Microsoft Edge**.
-1. Navigate to **https://www.microsoft365.com**.
-1. On Login | Microsoft 365, click **Sign in**.
-1. Sign in using your Office 365 Tenant Credentials for the Global Admin.
-1. On Home | Microsoft 365, in the top-right corner, click **Install and more** and **Install Microsoft 365 apps**.
-1. On Apps & devices, under Office, under Language, ensure **English (United States)** is selected. Under Version, ensure **64-bit** is selected. Click **Intall Office**.
-1. In Downloads, open **OfficeSetup.exe**.
-
-The Microsoft 365 Apps for Enterprise will be installed. This will take a few minutes.
 
 ## Introduction
 
@@ -49,9 +40,6 @@ This task is only necessary, if you plan to install PowerShell and/or Windows Te
 Perform this task on LON-CL1.
 
 1. Open the **Microsoft Store**.
-
-    Microsoft Store may need an update. This can take a minute or two.
-
 1. In Microsoft Store, in the left navigation bar, click **Library**.
 1. In the Library, find **App Installer** and, beside, click **Update**.
 
@@ -115,9 +103,6 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Open the **Microsoft Store**.
-
-    Microsoft Store may need an update. This can take a minute or two.
-
 1. In Microsoft Store, search for **PowerShell**.
 1. In the search results, click **PowerShell**.
 1. In PowerShell, ensure, it is from **Microsoft Corporation** [figure 1] and click **Get**.
@@ -129,6 +114,14 @@ You do not have to wait for the installation to complete.
 Perform this task on LON-CL1.
 
 1. Run **Windows PowerShell** as Administrator.
+1. Find PowerShell in the respository.
+
+    ````powershell
+    winget search powershell
+    ````
+
+    Notice the ID of PowerShell in the source msstore.
+
 1. Download and install PowerShell.
 
     ````powershell
@@ -145,9 +138,6 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Open the **Microsoft Store**.
-
-    Microsoft Store may need an update. This can take a minute or two.
-
 1. In Microsoft Store, search for **Windows Terminal**.
 1. In the search results, click **Windows Terminal**.
 1. In Windows Terminal, ensure, it is from **Microsoft Corporation** [figure 2] and click **Get**.
@@ -159,6 +149,14 @@ Wait for PowerShell and Windows Terminal to finish installing. You can close the
 Perform this task on LON-CL1.
 
 1. Run **PowerShell** as Administrator.
+1. Find Windows Terminal in the repositories.
+
+    ````powershell
+    winget search 'windows terminal'
+    ````
+
+    Notice the ID of Windows Terminal in the source msstore.
+
 1. Download and install PowerShell.
 
     ````powershell
