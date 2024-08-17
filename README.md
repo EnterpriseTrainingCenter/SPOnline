@@ -8,6 +8,7 @@ If you are a trainer or participant of the course, you may fork this repository.
 
 ## Practices
 
+1. [Setup](Instructions/Practices/Setup.md)
 1. [Install Visual Studio Code](Instructions/Practices/Install-Visual-Studio-Code.md)
 1. [Install Microsoft Graph Beta PowerShell module](Instructions/Practices/Install-Microsoft-Graph-Beta-PowerShell-module.md)
 1. [Configure OneDrive storage limits](Instructions/Practices/Configure-OneDrive-storage-limits.md)
