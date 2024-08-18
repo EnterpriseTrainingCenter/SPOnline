@@ -1,5 +1,9 @@
 # Practice: Enable Integration with Entra B2B
 
+## Setup
+
+If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Invoke-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+
 ## Task
 
 Enable the integration between SharePoint, OneDrive, and EntraB2B.

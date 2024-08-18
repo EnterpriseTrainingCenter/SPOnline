@@ -4,6 +4,8 @@
 
 On **LON-CL1**, sign in as **Administrator**.
 
+If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Invoke-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+
 ## Introduction
 
 Contoso wants to use Microsoft Forms, but is concerned about data protection. Therefore, you want to limit external sharing and content in Microsoft Forms. Furthermore, Contoso wants to provide a custom Expense tracker list template for project sites.

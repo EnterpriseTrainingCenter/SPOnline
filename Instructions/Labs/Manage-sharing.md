@@ -4,6 +4,8 @@
 
 On **LON-CL1**, sign in as **Administrator**.
 
+If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Invoke-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+
 Moreover, you need additional email accounts for this lab. Ideally, you have two accounts. One is a personal Microsoft or Entra account. The other must not be a Microsoft or Entra account, like a Gmail or GMX account. Consider creating a Microsoft and a Gmail account for this lab, if you do not have access to one of them.
 
 ## Introduction

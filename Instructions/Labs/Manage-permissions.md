@@ -4,6 +4,8 @@
 
 On **LON-CL1** sign in as **Administrator**.
 
+If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Invoke-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+
 ## Introduction
 
 Contoso wants to configure the hub Work @ Contoso and the associated site News @ Contoso so that all users can read and Debra Berger and Irvin Sayers can contribute. Lynne Robbins should be site admin on both sites. Later, a content scheduler list is added to the News @ Contoso site. On this list only Debra should contribute, Irvin should read, and nobody else. Finally, Contoso requires content approval for documents on the News @ Contoso site. Only Debra should approve documents.

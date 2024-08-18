@@ -1,5 +1,9 @@
 # Practice: Configure sharing settings
 
+## Setup
+
+If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Invoke-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+
 ## Task
 
 Configure the global sharing settings for Sharepoint and OneDrive as follows:

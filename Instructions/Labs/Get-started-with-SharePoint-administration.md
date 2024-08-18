@@ -1,4 +1,4 @@
-# Lab: Get started with SharePoint
+# Lab: Get started with SharePoint administration
 
 ## Setup
 
@@ -157,7 +157,7 @@ Perform this task on LON-CL1.
 
     Notice the ID of Windows Terminal in the source msstore.
 
-1. Download and install PowerShell.
+1. Download and install Windows Terminal.
 
     ````powershell
     winget install 9N0DX20HK701
@@ -340,10 +340,14 @@ Perform this task on LON-CL1.
     ````powershell
     $displayname = 'Lynne Robbins'
     $mgUser = Get-MgUser -Filter "Displayname eq '$displayname'"
-    $userId = ( Get-MgUser -Filter { userPrincipalName eq $userPrincipalName }).Id
+    `````
+
+1. Add the stored user to the role.
+
+    ````powershell
     New-MgDirectoryRoleMemberByRef `
         -DirectoryRoleId $role.Id `
-        –OdataId "https://graph.microsoft.com/v1.0/users/$($mgUser.Id)"
+        -OdataId "https://graph.microsoft.com/v1.0/users/$($mgUser.Id)"
     ````
 
 1. Disconnect from Microsoft Graph.
@@ -603,8 +607,7 @@ Perform this taks on LON-CL1.
     Connect-MicrosoftTeams
     `````
 
-1. In Microsoft Edge, sign in as **LynneR@\<your tenant\>.onmicrosoft.com*.
-1. Close **Microsoft Edge** and return to **Terminal**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Create a team with the name **SharePoint project**.
 
     ````powershell
@@ -650,8 +653,8 @@ Perform this taks on LON-CL1.
     Connect-MicrosoftTeams
     `````
 
-1. In Microsoft Edge, sign in as **LynneR@\<your tenant\>.onmicrosoft.com*.
-1. Close **Microsoft Edge** and return to **Terminal**.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. Create a standard channel with the name **Planning**.
 
     ````powershell
     Get-Team -DisplayName 'SharePoint Project' |

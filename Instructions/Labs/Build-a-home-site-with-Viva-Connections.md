@@ -4,6 +4,8 @@
 
 On **LON-CL1**, sign in as **Administrator**.
 
+If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Invoke-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+
 ## Introduction
 
 Contoso wants to build a home site using Viva Connections to enable global navigation and a unified dashboard for all users.
