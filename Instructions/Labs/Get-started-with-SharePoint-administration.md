@@ -28,7 +28,7 @@ To manage the SharePoint project, you create a new Team with a new standard and 
 
 1. [Install PowerShell](#task-2-install-powershell)
 1. [Install Windows Terminal](#task-3-install-windows-terminal)
-1. [Install PowerShell modules](#task-4-install-powershell-modules) PnP.PowerShell, MicrosoftTeams, Microsoft.Graph, and Microsoft.Online.SharePoint.PowerShell
+1. [Install PowerShell modules](#task-4-install-powershell-modules) PnP.PowerShell, ExchangeOnlineManagement, MicrosoftTeams, Microsoft.Graph, and Microsoft.Online.SharePoint.PowerShell
 1. [Verify the functionality of the PowerShell modules](#task-5-verify-the-functionality-of-the-powershell-modules)
 
 ### Task 1: Install WinGet
@@ -181,6 +181,13 @@ Perform this task on LON-CL1.
 
     ````powershell
     Install-Module -Name MicrosoftTeams
+    ````
+
+1. On the message Untrusted repository, enter **y**.
+1. Install the Exchange Online Management V3 module.
+
+    ````powershell
+    Install-Module -Name ExchangeOnlineManagement
     ````
 
 1. On the message Untrusted repository, enter **y**.
