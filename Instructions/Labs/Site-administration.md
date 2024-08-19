@@ -73,7 +73,7 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 
     For all sites, the language is English, and the primary adminsitrator is Lynne Robbins. Select your local time zone.
 
-1. [Create a communication sites](#task-3-create-communication-sites)
+1. [Create communication sites](#task-3-create-communication-sites)
 
     | Template          | Site name     | Site description                                                                     | Site address  |
     | ----------------- | ------------- | ------------------------------------------------------------------------------------ | ------------- |
@@ -90,6 +90,8 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 1. [Restore Microsoft 365 group OneDrive](#task-9-restore-microsoft-365-group) deployment project
 
 ### Task 1: Create a team site with a Microsoft 365 group
+
+#### Web UI
 
 Perform this task on LON-CL1.
 
@@ -109,6 +111,85 @@ Perform this task on LON-CL1.
 1. On the IT department internal panel, click the tab **Membership**.
 1. On the tab Membership, click **Members**. Verify the users listed above were added as members.
 1. Close the **IT department internal** panel.
+
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to SharePoint.
+
+    ````powershell
+    # Replace the URL wityh the URL you copied before
+    Connect-PnPOnline -Url https://WWLx341755-admin.sharepoint.com/ -Interactive
+    ````
+
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. Sign in to Microsoft Graph.
+
+    ````powershell
+    Connect-Graph -Scopes User.ReadBasic.All
+    `````
+
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. In Permissions requestet, click **Accept**.
+1. Find the user of Lynne Robbins and store it in a variable.
+
+    ````powershell
+    $owner = Get-MgUser -Filter "Displayname eq 'Lynne Robbins'"
+    `````
+
+1. Create a standard team site with a Microsoft 365 group. As title, use **IT department internal**. As description, use **Site for internal collaboration within the IT department. Information on this site must not be published without permission.**. The group email address should be **IT**. The site site address should be **IT-internal**. The group owner must be the user in the variable you created in the previous step.
+
+    ````powershell
+    # Replace the domain name of LynneR with your tenant name
+    # You can use a different time zone
+    $title = 'IT department internal'
+    New-PnPSite `
+        -Type TeamSite `
+        -Title $title `
+        -Description `
+            'Site for internal collaboration within the IT department. Information on this site must not be published without permission.' `
+            -Alias 'IT' `
+            -SiteAlias 'IT-internal' `
+            -Lcid 1033 `
+            -Owners $owner
+            -TimeZone UTCPLUS0100_AMSTERDAM_BERLIN_BERN_ROME_STOCKHOLM_VIENNA
+    ````
+
+1. Build a list of users to be added to the group.
+
+    ````powershell
+    $displayNames = @(
+        'Miriam Graham'
+        'Alex Wilber'
+        'Christie Cline'
+        'Isaiah Langer'
+        'Megan Bowen'
+        'Adele Vance'
+        'Debra Berger'
+        'Nestor Wilke'
+        'Lee Gu'
+        'Joni Sherman'
+        'Pradeep Gupta'
+    )
+    $users = $displayNames | ForEach-Object { 
+        Get-MgUser -Filter "Displayname eq '$PSItem'"
+    }
+    ````
+
+1. Add the users to the new group.
+
+    ````powershell
+    Add-PnPMicrosoft365GroupMember `
+        -Identity $title -Users $users.UserPrincipalName
+    ````
+
+1. Verify the members of the group.
+
+    ````powershell
+    Get-PnPMicrosoft365GroupMember -Identity $title
+    ````
 
 ### Task 2: Create team sites without a Microsoft 365 group
 
