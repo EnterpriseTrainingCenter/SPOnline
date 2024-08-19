@@ -178,10 +178,10 @@ Perform this task on LON-CL1.
 
 1. On the message Untrusted repository, enter **y**.
 1. In Terminal, click the down chevron and **Windows PowerShell**.
-1. Ensure **Windows Powershell** is shown at the top. Install the Microsoft Teams cmdlets module.
+1. Ensure **Windows Powershell** is shown at the top. Install the Microsoft SharePoint Onine Services Module.
 
     ````powershell
-    Install-Module -Name MicrosoftTeams
+    Install-Module -Name Microsoft.Online.SharePoint.PowerShell
     ````
 
 1. On the message Untrusted repository, enter **y**.
@@ -189,6 +189,13 @@ Perform this task on LON-CL1.
 
     ````powershell
     Install-Module -Name ExchangeOnlineManagement
+    ````
+
+1. On the message Untrusted repository, enter **y**.
+1. Install the Microsoft Teams cmdlets module.
+
+    ````powershell
+    Install-Module -Name MicrosoftTeams
     ````
 
 1. On the message Untrusted repository, enter **y**.
@@ -201,14 +208,6 @@ Perform this task on LON-CL1.
 1. On the message Untrusted repository, enter **y**.
 
     This will take a minute or two. You do not have to wait for the installation to complete. Instead, continue to the next step.
-
-1. Install the Microsoft SharePoint Onine Services Module.
-
-    ````powershell
-    Install-Module -Name Microsoft.Online.SharePoint.PowerShell
-    ````
-
-1. On the message Untrusted repository, enter **y**.
 
 ### Task 5: Verify the functionality of the PowerShell modules
 
@@ -814,6 +813,7 @@ Perform this task on LON-CL1.
     Connect-PnPOnline -Url https://wwlx421595-admin.sharepoint.com/ -Interactive
     ````
 
+1. Sign using **LynneR@\<your tenant\>.onmicrosoft.com**. The password is the same as the global administrator.
 1. List the sites with their title and url.
 
     ````powershell
