@@ -214,26 +214,43 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. List the commands of the module PnP.PowerShell.
+1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Import the modules.
+
+    ````powershell
+    Import-Module ExchangeOnlineManagement, Microsoft.Graph, PnP.PowerShell
+    Import-Module MicrosoftTeams
+    `````
+
+    This may take some minutes.
+
+1. List the commands of the module **PnP.PowerShell**.
 
     ````powershell
     Get-Command -Module PnP.PowerShell
     ````
 
-1. List the commands of the module MicrosoftTeams.
+1. List the commands of the module **MicrosoftTeams**.
 
     ````powershell
     Get-Command -Module MicrosoftTeams
     ````
 
-1. List the commands of the module Microsoft.Graph.
+1. List the commands of the module **Microsoft.Graph.Users**.
 
     ````powershell
     Get-Command -Module Microsoft.Graph.Users
     ````
 
 1. In Terminal, click the down chevron and **Windows PowerShell**.
-1. Ensure **Windows Powershell** is shown at the top. List the commands of the module Microsoft.Online.SharePoint.PowerShell.
+1. Ensure **Windows Powershell** is shown at the top. Import modules.
+
+    ````powershell
+    Import-Module ExchangeOnlineManagement, Microsoft.Graph
+    Import-Module Microsoft.Online.PowerShell
+    Import-Module MicrosoftTeams
+    ````
+
+1. List the commands of the module Microsoft.Online.SharePoint.PowerShell.
 
     ````powershell
     Get-Command -Module Microsoft.Online.SharePoint.PowerShell
