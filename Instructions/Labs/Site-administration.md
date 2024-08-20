@@ -142,7 +142,6 @@ Perform this task on LON-CL1.
 1. Create a standard team site with a Microsoft 365 group. As title, use **IT department internal**. As description, use **Site for internal collaboration within the IT department. Information on this site must not be published without permission.**. The group email address should be **IT**. The site site address should be **IT-internal**. The group owner must be the user in the variable you created in the previous step.
 
     ````powershell
-    # Replace the domain name of LynneR with your tenant name
     # You can use a different time zone
     $title = 'IT department internal'
     New-PnPSite `
