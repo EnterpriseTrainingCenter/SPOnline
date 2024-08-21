@@ -491,7 +491,7 @@ Perform this task on LON-CL1.
 1. Verify that OneDrive deployment project is a team.
 
     ````powershell
-    New-Team -GroupId $pnPMicrosoft365Group.Id
+    Get-Team -GroupId $pnPMicrosoft365Group.Id
     ````
 
 1. Disconnect from SharePoint and Teams.
