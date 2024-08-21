@@ -814,10 +814,10 @@ Perform this task on LON-CL1.
 
 ## Exercise 3: Manage site creation
 
-1. [Verify that users can create Microsoft 365 groups](#task-1-verify-that-users-can-create-microsoft-365-groups) using Outlook
+1. [Verify that users can create Microsoft 365 groups](#task-1-verify-that-users-can-create-microsoft-365-groups) by, as Joni Sherman, creating Joni's group from Outlook
 1. [Limit the users that can create Microsoft 365 groups](#task-2-limit-the-users-that-can-create-microsoft-365-groups) to members the security group sg-IT
 1. [Verify that users cannot create Microsoft 365 groups](#task-3-verify-that-users-cannot-create-microsoft-365-groups)
-1. [Verify that users can create SharePoint sites](#task-4-verify-that-users-can-create-sharepoint-sites)
+1. [Verify that users can create SharePoint sites](#task-4-verify-that-users-can-create-sharepoint-sites) by, as Joni Sherman, creating a new site IT help desk from the SharePoint start page
 1. [Change settings for site creation](#task-5-change-settings-for-site-creation) to disable site creation for users and create new team sites under /teams/
 1. [Verify that users cannot create SharePoint sites](#task-6-verify-that-users-cannot-create-sharepoint-sites)
 
@@ -1077,7 +1077,7 @@ Perform this task on LON-CL1.
     ````powershell
     $storageQuota = 1024
     Set-SPOSite `
-        -Identity https://$tenantName.sharepoint.com/sites/it-internal `
+        -Identity https://$tenantName.sharepoint.com/sites/it `
         -StorageQuota $storageQuota `
         -StorageQuotaWarningLevel ($storageQuota * .97)
     ````
