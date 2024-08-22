@@ -18,7 +18,6 @@ Perform this task on LON-CL1.
 1. Connect to Sharepoint Online.
 
     ````powershell
-    
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
@@ -35,6 +34,6 @@ Perform this task on LON-CL1.
 
     ````powershell
     Get-SPOOrgNewsSite
-    `````
+    ````
 
     /sites/news should be in the list. If you configured a home site before, this site is in the list too.
