@@ -1,5 +1,9 @@
 # Practice: Declare an organization new site
 
+## Setup
+
+If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+
 ## Task
 
 Declare the site News \@ Contoso as organization news site.
@@ -14,7 +18,6 @@ Perform this task on LON-CL1.
 1. Connect to Sharepoint Online.
 
     ````powershell
-    
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
@@ -31,6 +34,6 @@ Perform this task on LON-CL1.
 
     ````powershell
     Get-SPOOrgNewsSite
-    `````
+    ````
 
     /sites/news should be in the list. If you configured a home site before, this site is in the list too.

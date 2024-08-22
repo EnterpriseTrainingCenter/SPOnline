@@ -5,6 +5,8 @@
 1. On **LON-CL1**, sign in as **Administrator**.
 1. On **LON-CL2**, sign in as **Admin**.
 
+If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+
 ## Introduction
 
 Your company wants to make use of OneDrive. Therefore, you want to configure clients to automatically sign in to the OneDrive sync app and redirect known folders to OneDrive. Furthermore, the company has migrated network shares to SharePoint libraries. However, users expect to show up the files from these locations in File Explorer automatically. Therefore, you want to configure OneDrive to sync these libraries automatically.

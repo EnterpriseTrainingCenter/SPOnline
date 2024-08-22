@@ -1,17 +1,8 @@
-# Lab: Get started with SharePoint
+# Lab: Get started with SharePoint administration
 
 ## Setup
 
 1. Sign in to LON-CL1 as Administrator.
-1. Open **Microsoft Edge**.
-1. Navigate to **https://www.microsoft365.com**.
-1. On Login | Microsoft 365, click **Sign in**.
-1. Sign in using your Office 365 Tenant Credentials for the Global Admin.
-1. On Home | Microsoft 365, in the top-right corner, click **Install and more** and **Install Microsoft 365 apps**.
-1. On Apps & devices, under Office, under Language, ensure **English (United States)** is selected. Under Version, ensure **64-bit** is selected. Click **Intall Office**.
-1. In Downloads, open **OfficeSetup.exe**.
-
-The Microsoft 365 Apps for Enterprise will be installed. This will take a few minutes.
 
 ## Introduction
 
@@ -31,26 +22,118 @@ To manage the SharePoint project, you create a new Team with a new standard and 
 
 ## Exercise 1: Get started with PowerShell
 
-1. [Install PowerShell](#task-1-install-powershell)
-1. [Install Windows Terminal](#task-2-install-windows-terminal)
-1. [Install PowerShell modules](#task-3-install-powershell-modules) PnP.PowerShell, MicrosoftTeams, Microsoft.Graph, and Microsoft.Online.SharePoint.PowerShell
-1. [Verify the functionality of the PowerShell modules](#task-4-verify-the-functionality-of-the-powershell-modules)
+1. [Install WinGet](#task-1-install-winget)
 
-### Task 1: Install PowerShell
+    This task is only necessary, if you plan to install PowerShell and/or Windows Terminal with Windows PowerShell.
+
+1. [Install PowerShell](#task-2-install-powershell)
+1. [Install Windows Terminal](#task-3-install-windows-terminal)
+1. [Install PowerShell modules](#task-4-install-powershell-modules) PnP.PowerShell, ExchangeOnlineManagement, MicrosoftTeams, Microsoft.Graph, and Microsoft.Online.SharePoint.PowerShell
+1. [Verify the functionality of the PowerShell modules](#task-5-verify-the-functionality-of-the-powershell-modules)
+
+### Task 1: Install WinGet
+
+This task is only necessary, if you plan to install PowerShell and/or Windows Terminal with Windows PowerShell.
+
+#### Desktop experience
 
 Perform this task on LON-CL1.
 
 1. Open the **Microsoft Store**.
+1. In Microsoft Store, in the left navigation bar, click **Library**.
+1. In the Library, find **App Installer** and, beside, click **Update**.
 
-    Microsoft Store may need an update. This can take a minute or two.
+    Wait for the update to complete.
 
+#### Windows PowerShell
+
+Perform this task on LON-CL1.
+
+1. Run **Windows PowerShell** as Administrator.
+1. Download the Microsoft Visual C++ 2015 Redistributable.
+
+    ````powershell
+    $filename = 'Microsoft.VCLibs.x64.14.00.Desktop.appx'
+    Start-BitsTransfer `
+        -Source https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx `
+        -Destination ~\Downloads\$filename
+    `````
+
+1. Install the Microsoft Visual C++ 2015 Redistributable.
+
+    ````powershell
+    Add-AppxPackage -Path ~\Downloads\$filename
+    ````
+
+1. Download WinUI3.
+
+    ````powershell
+    $filename = 'Microsoft.UI.Xaml.2.8.x64.appx'
+    Start-BitsTransfer `
+        -Source `
+            https://github.com/microsoft/microsoft-ui-xaml/releases/download/v2.8.6/Microsoft.UI.Xaml.2.8.x64.appx `
+        -Destination ~\Downloads\$filename
+    ````
+
+1. Install WinUI3.
+
+    ````powershell
+    Add-AppxPackage -Path ~\Downloads\$filename
+    ````
+
+1. Download WinGet.
+
+    ````powershell
+    $filename = 'Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle'
+    Start-BitsTransfer `
+        -Source https://aka.ms/getwinget `
+        -Destination ~\Downloads\$filename
+    ````
+
+1. Install WinGet.
+
+    ````powershell
+        Add-AppxPackage -Path ~\Downloads\$filename
+    ````
+
+### Task 2: Install PowerShell
+
+#### Desktop experience
+
+Perform this task on LON-CL1.
+
+1. Open the **Microsoft Store**.
 1. In Microsoft Store, search for **PowerShell**.
 1. In the search results, click **PowerShell**.
 1. In PowerShell, ensure, it is from **Microsoft Corporation** [figure 1] and click **Get**.
 
 You do not have to wait for the installation to complete.
 
-### Task 2: Install Windows Terminal
+#### Windows PowerShell
+
+Perform this task on LON-CL1.
+
+1. Run **Windows PowerShell** as Administrator.
+1. Find PowerShell in the respository.
+
+    ````powershell
+    winget search powershell
+    ````
+
+    Notice the ID of PowerShell in the source msstore.
+
+1. Download and install PowerShell.
+
+    ````powershell
+    winget install 9MZ1SNWT0N5D
+    ````
+
+1. On the message Do you agree to all source agreements terms, enter **Y**.
+1. On the mesage Do you agree to the terms, enter **Y**.
+
+### Task 3: Install Windows Terminal
+
+#### Desktop experience
 
 Perform this task on LON-CL1.
 
@@ -59,9 +142,30 @@ Perform this task on LON-CL1.
 1. In the search results, click **Windows Terminal**.
 1. In Windows Terminal, ensure, it is from **Microsoft Corporation** [figure 2] and click **Get**.
 
-Wait for PowerShelll and Windows Terminal to finish installing. You can close the Microsoft Store now.
+Wait for PowerShell and Windows Terminal to finish installing. You can close the Microsoft Store now.
 
-### Task 3: Install PowerShell modules
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Run **PowerShell** as Administrator.
+1. Find Windows Terminal in the repositories.
+
+    ````powershell
+    winget search 'windows terminal'
+    ````
+
+    Notice the ID of Windows Terminal in the source msstore.
+
+1. Download and install Windows Terminal.
+
+    ````powershell
+    winget install 9N0DX20HK701
+    ````
+
+1. On the mesage Do you agree to the terms, enter **Y**.
+
+### Task 4: Install PowerShell modules
 
 Perform this task on LON-CL1.
 
@@ -70,6 +174,21 @@ Perform this task on LON-CL1.
 
     ````powershell
     Install-Module -Name PnP.PowerShell
+    ````
+
+1. On the message Untrusted repository, enter **y**.
+1. In Terminal, click the down chevron and **Windows PowerShell**.
+1. Ensure **Windows Powershell** is shown at the top. Install the Microsoft SharePoint Onine Services Module.
+
+    ````powershell
+    Install-Module -Name Microsoft.Online.SharePoint.PowerShell
+    ````
+
+1. On the message Untrusted repository, enter **y**.
+1. Install the Exchange Online Management V3 module.
+
+    ````powershell
+    Install-Module -Name ExchangeOnlineManagement
     ````
 
 1. On the message Untrusted repository, enter **y**.
@@ -90,40 +209,48 @@ Perform this task on LON-CL1.
 
     This will take a minute or two. You do not have to wait for the installation to complete. Instead, continue to the next step.
 
-1. In Terminal, click the down chevron and **Windows PowerShell**.
-1. Ensure **Windows Powershell** is shown at the top. Install the Microsoft SharePoint Onine Services Module.
-
-    ````powershell
-    Install-Module -Name Microsoft.Online.SharePoint.PowerShell
-    ````
-
-1. On the message Untrusted repository, enter **y**.
-
-### Task 4: Verify the functionality of the PowerShell modules
+### Task 5: Verify the functionality of the PowerShell modules
 
 Perform this task on LON-CL1.
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. List the commands of the module PnP.PowerShell.
+1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Import the modules.
+
+    ````powershell
+    Import-Module ExchangeOnlineManagement, Microsoft.Graph, PnP.PowerShell
+    Import-Module MicrosoftTeams
+    `````
+
+    This may take some minutes.
+
+1. List the commands of the module **PnP.PowerShell**.
 
     ````powershell
     Get-Command -Module PnP.PowerShell
     ````
 
-1. List the commands of the module MicrosoftTeams.
+1. List the commands of the module **MicrosoftTeams**.
 
     ````powershell
     Get-Command -Module MicrosoftTeams
     ````
 
-1. List the commands of the module Microsoft.Graph.
+1. List the commands of the module **Microsoft.Graph.Users**.
 
     ````powershell
     Get-Command -Module Microsoft.Graph.Users
     ````
 
 1. In Terminal, click the down chevron and **Windows PowerShell**.
-1. Ensure **Windows Powershell** is shown at the top. List the commands of the module Microsoft.Online.SharePoint.PowerShell.
+1. Ensure **Windows Powershell** is shown at the top. Import modules.
+
+    ````powershell
+    Import-Module ExchangeOnlineManagement, Microsoft.Graph
+    Import-Module Microsoft.Online.PowerShell
+    Import-Module MicrosoftTeams
+    ````
+
+1. List the commands of the module Microsoft.Online.SharePoint.PowerShell.
 
     ````powershell
     Get-Command -Module Microsoft.Online.SharePoint.PowerShell
@@ -144,7 +271,7 @@ Perform this task on LON-CL1.
     ````
 
 1. Sign in using your Office 365 Tenant Credentials for the Global Admin.
-1. In Permissions requested, click **Accept**.
+1. In Permissions requested, activate **Consent on behalf of your organization** and click **Accept**.
 1. In **Terminal**, list the sites in the tenant.
 
     ````powershell
@@ -186,6 +313,8 @@ Perform this task on LON-CL1.
 
 ### Task 1: Assign the SharePoint Administrator role
 
+#### Web UI
+
 Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
@@ -197,7 +326,62 @@ Perform this task on LON-CL1.
 1. In Manage admin roles, click **Admin center access** and **SharePoint Administrator**. Click **Save changes**.
 1. Close the panel **Manage admin roles**.
 
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to Microsoft Graph.
+
+    ````powershell
+    Connect-MgGraph -Scopes 'RoleManagement.ReadWrite.Directory'
+    ````
+
+1. In Microsoft Edge, sign in using your Office 365 Tenant Credentials for the Global Admin.
+1. In the dialog Permissions requests, click **Accept**.
+1. Close **Microsoft Edge** and return to **Terminal**.
+1. Get the SharePoint Administrator role.
+
+    ````powershell
+    $roleName = 'SharePoint Administrator'
+    $role = Get-MgDirectoryRole -Filter "Displayname eq '$roleName'"
+    ````
+
+1. Add role from template if role is not present yet.
+
+    ````powershell
+    if ($role -eq $null) {
+        $roleTemplate = Get-MgDirectoryRoleTemplate |
+            Where-Object { $PSItem.Displayname -eq $roleName }
+        New-MgDirectoryRole `
+            -DisplayName $roleName -RoleTemplateId $roleTemplate.Id
+        $role = Get-MgDirectoryRole -Filter "Displayname eq '$roleName'"
+    }
+
+1. Find and store the user **Lynne Robbins** in a variable.
+
+    ````powershell
+    $displayname = 'Lynne Robbins'
+    $mgUser = Get-MgUser -Filter "Displayname eq '$displayname'"
+    `````
+
+1. Add the stored user to the role.
+
+    ````powershell
+    New-MgDirectoryRoleMemberByRef `
+        -DirectoryRoleId $role.Id `
+        -OdataId "https://graph.microsoft.com/v1.0/users/$($mgUser.Id)"
+    ````
+
+1. Disconnect from Microsoft Graph.
+
+    ````powershell
+    Disconnect-MgGraph
+    ````
+
 ### Task 2: Verify the SharePoint Administrator role holders
+
+#### Web UI
 
 Perform this task on LON-CL1.
 
@@ -211,6 +395,47 @@ Perform this task on LON-CL1.
     Verify that Lynne Robbins is has the SharePoint Administrator role assigned.
 
 1. Close the SharePoint Administrator panel.
+
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to Microsoft Graph.
+
+    ````powershell
+    Connect-MgGraph -Scopes 'RoleManagement.Read.Directory'
+    ````
+
+1. In Microsoft Edge, sign in using your Office 365 Tenant Credentials for the Global Admin.
+1. In the dialog Permissions requests, click **Accept**.
+1. Close **Microsoft Edge** and return to **Terminal**.
+1. Get the SharePoint Administrator role.
+
+    ````powershell
+    $roleName = 'SharePoint Administrator'
+    $role = Get-MgDirectoryRole -Filter "Displayname eq '$roleName'"
+    ````
+
+1. Get the role members and store them in a variable.
+
+    ````powershell
+    $mgDirectoryRoleMember = Get-MgDirectoryRoleMember -DirectoryRoleId $role.Id
+    `````
+
+1. Retrieve the users for the role member ids.
+
+    ````powershell
+    $mgDirectoryRoleMember | ForEach-Object { Get-MgUser -UserId $PSItem.Id }
+    `````
+
+    Verify that Lynne Robbins is has the SharePoint Administrator role assigned.
+
+1. Disconnect from Microsoft Graph.
+
+    ````powershell
+    Disconnect-MgGraph
+    ````
 
 ### Task 3: Verify access to the SharePoint admin center
 
@@ -382,6 +607,8 @@ If time allows, install the SharePoint and OneDrive apps on your smartphone, sig
 
 ### Task 1: Create a new team
 
+#### Web UI
+
 Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
@@ -392,23 +619,85 @@ Perform this task on LON-CL1.
 1. In Create a team, under Team name, type **SharePoint project**. Ensure the **Team type** to be **Private**. Click **Create**.
 1. In Add members to SharePoint project, in Type a name or email, search for and click **Megan Bowen**. Click **Add**.
 
-Leave Microsoft Edge open for the next task.
+#### PowerShell
+
+Perform this taks on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to Microsoft Teams.
+
+    ````powershell
+    Connect-MicrosoftTeams
+    `````
+
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. Create a team with the name **SharePoint project**.
+
+    ````powershell
+    New-Team -DisplayName 'SharePoint Project' -MailNickName SharePointProject
+    ````
+
+1. Add **Megan Bowen** to the team.
+
+    ````powershell
+    Get-Team -DisplayName 'SharePoint Project' |
+    Add-TeamUser -User MeganB@\<your tenant\>.onmicrosoft.com
+    ````
+
+1. Disconnect from Microsoft Teams.
+
+    ````powershell
+    Disconnect-MicrosoftTeams
+    ````
 
 ### Task 2: Create a standard channel
 
+#### Web UI
+
 Perform this task on LON-CL1.
 
+1. Open **Microsoft Edge**.
+1. Navigate to **https://teams.microsoft.com**.
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft Teams, on the left, click **Teams**.
 1. In Teams, at the top click **+** and click **Create channel**.
 1. In Create a channel, click **Select a team**.
 1. In Pick a team to add new channel to, click **SharePoint project** and click **Done**.
 1. In **Create a channel**, under **Channel name**, type **Planning**. Under **Choose a channel type**, select **Standard**. Click **Create**.
 
-Leave Microsoft Edge open for the next task.
+#### PowerShell
+
+Perform this taks on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to Microsoft Teams.
+
+    ````powershell
+    Connect-MicrosoftTeams
+    `````
+
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. Create a standard channel with the name **Planning**.
+
+    ````powershell
+    Get-Team -DisplayName 'SharePoint Project' |
+    New-TeamChannel -DisplayName 'Planning' -MembershipType Standard
+    ````
+
+1. Disconnect from Microsoft Teams.
+
+    ````powershell
+    Disconnect-MicrosoftTeams
+    ````
 
 ### Task 3: Explore the team associated SharePoint site
 
 Perform this task on LON-CL1.
 
+1. Open **Microsoft Edge**.
+1. Navigate to **https://teams.microsoft.com**.
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft Teams, on the left, click **Teams**.
 1. In Teams, under Sharepoint project, click **General**.
 1. In General, click **Files**.
 1. In the documents toolbar, click the ellipsis (**...**) and click **Open in SharePoint**.
@@ -416,25 +705,64 @@ Perform this task on LON-CL1.
 
     Verify you see two folders with the same name as the team's channels.
 
-Leave Microsoft Edge and all tabs open for the next task.
-
 ### Task 4: Create a shared channel
+
+#### Web UI
 
 Perform this task on LON-CL1.
 
-1. In Microsoft Edge, click the **Teams and Channels | SharePoint project/General | Microsoft Teams** tab.
+1. Open **Microsoft Edge**.
+1. Navigate to **https://teams.microsoft.com**.
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft Teams, on the left, click **Teams**.
 1. In Teams, at the top click **+** and click **Create channel**.
 1. In Create a channel, click **Select a team**.
 1. In Pick a team to add new channel to, click **SharePoint project** and click **Done**.
 1. In **Create a channel**, under **Channel name**, type **Govenance**. Under **Choose a channel type**, select **Shared**. Deactivate **Share this channel with everyone on the team** and click **Create**.
 1. In Share the Governance channel, in **Type a name or email**, finde and click **Patti Fernandez**. Click **Share**.
 
-Leave Microsoft Edge and all tabs open for the next task.
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to Microsoft Teams.
+
+    ````powershell
+    Connect-MicrosoftTeams
+    `````
+
+1. In Microsoft Edge, sign in as **LynneR@\<your tenant\>.onmicrosoft.com*.
+1. Close **Microsoft Edge** and return to **Terminal**.
+1. In the team **SharePoint Project**, create a new shared channel **Governance**.
+
+    ````powershell
+    Get-Team -DisplayName 'SharePoint Project' |
+    New-TeamChannel -DisplayName 'Governance' -MembershipType Shared
+    ````
+
+1. Add **Patti Fernandez** to the shared channel.
+
+    ````powershell
+    Get-Team -DisplayName 'SharePoint Project' |
+    Add-TeamChannelUser `
+        -DisplayName 'Governance' -User PattiF@\<your tenant\>.onmicrosoft.com
+    ````
+
+1. Disconnect from Microsoft Teams.
+
+    ````powershell
+    Disconnect-MicrosoftTeams
+    ````
 
 ### Task 5: Explore the private channel associated SharePoint site
 
 Perform this task on LON-CL1.
 
+1. Open **Microsoft Edge**.
+1. Navigate to **https://teams.microsoft.com**.
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. In Microsoft Teams, on the left, click **Teams**.
 1. In Teams, under Sharepoint project, click **Governance**.
 1. In General, click **Files**.
 1. In the documents toolbar, click the ellipsis (**...**) and click **Open in SharePoint**.
@@ -455,13 +783,15 @@ Perform this task on LON-CL1.
 
 Perform this task on LON-CL1.
 
+#### Web UI
+
 1. Open **Microsoft Edge**.
 1. Navigate to **https://admin.microsoft.com**.
 1. Sign using **LynneR@\<your tenant\>.onmicrosoft.com**. The password is the same as the global administrator.
 1. In Microsoft 365 admin center, in the left navigation, click **Show all** and click **SharePoint**.
 1. In Sharepoint admin center, click **Sites** and **Active sites**.
-1. In Active sites, click **SharePoint project**.
-1. In the SharePoint project panel, click the tab **Membership**.
+1. In Active sites, click **SharePoint Project**.
+1. In the SharePoint Project panel, click the tab **Membership**.
 
     Verify that Lynne Robbins is in Owners.
 
@@ -471,16 +801,16 @@ Perform this task on LON-CL1.
 
 1. Click **Site admins**.
 
-    Verify that SharePoint project Owners are Site admins.
+    Verify that SharePoint Project Owners are Site admins.
 
 1. Click **Site members**.
 
-    Verify that SharePoint project members are Site members.
+    Verify that SharePoint Project members are Site members.
 
 1. Click the tab **General**.
 1. On the tab General, under Channel sites, verify that there is 1 site. Click **View**.
-1. Select **SharePoint project-Governance** and click **Edit**.
-1. On the SharePoint project-Governance panel, click the tab **Membership**.
+1. Select **SharePoint Project-Governance** and click **Edit**.
+1. On the SharePoint Project-Governance panel, click the tab **Membership**.
 
     Verify that Lynne Robbins is in Site admins.
 
@@ -488,7 +818,62 @@ Perform this task on LON-CL1.
 
     Verify that Lynne Robbins and Patti Fernandez are Site members.
 
-1. Close the SharePoint project-Governance panel.
+1. Close the SharePoint Project-Governance panel.
+
+#### PowerShell
+
+1. Open **Terminal**.
+1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to SharePoint.
+
+    ````powershell
+    # Replace the URL with the URL you copied before
+    Connect-PnPOnline -Url https://wwlx421595-admin.sharepoint.com/ -Interactive
+    ````
+
+1. Sign using **LynneR@\<your tenant\>.onmicrosoft.com**. The password is the same as the global administrator.
+1. List the sites with their title and url.
+
+    ````powershell
+    Get-PnPTenantSite | Select-Object Title, Url
+    ````
+
+1. List the members of the Microsoft 365 group **SharePoint Project** with their id, principal name, display name, and user type.
+
+    ````powershell
+    Get-PnPMicrosoft365Group -Identity 'SharePoint Project' |
+    Get-PnPMicrosoft365GroupMembers |
+    Select-Object Id, UserPrincipalName, DisplayName, UserType
+    ````
+
+1. Store the url of the **SharePoint Project** site in a variable.
+
+    ````powershell
+    $site = Get-PnPTenantSite |
+        Where-Object { $PSItem.Title -eq 'SharePoint Project' } |
+        Select-Object -ExpandProperty Url
+    `````
+
+1. Retrieve the site groups of the **SharePoint Project site**.
+
+    ````powershell
+    Get-PnPSiteGroup -Site $site
+    ````
+
+    Note the ids in the property **Users**.
+
+1. Retrieve the Microsoft 365 group **SharePoint Project**
+
+    ````powershell
+    Get-PnPMicrosoft365Group -Identity 'SharePoint Project'
+    ````
+
+    Compare the id of the group with the ids you noted in the previous step. They should be identical, but the owners group has an _o suffix.
+
+1. Disconnect from SharePoint.
+
+    ````powershell
+    Disconnect-PnPOnline
+    `````
 
 [figure 1]:/images/microsoft-store-powershell.png
 [figure 2]:/images/microsoft-store-windows-terminal.png

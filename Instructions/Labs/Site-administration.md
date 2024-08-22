@@ -9,6 +9,8 @@ Students must have finished the following practices before starting this lab:
 
 On LON-CL1, sign in as Administrator.
 
+If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+
 ## Introduction
 
 To support various projects you want to create team sites for the SharePoint and the OneDrive deployment project, as well as for the IT department. You want to test the upgrade of a site to a Microsoft 365 group and add Teams functionality. Moreover, you want to test the restore functionality of sites and Microsoft 365 group.  Furthermore, you want to create communication sites for the IT department and a new home site for Contoso. You want to grant Joni Sherman site admins permissions to the new home site.
@@ -19,8 +21,6 @@ Your company wants to manage site storage limits manually. All existing sites sh
 
 The address of a site needs to be changed to a more convenient URL. Users should be redirected from the old URL to the new.
 
-After the design of the new home site is finished, your company wants you to replace to unused generic root site with the new site. As a next step, your company wants to introduce hubs to have a common navigation between sites.
-
 A site created by a user should be made unavailable. Furthermore, the site of a cancelled project should be made read-only.
 
 ## Exercises
@@ -30,9 +30,7 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 1. [Manage site creation](#exercise-3-manage-site-creation)
 1. [Manage storage limits](#exercise-4-manage-storage-limits)
 1. [Change a site address](#exercise-5-change-a-site-address)
-1. [Replace the root site](#exercise-6-replace-the-root-site)
-1. [Manage hub sites](#exercise-7-manage-hub-sites)
-1. [Manage lock states](#exercise-8-manage-lock-states)
+1. [Manage lock states](#exercise-6-manage-lock-states)
 
 ## Exercise 1: Manage sites
 
@@ -64,21 +62,21 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 
 1. [Create team sites without a Microsoft 365 group](#task-2-create-team-sites-without-a-microsoft-365-group)
 
-    | Site name                   | Site description                                                  | Site address            |
-    | --------------------------- | ----------------------------------------------------------------- | ----------------------- |
+    | Site name                   | Site description                                                   | Site address            |
+    | --------------------------- | ------------------------------------------------------------------ | ----------------------- |
     | OneDrive deployment project | Plan, deploy, and maintain OneDrive                                | ../teams/Project1Drive  |
-    | SharePoint project       | Play, deploy, and maintain OneDrive | ../sites/PlaygroundSite |
+    | SharePoint playground       | Play around with SharePoint features, not intented for production  | ../sites/PlaygroundSite |
 
     For all sites, the language is English, and the primary adminsitrator is Lynne Robbins. Select your local time zone.
 
-1. [Create a communication sites](#task-3-create-communication-sites)
+1. [Create communication sites](#task-3-create-communication-sites)
 
     | Template          | Site name     | Site description                                                                     | Site address  |
     | ----------------- | ------------- | ------------------------------------------------------------------------------------ | ------------- |
     | Department        | IT department | External communication site of the IT department for instructions, help, and support | ../sites/IT   |
     | Organization home | Contoso home  | Contoso's new home site                                                              | ../sites/home |
 
-    For all sites, the language is English, and the primary adminsitrator is Lynne Robbins. Select your local time zone.
+    For all sites, the language is English, and the primary administrator is Lynne Robbins. Select your local time zone.
 
 1. [Connect the team site OneDrive deployment project to a new Microsoft 365 group](#task-4-connect-a-team-site-to-a-new-microsoft-365-group) with the alias Project1Drive
 1. [Upgrade the Microsoft 365 group OneDrive deployment project to a team](#task-5-upgrade-a-microsoft-365-group-to-a-team)
@@ -88,6 +86,8 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 1. [Restore Microsoft 365 group OneDrive](#task-9-restore-microsoft-365-group) deployment project
 
 ### Task 1: Create a team site with a Microsoft 365 group
+
+#### Web UI
 
 Perform this task on LON-CL1.
 
@@ -108,7 +108,104 @@ Perform this task on LON-CL1.
 1. On the tab Membership, click **Members**. Verify the users listed above were added as members.
 1. Close the **IT department internal** panel.
 
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Import modules **Microsoft.Graph.Authentication** and **Microsoft.Graph.Users**.
+
+    ````powershell
+    Import-Module Microsoft.Graph.Authentication, Microsoft.Graph.Users
+    `````
+
+1. Sign in to Microsoft Graph.
+
+    ````powershell
+    Connect-Graph -Scopes User.ReadBasic.All
+    `````
+
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. In Permissions requested, click **Accept**.
+1. Find the user of Lynne Robbins and store it in a variable.
+
+    ````powershell
+    $owner = Get-MgUser -Filter "Displayname eq 'Lynne Robbins'"
+    ````
+
+    If you receive an error message at this point, close Terminal and start the task again.
+
+1. Sign in to SharePoint.
+
+    ````powershell
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Import-Module PnP.PowerShell
+    Connect-PnPOnline `
+        -Url "https://$tenantName-admin.sharepoint.com/" -Interactive
+    ````
+
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. Create a standard team site with a Microsoft 365 group. As title, use **IT department internal**. As description, use **Site for internal collaboration within the IT department. Information on this site must not be published without permission.**. The group email address should be **IT**. The site address should be **IT-internal**. The group owner must be the user in the variable you created in the previous step.
+
+    ````powershell
+    # You can use a different time zone
+    $title = 'IT department internal'
+    New-PnPSite `
+        -Type TeamSite `
+        -Title $title `
+        -Description `
+            'Site for internal collaboration within the IT department. Information on this site must not be published without permission.' `
+            -Alias 'IT' `
+            -SiteAlias 'IT-internal' `
+            -Lcid 1033 `
+            -Owners $owner.UserPrincipalName `
+            -TimeZone UTCPLUS0100_AMSTERDAM_BERLIN_BERN_ROME_STOCKHOLM_VIENNA
+    ````
+
+1. Build a list of users to be added to the group.
+
+    ````powershell
+    $displayNames = @(
+        'Miriam Graham'
+        'Alex Wilber'
+        'Christie Cline'
+        'Isaiah Langer'
+        'Megan Bowen'
+        'Adele Vance'
+        'Debra Berger'
+        'Nestor Wilke'
+        'Lee Gu'
+        'Joni Sherman'
+        'Pradeep Gupta'
+    )
+    $users = $displayNames | ForEach-Object { 
+        Get-MgUser -Filter "Displayname eq '$PSItem'"
+    }
+    ````
+
+1. Add the users to the new group.
+
+    ````powershell
+    Add-PnPMicrosoft365GroupMember `
+        -Identity $title -Users $users.UserPrincipalName
+    ````
+
+1. Verify the members of the group.
+
+    ````powershell
+    Get-PnPMicrosoft365GroupMember -Identity $title
+    ````
+
+1. Disconnect from SharePoint and Graph.
+
+    ````powershell
+    Disconnect-PnPOnline
+    Disconnect-Graph
+    ````
+
 ### Task 2: Create team sites without a Microsoft 365 group
+
+#### Web UI
 
 Perform this task on LON-CL1.
 
@@ -121,9 +218,83 @@ Perform this task on LON-CL1.
 1. In Create a site: Select the site type, click **Browse more sites**.
 1. In Other options, under **Choose a template**, ensure **Team site** is selected. Under **Site name**, type **OneDrive deployment project**. Under **Site description**, type **Plan, deploy and maintain OneDrive**. Under **Site address**, in the drop-down, select **../teams/** and, beside, type **Project1Drive**. Under **Primary administrator**, find and click **Lynne Robbins**. Click **Next**.
 1. Under **Select a language**, ensure **English** is selected. Under **Time zone**, select your time zone. Click **Create site**.
-1. Repeat from step 6 for the site **SharePoint project**. Take the parameters for this site from the table above.
+1. Repeat from step 6 for the site **SharePoint playground**. Take the parameters for this site from the table above.
+
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, click the down chevron and **Windows PowerShell**.
+1. Ensure **Windows Powershell** is shown at the top. Import modules **Microsoft.Graph.Authentication**, **Microsoft.Graph.Users**.
+
+    ````powershell
+    Import-Module Microsoft.Graph.Authentication, Microsoft.Graph.Users
+    `````
+
+1. Sign in to Microsoft Graph.
+
+    ````powershell
+    Connect-Graph -Scopes User.ReadBasic.All
+    `````
+
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. In Permissions requested, click **Accept**.
+1. Find the user of Lynne Robbins and store it in a variable.
+
+    ````powershell
+    $owner = Get-MgUser -Filter "Displayname eq 'Lynne Robbins'"
+    ````
+
+    If you receive an error message at this point, close Terminal and start the task again.
+
+1. Sign in to SharePoint.
+
+    ````powershell
+    Import-Module Microsoft.Online.SharePoint.PowerShell
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
+    ````
+
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. Create a team site **OneDrive deployment project** with the url **teams/Project1Drive**.
+
+    ````powershell
+    # TimeZoneId 4 means Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna
+    New-SPOSite `
+        -Url "https://$tenantName.sharepoint.com/teams/Project1Drive" `
+        -Owner $owner.UserPrincipalName `
+        -Title 'OneDrive deployment project' `
+        -Template 'STS#3' `
+        -LocaleId 1033 `
+        -TimeZoneId 4 `
+        -StorageQuota 2560
+    ````
+
+1. Create a team site **SharePoint playground** with the url **sites/PlaygroundSite**.
+
+    ````powershell
+    # TimeZoneId 4 means Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna
+    New-SPOSite `
+        -Url "https://$tenantName.sharepoint.com/sites/PlaygroundSite" `
+        -Owner $owner.UserPrincipalName `
+        -Title 'SharePoint playground' `
+        -Template 'STS#3' `
+        -LocaleId 1033 `
+        -TimeZoneId 4 `
+        -StorageQuota 2560
+    ````
+
+1. Disconnect from SharePoint and Graph.
+
+    ````powershell
+    Disconnect-SPOService
+    Disconnect-Graph
+    ````
 
 ### Task 3: Create communication sites
+
+#### Web UI
 
 Perform this task on LON-CL1.
 
@@ -139,6 +310,90 @@ Perform this task on LON-CL1.
 1. In Give your site a name, under **Site name**, type **IT department**. Under **Site description**, type **External communication site of the IT department for instructions, help, and support**. Under **Site address**, in the drop-down, ensure **../sites/** is selected and, beside, type **IT**. Under **Site owner**, find and click **Lynne Robbins**. Click **Next**.
 1. In Set language and other options, under **Select a language**, ensure **English** is selected. Under **Time zone**, select your time zone. Click **Create site**.
 1. Repeat from step 6 for the site **Contoso home**. Take the parameters for this site from the table above.
+
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Import modules **Microsoft.Graph.Authentication** and **Microsoft.Graph.Users**.
+
+    ````powershell
+    Import-Module Microsoft.Graph.Authentication, Microsoft.Graph.Users
+    `````
+
+1. Sign in to Microsoft Graph.
+
+    ````powershell
+    Connect-Graph -Scopes User.ReadBasic.All
+    `````
+
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. In Permissions requested, click **Accept**.
+1. Find the user of Lynne Robbins and store it in a variable.
+
+    ````powershell
+    $owner = Get-MgUser -Filter "Displayname eq 'Lynne Robbins'"
+    ````
+
+    If you receive an error message at this point, close Terminal and start the task again.
+
+1. Sign in to SharePoint.
+
+    ````powershell
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Import-Module PnP.PowerShell
+    Connect-PnPOnline `
+        -Url "https://$tenantName-admin.sharepoint.com/" -Interactive
+    ````
+
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. Create a communication site. As title, use **IT department**. As description, use **External communication site of the IT department for instructions, help, and support**. The site address should be **/sites/it**. The group owner must be the user in the variable you created in the previous step.
+
+    ````powershell
+    # You can use a different time zone
+    New-PnPSite `
+        -Type CommunicationSite `
+        -Title 'IT department' `
+        -Description `
+            'External communication site of the IT department for instructions, help, and support' `
+        -Url "https://$tenantName.sharepoint.com/sites/it" `
+        -Lcid 1033 `
+        -Owner $owner.UserPrincipalName `
+        -TimeZone UTCPLUS0100_AMSTERDAM_BERLIN_BERN_ROME_STOCKHOLM_VIENNA
+    ````
+
+    Note, that you cannot apply the department site design using PowerShell. However, you can apply the design afterwards in the site. See optional steps below.
+
+1. Create a communication site. As title, use **Contoso home**. As description, use **Contoso's new home site**. The site address should be **/sites/home**. The group owner must be the user in the variable you created in the previous step.
+
+    ````powershell
+    # The single quote in the description must be escaped by two single quotes
+    # You can use a different time zone
+    New-PnPSite `
+        -Type CommunicationSite `
+        -Title 'Contoso home' `
+        -Description 'Contoso''s new home site' `
+        -Url "https://$tenantName.sharepoint.com/sites/home" `
+        -Lcid 1033 `
+        -Owner $owner.UserPrincipalName `
+        -TimeZone UTCPLUS0100_AMSTERDAM_BERLIN_BERN_ROME_STOCKHOLM_VIENNA
+    ````
+
+1. Disconnect from SharePoint and Graph.
+
+    ````powershell
+    Disconnect-PnPOnline
+    Disconnect-Graph
+    ````
+
+If you want to apply the department site design to the IT site, optionally, follow these steps:
+
+1. Open **Microsoft Edge**.
+1. Navigate to **https://\<your tenant name\>.sharepoin.com/sites/it**.
+1. On the site IT department, click the *Settings* icon (the gear icon) and **Apply a site template**.
+1. In Select a template, click **Department**.
+1. On Preview and use 'Department' template, click **Use template**.
 
 ### Task 4: Connect a team site to a new Microsoft 365 group
 
@@ -159,6 +414,7 @@ Perform this task on LON-CL1.
     ````
 
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
+
 1. Connect the site **OneDrive deployment project** to a new Microsoft 365 group with the same name and the alias **Project1Drive**.
 
     ````powershell
@@ -176,6 +432,8 @@ Perform this task on LON-CL1.
 
 ### Task 5: Upgrade a Microsoft 365 group to a team
 
+#### Web UI
+
 Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
@@ -191,7 +449,57 @@ Perform this task on LON-CL1.
 
     Verify that the OneDrive deployment project is visible as a new team.
 
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to SharePoint.
+
+    ````powershell
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Import-Module PnP.PowerShell
+    Connect-PnPOnline `
+        -Url "https://$tenantName-admin.sharepoint.com/" -Interactive
+    ````
+
+1. Retrieve the Microsoft 365 group **OneDrive deployment project** and store it in a variable.
+
+    ````powershell
+    $pnPMicrosoft365Group = Get-PnPMicrosoft365Group `
+        -Identity 'OneDrive deployment project'
+    ````
+
+1. Connect to Microsoft Teams.
+
+    ````powershell
+    Import-Module MicrosoftTeams
+    Connect-MicrosoftTeams
+    ````
+
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. Add the Teams functionality to the group.
+
+    ````powershell
+    New-Team -GroupId $pnPMicrosoft365Group.Id
+    `````
+
+1. Verify that OneDrive deployment project is a team.
+
+    ````powershell
+    Get-Team -GroupId $pnPMicrosoft365Group.Id
+    ````
+
+1. Disconnect from SharePoint and Teams.
+
+    ````powershell
+    Disconnect-PnpOnline
+    Disconnect-MicrosoftTeams
+    ````
+
 ### Task 6: Delete a site without a Microsoft 365 group
+
+#### Web UI
 
 Perform this task on LON-CL1.
 
@@ -200,10 +508,41 @@ Perform this task on LON-CL1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Active sites**.
-1. In Active sites, select **SharePoint project** and click **Delete**.
-1. In the Delete SharePoint project? panel, click **Delete**.
+1. In Active sites, select **SharePoint playground** and click **Delete**.
+1. In the Delete SharePoint playground? panel, click **Delete**.
+
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, click the down chevron and click **Windows PowerShell**.
+1. Connect to Sharepoint Online.
+
+    ````powershell
+    
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
+    ````
+
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. Delete the **SharePoint Playground site**.
+
+    ````powershell
+    Remove-SPOSite `
+        -Identity "https://$tenantName.sharepoint.com/sites/PlaygroundSite"
+    ````
+
+1. On the prompt Performing the operation "Remove-SPOSite" on target "https://WWLx341755.sharepoint.com/sites/PlaygroundSite", enter **y**.
+1. Disconnect from SharePoint.
+
+    ````powershell
+    Disconnect-SPOService
+    ````
 
 ### Task 7: Delete a Microsoft 365 group-connected site
+
+#### Web UI
 
 Perform this task on LON-CL1.
 
@@ -215,7 +554,35 @@ Perform this task on LON-CL1.
 1. In Active sites, select **Onedrive deployment project** and click **Delete**.
 1. In the Delete Onedrive deployment project? panel, click **Delete**.
 
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to SharePoint.
+
+    ````powershell
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Import-Module PnP.PowerShell
+    Connect-PnPOnline `
+        -Url "https://$tenantName-admin.sharepoint.com/" -Interactive
+    ````
+
+1. Delete the group **OneDrive deployment project**.
+
+    ````powershell
+    Remove-PnPMicrosoft365Group -Identity 'OneDrive deployment project'
+    ````
+
+1. Disconnect from SharePoint.
+
+    ````powershell
+    Disconnect-PnPOnline
+    ````
+
 ### Task 8: Restore site
+
+#### Web UI
 
 Perform this task on LON-CL1.
 
@@ -224,12 +591,58 @@ Perform this task on LON-CL1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Deleted sites**.
-1. In Deleted sites, select **SharePoint project** and click **Restore**.
+1. In Deleted sites, select **SharePoint playground** and click **Restore**.
 1. Click **Active sites**.
 
-    Verify that SharePoint project is listed in Active sites again.
+    Verify that SharePoint playground is listed in Active sites again.
+
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, click the down chevron and click **Windows PowerShell**.
+1. Connect to Sharepoint Online.
+
+    ````powershell
+    
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
+    ````
+
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. List the deleted sites.
+
+    ````powershell
+    Get-SPODeletedSite
+    ````
+
+    Verify that the PlaygroundSite is listed.
+
+1. Restore the PlaygroundSite.
+
+    ````powershell
+    Restore-SPODeletedSite `
+        -Identity https://$tenantName.sharepoint.com/sites/PlaygroundSite
+    ````
+
+1. List the active sites.
+
+    ````powershell
+    Get-SPOSite
+    ````
+
+    Verify that the PlaygroundSite is listed.
+
+1. Disconnect from SharePoint.
+
+    ````powershell
+    Disconnect-SPOService
+    ````
 
 ### Task 9: Restore Microsoft 365 group
+
+#### Web UI
 
 Perform this task on LON-CL1.
 
@@ -253,12 +666,56 @@ Perform this task on LON-CL1.
 
     You could have restored the Microsoft 365 group with the site from here too.
 
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to SharePoint.
+
+    ````powershell
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Import-Module PnP.PowerShell
+    Connect-PnPOnline `
+        -Url "https://$tenantName-admin.sharepoint.com/" -Interactive
+    ````
+
+1. List deleted Microsoft 365 groups.
+
+    ````powershell
+    Get-PnPDeletedMicrosoft365Group
+    ````
+
+    Verify that OneDrive deployment project is listed.
+
+1. Restore the OneDrive deployment project Microsoft 365 group.
+
+    ````powershell
+    Restore-PnPDeletedMicrosoft365Group -Identity 'OneDrive deployment project'
+    `````
+
+1. List the Microsoft 365 groups
+
+    ````powershell
+    Get-PnPMicrosoft365Group
+    ````
+
+    Verify that OneDrive deployment project is listed.
+
+1. Disconnect from SharePoint.
+
+    ````powershell
+    Disconnect-PnPOnline
+    ````
+
 ## Exercise 2: Manage site admins
 
 1. [Add Joni Sherman as site admin to the site](#task-1-add-a-site-admins-to-a-site) Contoso home
 1. [Verify site admin access](#task-2-verify-site-admin-access) by Joni Sherman
 
 ### Task 1: Add a site admins to a site
+
+#### Web UI
 
 Perform this task on LON-CL1.
 
@@ -273,6 +730,66 @@ Perform this task on LON-CL1.
 1. Above Add site admins to Contoso home, click the left arrow.
 
     Verify that Joni Sherman was added to the Site admins.
+
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, click the down chevron and **Windows PowerShell**.
+1. Ensure **Windows Powershell** is shown at the top. Import modules **Microsoft.Graph.Authentication**, **Microsoft.Graph.Users**.
+
+    ````powershell
+    Import-Module Microsoft.Graph.Authentication, Microsoft.Graph.Users
+    `````
+
+1. Sign in to Microsoft Graph.
+
+    ````powershell
+    Connect-Graph -Scopes User.ReadBasic.All
+    `````
+
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. In Permissions requested, click **Accept**.
+1. Find the user of **Joni Sherman** and store it in a variable.
+
+    ````powershell
+    $loginName = `
+        (Get-MgUser -Filter "Displayname eq 'Joni Sherman'").UserPrincipalName
+    ````
+
+    If you receive an error message at this point, close Terminal and start the task again.
+
+1. Sign in to SharePoint.
+
+    ````powershell
+    Import-Module Microsoft.Online.SharePoint.PowerShell
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
+    ````
+
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. Add the user as site admin to the site **Contoso home**.
+
+    ````powershell
+    $site = "https://$tenantName.sharepoint.com/sites/home"
+    Set-SPOUser -Site $site -LoginName $loginName -IsSiteCollectionAdmin $true
+    ````
+
+1. Verify that **Joni Sherman** is is site admin of **Contoso home**.
+
+    ````powershell
+    Get-SPOUser -Site $site |
+    Where-Object { $PSItem.IsSiteAdmin } |
+    Format-Table DisplayName, LoginName, IsSiteAdmin, UserType
+    ````
+
+1. Disconnect from Graph and SharePoint
+
+    ````powershell
+    Disconnect-Graph
+    Disconnect-SPOService
+    ````
 
 ### Task 2: Verify site admin access
 
@@ -293,10 +810,10 @@ Perform this task on LON-CL1.
 
 ## Exercise 3: Manage site creation
 
-1. [Verify that users can create Microsoft 365 groups](#task-1-verify-that-users-can-create-microsoft-365-groups) using Outlook
+1. [Verify that users can create Microsoft 365 groups](#task-1-verify-that-users-can-create-microsoft-365-groups) by, as Joni Sherman, creating Joni's group from Outlook
 1. [Limit the users that can create Microsoft 365 groups](#task-2-limit-the-users-that-can-create-microsoft-365-groups) to members the security group sg-IT
 1. [Verify that users cannot create Microsoft 365 groups](#task-3-verify-that-users-cannot-create-microsoft-365-groups)
-1. [Verify that users can create SharePoint sites](#task-4-verify-that-users-can-create-sharepoint-sites)
+1. [Verify that users can create SharePoint sites](#task-4-verify-that-users-can-create-sharepoint-sites) by, as Joni Sherman, creating a new site IT help desk from the SharePoint start page
 1. [Change settings for site creation](#task-5-change-settings-for-site-creation) to disable site creation for users and create new team sites under /teams/
 1. [Verify that users cannot create SharePoint sites](#task-6-verify-that-users-cannot-create-sharepoint-sites)
 
@@ -333,8 +850,24 @@ Perform this task on LON-CL1.
     Wait for the installation to complete. This will take less than a minute. A TERMINAL pane will open at the bottom with a PowerShell prompt.
 
 1. Open **Microsoft Edge**.
-1. In Microsof Edge, navigate to **https://learn.microsoft.com/en-us/microsoft-365/solutions/manage-creation-of-groups?view=o365-worldwide**
-1. On page Manage who can create Microsoft 365 groups, scroll down to the script and click **Copy**. The script is provided for reference here:
+1. In Microsoft Edge, navigate to **https://learn.microsoft.com/en-us/microsoft-365/solutions/manage-creation-of-groups?view=o365-worldwide**
+1. On page Manage who can create Microsoft 365 groups, scroll down to the script and click **Copy**. The script is provided for reference below.
+1. Switch to **Visual Studio Code**.
+1. In Visual Studio Code, click the tab **Set-M365GroupCreationAllowedGroups.ps1**.
+1. In Set-M365GroupCreationAllowedGroups.ps1, paste the script from the web site.
+1. In line 6 of the script reading
+
+    ````powershell
+    $GroupName = ""
+    ````
+
+    type **sg-IT** between the quotes. It should read
+
+    ````powershell
+    $GroupName = "sg-IT"
+    ````
+
+    Note: The security group sg-IT was previously created for you. The script should now look like this.
 
     ````powershell
     Import-Module Microsoft.Graph.Beta.Identity.DirectoryManagement
@@ -342,7 +875,7 @@ Perform this task on LON-CL1.
 
     Connect-MgGraph -Scopes "Directory.ReadWrite.All", "Group.Read.All"
 
-    $GroupName = ""
+    $GroupName = "sg-IT" # <-- This is the modified line
     $AllowGroupCreation = "False"
 
     $settingsObjectID = (Get-MgBetaDirectorySetting | Where-object -Property Displayname -Value "Group.Unified" -EQ).id
@@ -356,8 +889,8 @@ Perform this task on LON-CL1.
                     name = "EnableMSStandardBlockedWords"
                     value = "true"
                 }
-                )
-            }
+            )
+        }
         
         New-MgBetaDirectorySetting -BodyParameter $params
         
@@ -386,23 +919,6 @@ Perform this task on LON-CL1.
     (Get-MgBetaDirectorySetting -DirectorySettingId $settingsObjectID).Values
     `````
 
-1. Switch to **Visual Studio Code**.
-1. In Visual Studio Code, click the tab **Set-M365GroupCreationAllowedGroups.ps1**.
-1. In Set-M365GroupCreationAllowedGroups.ps1, paste the script from the web site.
-1. In line 6 of the script reading
-
-    ````powershell
-    $GroupName = ""
-    ````
-
-    type **sg-IT** between the quotes. It should read
-
-    ````powershell
-    $GroupName = "sg-IT"
-    ````
-
-    Note: The security group sg-IT was previously created for you.
-
 1. On the menu, click **File**, **Save**.
 1. On the menu, click **Run**, **Run Without Debugging**.
 
@@ -427,7 +943,7 @@ Perform this task on LON-CL1.
 1. On Microsoft 365 home, click the app launcher and click **Outlook**.
 1. In Outlook, on the left, click the *Groups* icon.
 
-    Verify that you do not see the New group button anymore.
+    Verify that you do not see the New group button anymore. It might take a few minutes before you can see the effect.
 
 ### Task 4: Verify that users can create SharePoint sites
 
@@ -446,9 +962,11 @@ Perform this task on LON-CL1.
 1. On Give your site a name, under **site name**, type **IT help desk** and click **Next**.
 1. On Set language and other options, under **Select a language**, ensure **English** is selected and click **Create site**.
 
-    After a few moments, you will be redirected to the new team site. Note, that this is a team site without a Microsoft 365 group, since we disable the Microsoft 365 group creation for users before. If Microsoft 365 group creation is allowed, the same process looks a little different and a Microsoft 365 group would be created.
+    After a few moments, you will be redirected to the new team site. Note, that this is a team site without a Microsoft 365 group, since you disabled the Microsoft 365 group creation for users before. If Microsoft 365 group creation is allowed, the same process looks a little different and a Microsoft 365 group would be created.
 
 ### Task 5: Change settings for site creation
+
+#### Web UI
 
 Perform this task on LON-CL1.
 
@@ -459,6 +977,33 @@ Perform this task on LON-CL1.
 1. In SharePoint admin center, click **Settings**.
 1. In Settings, click **Site creation**.
 1. In Site creation, deactivate **Users can create SharePoint sites**. Under **Create team sites under**, in the drop-down, select **/teams/**. Under **Default time zone**, select your time zone. Click **Save**.
+
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, click the down chevron and **Windows PowerShell**.
+1. Ensure **Windows Powershell** is shown at the top. Sign in to SharePoint.
+
+    ````powershell
+    Import-Module Microsoft.Online.SharePoint.PowerShell
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
+    ````
+
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. Disable self service site creation.
+
+    ````powershell
+    Set-SPOTenant -SelfServiceSiteCreationDisabled $true
+    ````
+
+1. Disconnect SharePoint
+
+    ````powershell
+    Disconnect-SPOService
+    ````
 
 ### Task 6: Verify that users cannot create SharePoint sites
 
@@ -492,6 +1037,8 @@ Perform this task on LON-CL1.
 
 ### Task 2: Change the storage limits of sites
 
+#### Web UI
+
 Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
@@ -506,12 +1053,45 @@ Perform this task on LON-CL1.
 
 Repeat from step 6 for other sites. For bulk changes of storage limits, PowerShell is much more effective.
 
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, click the down chevron and **Windows PowerShell**.
+1. Ensure **Windows Powershell** is shown at the top. Sign in to SharePoint.
+
+    ````powershell
+    Import-Module Microsoft.Online.SharePoint.PowerShell
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
+    ````
+
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. Set the storage limit of the site **IT department** to **1 GB** and the warning level to **97 %** of the storage limit.
+
+    ````powershell
+    $storageQuota = 1024
+    Set-SPOSite `
+        -Identity https://$tenantName.sharepoint.com/sites/it `
+        -StorageQuota $storageQuota `
+        -StorageQuotaWarningLevel ($storageQuota * .97)
+    ````
+
+1. Disconnect SharePoint
+
+    ````powershell
+    Disconnect-SPOService
+    ````
+
 ## Exercise 5: Change a site address
 
-1. [Change the address of site](#task-1-change-the-address-of-a-site) SharePoint Project from SharePointproject to SharePoint-project
+1. [Change the address of site](#task-1-change-the-address-of-a-site) SharePoint playground from PlaygroundSite to SharePoint-playground
 1. [Verify automatic redirection](#task-2-verify-automatic-redirection) from the old address to the new address
 
 ### Task 1: Change the address of a site
+
+#### Web UI
 
 Perform this task on LON-CL1.
 
@@ -520,189 +1100,63 @@ Perform this task on LON-CL1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
-1. In Active sites, click **SharePoint project**.
+1. In Active sites, click **SharePoint playground**.
 1. In the IT help desk panel, on the tab General, under **Site address**, click **Edit**.
-1. In Edit SharePoint site address, under **SharePoint site address**, type **SharePoint-project** and click **Save**.
+1. In Edit SharePoint site address, under **SharePoint site address**, type **SharePoint-playground** and click **Save**.
 1. In the message box Change site name?, click **No**.
 1. Close the panel.
+
+#### PowerShell
+
+Perform this task on LON-CL1.
+
+1. Open **Terminal**.
+1. In Terminal, click the down chevron and **Windows PowerShell**.
+1. Ensure **Windows Powershell** is shown at the top. Sign in to SharePoint.
+
+    ````powershell
+    Import-Module Microsoft.Online.SharePoint.PowerShell
+    $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
+    Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
+    ````
+
+1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+1. Check if the url of the site **/sites/PlaygroundSite** can be changed to **/sites/SharePoint-Playground**.
+
+    ````powershell
+    $identity = "https://$tenantName.sharepoint.com/sites/PlaygroundSite"
+    $newSiteUrl = `
+        "https://$tenantName.sharepoint.com/sites/SharePoint-Playground"
+    Start-SPOSiteRename `
+        -Identity $identity -NewSiteUrl $newSiteUrl -ValidationOnly
+    ````
+
+    In the output, verify that the ValidationState is Success.
+
+1. Start the site rename.
+
+    ````powershell
+    Start-SPOSiteRename -Identity $identity -NewSiteUrl $newSiteUrl
+    ````
+
+1. On the prompt This operation will change the URL for site https://\<your tenant\>.sharepoint.com/sites/PlaygroundSite to https://\<your tenant\>.sharepoint.com/sites/SharePoint-Playground, enter **y**.
+1. Disconnect SharePoint
+
+    ````powershell
+    Disconnect-SPOService
+    ````
 
 ### Task 2: Verify automatic redirection
 
 Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/SharePointProject** (the old URL).
+1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/SharePointPlayground** (the old URL).
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
-Verify that you are redirected to the new URL.
+Verify that you are redirected to the new URL. It can take a minute or two until you see the effect.
 
-## Exercise 6: Replace the root site
-
-1. [Explore the current root site](#task-1-explore-the-current-root-site)
-1. [Replace the root site](#task-2-replace-the-root-site) with the new Contoso home
-1. [Verify the new root site](#task-3-verify-the-new-root-site)
-
-### Task 1: Explore the current root site
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-
-    You should see a generic communication site. You may explore the site further.
-
-### Task 2: Replace the root site
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
-1. In SharePoint admin center, click **Active sites**.
-1. In Active sites, select **Communication site** with the root URL. On the toolbar click **Manage home site** (you may have to click the ellipsis to see this command).
-1. In the Home site panel, under **Current home site**, beside the current home site, click the **X** icon to remove it as home site. Click **Save**.
-1. In **Active Sites**, in the row of site **Contoso home**, in the column **URL**, in the context-menu of the URL, click **Copy link**.
-1. Select **Communication site** with the root URL. On the toolbar click **Replace site** (you may have to click the ellipsis to see this command).
-1. In the panel Replace root site, under **URL of the site you want to use**, paste the copied URL of Contoso home. Click **Save**.
-
-    Wait for the action to complete. This may take a minute or two.
-
-### Task 3: Verify the new root site
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-
-    You should see a site using the organization home template with the name Contoso home.
-
-## Exercise 7: Manage hub sites
-
-1. [Register sites as hub sites](#task-1-register-sites-as-hub-sites)
-
-    * Contoso home
-    * IT department
-    * Executive corner
-    * HR
-
-1. [Associate sites with the hub](#task-2-associate-sites-with-the-hub) IT department:
-
-    * IT department internal
-    * IT help desk
-    * OneDrive deployment project
-    * SharePoint project
-
-1. [Associate hubs with the parent hub](#task-3-associate-hubs-with-a-parent-hub) Contoso home:
-
-    * IT department
-    * Executive corner
-    * HR
-
-1. [Edit the navigation on the top-level hub](#task-4-edit-the-navigation-on-the-top-level-hub) by adding all associated hubs under the display name Hubs.
-1. [Edit the navigation on the hub site](#task-5-edit-the-navigation-on-the-hub-site) following the structure below:
-
-    * Groups and Teams (label)
-        * IT internal (link to site)
-        * IT help desk (link to site)
-    * Projects (label)
-        * OneDrive deployment project (link to site)
-        * SharePoint project (link to site)
-    * Hubs (associated child hubs)
-
-### Task 1: Register sites as hub sites
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
-1. In SharePoint admin center, click **Active sites**.
-1. In Active sites, select **Contoso home** and click **Hub**, **Register as hub site**.
-1. In the Register as hub site panel, accept the defaults and click **Save**.
-1. Close the panel.
-1. Repat steps 6 - 8 for the site **IT department**.
-1. In active sites, select **Executive Corner** and click **Hub**, **Change hub association**.
-1. In the panel Edit hub association, under **Select a hub**, select **None** and click **Save**.
-1. Close the panel.
-1. With Executive corner still selected, click **Hub**, **Register as hub site**.
-1. In the Register as hub site panel, accept the defaults and click **Save**.
-1. Close the panel.
-1. Repeat steps 10 - 15 for the site HR.
-
-### Task 2: Associate sites with the hub
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
-1. In SharePoint admin center, click **Active sites**.
-1. In Active sites, select **IT department internal**, **IT help desk**, **OneDrive deployment project**, and **SharePoint project**. click **Bulk edit**, **Hub association**.
-1. In the panel Edit hub association, under **Select a hub**, select **IT department** and click **Save**.
-
-### Task 3: Associate hubs with a parent hub
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
-1. In SharePoint admin center, click **Active sites**.
-1. In Active sites, select **HR** and click **Hub**, **Edit hub site settings**.
-1. In the panel Hub site settings, under **Parent hub association**, select **Contoso home** and click **Save**.
-1. Close the panel.
-1. Repeat steps 6 - 8 for **Executive corner** and **HR**.
-
-### Task 4: Edit the navigation on the top-level hub
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
-1. In SharePoint admin center, click **Active sites**.
-1. In active site, beside **Contoso home**, click the URL.
-1. On the site Contoso home, in the hub navigation bar, click **Add link**.
-1. In the Add panel, under **Choose an option**, select **Associated hubs**. Under Display name, type **Hubs** and click **OK**.
-1. In the Edit hub navigation panel, click **Save**.
-
-### Task 5: Edit the navigation on the hub site
-
-Perform this task on LON-CL1.
-
-1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
-1. In SharePoint admin center, click **Active sites**.
-1. In active site, beside **IT department**, click the URL.
-1. On the page IT department, in the hub navigation bar, click **Add link**.
-1. In the Add panel, under **Choose an option**, select **Label**. Under Display name, type **Groups and teams** and click **OK**.
-1. In the Edit hub navigation panel, hover the mouse just under the **Group and teams** and click the **+**.
-1. In the Add panel, under **Choose an option**, select **Label**. Under Display name, type **Projects** and click **OK**.
-1. In the Edit hub navigation panel, hover the mouse just under the **Group and teams** and click the **+**.
-1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/IT-internal**.  Under Display name, type **IT internal** and click **OK**.
-1. In the Edit hub navigation panel, to the right of **IT internal**, click the ellipsis and click **Make sub link**.
-1. In the Edit hub navigation panel, hover the mouse just under the **IT internal** and click the **+**.
-1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/IT-helpdesk**.  Under Display name, type **IT help desk** and click **OK**.
-1. In the Edit hub navigation panel, hover the mouse just under the **Projects** and click the **+**.
-1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/Project1Drive**.  Under Display name, type **OneDrive deployment project** and click **OK**.
-1. In the Edit hub navigation panel, to the right of **OneDrive deployment project**, click the ellipsis and click **Make sub link**.
-1. In the Edit hub navigation panel, hover the mouse just under the **OneDrive deployment project** and click the **+**.
-1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/SharePoint-project**.  Under Display name, type **SharePoint project** and click **OK**.
-1. In the Edit hub navigation panel, hover the mouse just under the **SharePoint project** and click the **+**.
-1. In the Add panel, under **Choose an option**, select **Associated child hubs**. Under Display name, type **Hubs** and click **OK**.
-1. In the Edit hub navigation panel, to the right of **Hubs**, click the ellipsis and click **Promote sub link**.
-1. In the Edit hub navigation panel, click **Save**.
-
-## Exercise 8: Manage lock states
+## Exercise 6: Manage lock states
 
 1. [Add a page](#task-1-add-a-page) to the site Contoso home telling users that the content of the site is unavaible.
 1. [Set the tenant's unavailability page](#task-2-set-the-tenants-unavailability-page) to the page you just created
@@ -716,10 +1170,7 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
-1. In SharePoint admin center, click **Active sites**.
+1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com**.
 1. In active site, beside **Contoso home**, click the URL.
 1. On the site Contoso home, click **New**, **Page**.
 1. On Welcome!, click **I've done this before** and **Let's go**.
@@ -727,7 +1178,7 @@ Perform this task on LON-CL1.
 1. On the new page, click in **Add a title**, type **Sorry, this site is currently not avaiable**.
 1. In **Add your text here.**, type **An administrator made this site unavailable, because the site need maintenance or the content is outdated. Don't worry! The content is not lost and the site may be available later again.**.
 1. Turn **Comments** **Off**.
-1. Click the full-width banner above the title. A floating toolbar appears. In the toolbar, click the icon *Browse images*.
+1. Click the full-width banner above the title. A floating toolbar appears. In the toolbar, click the ellipsis and **Browse images**.
 1. In the image browser, click **Web search**. Search and select an appropriate image. Try to search for terms like **maintenance** or **out of order**. Click **Insert image**.
 1. When you are satisfied with your page, click **Publish**.
 1. In the Help others find your page, click **Copy link to page** and save the URL anywhere, e.g., in Notepad. Remove the part behind and including the question mark.

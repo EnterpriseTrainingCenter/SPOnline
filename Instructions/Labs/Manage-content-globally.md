@@ -3,15 +3,16 @@
 ## Setup
 
 1. On **LON-CL1**, sign in as **Administrator**.
+1. If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\New-Sites.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
+1. Navigate to **https://admin.microsoft.com**.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Sites**, **Active sites**.
 1. In Active sites, select **U.S. Sales** and, on the toolbar, click **Membership**.
 1. In the U.S. Sales panel on the tab Membership, click **Site admins**.
 1. In Site admins, click **Add site admins**.
-1. In the panel Add sites admins to site U.S. Sales, find and click **Lynne Robbings**. Click **Add (1)**.
+1. In the panel Add sites admins to site U.S. Sales, find and click **Lynne Robbins**. Click **Add (1)**.
 1. Close the panel.
 
 ## Introduction

@@ -1,5 +1,9 @@
 # Practice: Configure OneDrive storage limits
 
+## Setup
+
+If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+
 ## Task
 
 Set the default limit for OneDrive to 100 GB. Change the limit for Patti Fernandez to 5 TB.
