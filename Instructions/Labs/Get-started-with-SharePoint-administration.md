@@ -65,6 +65,8 @@ Perform this task on LON-CL1.
     Add-AppxPackage -Path ~\Downloads\$filename
     ````
 
+    If you get a message that a newer version of Microsoft Visual C++ 2015 Redistributabel is already installed, do not continue to install this version, proceed to the next step.
+
 1. Download WinUI3.
 
     ````powershell
