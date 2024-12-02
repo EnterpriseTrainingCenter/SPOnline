@@ -1151,7 +1151,7 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/SharePointPlayground** (the old URL).
+1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/PlaygroundSite** (the old URL).
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
 Verify that you are redirected to the new URL. It can take a minute or two until you see the effect.
