@@ -242,7 +242,7 @@ Perform this task on LON-CL1.
 
     ````powershell
     Import-Module ExchangeOnlineManagement
-    Import-Module Microsoft.Online.PowerShell
+    Import-Module Microsoft.Online.SharePoint.PowerShell
     Import-Module MicrosoftTeams
     ````
 
