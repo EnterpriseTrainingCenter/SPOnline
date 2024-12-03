@@ -209,7 +209,7 @@ Perform this task on LON-CL1.
 
 1. On the message Untrusted repository, enter **y**.
 
-    This will take a minute or two. You do not have to wait for the installation to complete. Instead, continue to the next step.
+    This will take a few minutes. You do not have to wait for the installation to complete. Instead, continue to the next step.
 
 ### Task 5: Verify the functionality of the PowerShell modules
 
