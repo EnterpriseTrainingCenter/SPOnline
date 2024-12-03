@@ -219,7 +219,7 @@ Perform this task on LON-CL1.
 1. In Terminal, ensure **PowerShell** is shown at the top. Import the modules.
 
     ````powershell
-    Import-Module ExchangeOnlineManagement, Microsoft.Graph, PnP.PowerShell
+    Import-Module ExchangeOnlineManagement, PnP.PowerShell
     Import-Module MicrosoftTeams
     `````
 
@@ -237,17 +237,11 @@ Perform this task on LON-CL1.
     Get-Command -Module MicrosoftTeams
     ````
 
-1. List the commands of the module **Microsoft.Graph.Users**.
-
-    ````powershell
-    Get-Command -Module Microsoft.Graph.Users
-    ````
-
 1. In Terminal, click the down chevron and **Windows PowerShell**.
 1. Ensure **Windows Powershell** is shown at the top. Import modules.
 
     ````powershell
-    Import-Module ExchangeOnlineManagement, Microsoft.Graph
+    Import-Module ExchangeOnlineManagement
     Import-Module Microsoft.Online.PowerShell
     Import-Module MicrosoftTeams
     ````
@@ -332,6 +326,8 @@ Perform this task on LON-CL1.
 
 Perform this task on LON-CL1.
 
+*Important:* The installation of the Microosoft.Graph module must be finished. If it is not finished yet, use the instructions for Web UI.
+
 1. Open **Terminal**.
 1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Graph.
 
@@ -401,6 +397,8 @@ Perform this task on LON-CL1.
 #### PowerShell
 
 Perform this task on LON-CL1.
+
+*Important:* The installation of the Microosoft.Graph module must be finished. If it is not finished yet, use the instructions for Web UI.
 
 1. Open **Terminal**.
 1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Graph.
