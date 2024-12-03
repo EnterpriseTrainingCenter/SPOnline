@@ -172,7 +172,7 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Run **Terminal** as Administrator.
-1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Install the Microsoft 365 Patterns and Practices PowerShell Cmdlets.
+1. In Terminal, ensure **PowerShell** is shown at the top. Install the Microsoft 365 Patterns and Practices PowerShell Cmdlets.
 
     ````powershell
     Install-Module -Name PnP.PowerShell
@@ -216,7 +216,7 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Import the modules.
+1. In Terminal, ensure **PowerShell** is shown at the top. Import the modules.
 
     ````powershell
     Import-Module ExchangeOnlineManagement, Microsoft.Graph, PnP.PowerShell
@@ -333,7 +333,7 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to Microsoft Graph.
+1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Graph.
 
     ````powershell
     Connect-MgGraph -Scopes 'RoleManagement.ReadWrite.Directory'
@@ -403,7 +403,7 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to Microsoft Graph.
+1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Graph.
 
     ````powershell
     Connect-MgGraph -Scopes 'RoleManagement.Read.Directory'
@@ -626,7 +626,7 @@ Perform this task on LON-CL1.
 Perform this taks on LON-CL1.
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to Microsoft Teams.
+1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Teams.
 
     ````powershell
     Connect-MicrosoftTeams
@@ -672,7 +672,7 @@ Perform this task on LON-CL1.
 Perform this taks on LON-CL1.
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to Microsoft Teams.
+1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Teams.
 
     ````powershell
     Connect-MicrosoftTeams
@@ -728,7 +728,7 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to Microsoft Teams.
+1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Teams.
 
     ````powershell
     Connect-MicrosoftTeams
@@ -825,7 +825,7 @@ Perform this task on LON-CL1.
 #### PowerShell
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to SharePoint.
+1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to SharePoint.
 
     ````powershell
     # Replace the URL with the URL you copied before
