@@ -113,7 +113,7 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Import modules **Microsoft.Graph.Authentication** and **Microsoft.Graph.Users**.
+1. In Terminal, ensure **PowerShell** is shown at the top. Import modules **Microsoft.Graph.Authentication** and **Microsoft.Graph.Users**.
 
     ````powershell
     Import-Module Microsoft.Graph.Authentication, Microsoft.Graph.Users
@@ -316,7 +316,7 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Import modules **Microsoft.Graph.Authentication** and **Microsoft.Graph.Users**.
+1. In Terminal, ensure **PowerShell** is shown at the top. Import modules **Microsoft.Graph.Authentication** and **Microsoft.Graph.Users**.
 
     ````powershell
     Import-Module Microsoft.Graph.Authentication, Microsoft.Graph.Users
@@ -454,7 +454,7 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to SharePoint.
+1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to SharePoint.
 
     ````powershell
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
@@ -559,7 +559,7 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to SharePoint.
+1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to SharePoint.
 
     ````powershell
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
@@ -671,7 +671,7 @@ Perform this task on LON-CL1.
 Perform this task on LON-CL1.
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell 7.x.y** is shown at the top. Sign in to SharePoint.
+1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to SharePoint.
 
     ````powershell
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
