@@ -175,8 +175,10 @@ Perform this task on LON-CL1.
 1. In Terminal, ensure **PowerShell** is shown at the top. Install the Microsoft 365 Patterns and Practices PowerShell Cmdlets.
 
     ````powershell
-    Install-Module -Name PnP.PowerShell
+    Install-Module -Name PnP.PowerShell -AllowPrerelease
     ````
+
+    *Note:* We install a nightly build to have the cmdlet ````Set-PnPManagedAppId```` available.
 
 1. On the message Untrusted repository, enter **y**.
 1. In Terminal, click the down chevron and **Windows PowerShell**.
@@ -259,11 +261,40 @@ Perform this task on LON-CL1.
 1. In SharePoint admin center, copy the URL left to the third slash, e.g., *https://wwlx421595-admin.sharepoint.com* and paste it, e.g. in Notepad.
 1. Switch to **Terminal**.
 1. Click the tab **Administrator: PowerShell**.
+1. Register an App for the PnP PowerShell module.
+
+    ````powershell
+    <#
+        Replace the string after $tenant with your tenant name.
+        The tenant name is the part of the SharePoint admin center URL
+        between the second slash and -admin, starting with wwlx and ending
+        with a number, e.g., WWLx312435.
+    #>
+    $tenant = 'wwlx421595'
+    Register-PnPEntraIDAppForInteractiveLogin `
+        -ApplicationName 'PnP PowerShell Cmdlets' `
+        -Tenant "$tenant.onmicrosoft.com"
+    ````
+
+    A browser window opens.
+
+1. Sign in using your Office 365 Tenant Credentials for the Global Admin.
+1. When the message Your are signed in now and can close this page appears, close the browser window and switch back to Terminal. Wait a few seconds. A new browser window will open.
+1. Sign in again using your Office 365 Tenant Credentials for the Global Admin.
+1. In the dialog Permisions requested, activate **Consent on behalf of your organization** and click **Accept**.
+1. When the message Your are signed in now and can close this page appears, close the browser window and switch back to Terminal. After a few seconds, the command emits an AzureAppId/ClientId. Take a note or copy it to the clipboard.
+1. Register the AzureAppId/ClientId a default.
+
+    ````powershell
+    $appId = '9ad7b0d6-2aaf-4bd3-ab03-71c05e0c8df2' # Replace with your ID
+    Set-PnPManagedAppId -Url "https://$tenant.sharepoint.com" -AppId $appId
+    Set-PnPManagedAppId `
+        -Url "https://$tenant-admin.sharepoint.com" -AppId $appId
+    ````
 1. Sign in to SharePoint using the PnP PowerShell module.
 
     ````powershell
-    # Replace the URL with the URL you copied before
-    Connect-PnPOnline -Url https://wwlx421595-admin.sharepoint.com/ -Interactive
+    Connect-PnPOnline -Url "https://$tenant-admin.sharepoint.com" -Interactive
     ````
 
 1. Sign in using your Office 365 Tenant Credentials for the Global Admin.
