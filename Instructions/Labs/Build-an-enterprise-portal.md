@@ -356,7 +356,7 @@ Perform this task on LON-CL1.
 1. In the Edit hub navigation panel, hover the mouse just under the **IT internal** and click the **+**.
 1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/IT-helpdesk**.  Under Display name, type **IT help desk** and click **OK**.
 1. In the Edit hub navigation panel, hover the mouse just under the **Projects** and click the **+**.
-1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/Project1Drive**.  Under Display name, type **OneDrive deployment project** and click **OK**.
+1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/teams/Project1Drive**.  Under Display name, type **OneDrive deployment project** and click **OK**.
 1. In the Edit hub navigation panel, to the right of **OneDrive deployment project**, click the ellipsis and click **Make sub link**.
 1. In the Edit hub navigation panel, hover the mouse just under the **OneDrive deployment project** and click the **+**.
 1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/SharePoint-project**.  Under Display name, type **SharePoint project** and click **OK**.
