@@ -211,10 +211,6 @@ Perform this task on LON-CL1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
-1. In Active sites, select **News @ Contoso**.
-1. Click **Hub**, **Change hub association**.
-1. In the panel Edit hub association, under **Select a hub**, select **Contoso home** and click **Save**.
-1. Close the panel.
 1. In Active sites, select **IT department internal**, **IT help desk**, **OneDrive deployment project**, and **SharePoint project**.
 1. Click **Bulk edit**, **Hub association**.
 1. In the panel Edit hub association, under **Select a hub**, select **IT department** and click **Save**.
@@ -234,14 +230,6 @@ Perform this task on LON-CL1.
     ````
 
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. Associate the site **/sites/News** with the Contoso home hub.
-
-    ````powershell
-    Add-SPOHubSiteAssociation `
-        -Site https://$tenantName.sharepoint.com/sites/News `
-        -HubSite https://$tenantName.sharepoint.com
-    ````
-
 1. Associate the sites **/sites/IT-internal**, **/teams/ITHelpdesk**, **teams/Project1Drive**, and **sites/SharePointProject** with the IT hub.
 
     ````powershell
