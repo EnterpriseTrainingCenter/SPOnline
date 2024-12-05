@@ -24,7 +24,7 @@ Contoso wants to customize the search by adding definitions for acronyms, promot
     | Acronym     | HR                                                                                                                             |
     | Stands for  | Human Resources                                                                                                                |
     | Description | Human resources (HR) is the set of people who make up the workforce of an organization, business sector, industry, or economy. |
-    | Source      | /sites/HR                                                                                                                      |
+    | Source      | https://\<your tenant\>.sharepoint.com/sites/HR                                                                                                                      |
 
 1. [Add a bookark](#task-2-add-a-bookmark)
 
