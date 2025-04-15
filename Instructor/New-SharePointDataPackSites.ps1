@@ -105,7 +105,7 @@ Import-Module `
     Microsoft.Graph.Users
 
 # Connect to Microsoft Graph
-Connect-MgGraph -Scopes 'Domain.Read.All'
+Connect-MgGraph -Scopes 'Domain.Read.All', 'Directory.Read.All', 'User.Read.All'
 
 # Get Entra Id default domain using Microsoft Graph
 $defaultDomain = (Get-MgDomain | Where-Object { $PSItem.IsDefault }).Id
