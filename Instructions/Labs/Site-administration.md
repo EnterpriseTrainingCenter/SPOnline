@@ -1101,7 +1101,7 @@ Perform this task on LON-CL1.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, click **SharePoint playground**.
-1. In the IT help desk panel, on the tab General, under **Site address**, click **Edit**.
+1. In the SharePoint Playground panel, on the tab General, under **Site address**, click **Edit**.
 1. In Edit SharePoint site address, under **SharePoint site address**, type **SharePoint-playground** and click **Save**.
 1. In the message box Change site name?, click **No**.
 1. Close the panel.
