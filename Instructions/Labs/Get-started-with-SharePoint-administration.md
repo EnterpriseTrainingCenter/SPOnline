@@ -10,7 +10,10 @@ As a SharePoint administrator, you have to use PowerShell from time to time. The
 
 After you have set the stage for administration, you explore the features of SharePoint cloud file storage including real-time collaboration, version control and the recycle bin. Then you explore OneDrive and a way to restore it.
 
-To manage the SharePoint project, you create a new Team with a new standard and a new shared channel. You add members to the team and channels and explore the mapping between Teams channels and SharePoint sites.
+To manage the SharePoint project, you create a new Team with a new standard and a new shared channel (figure 1). You add members to the team and channels and explore the mapping between Teams channels and SharePoint sites.
+
+![Site structure after exercise 5][figure 1]
+Figure 1: Site structure after exercise 5
 
 ## Exercises
 
@@ -30,6 +33,7 @@ To manage the SharePoint project, you create a new Team with a new standard and 
 1. [Install Windows Terminal](#task-3-install-windows-terminal)
 1. [Install PowerShell modules](#task-4-install-powershell-modules) PnP.PowerShell, ExchangeOnlineManagement, MicrosoftTeams, Microsoft.Graph, and Microsoft.Online.SharePoint.PowerShell
 1. [Verify the functionality of the PowerShell modules](#task-5-verify-the-functionality-of-the-powershell-modules)
+1. [Register the Entra ID App for interactive login with the PnP Powershell]
 
 ### Task 1: Install WinGet
 
@@ -107,7 +111,7 @@ Perform this task on WIN1.
 1. Open the **Microsoft Store**.
 1. In Microsoft Store, search for **PowerShell**.
 1. In the search results, click **PowerShell**.
-1. In PowerShell, ensure, it is from **Microsoft Corporation** [figure 1] and click **Get**.
+1. In PowerShell, ensure, it is from **Microsoft Corporation** [figure 2] and click **Get**.
 
 You do not have to wait for the installation to complete.
 
@@ -142,7 +146,7 @@ Perform this task on WIN1.
 1. Open the **Microsoft Store**.
 1. In Microsoft Store, search for **Windows Terminal**.
 1. In the search results, click **Windows Terminal**.
-1. In Windows Terminal, ensure, it is from **Microsoft Corporation** [figure 2] and click **Get** or **Update**, if it is installed already.
+1. In Windows Terminal, ensure, it is from **Microsoft Corporation** [figure 3] and click **Get** or **Update**, if it is installed already.
 
 Wait for PowerShell and Windows Terminal to finish installing. You can close the Microsoft Store now.
 
@@ -254,23 +258,22 @@ Perform this task on WIN1.
     Get-Command -Module Microsoft.Online.SharePoint.PowerShell
     ````
 
-1. Open **Microsoft Edge**.
-1. Navigate to **https://admin.microsoft.com**.
-1. Sign in using your Office 365 Tenant Credentials for the Global Admin.
-1. In Microsoft 365 admin center, in the left navigation, click **Show all** and click **SharePoint**.
-1. In SharePoint admin center, copy the URL left to the third slash, e.g., *https://wwlx421595-admin.sharepoint.com* and paste it, e.g. in Notepad.
-1. Switch to **Terminal**.
-1. Click the tab **Administrator: PowerShell**.
+### Task 6: Register the Entra ID App for interactive login with the PnP Powershell
+
+Perform this task on WIN1.
+
+1. Open **Terminal**.
+1. In Terminal, ensure **PowerShell** is shown at the top. Import the modules.
+1. Click the tab **PowerShell**.
 1. Register an App for the PnP PowerShell module.
+
+    Your tenant name is the first label of the domain name in your Office 365 Tenant credentials. E.g., if your tenant credentials are admin@WWLx627621.onmicrosoft.com, your tenant name is WWLx627621.
 
     ````powershell
     <#
         Replace the string after $tenant with your tenant name.
-        The tenant name is the part of the SharePoint admin center URL
-        between the second slash and -admin, starting with wwlx and ending
-        with a number, e.g., WWLx312435.
     #>
-    $tenant = 'wwlx421595'
+    $tenant = 'WWLx627621'
     Register-PnPEntraIDAppForInteractiveLogin `
         -ApplicationName 'PnP PowerShell Cmdlets' `
         -Tenant "$tenant.onmicrosoft.com" `
@@ -362,7 +365,7 @@ Perform this task on WIN1.
 *Important:* The installation of the Microosoft.Graph module must be finished. If it is not finished yet, use the instructions for Web UI.
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Graph.
+1. In Terminal, sign in to Microsoft Graph.
 
     ````powershell
     Connect-MgGraph -Scopes 'RoleManagement.ReadWrite.Directory', 'User.ReadBasic.All'
@@ -388,6 +391,7 @@ Perform this task on WIN1.
             -DisplayName $roleName -RoleTemplateId $roleTemplate.Id
         $role = Get-MgDirectoryRole -Filter "Displayname eq '$roleName'"
     }
+    ````
 
 1. Find and store the user **Lynne Robbins** in a variable.
 
@@ -657,7 +661,7 @@ Perform this task on WIN1.
 Perform this taks on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Teams.
+1. In Terminal, sign in to Microsoft Teams.
 
     ````powershell
     Connect-MicrosoftTeams
@@ -754,6 +758,8 @@ Perform this task on WIN1.
 1. In **Create a channel**, under **Channel name**, type **Governance**. Under **Choose a channel type**, select **Shared**. Deactivate **Share this channel with everyone on the team** and click **Create**.
 1. In Share the Governance channel, in **Type a name or email**, finde and click **Patti Fernandez**. Click **Share**.
 
+If you want, you can try to add your personal work or school account to the shared channel.
+
 #### PowerShell
 
 Perform this task on WIN1.
@@ -781,6 +787,8 @@ Perform this task on WIN1.
     Add-TeamChannelUser `
         -DisplayName 'Governance' -User PattiF@\<your tenant\>.onmicrosoft.com
     ````
+
+    If you want, you can repeat this step and try to add your personal work or school account to the shared channel.
 
 1. Disconnect from Microsoft Teams.
 
@@ -908,5 +916,6 @@ Perform this task on WIN1.
     Disconnect-PnPOnline
     `````
 
-[figure 1]:/images/microsoft-store-powershell.png
-[figure 2]:/images/microsoft-store-windows-terminal.png
+[figure 1]:/images/Lab-Getting-started-with-SharePoint-administration-exercise-5.png
+[figure 2]:/images/microsoft-store-powershell.png
+[figure 3]:/images/microsoft-store-windows-terminal.png
