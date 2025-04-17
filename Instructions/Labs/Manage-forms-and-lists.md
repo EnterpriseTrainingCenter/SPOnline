@@ -2,7 +2,7 @@
 
 ## Setup
 
-On **LON-CL1**, sign in as **Administrator**.
+On **WIN1**, sign in as **Administrator**.
 
 If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
@@ -21,7 +21,7 @@ Contoso wants to use Microsoft Forms, but is concerned about data protection. Th
 
 ### Task: Configure Microsoft Forms options
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -52,7 +52,7 @@ Perform this task on LON-CL1.
 
 ### Task 1: Create a list
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://www.microsoft365.com**.
@@ -69,7 +69,7 @@ If time allows, you may add some lines to the list, if you want to try the funct
 
 ### Task 2: Create a custom list temmplate
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://www.microsoft365.com**.
@@ -121,7 +121,7 @@ Perform this task on LON-CL1.
 
 ### Task 3: Create a list from the custom list template
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https:\/\/\<your tenant\>\.sharepoint.com\/sites\/Mark8ProjectTeam**.

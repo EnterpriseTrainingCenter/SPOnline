@@ -10,9 +10,9 @@ Enable the integration between SharePoint, OneDrive, and EntraB2B.
 
 ## Instructions
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
-1. Sign in to **LON-CL1** as **Administrator**.
+1. Sign in to **WIN1** as **Administrator**.
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and click **Windows PowerShell**.
 1. Connect to Sharepoint Online.

@@ -7,7 +7,7 @@ Students must have finished the following practices before starting this lab:
 1. [Install Visual Studio Code](../Practices/Install-Visual-Studio-Code.md)
 1. [Install Microsoft Graph Beta PowerShell module](../Practices/Install-Microsoft-Graph-Beta-PowerShell-module.md)
 
-On LON-CL1, sign in as Administrator.
+On WIN1, sign in as Administrator.
 
 If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
@@ -89,7 +89,7 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -110,7 +110,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, ensure **PowerShell** is shown at the top. Import modules **Microsoft.Graph.Authentication** and **Microsoft.Graph.Users**.
@@ -207,7 +207,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -222,7 +222,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and **Windows PowerShell**.
@@ -296,7 +296,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -313,7 +313,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, ensure **PowerShell** is shown at the top. Import modules **Microsoft.Graph.Authentication** and **Microsoft.Graph.Users**.
@@ -401,7 +401,7 @@ At the time of writing this lab, the feature to connect a team site to a new Mic
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and click **Windows PowerShell**.
@@ -434,7 +434,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://teams.microsoft.com**.
@@ -451,7 +451,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to SharePoint.
@@ -501,7 +501,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -513,7 +513,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and click **Windows PowerShell**.
@@ -544,7 +544,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -556,7 +556,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to SharePoint.
@@ -584,7 +584,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -598,7 +598,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and click **Windows PowerShell**.
@@ -644,7 +644,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -668,7 +668,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to SharePoint.
@@ -717,7 +717,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -733,7 +733,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and **Windows PowerShell**.
@@ -793,7 +793,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Verify site admin access
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
@@ -819,7 +819,7 @@ Perform this task on LON-CL1.
 
 ### Task 1: Verify that users can create Microsoft 365 groups
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
@@ -837,7 +837,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Limit the users that can create Microsoft 365 groups
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Visual Studio Code**.
 1. In Visual Studio Code, in the menu, click **File**, **Open Folder...**
@@ -933,7 +933,7 @@ Perform this task on LON-CL1.
 
 ### Task 3: Verify that users cannot create Microsoft 365 groups
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
@@ -947,7 +947,7 @@ Perform this task on LON-CL1.
 
 ### Task 4: Verify that users can create SharePoint sites
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
@@ -968,7 +968,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -980,7 +980,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and **Windows PowerShell**.
@@ -1007,7 +1007,7 @@ Perform this task on LON-CL1.
 
 ### Task 6: Verify that users cannot create SharePoint sites
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
@@ -1025,7 +1025,7 @@ Perform this task on LON-CL1.
 
 ### Task 1: Change the site storage limits to manual
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -1039,7 +1039,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -1055,7 +1055,7 @@ Repeat from step 6 for other sites. For bulk changes of storage limits, PowerShe
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and **Windows PowerShell**.
@@ -1093,7 +1093,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -1108,7 +1108,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and **Windows PowerShell**.
@@ -1148,7 +1148,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Verify automatic redirection
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/PlaygroundSite** (the old URL).
@@ -1167,7 +1167,7 @@ Verify that you are redirected to the new URL. It can take a minute or two until
 
 ### Task 1: Add a page
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com**.
@@ -1187,7 +1187,7 @@ Note: In a real-world scenario, you should configure the permissions for the pag
 
 ### Task 2: Set the tenant's unavailability page
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and click **Windows PowerShell**.
@@ -1214,7 +1214,7 @@ Perform this task on LON-CL1.
 
 ### Task 3: Make a site unavailable
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and click **Windows PowerShell**.
@@ -1258,7 +1258,7 @@ Perform this task on LON-CL1.
 
 ### Task 4: Verify the user experience for an unavailable site
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to the URL you copied to the clipboard in the previous task.
@@ -1268,7 +1268,7 @@ Perform this task on LON-CL1.
 
 ### Task 5: Make a site read-only
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and click **Windows PowerShell**.
@@ -1308,7 +1308,7 @@ Perform this task on LON-CL1.
 
 ### Task 6: Verify the user experience for a read-only site
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to the URL you copied to the clipboard in the previous task.

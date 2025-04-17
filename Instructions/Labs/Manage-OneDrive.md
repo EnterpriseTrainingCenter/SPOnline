@@ -2,7 +2,7 @@
 
 ## Setup
 
-1. On **LON-CL1**, sign in as **Administrator**.
+1. On **WIN1**, sign in as **Administrator**.
 1. On **LON-CL2**, sign in as **Admin**.
 
 If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
@@ -28,7 +28,7 @@ Your manager is concerned about the loss of data in OneDrive when a user gets de
 
 ### Task 1: Obtain the Entra tenant ID
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://entra.microsoft.com**.
@@ -39,7 +39,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Configure automatic enrollment in Intune
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://intune.microsoft.com**.
@@ -51,7 +51,7 @@ Perform this task on LON-CL1.
 
 ### Task 3: Create a configuration policy
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://intune.microsoft.com**.
@@ -116,7 +116,7 @@ Perform this task on LON-CL2.
 
 ### Task 1: Obtain the ID of a library
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/allcompany**.
@@ -129,7 +129,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Create a configuration policy
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://intune.microsoft.com**.
@@ -167,7 +167,7 @@ Perform this task on LON-CL2.
 
 ### Task 1: Configure the settings for retention and access delegation
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -185,7 +185,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Delete user
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -204,7 +204,7 @@ Perform this task on LON-CL1.
 
 *Important:* It takes up to 24 hours for the OneDrive cleanup job to run. Therefore, perform this task on the next course day.
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
@@ -228,7 +228,7 @@ Perform this task on LON-CL1.
 
 *Important:* It takes up to 24 hours for the OneDrive cleanup job to run. Therefore, perform this task on the next course day.
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and click **Windows PowerShell**.

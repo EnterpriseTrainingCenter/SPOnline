@@ -2,7 +2,7 @@
 
 ## Setup
 
-1. On **LON-CL1**, sign in as **Administrator**.
+1. On **WIN1**, sign in as **Administrator**.
 1. If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\New-Sites.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 1. Open **Microsoft Edge**.
 1. Navigate to **https://admin.microsoft.com**.
@@ -40,7 +40,7 @@ Moreover, Contoso wants to use SharePoint as advanced document management system
 
 ### Task 1: Create a communication site
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -57,7 +57,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Grant permission
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/OrgAssets**.
@@ -68,7 +68,7 @@ Perform this task on LON-CL1.
 
 ### Task 3: Create libraries
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/OrgAssets**.
@@ -81,7 +81,7 @@ Perform this task on LON-CL1.
 
 ### Task 4: Add the organization assets libraries
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and click **Windows PowerShell**.
@@ -119,7 +119,7 @@ Perform this task on LON-CL1.
 
 ### Task 5: Create organizational templates
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/OrgAssets**.
@@ -151,7 +151,7 @@ Perform this task on LON-CL1.
 
 ### Task 6: Create organizational images
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/OrgAssets**.
@@ -162,9 +162,9 @@ Perform this task on LON-CL1.
 1. In Create a folder, under **Name**, type **Cats** and click **Create**.
 1. Repeat from step 6 to create another folder with the name **Dogs**.
 1. In Microsoft Edge, open a new tab and navigate to **https://en.wikipedia.org/wiki/Cat**.
-1. Save some pictures from the page locally on LON-CL1.
+1. Save some pictures from the page locally on WIN1.
 1. Navigate to **https://en.wikipedia.org/wiki/Dog**.
-1. Save some pictures from the page locally on LON-CL1.
+1. Save some pictures from the page locally on WIN1.
 1. In Microsoft Edge, click the tab **Organization assets**.
 1. In the library Images, click the folder **Cats**.
 1. In the folder Cats, click **Upload**, **Files**.
@@ -175,7 +175,7 @@ Perform this task on LON-CL1.
 
 ### Task 7: Use organizational templates
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Word**.
 1. In Word, click **New**.
@@ -193,7 +193,7 @@ Perform this task on LON-CL1.
 
 ### Task 8: Use organizational images
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/OrgAssets**.
@@ -236,7 +236,7 @@ Perform this task on LON-CL1.
 
 ### Task 1: Configure term store permissions
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -248,7 +248,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Add a term group
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -261,7 +261,7 @@ Perform this task on LON-CL1.
 
 ### Task 3: Add a term set
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -280,7 +280,7 @@ Repeat from step 10 for the term **North America.**
 
 ### Task 4: Add a managed metadata column
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/USSales**.
@@ -295,7 +295,7 @@ Perform this task on LON-CL1.
 
 ### Task 5: Add terms to documents
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/USSales**.
@@ -319,7 +319,7 @@ Repeat steps 7 and 8 for the remaining documents in the folder according to the 
 
 ### Task 1: Grant permissions on the content type hub site
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/contentTypeHub**.
@@ -330,7 +330,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Create content types
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -355,7 +355,7 @@ Perform this task on LON-CL1.
 
 ### Task 3: Add content types to a library
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/USSales**.
@@ -380,7 +380,7 @@ Perform this task on LON-CL1.
 
 ### Task 4: Use content types
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/USSales**.

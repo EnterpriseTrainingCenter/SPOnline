@@ -2,7 +2,7 @@
 
 ## Setup
 
-1. Sign in to LON-CL1 as Administrator.
+1. Sign in to WIN1 as Administrator.
 
 ## Introduction
 
@@ -37,7 +37,7 @@ This task is only necessary, if you plan to install PowerShell and/or Windows Te
 
 #### Desktop experience
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open the **Microsoft Store**.
 1. In Microsoft Store, in the left navigation bar, click **Library**.
@@ -47,7 +47,7 @@ Perform this task on LON-CL1.
 
 #### Windows PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Run **Windows PowerShell** as Administrator.
 1. Download the Microsoft Visual C++ 2015 Redistributable.
@@ -102,7 +102,7 @@ Perform this task on LON-CL1.
 
 #### Desktop experience
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open the **Microsoft Store**.
 1. In Microsoft Store, search for **PowerShell**.
@@ -113,7 +113,7 @@ You do not have to wait for the installation to complete.
 
 #### Windows PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Run **Windows PowerShell** as Administrator.
 1. Find PowerShell in the respository.
@@ -137,7 +137,7 @@ Perform this task on LON-CL1.
 
 #### Desktop experience
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open the **Microsoft Store**.
 1. In Microsoft Store, search for **Windows Terminal**.
@@ -148,7 +148,7 @@ Wait for PowerShell and Windows Terminal to finish installing. You can close the
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Run **PowerShell** as Administrator.
 1. Find Windows Terminal in the repositories.
@@ -169,7 +169,7 @@ Perform this task on LON-CL1.
 
 ### Task 4: Install PowerShell modules
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Run **Terminal** as Administrator.
 1. In Terminal, ensure **PowerShell** is shown at the top. Install the Microsoft 365 Patterns and Practices PowerShell Cmdlets.
@@ -215,7 +215,7 @@ Perform this task on LON-CL1.
 
 ### Task 5: Verify the functionality of the PowerShell modules
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, ensure **PowerShell** is shown at the top. Import the modules.
@@ -343,7 +343,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://admin.microsoft.com**.
@@ -356,7 +356,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 *Important:* The installation of the Microosoft.Graph module must be finished. If it is not finished yet, use the instructions for Web UI.
 
@@ -413,7 +413,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://admin.microsoft.com**.
@@ -428,7 +428,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 *Important:* The installation of the Microosoft.Graph module must be finished. If it is not finished yet, use the instructions for Web UI.
 
@@ -471,7 +471,7 @@ Perform this task on LON-CL1.
 
 ### Task 3: Verify access to the SharePoint admin center
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://admin.microsoft.com**.
@@ -496,7 +496,7 @@ Perform this task on LON-CL1.
 
 ### Task 1: Navigate to the Documents library
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://www.microsoft365.com**.
@@ -513,7 +513,7 @@ Leave Microsoft Edge open for the next task.
 
 ### Task 2: Collaborate on a document in real-time
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. In Documents, click **Contoso Electroncs Announces Electronic Events Legal Department Moves.docx**.
 1. In Contoso Electroncs Announces Electronic Events Legal Department Moves.docx, in the top-right corner, click **Editing** and **Open in Desktop**.
@@ -544,7 +544,7 @@ Leave Microsoft Edge open for the next task.
 
 ### Task 3: Restore the document to the original version
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. In Campaigns - Events - Documents, select **Contoso Electroncs Announces Electronic Event Legal Department Move.docx**. On the toolbar, click the ellipsis (**...**) and click **Version history**.
 
@@ -563,7 +563,7 @@ Leave Microsoft Edge open for the next task.
 
 ### Task 4: Delete and restore a document
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Select **Divisional Sales Report.docx** and, on the tool bar, click **Delete**. You may have to click the ellipsis (**...**) for the Delete command to show.
 1. In the Microsoft 365 bar, click the *Settings* icon (the gear icon) and click **Site contents**.
@@ -580,7 +580,7 @@ Perform this task on LON-CL1.
 
 ### Task 1: Explore OneDrive
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://www.microsoft365.com**.
@@ -602,7 +602,7 @@ Leave Microsoft Edge open for the next task.
 
 ### Task 2: Restore OneDrive
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. In My files, select all files and folders, by clicking to the left of the column headers. Click **Delete**.
 1. In Delete?, click **Delete**.
@@ -641,7 +641,7 @@ If time allows, install the SharePoint and OneDrive apps on your smartphone, sig
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://teams.microsoft.com**.
@@ -653,7 +653,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this taks on LON-CL1.
+Perform this taks on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Teams.
@@ -686,7 +686,7 @@ Perform this taks on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://teams.microsoft.com**.
@@ -699,7 +699,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this taks on LON-CL1.
+Perform this taks on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Teams.
@@ -724,7 +724,7 @@ Perform this taks on LON-CL1.
 
 ### Task 3: Explore the team associated SharePoint site
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://teams.microsoft.com**.
@@ -741,7 +741,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://teams.microsoft.com**.
@@ -755,7 +755,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Teams.
@@ -789,7 +789,7 @@ Perform this task on LON-CL1.
 
 ### Task 5: Explore the private channel associated SharePoint site
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://teams.microsoft.com**.
@@ -813,7 +813,7 @@ Perform this task on LON-CL1.
 
 ### Task 6: Explore the team associated SharePoint sites in SharePoint admin center
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 #### Web UI
 

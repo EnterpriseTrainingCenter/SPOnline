@@ -2,19 +2,19 @@
 
 ## Setup
 
-On LON-CL1, sign in as Administrator.
+On WIN1, sign in as Administrator.
 
 If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
 ## Task
 
-On LON-CL1, install Visual Studio Code.
+On WIN1, install Visual Studio Code.
 
 ## Instructions
 
 ### Desktop Experience
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Store**.
 1. In Microsoft store, search for **Visual Studio Code**.
@@ -24,7 +24,7 @@ Perform this task on LON-CL1.
 
 ### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, find **Visual Studio Code** in the respository.

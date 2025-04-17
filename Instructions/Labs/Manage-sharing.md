@@ -2,7 +2,7 @@
 
 ## Setup
 
-On **LON-CL1**, sign in as **Administrator**.
+On **WIN1**, sign in as **Administrator**.
 
 If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
@@ -27,7 +27,7 @@ After you configured the sharing settings for Contoso, you want to evaluate the 
 
 ### Task 1: Verify the sharing options in a site
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/Mark8ProjectTeam**.
@@ -43,7 +43,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Modify the sharing settings of sites
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -61,7 +61,7 @@ Repeat from step 6 for the site **Brand**.
 
 ### Task 3: Share content using an anyone link
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/Mark8ProjectTeam**.
@@ -82,7 +82,7 @@ Perform this task on LON-CL1.
 
 ### Task 4: Share a folder with an authenticating link
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/Mark8ProjectTeam**.
@@ -114,7 +114,7 @@ Check your email for the invitation message and follow the instructions to acces
 
 ### Task 1: Run a sharing report
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/Mark8ProjectTeam**.
@@ -126,9 +126,9 @@ Perform this task on LON-CL1.
 
 ### Task 2: Remove the anyone ink
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/Mark8ProjectTeam**.
@@ -152,7 +152,7 @@ Perform this task on LON-CL1.
 
 ### Task 3: Delete guest users
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://entra.microsoft.com**.

@@ -2,7 +2,7 @@
 
 ## Setup
 
-On **LON-CL1** sign in as **Administrator**.
+On **WIN1** sign in as **Administrator**.
 
 If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
@@ -37,7 +37,7 @@ In this lab you configure the permissions to meet these requirements.
 
 ### Task 1: Change SharePoint site permissions in SharePoint admin center
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -62,7 +62,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Change SharePoint group memberships site
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/work**.
@@ -79,7 +79,7 @@ Perform this task on LON-CL1.
 
 ### Task 3: Verify and fix site permissions
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/work**.
@@ -104,7 +104,7 @@ Perform this task on LON-CL1.
 
 ### Task 4: Configure permissions on site
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -146,7 +146,7 @@ Perform this task on LON-CL1.
 
 ### Task 1: Enable hub permissions sync on the hub site
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/work**.
@@ -158,7 +158,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Enable hub permissions sync on the associated site
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
@@ -210,7 +210,7 @@ Perform this task on LON-CL1.
 
 ### Task 1: Create a list
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
@@ -224,7 +224,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Create SharePoint groups
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
@@ -244,7 +244,7 @@ Perform this task on LON-CL1.
 
 ### Task 3: Configure permissions on the list
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
@@ -267,7 +267,7 @@ Perform this task on LON-CL1.
 
 ### Task 4: Add users to the SharePoint groups
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
@@ -286,7 +286,7 @@ Perform this task on LON-CL1.
 
 ### Task 5: Verify permissions on the list
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
@@ -315,7 +315,7 @@ Perform this task on LON-CL1.
 
 ### Task 1: Create a permission level
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
@@ -337,7 +337,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Create a SharePoint group, grant a permission level and add users
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
@@ -365,7 +365,7 @@ Perform this task on LON-CL1.
 
 ### Task 4: Verify permissions
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/news**.
