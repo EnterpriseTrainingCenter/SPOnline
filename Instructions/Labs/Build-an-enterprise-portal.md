@@ -425,9 +425,10 @@ Perform this task on LON-CL1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
 1. On Contoso home site (ensure, you are on the empty home page of the site), in the top-right corner, click **Edit**.
-1. In the left column of the second section, click **Add a new web part in column 1** [figure 1] (hover with the mouse near the top of the section and click **+**).
+1. In the left column of the second section, click **Add a new web part in column 1** [figure 2] (hover with the mouse near the top of the section and click **+**).
 1. Find and click **Dashboard for Viva connection**.
 1. In the top-right corner, click **Republish**.
 1. In Ready to republish?, click **Republish**.
 
 [figure 1]:/images/edit-hub-navigation.png
+[figure 2]:/images/contoso-home-site-edit-empty.png
