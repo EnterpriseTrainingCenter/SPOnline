@@ -53,7 +53,7 @@ Perform this task on WIN1.
 
 Perform this task on WIN1.
 
-1. Run **Windows PowerShell** as Administrator.
+1. Run **Terminal** or **Windows PowerShell** as Administrator.
 1. Download the Microsoft Visual C++ 2015 Redistributable.
 
     ````powershell
@@ -119,7 +119,7 @@ You do not have to wait for the installation to complete.
 
 Perform this task on WIN1.
 
-1. Run **Windows PowerShell** as Administrator.
+1. Run **Terminal** or **Windows PowerShell** as Administrator.
 1. Find PowerShell in the respository.
 
     ````powershell
@@ -176,7 +176,7 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Run **Terminal** as Administrator.
-1. In Terminal, ensure **PowerShell** is shown at the top. If not, click the down chevron and click **PowerShell**. Install the Microsoft 365 Patterns and Practices PowerShell Cmdlets.
+1. In Terminal, ensure **Administrator: PowerShell** is shown at the top. If not, click the down chevron and click **PowerShell**. Install the Microsoft 365 Patterns and Practices PowerShell Cmdlets.
 
     ````powershell
     Install-Module -Name PnP.PowerShell -AllowPrerelease
@@ -185,7 +185,7 @@ Perform this task on WIN1.
     *Note:* We install a nightly build to have the cmdlet ````Set-PnPManagedAppId```` available.
 
 1. On the message Untrusted repository, enter **y**.
-1. In Terminal, click the tab **Windows PowerShell**. If you do not have a this tab open, click the down chevron and **Windows PowerShell**.
+1. In Terminal, click the tab **Administrator: Windows PowerShell**. If you do not have a this tab open, click the down chevron and **Windows PowerShell**.
 1. Ensure **Windows Powershell** is shown at the top. Install the Microsoft SharePoint Onine Services Module.
 
     ````powershell
