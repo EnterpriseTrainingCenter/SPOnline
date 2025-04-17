@@ -273,7 +273,8 @@ Perform this task on LON-CL1.
     $tenant = 'wwlx421595'
     Register-PnPEntraIDAppForInteractiveLogin `
         -ApplicationName 'PnP PowerShell Cmdlets' `
-        -Tenant "$tenant.onmicrosoft.com"
+        -Tenant "$tenant.onmicrosoft.com" `
+        -Interactive
     ````
 
     A browser window opens.
@@ -363,7 +364,7 @@ Perform this task on LON-CL1.
 1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Graph.
 
     ````powershell
-    Connect-MgGraph -Scopes 'RoleManagement.ReadWrite.Directory'
+    Connect-MgGraph -Scopes 'RoleManagement.ReadWrite.Directory', 'User.ReadBasic.All'
     ````
 
 1. In Microsoft Edge, sign in using your Office 365 Tenant Credentials for the Global Admin.
@@ -647,7 +648,7 @@ Perform this task on LON-CL1.
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft Teams, on the left, click **Teams**.
 1. In Teams, at the top click **+** and click **Create team**.
-1. In Create a team, under Team name, type **SharePoint project**. Ensure the **Team type** to be **Private**. Click **Create**.
+1. In Create a team, under Team name, type **SharePoint project**. Ensure the **Team type** to be **Private**. Under Name the first channel, type **General information**. Click **Create**.
 1. In Add members to SharePoint project, in Type a name or email, search for and click **Megan Bowen**. Click **Add**.
 
 #### PowerShell
@@ -749,7 +750,7 @@ Perform this task on LON-CL1.
 1. In Teams, at the top click **+** and click **Create channel**.
 1. In Create a channel, click **Select a team**.
 1. In Pick a team to add new channel to, click **SharePoint project** and click **Done**.
-1. In **Create a channel**, under **Channel name**, type **Govenance**. Under **Choose a channel type**, select **Shared**. Deactivate **Share this channel with everyone on the team** and click **Create**.
+1. In **Create a channel**, under **Channel name**, type **Governance**. Under **Choose a channel type**, select **Shared**. Deactivate **Share this channel with everyone on the team** and click **Create**.
 1. In Share the Governance channel, in **Type a name or email**, finde and click **Patti Fernandez**. Click **Share**.
 
 #### PowerShell
