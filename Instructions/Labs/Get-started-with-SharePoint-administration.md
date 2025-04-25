@@ -639,7 +639,7 @@ If time allows, install the SharePoint and OneDrive apps on your smartphone, sig
 1. [Create a standard channel](#task-2-create-a-standard-channel) in the new team with the name Planning
 1. [Explore the team associated SharePoint site](#task-3-explore-the-team-associated-sharepoint-site)
 1. [Create a shared channel](#task-4-create-a-shared-channel) with the name Governance. Do not share it with team members, but add Patti Fernandez as member.
-1. [Explore the private channel associated SharePoint site](#task-5-explore-the-private-channel-associated-sharepoint-site)
+1. [Explore the shared channel associated SharePoint site](#task-5-explore-the-shared-channel-associated-sharepoint-site)
 1. [Explore the team associated SharePoint sites in SharePoint admin center](#task-6-explore-the-team-associated-sharepoint-sites-in-sharepoint-admin-center)
 
 ### Task 1: Create a new team
@@ -796,7 +796,7 @@ Perform this task on WIN1.
     Disconnect-MicrosoftTeams
     ````
 
-### Task 5: Explore the private channel associated SharePoint site
+### Task 5: Explore the shared channel associated SharePoint site
 
 Perform this task on WIN1.
 
