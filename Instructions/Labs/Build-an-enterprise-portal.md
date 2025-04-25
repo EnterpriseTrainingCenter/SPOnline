@@ -2,7 +2,7 @@
 
 ## Setup
 
-On **LON-CL1**, sign in as **Administrator**.
+On **WIN1**, sign in as **Administrator**.
 
 If you skipped Lab [Site administration](/Instructions/Labs/Site-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\New-Sites.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
@@ -25,7 +25,7 @@ After the design of the new home site is finished, your company wants you to rep
 
 ### Task 1: Explore the current root site
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/**.
@@ -37,7 +37,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -57,7 +57,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and **Windows PowerShell**.
@@ -93,7 +93,7 @@ Perform this task on LON-CL1.
 
 ### Task 3: Verify the new root site
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/**.
@@ -138,7 +138,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -159,7 +159,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and **Windows PowerShell**.
@@ -204,7 +204,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -217,7 +217,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and **Windows PowerShell**.
@@ -256,7 +256,7 @@ Perform this task on LON-CL1.
 
 #### Web UI
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -270,7 +270,7 @@ Perform this task on LON-CL1.
 
 #### PowerShell
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and **Windows PowerShell**.
@@ -307,7 +307,7 @@ Perform this task on LON-CL1.
 
 ### Task 4: Edit the navigation on the top-level hub
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -326,7 +326,7 @@ Perform this task on LON-CL1.
 
 ### Task 5: Edit the navigation on the hub site
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -360,7 +360,7 @@ Perform this task on LON-CL1.
 
 ### Task 1: Create a new Viva Connections experience
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://admin.microsoft.com**.
@@ -376,7 +376,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Set up global navigation
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com**.
@@ -393,7 +393,7 @@ Perform this task on LON-CL1.
 
 ### Task 1: Create a dashboard
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com**.
@@ -418,7 +418,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Add Viva Connection web parts
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com**.

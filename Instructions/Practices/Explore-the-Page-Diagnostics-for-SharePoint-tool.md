@@ -2,13 +2,13 @@
 
 ## Task
 
-On LON-CL1, install the Page Diagnostics for SharePoint tool and diagnose the performance of the Contoso \@ Work site.
+On WIN1, install the Page Diagnostics for SharePoint tool and diagnose the performance of the Contoso \@ Work site.
 
 ## Instructions
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
-1. Sign in to **LON-CL1** as **Administrator**.
+1. Sign in to **WIN1** as **Administrator**.
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, click the ellipsis and **Extensions**.
 1. In the Extensions fly-out, click **Get extensions for Microsoft Edge**.

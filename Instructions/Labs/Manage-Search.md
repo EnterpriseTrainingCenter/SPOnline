@@ -2,7 +2,7 @@
 
 ## Setup
 
-Sign in to **LON-CL1** as **Administrator**.
+Sign in to **WIN1** as **Administrator**.
 
 If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
@@ -57,7 +57,7 @@ Contoso wants to customize the search by adding definitions for acronyms, promot
 
 ### Task 1: Add an acronym
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://admin.microsoft.com**.
@@ -69,7 +69,7 @@ Perform this task on LON-CL1.
 
 ### Task 2: Add a bookmark
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://admin.microsoft.com**.
@@ -81,7 +81,7 @@ Perform this task on LON-CL1.
 
 ### Task 3: Add a location
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://admin.microsoft.com**.
@@ -93,7 +93,7 @@ Perform this task on LON-CL1.
 
 ### Task 4: Add a question
 
-Perform this task on LON-CL1.
+Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://admin.microsoft.com**.

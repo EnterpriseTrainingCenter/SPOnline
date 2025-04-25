@@ -2,13 +2,13 @@
 
 ## Task
 
-On LON-CL1, update the Microsoft Store app, install the lab resources and solutions and install the Microsoft 365 apps for Enterprise.
+On WIN1, update the Microsoft Store app, install the lab resources and solutions and install the Microsoft 365 apps for Enterprise.
 
 ## Instructions
 
-1. Sign in to LON-CL1 as Administrator.
+1. Sign in to WIN1 as Administrator.
 1. Open the **Microsoft Store**.
-1. In Microsoft Store, click Update Now.
+1. If Microsoft Store shows a message **Pardon the interruption**, click Update Now.
 
     Do not wait for the update to complete. Continue with the next steps.
 
