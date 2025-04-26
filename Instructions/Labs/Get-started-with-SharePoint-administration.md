@@ -658,7 +658,7 @@ Perform this task on WIN1.
 
 #### PowerShell
 
-Perform this taks on WIN1.
+Perform this tasks on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, sign in to Microsoft Teams.
