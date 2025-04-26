@@ -120,7 +120,7 @@ You do not have to wait for the installation to complete.
 Perform this task on WIN1.
 
 1. Run **Terminal** or **Windows PowerShell** as Administrator.
-1. Find PowerShell in the respository.
+1. Find PowerShell in the repository.
 
     ````powershell
     winget search powershell
