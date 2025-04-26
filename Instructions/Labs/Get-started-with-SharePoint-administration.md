@@ -147,7 +147,7 @@ Perform this task on WIN1.
     ````
 
 1. On the message Do you agree to all source agreements terms, enter **Y**.
-1. On the mesage Do you agree to the terms, enter **Y**.
+1. On the message Do you agree to the terms, enter **Y**.
 
 ### Task 3: Install Windows Terminal
 
