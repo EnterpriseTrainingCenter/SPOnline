@@ -15,7 +15,6 @@ If you skipped the practice [Install Visual Studio Code](Instructions/Practices/
 
 If you skipped the practice [Install Microsoft Graph Beta PowerShell module](Instructions/Practices/Install-Microsoft-Graph-Beta-PowerShell-module.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Install-GraphBeta.ps1**.
 
-
 ## Introduction
 
 To support various projects you want to create team sites for the SharePoint and the OneDrive deployment project, as well as for the IT department. You want to test the upgrade of a site to a Microsoft 365 group and add Teams functionality. Moreover, you want to test the restore functionality of sites and Microsoft 365 group.  Furthermore, you want to create communication sites for the IT department and a new home site for Contoso. You want to grant Joni Sherman site admins permissions to the new home site.
@@ -72,7 +71,7 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
     | OneDrive deployment project | Plan, deploy, and maintain OneDrive                                | ../teams/Project1Drive  |
     | SharePoint playground       | Play around with SharePoint features, not intented for production  | ../sites/PlaygroundSite |
 
-    For all sites, the language is English, and the primary adminsitrator is Lynne Robbins. Select your local time zone.
+    For all sites, the language is English, and the primary administrator is Lynne Robbins. Select your local time zone.
 
 1. [Create communication sites](#task-3-create-communication-sites)
 
@@ -89,6 +88,9 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 1. [Delete a Microsoft 365 group-connected site](#task-7-delete-a-microsoft-365-group-connected-site), OneDrive deployment project
 1. [Restore site](#task-8-restore-site) SharePoint Project
 1. [Restore Microsoft 365 group OneDrive](#task-9-restore-microsoft-365-group) deployment project
+
+![Site structure after exercise 1][figure 1]
+Figure 1: Site structure after exercise 1
 
 ### Task 1: Create a team site with a Microsoft 365 group
 
@@ -402,7 +404,16 @@ If you want to apply the department site design to the IT site, optionally, foll
 
 ### Task 4: Connect a team site to a new Microsoft 365 group
 
-At the time of writing this lab, the feature to connect a team site to a new Microsoft 365 group using the web site interface, was broken. Therefore, only PowerShell instructions are provided.
+#### Web UI
+
+Perform this task on WIN1.
+
+1. Open **Microsoft Edge**.
+1. In Microsoft Edge, navigate to <https://wwlx691952.sharepoint.com/teams/Project1Drive>.
+1. In OneDrive deployment project, click the *Settings* (the gear icon) and **Connect to a new Microsoft 365 group**.
+1. In the panel Associate this team site to a new Microsoft 365 Group, click **Let's get started**.
+1. In the panel Tell us about your new Microsoft 365 Group, under **Group email address**, click *Change email address* (the pencil icon) and, to the left, type Project1Drive. Under **Privacy settings**, ensure **Private - only members can access this site** is selected. Click **Connect group**.
+1. In the panel Add and assign people, wait for the group to be created and click **Finish**.
 
 #### PowerShell
 
@@ -444,8 +455,8 @@ Perform this task on WIN1.
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://teams.microsoft.com**.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In the left navigation, click **Teams**.
-1. In Teams, at the top, click **+** and click **Create team**.
+1. In the left navigation, click **Chat**.
+1. In Chat, at the top, click the down chevron *New items* and click **New team**.
 1. In Create a team, click the link **More create team options**.
 1. In Create team, on the left, click **From group**.
 1. Under Which Microsoft 365 group do you want to use?, click **OneDrive deployment project** and click **Add Team**.
@@ -1320,3 +1331,5 @@ Perform this task on WIN1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
     You should see a warning message at the top of the page telling you that this site is read-only at the administrator's request. Verify that you cannot add or change any content.
+
+[figure 1]:/images/Lab-Site-administration-Exercise-1.png
