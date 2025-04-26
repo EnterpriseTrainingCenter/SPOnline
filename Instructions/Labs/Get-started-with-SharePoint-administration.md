@@ -128,6 +128,18 @@ Perform this task on WIN1.
 
     Notice the ID of PowerShell in the source msstore.
 
+    If you receive a warning
+
+    ````text
+    Failed when searching source; results will not be included: msstore
+    ````
+
+    run the following command and retry.
+
+    ````powershell
+    winget settings --enable BypassCertificatePinningForMicrosoftStore
+    ````
+
 1. Download and install PowerShell.
 
     ````powershell
