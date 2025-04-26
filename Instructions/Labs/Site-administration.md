@@ -726,10 +726,10 @@ Perform this task on WIN1.
 
 ## Exercise 2: Manage site admins
 
-1. [Add Joni Sherman as site admin to the site](#task-1-add-a-site-admins-to-a-site) Contoso home
+1. [Add Joni Sherman as site admin to the site](#task-1-add-a-site-admin-to-the-site) Contoso home
 1. [Verify site admin access](#task-2-verify-site-admin-access) by Joni Sherman
 
-### Task 1: Add a site admins to a site
+### Task 1: Add a site admin to the site
 
 #### Web UI
 
@@ -833,6 +833,9 @@ Perform this task on WIN1.
 1. [Change settings for site creation](#task-5-change-settings-for-site-creation) to disable site creation for users and create new team sites under /teams/
 1. [Verify that users cannot create SharePoint sites](#task-6-verify-that-users-cannot-create-sharepoint-sites)
 
+![Site structure after exercise 3][figure 2]
+Figure 2: Site structure after exercise 3
+
 ### Task 1: Verify that users can create Microsoft 365 groups
 
 Perform this task on WIN1.
@@ -843,7 +846,7 @@ Perform this task on WIN1.
 1. On Login | Microsoft 365, click Sign in.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
 1. On Microsoft 365 home, click the app launcher and click **Outlook**.
-1. In Outlook, on the left, click the *Groups* icon.
+1. In Outlook, on the left, click the **Go to groups** icon.
 1. Above Groups, click **New group**.
 1. In New group, under **Name**, type **Joni's Group** and click **Create**.
 1. In Add members to Joni's Group, click **Not now**.
@@ -867,7 +870,7 @@ Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://learn.microsoft.com/en-us/microsoft-365/solutions/manage-creation-of-groups?view=o365-worldwide**
-1. On page Manage who can create Microsoft 365 groups, scroll down to the script and click **Copy**. The script is provided for reference below.
+1. On page Manage who can create Microsoft 365 groups, click the link **Step 2: Run PowerShell commands**, and, in the script block under Step 2: Run PowerShell commands, click **Copy**. The script is provided for reference below.
 1. Switch to **Visual Studio Code**.
 1. In Visual Studio Code, click the tab **Set-M365GroupCreationAllowedGroups.ps1**.
 1. In Set-M365GroupCreationAllowedGroups.ps1, paste the script from the web site.
@@ -1105,6 +1108,9 @@ Perform this task on WIN1.
 1. [Change the address of site](#task-1-change-the-address-of-a-site) SharePoint playground from PlaygroundSite to SharePoint-playground
 1. [Verify automatic redirection](#task-2-verify-automatic-redirection) from the old address to the new address
 
+![Site structure after exercise 5][figure 3]
+Figure 3: Site structure after exercise 5
+
 ### Task 1: Change the address of a site
 
 #### Web UI
@@ -1120,6 +1126,9 @@ Perform this task on WIN1.
 1. In the SharePoint Playground panel, on the tab General, under **Site address**, click **Edit**.
 1. In Edit SharePoint site address, under **SharePoint site address**, type **SharePoint-playground** and click **Save**.
 1. In the message box Change site name?, click **No**.
+
+    Wait until the site address finishes updating. This will take under a minute.
+
 1. Close the panel.
 
 #### PowerShell
@@ -1174,7 +1183,7 @@ Verify that you are redirected to the new URL. It can take a minute or two until
 
 ## Exercise 6: Manage lock states
 
-1. [Add a page](#task-1-add-a-page) to the site Contoso home telling users that the content of the site is unavaible.
+1. [Add a page](#task-1-add-a-page) to the site Contoso home telling users that the content of the site is unavailable.
 1. [Set the tenant's unavailability page](#task-2-set-the-tenants-unavailability-page) to the page you just created
 1. [Make a site unavailable](#task-3-make-a-site-unavailable): Joni's group
 1. [Verify the user experience for an unavailable site](#task-4-verify-the-user-experience-for-an-unavailable-site)
@@ -1187,14 +1196,14 @@ Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com**.
-1. In active site, beside **Contoso home**, click the URL.
+1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. On the site Contoso home, click **New**, **Page**.
 1. On Welcome!, click **I've done this before** and **Let's go**.
 1. On Page templates, click **Blank** and click **Create page**.
-1. On the new page, click in **Add a title**, type **Sorry, this site is currently not avaiable**.
+1. On the new page, click in **Add a title**, type **Sorry, this site is currently not available**.
 1. In **Add your text here.**, type **An administrator made this site unavailable, because the site need maintenance or the content is outdated. Don't worry! The content is not lost and the site may be available later again.**.
-1. Turn **Comments** **Off**.
-1. Click the full-width banner above the title. A floating toolbar appears. In the toolbar, click the ellipsis and **Browse images**.
+1. Ensure, **Comments** are **Off**.
+1. Click the full-width banner above the title. A floating toolbar appears. In the toolbar, the icon *Browse images*.
 1. In the image browser, click **Web search**. Search and select an appropriate image. Try to search for terms like **maintenance** or **out of order**. Click **Insert image**.
 1. When you are satisfied with your page, click **Publish**.
 1. In the Help others find your page, click **Copy link to page** and save the URL anywhere, e.g., in Notepad. Remove the part behind and including the question mark.
@@ -1207,7 +1216,7 @@ Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and click **Windows PowerShell**.
-1. Connect to Sharepoint Online.
+1. Connect to SharePoint Online.
 
     ````powershell
     
@@ -1234,7 +1243,7 @@ Perform this task on WIN1.
 
 1. Open **Terminal**.
 1. In Terminal, click the down chevron and click **Windows PowerShell**.
-1. Connect to Sharepoint Online.
+1. Connect to SharePoint Online.
 
     ````powershell
     
@@ -1254,16 +1263,24 @@ Perform this task on WIN1.
     Where-Object Title -eq 'Joni''s group'
     ````
 
-1. Make the site unavaible.
+1. Verify, that you retrieved the site object.
+
+    ````powershell
+    $sPOSite
+    ````
+
+    You should receive an output similar to
+
+    ````text
+    Url                                                Owner Storage Quota
+    ---                                                ----- -------------
+    https://wwlx691952.sharepoint.com/sites/jonisgroup            26214400
+    ````
+
+1. Make the site unavailable.
 
     ````powershell
     $sPOSite | Set-SPOSite -LockState NoAccess
-    ````
-
-1. Copy the URL of the site to the clipboard.
-
-    ````powershell
-    $sPOSite.Url | Set-Clipboard
     ````
 
 1. Disconnect from SharePoint Online.
@@ -1277,7 +1294,7 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. Navigate to the URL you copied to the clipboard in the previous task.
+1. In Microsoft Edge, navigate to <https://\<your tenant\>.sharepoint.com/sites/jonisgroup>
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
     You should get redirected to the page you configured before.
@@ -1304,16 +1321,24 @@ Perform this task on WIN1.
     Where-Object Title -eq 'OneDrive deployment project'
     ````
 
+1. Verify, that you retrieved the site object.
+
+    ````powershell
+    $sPOSite
+    ````
+
+    You should receive an output similar to
+
+    ````text
+    Url                                                   Owner Storage Quota
+    ---                                                   ----- -------------
+    https://wwlx691952.sharepoint.com/teams/Project1Drive             1048576
+    ````
+
 1. Make the site read-only.
 
     ````powershell
     $sPOSite | Set-SPOSite -LockState ReadOnly
-    ````
-
-1. Copy the URL of the site to the clipboard.
-
-    ````powershell
-    $sPOSite.Url | Set-Clipboard
     ````
 
 1. Disconnect from SharePoint Online.
@@ -1327,9 +1352,11 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. Navigate to the URL you copied to the clipboard in the previous task.
+1. In Microsoft Edge, navigate to <https://\<your tenant\>.sharepoint.com/teams/Project1Drive>
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
     You should see a warning message at the top of the page telling you that this site is read-only at the administrator's request. Verify that you cannot add or change any content.
 
 [figure 1]:/images/Lab-Site-administration-Exercise-1.png
+[figure 2]:/images/Lab-Site-administration-Exercise-3.png
+[figure 3]:/images/Lab-Site-administration-Exercise-5.png
