@@ -31,10 +31,10 @@ On WIN1, update the Microsoft Store app, install the lab resources and solutions
     ````
 
 1. Open **Microsoft Edge**.
-1. Navigate to **https://www.microsoft365.com**.
-1. On Login | Microsoft 365, click **Sign in**.
+1. Navigate to **https://m365.cloud.microsoft.com**.
+1. On Login | Microsoft 365 Copilot, click **Sign in**.
 1. Sign in using your Office 365 Tenant Credentials for the Global Admin.
-1. On Home | Microsoft 365, in the top-right corner, click **Install and more** and **Install Microsoft 365 apps**.
+1. On Copilot | Microsoft 365 Copilot, in the bottom-left corner, click your username and **My Microsoft 365 profile**.
 1. On My Account, under **Office apps & devices**, click **Install Office**.
 1. In Downloads, under **OfficeSetup.exe**, click **Open file**.
 
