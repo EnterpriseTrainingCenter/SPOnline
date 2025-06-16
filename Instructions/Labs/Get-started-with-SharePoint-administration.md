@@ -54,22 +54,52 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Run **Terminal** or **Windows PowerShell** as Administrator.
-1. Install the Nuget package provider.
+1. Download the Microsoft Visual C++ 2015 Redistributable.
 
     ````powershell
-    Install-PackageProvider -Name NuGet -Force
+    $filename = 'Microsoft.VCLibs.x64.14.00.Desktop.appx'
+    Start-BitsTransfer `
+        -Source https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx `
+        -Destination ~\Downloads\$filename
+    `````
+
+1. Install the Microsoft Visual C++ 2015 Redistributable.
+
+    ````powershell
+    Add-AppxPackage -Path ~\Downloads\$filename
     ````
 
-1. Install the module Microsoft.Winget.Client
+    If you get a message that a newer version of Microsoft Visual C++ 2015 Redistributabel is already installed, do not continue to install this version, proceed to the next step.
+
+1. Download WinUI3.
 
     ````powershell
-    Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery
+    $filename = 'Microsoft.UI.Xaml.2.8.x64.appx'
+    Start-BitsTransfer `
+        -Source `
+            https://github.com/microsoft/microsoft-ui-xaml/releases/download/v2.8.6/Microsoft.UI.Xaml.2.8.x64.appx `
+        -Destination ~\Downloads\$filename
     ````
 
-1. Repair the WinGet package manager for all users.
+1. Install WinUI3.
 
     ````powershell
-    Repair-WinGetPackageManager -AllUsers
+    Add-AppxPackage -Path ~\Downloads\$filename
+    ````
+
+1. Download WinGet.
+
+    ````powershell
+    $filename = 'Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle'
+    Start-BitsTransfer `
+        -Source https://aka.ms/getwinget `
+        -Destination ~\Downloads\$filename
+    ````
+
+1. Install WinGet.
+
+    ````powershell
+        Add-AppxPackage -Path ~\Downloads\$filename
     ````
 
 ### Task 2: Install PowerShell
