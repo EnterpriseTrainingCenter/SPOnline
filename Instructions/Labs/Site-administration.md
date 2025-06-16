@@ -1357,6 +1357,6 @@ Perform this task on WIN1.
 
     You should see a warning message at the top of the page telling you that this site is read-only at the administrator's request. Verify that you cannot add or change any content.
 
-[figure 1]:/images/Lab-Site-administration-Exercise-1.png
-[figure 2]:/images/Lab-Site-administration-Exercise-3.png
-[figure 3]:/images/Lab-Site-administration-Exercise-5.png
+[figure 1]:/images/Lab-Site-administration-exercise-1.png
+[figure 2]:/images/Lab-Site-administration-exercise-3.png
+[figure 3]:/images/Lab-Site-administration-exercise-5.png
