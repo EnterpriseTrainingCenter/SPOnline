@@ -181,7 +181,7 @@ Perform this task on WIN1.
     winget install 9N0DX20HK701
     ````
 
-1. On the mesage Do you agree to the terms, enter **Y**.
+1. On the message Do you agree to the terms, enter **Y**.
 
 ### Task 4: Install PowerShell modules
 
@@ -191,10 +191,8 @@ Perform this task on WIN1.
 1. In Terminal, ensure **Administrator: PowerShell** is shown at the top. If not, click the down chevron and click **PowerShell**. Install the Microsoft 365 Patterns and Practices PowerShell Cmdlets.
 
     ````powershell
-    Install-Module -Name PnP.PowerShell -AllowPrerelease
+    Install-Module -Name PnP.PowerShell
     ````
-
-    *Note:* We install a nightly build to have the cmdlet ````Set-PnPManagedAppId```` available.
 
 1. On the message Untrusted repository, enter **y**.
 1. In Terminal, click the tab **Administrator: Windows PowerShell**. If you do not have a this tab open, click the down chevron and **Windows PowerShell**.
@@ -288,8 +286,7 @@ Perform this task on WIN1.
     $tenant = 'WWLx627621'
     Register-PnPEntraIDAppForInteractiveLogin `
         -ApplicationName 'PnP PowerShell Cmdlets' `
-        -Tenant "$tenant.onmicrosoft.com" `
-        -Interactive
+        -Tenant "$tenant.onmicrosoft.com"
     ````
 
     A browser window opens.
@@ -600,14 +597,14 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. Navigate to **https://www.microsoft365.com**.
+1. Navigate to **https://m365.cloud.microsoft.com**.
 1. On Login | Microsoft 365, click **Sign in**.
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 
     On the Microsoft 365 home page, verify that you are signed in with Lynne Robbins. If you are still signed in with MOD Administrator, click your account icon in the top-right corner, and click **Sign out**. Close the tab and repeat this step.
 
-1. Click the app launcher and click **OneDrive**.
-1. On the Microsoft 365 home page, on the left, click **OneDrive**.
+1. In the left-hand navigation, click **Apps**.
+1. In Apps, click **OneDrive**.
 
     Explore the content shown on Home.
 
@@ -627,6 +624,9 @@ Perform this task on WIN1.
 
     Verify the deleted files and folders are in the Recycle bin. You could restore them from here, but we will take a different approach.
 
+1. In the bottom-left, click your user name and click **View acount**.
+1. In My Account, in the left navigation, click **My Apps**.
+1. In the App dashboard, click **OneDrive**.
 1. In the top-right corner, click the *Settings* icon (the gear icon), and click **Restore your OneDrive**.
 1. In Restore your OneDrive, under **Select a date**, select **Yesterday**.
 
