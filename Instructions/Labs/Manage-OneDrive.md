@@ -1,9 +1,8 @@
-# Lab: Manage OneDirve
+# Lab: Manage OneDrive
 
 ## Setup
 
-1. On **WIN1**, sign in as **Administrator**.
-1. On **LON-CL2**, sign in as **Admin**.
+1. On **WIN1**, sign in as **Admin**.
 
 If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
@@ -24,7 +23,7 @@ Your manager is concerned about the loss of data in OneDrive when a user gets de
 1. [Obtain the Entra tenant ID](#task-1-obtain-the-entra-tenant-id)
 1. [Configure automatic enrollment in Intune](#task-2-configure-automatic-enrollment-in-intune)
 1. [Create a configuration policy](#task-3-create-a-configuration-policy) to automatically sign in to OneDrive, move known folders, and prevent users from disabling files-on-demand
-1. [Join a client to Entra and verify the OneDrive configuration](#task-4-join-a-client-to-entra-and-verify-the-onedrive-configuration). Join LON-CL2.
+1. [Join a client to Entra and verify the OneDrive configuration](#task-4-join-a-client-to-entra-and-verify-the-onedrive-configuration). Join WIN1.
 
 ### Task 1: Obtain the Entra tenant ID
 
@@ -75,22 +74,11 @@ Perform this task on WIN1.
 
 ### Task 4: Join a client to Entra and verify the OneDrive configuration
 
-Perform this task on LON-CL2.
+Perform this task on WIN1.
 
 1. Open **Settings**.
 1. In Settings, click **Accounts**.
-1. In Acccounts, click **Access work or school**.
-1. In Access work or school, click **Connected to ADATUM AD domain** and click **Disconnect**.
-1. In the message Are you sure you want to remove this account?, click **Yes**.
-1. In the message box Disconnect from the organization, click **Disconnect**.
-1. In the message box Restart your PC, click **Restart now**.
-
-    Wait for the computer to restart. This will take less than a minute.
-
-1. Sign in as **Admin**.
-1. Open **Settings**.
-1. In Settings, click **Accounts**.
-1. In Acccounts, click **Access work or school**.
+1. In Accounts, click **Access work or school**.
 1. In Access work or school, click **Connect**.
 1. In Set up a work or school account, click the link **Join this device to Microsoft Entra ID**.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
@@ -108,6 +96,8 @@ Perform this task on LON-CL2.
 
     Verify that OneDrive contains your Joni's desktop, documents and pictures.
 
+1. Sign out.
+
 ## Exercise 2: Manage the sync of SharePoint libraries using Intune
 
 1. [Obtain the ID of the library](#task-1-obtain-the-id-of-a-library) Documents in the site All Company
@@ -118,9 +108,9 @@ Perform this task on LON-CL2.
 
 Perform this task on WIN1.
 
+1. Sign in as Global administrator.
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/allcompany**.
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the All company site, click **Documents**.
 1. In Documents, click **Sync**.
 1. In the message This site is trying to open Microsoft OneDrive, click **Cancel**.
@@ -133,7 +123,6 @@ Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://intune.microsoft.com**.
-1. Sign in as Global administrator.
 1. In Microsoft Intune admin center, in the left navigation pane, click **Devices**.
 1. In Devices, under **Manage devices**, click **Configuration**.
 1. In Configuration, click **Create**, **New Policy**.
@@ -148,7 +137,7 @@ Perform this task on WIN1.
 
 ### Task 3: Verify the sync of the SharePoint library
 
-Perform this task on LON-CL2.
+Perform this task on WIN1.
 
 1. Sign out.
 1. Sign in as **Joni Sherman**.
