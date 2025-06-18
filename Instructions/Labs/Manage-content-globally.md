@@ -360,7 +360,7 @@ Perform this task on WIN1.
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com/sites/USSales**.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. On the U.S. Sales site, click the *Settings* icon (the gear icon) and **Site settings**.
+1. On the U.S. Sales site, click the *Settings* icon (the gear icon), **Site Information** and **View all site settings**.
 1. In Site Settings, under **Site Collection Administration**, click **Content type publishing**.
 1. In Content Type Publishing hubs, beside **Hubs**, ensure the URL of the content type hub site from [Task 1](#task-1-grant-permissions-on-the-content-type-hub-site) is shown. Click **Content type publishing error log**.
 
