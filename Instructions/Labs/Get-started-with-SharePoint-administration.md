@@ -77,162 +77,19 @@ Perform all tasks on WIN1.
 
 ## Exercise 2: Manage the SharePoint administrator role
 
-1. [Assign the SharePoint Administrator role](#task-1-assign-the-sharepoint-administrator-role) to Lynne Robbins
-1. [Verify the SharePoint Administrator role holders](#task-2-verify-the-sharepoint-administrator-role-holders) include Lynne Robbins
-1. [Verify access to the SharePoint admin center](#task-3-verify-access-to-the-sharepoint-admin-center) as Lynne Robbins
+1. Assign the **SharePoint Administrator** role to **Lynne Robbins**.
 
-### Task 1: Assign the SharePoint Administrator role
+    [Assigning an Entra ID role](../General/Assigning-an-Entra-ID-role.md)
 
-#### Web UI
+1. Verify the **SharePoint Administrator** role holders include **Lynne Robbins**.
 
-Perform this task on WIN1.
+1. As **Lynne Robbins**, verify access to the SharePoint admin center by listing the active sites using the Web UI.
 
-1. Open **Microsoft Edge**.
-1. Navigate to **https://admin.microsoft.com**.
-1. Sign in using your Office 365 Tenant Credentials for the Global Admin.
-1. In the Microsoft 365 admin center, in the left navigation, click **Users** and **Active users**.
-1. In Active users, click **Lynne Robbins**.
-1. On the panel Lynne Robbins, on the tab Account, under Roles, click **Manage roles**.
-1. In Manage admin roles, click **Admin center access** and **SharePoint Administrator**. Click **Save changes**.
-1. Close the panel **Manage admin roles**.
-
-#### PowerShell
-
-Perform this task on WIN1.
-
-*Important:* The installation of the Microosoft.Graph module must be finished. If it is not finished yet, use the instructions for Web UI.
-
-1. Open **Terminal**.
-1. In Terminal, sign in to Microsoft Graph.
-
-    ````powershell
-    Connect-MgGraph -Scopes 'RoleManagement.ReadWrite.Directory', 'User.ReadBasic.All'
-    ````
-
-1. In Microsoft Edge, sign in using your Office 365 Tenant Credentials for the Global Admin.
-1. In the dialog Permissions requests, click **Accept**.
-1. Close **Microsoft Edge** and return to **Terminal**.
-1. Get the SharePoint Administrator role.
-
-    ````powershell
-    $roleName = 'SharePoint Administrator'
-    $role = Get-MgDirectoryRole -Filter "Displayname eq '$roleName'"
-    ````
-
-1. Add role from template if role is not present yet.
-
-    ````powershell
-    if ($role -eq $null) {
-        $roleTemplate = Get-MgDirectoryRoleTemplate |
-            Where-Object { $PSItem.Displayname -eq $roleName }
-        New-MgDirectoryRole `
-            -DisplayName $roleName -RoleTemplateId $roleTemplate.Id
-        $role = Get-MgDirectoryRole -Filter "Displayname eq '$roleName'"
-    }
-    ````
-
-1. Find and store the user **Lynne Robbins** in a variable.
-
-    ````powershell
-    $displayname = 'Lynne Robbins'
-    $mgUser = Get-MgUser -Filter "Displayname eq '$displayname'"
-    `````
-
-1. Add the stored user to the role.
-
-    ````powershell
-    New-MgDirectoryRoleMemberByRef `
-        -DirectoryRoleId $role.Id `
-        -OdataId "https://graph.microsoft.com/v1.0/users/$($mgUser.Id)"
-    ````
-
-1. Disconnect from Microsoft Graph.
-
-    ````powershell
-    Disconnect-MgGraph
-    ````
-
-### Task 2: Verify the SharePoint Administrator role holders
-
-#### Web UI
-
-Perform this task on WIN1.
-
-1. Open **Microsoft Edge**.
-1. Navigate to **https://admin.microsoft.com**.
-1. Sign in using your Office 365 Tenant Credentials for the Global Admin.
-1. In the Microsoft 365 admin center, in the left navigation, click **Show all**, **Roles** and **Role assignments**.
-1. In Role assignments, on the tab Microsoft Entra ID, click **SharePoint Administrator**.
-1. In the panel SharePoint Administrator, click the tab **Assigned**.
-
-    Verify that Lynne Robbins is has the SharePoint Administrator role assigned.
-
-1. Close the SharePoint Administrator panel.
-
-#### PowerShell
-
-Perform this task on WIN1.
-
-*Important:* The installation of the Microosoft.Graph module must be finished. If it is not finished yet, use the instructions for Web UI.
-
-1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Graph.
-
-    ````powershell
-    Connect-MgGraph -Scopes 'RoleManagement.Read.Directory'
-    ````
-
-1. In Microsoft Edge, sign in using your Office 365 Tenant Credentials for the Global Admin.
-1. In the dialog Permissions requests, click **Accept**.
-1. Close **Microsoft Edge** and return to **Terminal**.
-1. Get the SharePoint Administrator role.
-
-    ````powershell
-    $roleName = 'SharePoint Administrator'
-    $role = Get-MgDirectoryRole -Filter "Displayname eq '$roleName'"
-    ````
-
-1. Get the role members and store them in a variable.
-
-    ````powershell
-    $mgDirectoryRoleMember = Get-MgDirectoryRoleMember -DirectoryRoleId $role.Id
-    `````
-
-1. Retrieve the users for the role member ids.
-
-    ````powershell
-    $mgDirectoryRoleMember | ForEach-Object { Get-MgUser -UserId $PSItem.Id }
-    `````
-
-    Verify that Lynne Robbins is has the SharePoint Administrator role assigned.
-
-1. Disconnect from Microsoft Graph.
-
-    ````powershell
-    Disconnect-MgGraph
-    ````
-
-### Task 3: Verify access to the SharePoint admin center
-
-Perform this task on WIN1.
-
-1. Open **Microsoft Edge**.
-1. Navigate to **https://admin.microsoft.com**.
-
-    If you are signed in as MOD Administrator, click your account icon in the top-right corner, and click **Sign out**. Then close Microsoft Edge and start the task again.
-
-1. Sign using **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft 365 admin center, in the left navigation, click **Show all** and click **SharePoint**.
-
-    In SharePoint admin center, verify that you are signed in with Lynne Robbins. If you are still signed in with MOD Administrator, click your account icon in the top-right corner, and click **Sign out**. Close the tab and repeat this step.
-
-1. In Sharepoint admin center, click **Sites** and **Active sites**.
-
-    You should see a list of sites.
+    [Getting SharePoint Sites](../General/Getting-SharePoint-Sites.md)
 
 ## Exercise 3: Explore cloud file storage
 
-1. [Navigate to the Documents library](#task-1-navigate-to-the-documents-library) on the Compaigns - Events team site
+1. [Navigate to the Documents library](#task-1-navigate-to-the-documents-library) on the Campaigns - Events team site
 1. [Collaborate on a document in real-time](#task-2-collaborate-on-a-document-in-real-time)
 1. [Restore the document to the original version](#task-3-restore-the-document-to-the-original-version)
 1. [Delete and restore a document](#task-4-delete-and-restore-a-document)

@@ -28,3 +28,7 @@
     Set-PnPManagedAppId `
         -Url "https://$tenant-admin.sharepoint.com" -AppId $appId
     ````
+
+## References
+
+[Register an Entra ID Application to use with PnP PowerShell | PnP PowerShell](https://pnp.github.io/powershell/articles/registerapplication.html)
