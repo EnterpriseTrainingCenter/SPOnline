@@ -4,6 +4,8 @@
 
 Sign in to WIN1 as Admin.
 
+All exercises are performed on WIN1.
+
 ## Introduction
 
 As a SharePoint administrator, you have to use PowerShell from time to time. Therefore, you want to prepare your computer by installing PowerShell and the necessary PowerShell modules to administer SharePoint Online. Then, you assign the SharePoint administrator role to your user account, so that you do not have to be signed in as Global administrator all the time.
@@ -24,8 +26,6 @@ Figure 1: Site structure after exercise 5
 1. [Explore SharePoint integration with Teams](#exercise-5-explore-sharepoint-integration-with-teams)
 
 ## Exercise 1: Get started with PowerShell
-
-Perform all tasks on WIN1.
 
 1. Install WinGet.
 
@@ -89,143 +89,29 @@ Perform all tasks on WIN1.
 
 ## Exercise 3: Explore cloud file storage
 
-1. [Navigate to the Documents library](#task-1-navigate-to-the-documents-library) on the Campaigns - Events team site
-1. [Collaborate on a document in real-time](#task-2-collaborate-on-a-document-in-real-time)
-1. [Restore the document to the original version](#task-3-restore-the-document-to-the-original-version)
-1. [Delete and restore a document](#task-4-delete-and-restore-a-document)
+1. Navigate to the **Documents** library on the **Campaigns - Events** team site as **Lynne Robbins**.
+1. In the Documents library, open **Contoso Electronics Announces Electronic Events Legal Department Moves.docx** in the Microsoft Word desktop app. Ensure, **Autosave** is **On**. Make a change to the document, e.g., on page 2, apply the style **Quote** to the last paragraph.
 
-### Task 1: Navigate to the Documents library
+    If you are asked to activate Office, sign in using Lynne Robbins.
 
-Perform this task on WIN1.
+    Switch to the browser and verify your change is visible. In the browser, make a change to the document, e.g., on page 2, in the first paragraph, change **Seattle** to **Vienna**.
 
-1. Open **Microsoft Edge**.
-1. Navigate to **https://www.microsoft365.com**.
-1. On Login | Microsoft 365, click **Sign in**.
-1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+    Switch to the Microsoft Word desktop app and verify your change is visible. Then close Microsoft Word and the browser tab.
 
-    On the Microsoft 365 home page, verify that you are signed in with Lynne Robbins. If you are still signed in with MOD Administrator, click your account icon in the top-right corner, and click **Sign out**. Close the tab and repeat this step.
+1. Verify that the document **Contoso Electronics Announces Electronic Events Legal Department Moves.docx** has several versions. Restore version **2.0** by **Debra Berger** and verify your changes are undone.
 
-1. Click the app launcher and click **SharePoint**.
-1. On the SharePoint start page, click **Campaigns - Events**.
-1. In Campaigns - Events, click **Documents**.
+    [Managing versions](../General/Managing-versions.md)
 
-Leave Microsoft Edge open for the next task.
+1. Delete the document **Divisional Sales Report.docx** and restore it from the recycle bin. Verify that the document is restored.
 
-### Task 2: Collaborate on a document in real-time
-
-Perform this task on WIN1.
-
-1. In Documents, click **Contoso Electroncs Announces Electronic Events Legal Department Moves.docx**.
-1. In Contoso Electroncs Announces Electronic Events Legal Department Moves.docx, in the top-right corner, click **Editing** and **Open in Desktop**.
-
-    Wait for Microsoft Word to open.
-
-1. In Microsoft Word, sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Stay signed in to all your apps, click **OK**.
-1. In You're all set!, click **Done**.
-1. In Sign in to get started with Word, click **Sign in or create account**.
-1. In Activate Office, sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Accept the license agreement, click **Accept**.
-1. In Your privacy matters, click **Close**.
-1. You should see the document. On the top-left, ensure **Autosave** is **On**.
-1. Make a change to the document, e.g., on page 2, apply the style **Quote** to the last paragraph.
-1. Switch to **Microsoft Edge**.
-1. In Microsoft Edge, in All done. You can close this file now., click **Continue here**. Verify your change is visible.
-1. Make a change to the document, e.g., on page 2, in the first paragraph, change **Seattle** to **Vienna**.
-1. Switch to **Microsoft Word**.
-
-    Verify your change is visible.
-
-1. Close **Microsoft Word**.
-1. Switch to **Microsoft Edge**.
-1. Close the tab **Contoso Electroncs Announces Electronic Events Legal Department Moves.docx**.
-
-Leave Microsoft Edge open for the next task.
-
-### Task 3: Restore the document to the original version
-
-Perform this task on WIN1.
-
-1. In Campaigns - Events - Documents, select **Contoso Electroncs Announces Electronic Event Legal Department Move.docx**. On the toolbar, click the ellipsis (**...**) and click **Version history**.
-
-    You should see several versions including your recent changes.
-
-1. Hover the mouse over the date and time beside version **2.0** by **Debra Berger**, click the down chevron, and click **Restore**.
-1. In the mesage box You are about to replace the current version with the selected version, click **OK**.
-1. Close **Version history**.
-1. Click **Contoso Electroncs Announces Electronic Event Legal Department Move.docx**.
-
-    Verify you changes are undone.
-
-1. Close the tab **Contoso Electroncs Announces Electronic Event Legal Department Move.docx**.
-
-Leave Microsoft Edge open for the next task.
-
-### Task 4: Delete and restore a document
-
-Perform this task on WIN1.
-
-1. Select **Divisional Sales Report.docx** and, on the tool bar, click **Delete**. You may have to click the ellipsis (**...**) for the Delete command to show.
-1. In the Microsoft 365 bar, click the *Settings* icon (the gear icon) and click **Site contents**.
-1. In Contents, take a moment to review the site contents. Then, in the top-right, click **Recycle bin (1)**.
-1. Click **Divisional Sales Report.docx** and click **Restore**.
-1. In the left navigation, click **Documents**.
-
-    Verify that Divisional Sales Report.docx was restored.
+    [Restoring items from the recycle bin](../General/Restoring-items-from-the-recycle-bin.md)
 
 ## Exercise 4: Explore OneDrive
 
-1. [Explore OneDrive](#task-1-explore-onedrive)
-1. [Restore OneDrive](#task-2-restore-onedrive)
+1. As **Lynne Robbins**, access OneDrive.
+1. As **Lynne Robbins**, delete all files and folders in OneDrive and restore them using the **Restore your OneDrive** feature.
 
-### Task 1: Explore OneDrive
-
-Perform this task on WIN1.
-
-1. Open **Microsoft Edge**.
-1. Navigate to **https://m365.cloud.microsoft.com**.
-1. On Login | Microsoft 365, click **Sign in**.
-1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
-
-    On the Microsoft 365 home page, verify that you are signed in with Lynne Robbins. If you are still signed in with MOD Administrator, click your account icon in the top-right corner, and click **Sign out**. Close the tab and repeat this step.
-
-1. In the left-hand navigation, click **Apps**.
-1. In Apps, click **OneDrive**.
-
-    Explore the content shown on Home.
-
-1. On the left, click **My files**.
-
-    Explore the content in My files.
-
-Leave Microsoft Edge open for the next task.
-
-### Task 2: Restore OneDrive
-
-Perform this task on WIN1.
-
-1. In My files, select all files and folders, by clicking to the left of the column headers. Click **Delete**.
-1. In Delete?, click **Delete**.
-1. On the left, click **Recycle bin**.
-
-    Verify the deleted files and folders are in the Recycle bin. You could restore them from here, but we will take a different approach.
-
-1. In the bottom-left, click your user name and click **View acount**.
-1. In My Account, in the left navigation, click **My Apps**.
-1. In the App dashboard, click **OneDrive**.
-1. In the top-right corner, click the *Settings* icon (the gear icon), and click **Restore your OneDrive**.
-1. In Restore your OneDrive, under **Select a date**, select **Yesterday**.
-
-    You see all the changes you applied to your OneDrive since Yesterday. The last change is on the top, the first change at the bottom.
-
-1. Select your first change at the bottom and click **Restore**.
-1. In Are you sure you want to restore your OneDrive?, click **Restore**.
-
-    Wait for the restore to complete. This will take a minute or two.
-
-1. Click **Return to your OneDrive**.
-
-    Verify the file were restored. The folders were not restored, because the were empty. If you want to restore them, go to the recycle bin and restore them from there.
+    [Restoring OneDrive](../General/Restoring-OneDrive.md)
 
 *Note:* The restore feature is also available in SharePoint libraries.
 
