@@ -87,6 +87,8 @@ Figure 1: Site structure after exercise 5
 
     [Getting SharePoint Sites](../General/Getting-SharePoint-Sites.md)
 
+From now on, you can use the user Lynne Robbins for SharePoint administration.
+
 ## Exercise 3: Explore cloud file storage
 
 1. Navigate to the **Documents** library on the **Campaigns - Events** team site as **Lynne Robbins**.
@@ -119,57 +121,23 @@ If time allows, install the SharePoint and OneDrive apps on your smartphone, sig
 
 ## Exercise 5: Explore SharePoint integration with Teams
 
-1. [Create a new team](#task-1-create-a-new-team) with the name SharePoint project and invite Megan Bowen as member.
-1. [Create a standard channel](#task-2-create-a-standard-channel) in the new team with the name Planning
-1. [Explore the team associated SharePoint site](#task-3-explore-the-team-associated-sharepoint-site)
-1. [Create a shared channel](#task-4-create-a-shared-channel) with the name Governance. Do not share it with team members, but add Patti Fernandez as member.
-1. [Explore the shared channel associated SharePoint site](#task-5-explore-the-shared-channel-associated-sharepoint-site)
-1. [Explore the team associated SharePoint sites in SharePoint admin center](#task-6-explore-the-team-associated-sharepoint-sites-in-sharepoint-admin-center)
+1. Create a team with the name **SharePoint project** (mail nick name **SharePointProject**) and invite Megan Bowen as member.
 
-### Task 1: Create a new team
+    [Creating a team](../General/Creating-a-team.md)
 
-#### Web UI
+1. In the team SharePoint project, create a standard channel **Planning**.
 
-Perform this task on WIN1.
+    [Creating a channel](../General/Creating-a-channel.md)
 
-1. Open **Microsoft Edge**.
-1. Navigate to **https://teams.microsoft.com**.
-1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft Teams, on the left, click **Teams**.
-1. In Teams, at the top click **+** and click **Create team**.
-1. In Create a team, under Team name, type **SharePoint project**. Ensure the **Team type** to be **Private**. Under Name the first channel, type **General information**. Click **Create**.
-1. In Add members to SharePoint project, in Type a name or email, search for and click **Megan Bowen**. Click **Add**.
+1. Explore the team associated SharePoint site
+1. In the team SharePoint project, create a shared channel with the name **Governance**. Do not share it with team members, but add Patti Fernandez as member.
 
-#### PowerShell
+    [Creating a channel](../General/Creating-a-channel.md)
 
-Perform this tasks on WIN1.
+    If you want, you can share the channel with your personal work or school account.
 
-1. Open **Terminal**.
-1. In Terminal, sign in to Microsoft Teams.
-
-    ````powershell
-    Connect-MicrosoftTeams
-    `````
-
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. Create a team with the name **SharePoint project**.
-
-    ````powershell
-    New-Team -DisplayName 'SharePoint Project' -MailNickName SharePointProject
-    ````
-
-1. Add **Megan Bowen** to the team.
-
-    ````powershell
-    Get-Team -DisplayName 'SharePoint Project' |
-    Add-TeamUser -User MeganB@\<your tenant\>.onmicrosoft.com
-    ````
-
-1. Disconnect from Microsoft Teams.
-
-    ````powershell
-    Disconnect-MicrosoftTeams
-    ````
+1. Explore the shared channel associated SharePoint site
+1. Explore the team associated SharePoint sites in SharePoint admin center
 
 ### Task 2: Create a standard channel
 
