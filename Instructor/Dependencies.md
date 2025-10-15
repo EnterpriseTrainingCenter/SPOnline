@@ -1,6 +1,6 @@
 # Dependencies
 
-All labs are dependent on the successfull completion of Practice [Setup](/Instructions/Practices/Setup.md).
+All labs are dependent on the successful completion of Practice [Setup](/Instructions/Practices/Setup.md).
 
 This installs catch-up scripts in C:\LabResources\Solutions. If a lab or practice is dependent on a previous lab or practice, it is mentioned in the setup section, including the script, if available.
 
