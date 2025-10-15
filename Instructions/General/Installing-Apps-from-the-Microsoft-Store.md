@@ -42,9 +42,10 @@ If, at any point, you receive a message Do you agree to all source agreements te
 
 If, at any point, you receive a message Do you agree to the terms, enter **Y**.
 
-
 ## References
 
 [search Command | Microsoft Learn](https://learn.microsoft.com/en-us/windows/package-manager/winget/search)
+
 [install Command | Microsoft Learn](https://learn.microsoft.com/en-us/windows/package-manager/winget/install)
+
 [settings command | Microsoft Learn](https://learn.microsoft.com/en-us/windows/package-manager/winget/settings)
