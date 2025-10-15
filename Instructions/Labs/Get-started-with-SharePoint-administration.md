@@ -2,7 +2,7 @@
 
 ## Setup
 
-1. Sign in to WIN1 as Administrator.
+Sign in to WIN1 as Admin.
 
 ## Introduction
 
@@ -25,326 +25,55 @@ Figure 1: Site structure after exercise 5
 
 ## Exercise 1: Get started with PowerShell
 
-1. [Install WinGet](#task-1-install-winget)
-
-    This task is only necessary, if you plan to install PowerShell and/or Windows Terminal with Windows PowerShell.
-
-1. [Install PowerShell](#task-2-install-powershell)
-1. [Install Windows Terminal](#task-3-install-windows-terminal)
-1. [Install PowerShell modules](#task-4-install-powershell-modules) PnP.PowerShell, ExchangeOnlineManagement, MicrosoftTeams, Microsoft.Graph, and Microsoft.Online.SharePoint.PowerShell
-1. [Verify the functionality of the PowerShell modules](#task-5-verify-the-functionality-of-the-powershell-modules)
-1. [Register the Entra ID App for interactive login with the PnP Powershell](#task-6-register-the-entra-id-app-for-interactive-login-with-the-pnp-powershell)
-
-### Task 1: Install WinGet
-
-This task is only necessary, if you plan to install PowerShell and/or Windows Terminal with Windows PowerShell.
-
-#### Desktop experience
-
-Perform this task on WIN1.
-
-1. Open the **Microsoft Store**.
-1. In Microsoft Store, in the left navigation bar, click **Library**.
-1. In the Library, find **App Installer** and, beside, click **Update**.
-
-    Wait for the update to complete.
-
-#### Windows PowerShell
-
-Perform this task on WIN1.
-
-1. Run **Terminal** or **Windows PowerShell** as Administrator.
-1. Download the Microsoft Visual C++ 2015 Redistributable.
-
-    ````powershell
-    $filename = 'Microsoft.VCLibs.x64.14.00.Desktop.appx'
-    Start-BitsTransfer `
-        -Source https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx `
-        -Destination ~\Downloads\$filename
-    `````
-
-1. Install the Microsoft Visual C++ 2015 Redistributable.
-
-    ````powershell
-    Add-AppxPackage -Path ~\Downloads\$filename
-    ````
-
-    If you get a message that a newer version of Microsoft Visual C++ 2015 Redistributabel is already installed, do not continue to install this version, proceed to the next step.
-
-1. Download WinUI3.
-
-    ````powershell
-    $filename = 'Microsoft.UI.Xaml.2.8.x64.appx'
-    Start-BitsTransfer `
-        -Source `
-            https://github.com/microsoft/microsoft-ui-xaml/releases/download/v2.8.6/Microsoft.UI.Xaml.2.8.x64.appx `
-        -Destination ~\Downloads\$filename
-    ````
-
-1. Install WinUI3.
-
-    ````powershell
-    Add-AppxPackage -Path ~\Downloads\$filename
-    ````
-
-1. Download WinGet.
-
-    ````powershell
-    $filename = 'Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle'
-    Start-BitsTransfer `
-        -Source https://aka.ms/getwinget `
-        -Destination ~\Downloads\$filename
-    ````
+Perform all tasks on WIN1.
 
 1. Install WinGet.
 
-    ````powershell
-        Add-AppxPackage -Path ~\Downloads\$filename
-    ````
+    [Installing WinGet](../General/Installing-WinGet.md)
 
-### Task 2: Install PowerShell
+    This task is only necessary, if you plan to install PowerShell and/or Windows Terminal with Windows PowerShell.
 
-#### Desktop experience
+1. Install **PowerShell** (app-id: 9MZ1SNWT0N5D)from the Microsoft Store.
 
-Perform this task on WIN1.
+    ![figure 2]:/images/microsoft-store-powershell.png
+    Figure 2: PowerShell in Microsoft Store
 
-1. Open the **Microsoft Store**.
-1. In Microsoft Store, search for **PowerShell**.
-1. In the search results, click **PowerShell**.
-1. In PowerShell, ensure, it is from **Microsoft Corporation** [figure 2] and click **Get**.
+    [Installing Apps from the Microsoft Store](../General/Installing-Apps-from-the-Microsoft-Store.md)
 
-You do not have to wait for the installation to complete.
+1. Install **Windows Terminal** (app-id: 9N0DX20HK701) from the Microsoft Store.
 
-#### Windows PowerShell
+    ![figure 3]:/images/microsoft-store-windows-terminal.png
+    Figure 3: Windows Terminal in Microsoft Store
 
-Perform this task on WIN1.
+    [Installing Apps from the Microsoft Store](../General/Installing-Apps-from-the-Microsoft-Store.md)
 
-1. Run **Terminal** or **Windows PowerShell** as Administrator.
-1. Find PowerShell in the repository.
+1. In **PowerShell** Install the module **PnP.PowerShell**.
 
-    ````powershell
-    winget search powershell
-    ````
+    [Installing PowerShell modules](../General/Installing-PowerShell-modules.md)
 
-    Notice the ID of PowerShell in the source msstore.
+1. In **Windows PowerShell**, install the modules **Microsoft.Online.SharePoint.PowerShell**, **ExchangeOnlineManagement**, **MicrosoftTeams**, and **Microsoft.Graph**.
 
-    If you receive a warning
+    [Installing PowerShell modules](../General/Installing-PowerShell-modules.md)
 
-    ````text
-    Failed when searching source; results will not be included: msstore
-    ````
+    Installing Microsoft.Graph will take a few minutes. You do not have to wait for the installation to complete. Instead, continue to the next task.
 
-    run the following command and retry.
+1. In **PowerShell**, import the modules **ExchangeOnlineManagement**, **PnP.PowerShell** and **MicrosoftTeams**. List the commands of each module.
 
-    ````powershell
-    winget settings --enable BypassCertificatePinningForMicrosoftStore
-    ````
+    [Importing PowerShell modules](../General/Importing-PowerShell-modules.md)
+    [Getting PowerShell commands](../General/Getting-PowerShell-commands.md)
 
-1. Download and install PowerShell.
+1. In **Windows PowerShell**, import the modules **ExchangeOnlineManagement**, **Microsoft.Online.SharePoint.PowerShell** and **MicrosoftTeams**. List the commands of each module.
 
-    ````powershell
-    winget install 9MZ1SNWT0N5D
-    ````
+    [Importing PowerShell modules](../General/Importing-PowerShell-modules.md)
+    [Getting PowerShell commands](../General/Getting-PowerShell-commands.md)
 
-1. On the message Do you agree to all source agreements terms, enter **Y**.
-1. On the message Do you agree to the terms, enter **Y**.
+1. Register an Entra ID App for interactive login with the PnP Powershell.
 
-### Task 3: Install Windows Terminal
+    [Registering an Entra ID App for interactive login with the PnP Powershell](../General/Registering-an-Entra-ID-App-for-interactive-login-with-the-PnP-PowerShell.md)
 
-#### Desktop experience
+1. List the SharePoint sites in your tenant using the PnP PowerShell module and the SharePoint Online module.
 
-Perform this task on WIN1.
-
-1. Open the **Microsoft Store**.
-1. In Microsoft Store, search for **Windows Terminal**.
-1. In the search results, click **Windows Terminal**.
-1. In Windows Terminal, ensure, it is from **Microsoft Corporation** [figure 3] and click **Get** or **Update**, if it is installed already.
-
-Wait for PowerShell and Windows Terminal to finish installing. You can close the Microsoft Store now.
-
-#### PowerShell
-
-Perform this task on WIN1.
-
-1. Run **PowerShell** as Administrator.
-1. Find Windows Terminal in the repositories.
-
-    ````powershell
-    winget search 'windows terminal'
-    ````
-
-    Notice the ID of Windows Terminal in the source msstore.
-
-1. Download and install Windows Terminal.
-
-    ````powershell
-    winget install 9N0DX20HK701
-    ````
-
-1. On the message Do you agree to the terms, enter **Y**.
-
-### Task 4: Install PowerShell modules
-
-Perform this task on WIN1.
-
-1. Run **Terminal** as Administrator.
-1. In Terminal, ensure **Administrator: PowerShell** is shown at the top. If not, click the down chevron and click **PowerShell**. Install the Microsoft 365 Patterns and Practices PowerShell Cmdlets.
-
-    ````powershell
-    Install-Module -Name PnP.PowerShell
-    ````
-
-1. On the message Untrusted repository, enter **y**.
-1. In Terminal, click the tab **Administrator: Windows PowerShell**. If you do not have a this tab open, click the down chevron and **Windows PowerShell**.
-1. Ensure **Windows Powershell** is shown at the top. Install the Microsoft SharePoint Onine Services Module.
-
-    ````powershell
-    Install-Module -Name Microsoft.Online.SharePoint.PowerShell
-    ````
-
-1. On the message Untrusted repository, enter **y**.
-1. Install the Exchange Online Management V3 module.
-
-    ````powershell
-    Install-Module -Name ExchangeOnlineManagement
-    ````
-
-1. On the message Untrusted repository, enter **y**.
-1. Install the Microsoft Teams cmdlets module.
-
-    ````powershell
-    Install-Module -Name MicrosoftTeams
-    ````
-
-1. On the message Untrusted repository, enter **y**.
-1. Install the Microsoft Graph module.
-
-    ````powershell
-    Install-Module -Name Microsoft.Graph
-    ````
-
-1. On the message Untrusted repository, enter **y**.
-
-    This will take a few minutes. You do not have to wait for the installation to complete. Instead, continue to the next step.
-
-### Task 5: Verify the functionality of the PowerShell modules
-
-Perform this task on WIN1.
-
-1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell** is shown at the top. Import the modules.
-
-    ````powershell
-    Import-Module ExchangeOnlineManagement, PnP.PowerShell
-    Import-Module MicrosoftTeams
-    `````
-
-    This may take some minutes.
-
-1. List the commands of the module **PnP.PowerShell**.
-
-    ````powershell
-    Get-Command -Module PnP.PowerShell
-    ````
-
-1. List the commands of the module **MicrosoftTeams**.
-
-    ````powershell
-    Get-Command -Module MicrosoftTeams
-    ````
-
-1. In Terminal, click the down chevron and **Windows PowerShell**.
-1. Ensure **Windows Powershell** is shown at the top. Import modules.
-
-    ````powershell
-    Import-Module ExchangeOnlineManagement
-    Import-Module Microsoft.Online.SharePoint.PowerShell
-    Import-Module MicrosoftTeams
-    ````
-
-1. List the commands of the module Microsoft.Online.SharePoint.PowerShell.
-
-    ````powershell
-    Get-Command -Module Microsoft.Online.SharePoint.PowerShell
-    ````
-
-### Task 6: Register the Entra ID App for interactive login with the PnP Powershell
-
-Perform this task on WIN1.
-
-1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell** is shown at the top. Import the modules.
-1. Click the tab **PowerShell**.
-1. Register an App for the PnP PowerShell module.
-
-    Your tenant name is the first label of the domain name in your Office 365 Tenant credentials. E.g., if your tenant credentials are admin@WWLx627621.onmicrosoft.com, your tenant name is WWLx627621.
-
-    ````powershell
-    <#
-        Replace the string after $tenant with your tenant name.
-    #>
-    $tenant = 'WWLx627621'
-    Register-PnPEntraIDAppForInteractiveLogin `
-        -ApplicationName 'PnP PowerShell Cmdlets' `
-        -Tenant "$tenant.onmicrosoft.com"
-    ````
-
-    A browser window opens.
-
-1. Sign in using your Office 365 Tenant Credentials for the Global Admin.
-1. When the message Your are signed in now and can close this page appears, close the browser window and switch back to Terminal. Wait a few seconds. A new browser window will open.
-1. Sign in again using your Office 365 Tenant Credentials for the Global Admin.
-1. In the dialog Permisions requested, activate **Consent on behalf of your organization** and click **Accept**.
-1. When the message Your are signed in now and can close this page appears, close the browser window and switch back to Terminal. After a few seconds, the command emits an AzureAppId/ClientId. Take a note or copy it to the clipboard.
-1. Register the AzureAppId/ClientId a default.
-
-    ````powershell
-    $appId = '9ad7b0d6-2aaf-4bd3-ab03-71c05e0c8df2' # Replace with your ID
-    Set-PnPManagedAppId -Url "https://$tenant.sharepoint.com" -AppId $appId
-    Set-PnPManagedAppId `
-        -Url "https://$tenant-admin.sharepoint.com" -AppId $appId
-    ````
-
-1. Sign in to SharePoint using the PnP PowerShell module.
-
-    ````powershell
-    Connect-PnPOnline -Url "https://$tenant-admin.sharepoint.com" -Interactive
-    ````
-
-1. Sign in using your Office 365 Tenant Credentials for the Global Admin.
-1. In Permissions requested, activate **Consent on behalf of your organization** and click **Accept**.
-1. In **Terminal**, list the sites in the tenant.
-
-    ````powershell
-    Get-PnPTenantSite
-    ````
-
-1. Sign out from SharePoint.
-
-    ````powershell
-    Disconnect-PnpOnline
-    ````
-
-1. In Terminal, click the tab **Administrator: Windows PowerShell**.
-1. Sign in to SharePoint using SharePoint Online module.
-
-    ````powershell
-    # Replace the URL with the URL you copied before
-    Connect-SPOService -Url https://wwlx421595-admin.sharepoint.com
-    ````
-
-1. Sign in using your Office 365 Tenant Credentials for the Global Admin.
-1. List the sites in the tenant.
-
-    ````powershell
-    Get-SPOSite
-    ````
-
-1. Sign out from SharePoint.
-
-    ````powershell
-    Disconnect-SPOService
-    ````
+    [Getting SharePoint Sites](../General/Getting-SharePoint-Sites.md)
 
 ## Exercise 2: Manage the SharePoint administrator role
 
