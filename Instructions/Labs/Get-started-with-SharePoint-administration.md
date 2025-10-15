@@ -129,244 +129,26 @@ If time allows, install the SharePoint and OneDrive apps on your smartphone, sig
 
     [Creating a channel](../General/Creating-a-channel.md)
 
-1. Explore the team associated SharePoint site
+1. Explore the team associated SharePoint site by opening the tab **Files** in the channel **General** and then clicking **Open in SharePoint** from the ellipsis menu.
+
+    Verify you see two folders with the same name as the team's channels.
+
 1. In the team SharePoint project, create a shared channel with the name **Governance**. Do not share it with team members, but add Patti Fernandez as member.
 
     [Creating a channel](../General/Creating-a-channel.md)
 
     If you want, you can share the channel with your personal work or school account.
 
-1. Explore the shared channel associated SharePoint site
-1. Explore the team associated SharePoint sites in SharePoint admin center
+1. On the team's web site, verify that you do not see a folder for the channel **Governance**, but you see the channel in the documents library under **In channels**.
+1. List the sites in your tenant and verify the Membership of the site **SharePoint Project**.
 
-### Task 2: Create a standard channel
+    Verify that Lynne Robbins is in Owner.
+    Verify that SharePoint Project members are in Site admins.
+    Verify that SharePoint Project members are in Site members.
 
-#### Web UI
+    Verify, that on the tab **General** under **Channel sites** there is 1 site. View the site and verify that Lynne Robbins is in Site admins and that Lynne Robbins and Patti Fernandez are in Site members.
 
-Perform this task on WIN1.
-
-1. Open **Microsoft Edge**.
-1. Navigate to **https://teams.microsoft.com**.
-1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft Teams, on the left, click **Teams**.
-1. In Teams, at the top click **+** and click **Create channel**.
-1. In Create a channel, click **Select a team**.
-1. In Pick a team to add new channel to, click **SharePoint project** and click **Done**.
-1. In **Create a channel**, under **Channel name**, type **Planning**. Under **Choose a channel type**, select **Standard**. Click **Create**.
-
-#### PowerShell
-
-Perform this taks on WIN1.
-
-1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Teams.
-
-    ````powershell
-    Connect-MicrosoftTeams
-    `````
-
-1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. Create a standard channel with the name **Planning**.
-
-    ````powershell
-    Get-Team -DisplayName 'SharePoint Project' |
-    New-TeamChannel -DisplayName 'Planning' -MembershipType Standard
-    ````
-
-1. Disconnect from Microsoft Teams.
-
-    ````powershell
-    Disconnect-MicrosoftTeams
-    ````
-
-### Task 3: Explore the team associated SharePoint site
-
-Perform this task on WIN1.
-
-1. Open **Microsoft Edge**.
-1. Navigate to **https://teams.microsoft.com**.
-1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft Teams, on the left, click **Teams**.
-1. In Teams, under Sharepoint project, click **General**.
-1. In General, click **Files**.
-1. In the documents toolbar, click the ellipsis (**...**) and click **Open in SharePoint**.
-1. On the SharePoint project team site, in the left navigation, click **Documents**.
-
-    Verify you see two folders with the same name as the team's channels.
-
-### Task 4: Create a shared channel
-
-#### Web UI
-
-Perform this task on WIN1.
-
-1. Open **Microsoft Edge**.
-1. Navigate to **https://teams.microsoft.com**.
-1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft Teams, on the left, click **Teams**.
-1. In Teams, at the top click **+** and click **Create channel**.
-1. In Create a channel, click **Select a team**.
-1. In Pick a team to add new channel to, click **SharePoint project** and click **Done**.
-1. In **Create a channel**, under **Channel name**, type **Governance**. Under **Choose a channel type**, select **Shared**. Deactivate **Share this channel with everyone on the team** and click **Create**.
-1. In Share the Governance channel, in **Type a name or email**, finde and click **Patti Fernandez**. Click **Share**.
-
-If you want, you can try to add your personal work or school account to the shared channel.
-
-#### PowerShell
-
-Perform this task on WIN1.
-
-1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to Microsoft Teams.
-
-    ````powershell
-    Connect-MicrosoftTeams
-    `````
-
-1. In Microsoft Edge, sign in as **LynneR@\<your tenant\>.onmicrosoft.com*.
-1. Close **Microsoft Edge** and return to **Terminal**.
-1. In the team **SharePoint Project**, create a new shared channel **Governance**.
-
-    ````powershell
-    Get-Team -DisplayName 'SharePoint Project' |
-    New-TeamChannel -DisplayName 'Governance' -MembershipType Shared
-    ````
-
-1. Add **Patti Fernandez** to the shared channel.
-
-    ````powershell
-    Get-Team -DisplayName 'SharePoint Project' |
-    Add-TeamChannelUser `
-        -DisplayName 'Governance' -User PattiF@\<your tenant\>.onmicrosoft.com
-    ````
-
-    If you want, you can repeat this step and try to add your personal work or school account to the shared channel.
-
-1. Disconnect from Microsoft Teams.
-
-    ````powershell
-    Disconnect-MicrosoftTeams
-    ````
-
-### Task 5: Explore the shared channel associated SharePoint site
-
-Perform this task on WIN1.
-
-1. Open **Microsoft Edge**.
-1. Navigate to **https://teams.microsoft.com**.
-1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. In Microsoft Teams, on the left, click **Teams**.
-1. In Teams, under Sharepoint project, click **Governance**.
-1. In General, click **Files**.
-1. In the documents toolbar, click the ellipsis (**...**) and click **Open in SharePoint**.
-
-    Notice that you are in the Documents library and there are no subfolders.
-
-1. Click the **SharePoint project - Documents** tab.
-1. In Microsoft Edge, click the *Refresh* button.
-1. On the left, click **Documents**.
-
-    Notice that you do not see a Governance folder.
-
-1. Expand **In channels**.
-
-    Verify you see all channels including the Governance channel.
-
-### Task 6: Explore the team associated SharePoint sites in SharePoint admin center
-
-Perform this task on WIN1.
-
-#### Web UI
-
-1. Open **Microsoft Edge**.
-1. Navigate to **https://admin.microsoft.com**.
-1. Sign using **LynneR@\<your tenant\>.onmicrosoft.com**. The password is the same as the global administrator.
-1. In Microsoft 365 admin center, in the left navigation, click **Show all** and click **SharePoint**.
-1. In Sharepoint admin center, click **Sites** and **Active sites**.
-1. In Active sites, click **SharePoint Project**.
-1. In the SharePoint Project panel, click the tab **Membership**.
-
-    Verify that Lynne Robbins is in Owners.
-
-1. On the tab Membership, click **Members**.
-
-    Verify Lynne Robbins and Megan Bowen are in Members.
-
-1. Click **Site admins**.
-
-    Verify that SharePoint Project Owners are Site admins.
-
-1. Click **Site members**.
-
-    Verify that SharePoint Project members are Site members.
-
-1. Click the tab **General**.
-1. On the tab General, under Channel sites, verify that there is 1 site. Click **View**.
-1. Select **SharePoint Project-Governance** and click **Edit**.
-1. On the SharePoint Project-Governance panel, click the tab **Membership**.
-
-    Verify that Lynne Robbins is in Site admins.
-
-1. Click **Site members**.
-
-    Verify that Lynne Robbins and Patti Fernandez are Site members.
-
-1. Close the SharePoint Project-Governance panel.
-
-#### PowerShell
-
-1. Open **Terminal**.
-1. In Terminal, ensure **PowerShell** is shown at the top. Sign in to SharePoint.
-
-    ````powershell
-    # Replace the URL with the URL you copied before
-    Connect-PnPOnline -Url https://wwlx421595-admin.sharepoint.com/ -Interactive
-    ````
-
-1. Sign using **LynneR@\<your tenant\>.onmicrosoft.com**. The password is the same as the global administrator.
-1. List the sites with their title and url.
-
-    ````powershell
-    Get-PnPTenantSite | Select-Object Title, Url
-    ````
-
-1. List the members of the Microsoft 365 group **SharePoint Project** with their id, principal name, display name, and user type.
-
-    ````powershell
-    Get-PnPMicrosoft365Group -Identity 'SharePoint Project' |
-    Get-PnPMicrosoft365GroupMembers |
-    Select-Object Id, UserPrincipalName, DisplayName, UserType
-    ````
-
-1. Store the url of the **SharePoint Project** site in a variable.
-
-    ````powershell
-    $site = Get-PnPTenantSite |
-        Where-Object { $PSItem.Title -eq 'SharePoint Project' } |
-        Select-Object -ExpandProperty Url
-    `````
-
-1. Retrieve the site groups of the **SharePoint Project site**.
-
-    ````powershell
-    Get-PnPSiteGroup -Site $site
-    ````
-
-    Note the ids in the property **Users**.
-
-1. Retrieve the Microsoft 365 group **SharePoint Project**
-
-    ````powershell
-    Get-PnPMicrosoft365Group -Identity 'SharePoint Project'
-    ````
-
-    Compare the id of the group with the ids you noted in the previous step. They should be identical, but the owners group has an _o suffix.
-
-1. Disconnect from SharePoint.
-
-    ````powershell
-    Disconnect-PnPOnline
-    `````
+    [Managing site membership](../General/Managing-site-membership.md)
 
 [figure 1]:/images/Lab-Getting-started-with-SharePoint-administration-exercise-5.png
 [figure 2]:/images/microsoft-store-powershell.png
