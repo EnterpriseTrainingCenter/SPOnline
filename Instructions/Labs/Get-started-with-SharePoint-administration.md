@@ -61,7 +61,7 @@ Perform this task on WIN1.
     Start-BitsTransfer `
         -Source https://aka.ms/Microsoft.VCLibs.x64.14.00.Desktop.appx `
         -Destination ~\Downloads\$filename
-    `````
+    ````
 
 1. Install the Microsoft Visual C++ 2015 Redistributable.
 
@@ -931,3 +931,4 @@ Perform this task on WIN1.
 [figure 1]:/images/Lab-Getting-started-with-SharePoint-administration-exercise-5.png
 [figure 2]:/images/microsoft-store-powershell.png
 [figure 3]:/images/microsoft-store-windows-terminal.png
+
