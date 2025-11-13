@@ -1,6 +1,6 @@
 # Managing colors in brand center
 
-In brand center, click **Brand colors**.
+In brand center, click **Brand colors** or **Add a color**.
 
 ## Adding a color
 
