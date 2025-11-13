@@ -19,4 +19,4 @@ At the moment, it is not possible to delete a font package, but you can set the 
 
 ## References
 
-[Branc center font packages](https://learn.microsoft.com/en-us/sharepoint/brand-center-font-packages)
+[Branch center font packages](https://learn.microsoft.com/en-us/sharepoint/brand-center-font-packages)
