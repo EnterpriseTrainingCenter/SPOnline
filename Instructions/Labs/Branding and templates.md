@@ -4,7 +4,8 @@
 
 Perform this lab on WIN1.
 
-1. If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+1. If you skipped lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+1. If you skipped lab [Site administration](./Site-administration.md), execute **C:\LabResources\Solutions\New-Sites.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 2. Open the Microsoft 365 Admin Center and sign in as with the global administrator (**admin@\<your tenant\>.onmicrosoft.com**).
 
 ## Introduction
@@ -137,3 +138,7 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 
 ## Exercise 6: Crate a web site template
 
+1. From the Mark 8 Project site create a web site template. Include the list **Contoso Expense Tracker**, branding, and the theme. The name of the new template should be **Project site**.
+
+1. Create a new site from the template.
+1. Apply the template to the site **SharePoint Playground**.
