@@ -111,6 +111,29 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 
 1. Open **PowerPoint Online**. Create a new presentation using the template **Basic presentation**. Select some text. Change the font to any of the uploaded fonts.
 
+    **Important:** It can take up to 24 hours until uploaded fonts are available. If you do not see the uploaded fonts, check back later.
+
 ## Exercise 5: Create a list template
 
+1. Create a list using the **Expense tracker** in **My Lists** accepting the defaults.
+
+    [Creating a list](../General/Creating-a-list.md)
+
+1. In the list Expense tracker, add a column of type **Choice** with the name **Approval**. The options should be:
+
+    * **Pending**
+    * **Approved**
+    * **Rejected**
+
+    The default value should be **Pending** and the column should be required to contain information.
+
+    If time allows, you may add some lines to the list, if you want to try the functionality.
+
+1. Create a custom list template from the Expense tracker list with the name **Contoso Expense Tracker**.
+
+    [Creating a list template](../General/Creating-a-list-template.md)
+
+1. Create a new list using the **Contoso Expense Tracker** on **Mark 8 Project site**.
+
 ## Exercise 6: Crate a web site template
+
