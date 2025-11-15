@@ -24,7 +24,7 @@
     If you are interested, you may save the the script to a file and review it, e.g.,
 
     ````powershell
-    $siteScriptContent | Out-File expensetracker.json
+    $siteScriptContent | Out-File listtemplate.json
     ````
 
 1. Upload the site script.
