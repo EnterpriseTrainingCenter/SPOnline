@@ -1,4 +1,4 @@
-# Practice: Manage Forms and Lists
+# Practice: Manage Forms
 
 ## Setup
 
