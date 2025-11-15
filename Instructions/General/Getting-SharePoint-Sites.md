@@ -23,6 +23,7 @@
 1. Sign in to SharePoint using the PnP PowerShell module.
 
     ````powershell
+    $tenant = '' # Between the quotes, insert your tenant name
     Connect-PnPOnline -Url "https://$tenant-admin.sharepoint.com" -Interactive
     ````
 
@@ -46,6 +47,7 @@
 1. Sign in to SharePoint using SharePoint Online module.
 
     ````powershell
+    $tenant = '' # Between the quotes, insert your tenant name
     Connect-SPOService -Url "https://$tenant-admin.sharepoint.com"
     ````
 
