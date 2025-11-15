@@ -14,7 +14,8 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 ## Exercises
 
 1. [Configure SharePoint branding](#exercise-1-configure-sharepoint-branding)
-1. Manage organization assets libraries
+1. [Create an organization images library](#exercise-2-create-an-organization-images-library)
+1. [Create an organization templates library]
 1. Manage list templates
 1. Manage web site templates
 
@@ -73,3 +74,43 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 
 [Figure 1]:../../images/Brand-center-in-settings.png
 
+## Exercise 2: Create an organization images library
+
+1. In the site **Brand Guide**, create an organization assets library for images with the name **Organization images**.
+
+    [Managing organization asssets libraries](../General/Managing-organization-assets-libraries.md)
+
+1. In a new tab, navigate to **https://en.wikipedia.org/wiki/Cat** and save some pictures locally in a folder named **Cats**. 
+1. Navigate to **https://en.wikipedia.org/wiki/Dog** and save some pictures locally in a folder named **Dogs**.
+1. Upload the pictures the whole folders **Cats** and **Dogs** to the document library **Organization Images**. The document library should contain the folders Dogs and Cats at the top level after the upload.
+1. In the site **Mark 8 Project Team**, create a new blank page with the title **Cats and dogs**. Change the banner image and select a picture from **Organization Images**.
+
+## Exercise 3: Create an organization templates library
+
+1. In the site **Brand Guide**, create an organization templates library for templates with the name **Organization templates**.
+
+    [Managing organization asssets libraries](../General/Managing-organization-assets-libraries.md)
+
+1. In the library **Organization templates**, create folders:
+
+    * **Document templates**
+    * **Presentation templates**
+
+1. In **Microsoft Word**, sign in a **Lynne Robbins**. Create a new document with the template **Memo (simple design)**. In the document replace **COMPANY NAME** with **CONTOSO**. Save the file as type **Word Template (\*.dotx)** to the library **Organization templates** in folder **Document templates** with the name **Memo**.
+1. In **Microsoft PowerPoint**, sign in a **Lynne Robbins**. Create a new presentation with the template **Minimalist presentation**. Customize the template as desired. Save the file as type **PowerPoint Template (\*.potx)** to the library **Organization templates** in folder **Presentation templates** with the name **Basic presentation**.
+1. In **Microsoft Word**, create a new document using the template **Memo** you just created.
+1. In **Microsoft PowerPoint**, create a new document using the template **Basic presentation** you just created.
+
+## Exercise 4: Create an organization fonts library
+
+1. In the site **Brand Guide**, create an organization templates library for templates with the name **Office Fonts**.
+
+    [Managing organization asssets libraries](../General/Managing-organization-assets-libraries.md)
+
+1. In the library **Office Fonts**, upload the downloaded fonts from exercise 1. You only need to add the ttf files from the top directory of the font. If there are fonts in any sub-directories like static, you need not to add them.
+
+1. Open **PowerPoint Online**. Create a new presentation using the template **Basic presentation**. Select some text. Change the font to any of the uploaded fonts.
+
+## Exercise 5: Create a list template
+
+## Exercise 6: Crate a web site template
