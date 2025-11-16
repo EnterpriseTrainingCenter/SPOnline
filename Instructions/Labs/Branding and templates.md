@@ -19,7 +19,7 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 1. [Create an organization templates library](#exercise-3-create-an-organization-templates-library)
 1. [Create an organization fonts library](#exercise-4-create-an-organization-fonts-library)
 1. [Create list templates](#exercise-5-create-a-list-template)
-1. [Create web site templates](#exercise-6-create-a-web-site-template)
+1. [Create a web site template](#exercise-6-create-a-web-site-template)
 
 ## Exercise 1: Configure SharePoint branding
 
