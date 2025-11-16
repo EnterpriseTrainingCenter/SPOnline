@@ -19,7 +19,7 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 1. [Create an organization templates library](#exercise-3-create-an-organization-templates-library)
 1. [Create an organization fonts library](#exercise-4-create-an-organization-fonts-library)
 1. [Create list templates](#exercise-5-create-a-list-template)
-1. [Create web site templates](#exercise-6-crate-a-web-site-template)
+1. [Create a web site template](#exercise-6-create-a-web-site-template)
 
 ## Exercise 1: Configure SharePoint branding
 
@@ -119,7 +119,6 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 
     **Important:** It can take up to 24 hours until uploaded fonts are available. If you do not see the uploaded fonts, check back later.
 
-
 ## Exercise 5: Create a list template
 
 1. Create a list using the **Expense tracker** in **My Lists** accepting the defaults.
@@ -142,7 +141,7 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 
 1. Create a new list using the **Contoso Expense Tracker** on **Mark 8 Project site**.
 
-## Exercise 6: Crate a web site template
+## Exercise 6: Create a web site template
 
 1. From the Mark 8 Project site create a web site template. Include the list **Contoso Expense Tracker**, branding, and the theme. The name of the new template should be **Project site**.
 
