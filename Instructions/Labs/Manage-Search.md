@@ -22,7 +22,7 @@ Contoso wants to customize the search by adding definitions for acronyms, promot
 
     [Assigning an Entra ID role](../General/Assigning-an-Entra-ID-role.md).
 
-1. Sign out of Microsoft 365 Admin center and sign in again as **lynner@\<your tenant\>.
+1. Sign out of Microsoft 365 Admin center and sign in again as **lynner@<your tenant>.onmicrosoft.com**.
 
 ## Exercise 2: Customize Microsoft Search
 
@@ -36,7 +36,7 @@ Contoso wants to customize the search by adding definitions for acronyms, promot
     | Source      | https://\<your tenant\>.sharepoint.com/sites/HR                                                                                                                      |
     [Managing acronyms in search](../General/Managing-acronyms-in-search.md)
 
-1. Add a bookark to Microsoft Search.
+1. Add a bookmark to Microsoft Search.
 
     | Property          | Value                                                                                                                   |
     | ----------------- | ----------------------------------------------------------------------------------------------------------------------- |
