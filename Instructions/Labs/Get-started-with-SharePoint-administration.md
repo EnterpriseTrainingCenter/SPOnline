@@ -153,3 +153,4 @@ If time allows, install the SharePoint and OneDrive apps on your smartphone, sig
 [figure 1]:/images/Lab-Getting-started-with-SharePoint-administration-exercise-5.png
 [figure 2]:/images/microsoft-store-powershell.png
 [figure 3]:/images/microsoft-store-windows-terminal.png
+
