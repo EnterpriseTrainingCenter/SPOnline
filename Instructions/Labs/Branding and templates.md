@@ -111,13 +111,14 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 
     [Managing organization asssets libraries](../General/Managing-organization-assets-libraries.md)
 
+1. Use SharePoint Online Management Shell to upload the custom fonts from the folder you created in task 1 to the library you created in task 2.
+
+    [Uploading organization fonts](../General/Uploading-organization-fonts.md)
+
 1. Open **PowerPoint Online**. Create a new presentation using the template **Basic presentation**. Select some text. Change the font to any of the uploaded fonts.
 
     **Important:** It can take up to 24 hours until uploaded fonts are available. If you do not see the uploaded fonts, check back later.
 
-1. Use SharePoint Online Management Shell to upload the custom fonts from the folder you created in task 1 to the library you created in task 2.
-
-    [Uploading organization fonts](../General/Uploading-organization-fonts.md)
 
 ## Exercise 5: Create a list template
 
