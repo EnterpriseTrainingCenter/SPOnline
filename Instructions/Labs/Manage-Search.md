@@ -53,7 +53,7 @@ Contoso wants to customize the search by adding definitions for acronyms, promot
 
 1. Search for HR.
 
-    You should see a the translation and a short description.
+    You should see the translation and a short description.
 
 1. Search for
 
