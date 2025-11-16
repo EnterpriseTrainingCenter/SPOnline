@@ -2,9 +2,9 @@
 
 ## Setup
 
-Sign in to **WIN1** as **Administrator**.
-
-If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+1. Sign in to **WIN1** as **Administrator**.
+1. If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
+1. Open the **Microsoft 365 admin center** (<https://admin.microsoft.com>) and sign in as the global administrator.
 
 ## Introduction
 
@@ -12,10 +12,19 @@ Contoso wants to customize the search by adding definitions for acronyms, promot
 
 ## Exercises
 
-1. [Customize Microsoft Search](#exercise-1-customize-microsoft-search)
+1. [Specify a search administrator](#exercise-1-specify-a-search-administrator)
+1. [Customize Microsoft Search](#exercise-2-customize-microsoft-search)
 1. [Validate Microsoft Search customization](#exercise-2-validate-microsoft-search-customization)
 
-## Exercise 1: Customize Microsoft Search
+## Exercise 1: Specify a search administrator
+
+1. Assign **Lynne Robbins** the role **Search Administrator**.
+
+    [Assigning an Entra ID role](../General/Assigning-an-Entra-ID-role.md).
+
+1. Sign out of Microsoft 365 Admin center and sign in again as **lynner@\<your tenant\>.
+
+## Exercise 2: Customize Microsoft Search
 
 1. [Add an acronym](#task-1-add-an-acronym)
 
