@@ -119,7 +119,6 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 
     **Important:** It can take up to 24 hours until uploaded fonts are available. If you do not see the uploaded fonts, check back later.
 
-
 ## Exercise 5: Create a list template
 
 1. Create a list using the **Expense tracker** in **My Lists** accepting the defaults.
