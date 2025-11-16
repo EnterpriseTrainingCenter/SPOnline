@@ -23,7 +23,7 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 
 ## Exercise 1: Configure SharePoint branding
 
-1. Set up a Brand Center site with the name **Brand Guide** and the address **BrandGuide**. Take a note of the brand center site's URL and the brand center app's URL. You can navigate to the brand center apps anytime later using the *Settings* menu of your brand center site [Figure 1].
+1. Set up a Brand Center site with the name **Brand Guide** and the address **BrandGuide**. Take a note of the brand center site's URL and the brand center app's URL. You can navigate to the brand center apps anytime later using the *Settings* menu of your brand center site ([Figure 1]).
 
     [Setting up Brand Center](../General/Setting-up-Brand-Center.md)
 
@@ -76,8 +76,6 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 
     [Changing the look of a site](../General/Chaning-the-look-of-a-site.md)
 
-[Figure 1]:../../images/Brand-center-in-settings.png
-
 ## Exercise 2: Create an organization images library
 
 1. In the site **Brand Guide**, create an organization assets library for images with the name **Organization images**.
@@ -107,15 +105,19 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 
 ## Exercise 4: Create an organization fonts library
 
+1. Copy the font files you downloaded in [Exercise 1: Configure SharePoint branding](#exercise-1-configure-sharepoint-branding) to a single folder, e.g., C:\OfficeFonts. You only need to copy the font files from the top folders of each font, not the files from sub-folders ([figure 2]).
+
 1. In the site **Brand Guide**, create an organization templates library for templates with the name **Office Fonts**.
 
     [Managing organization asssets libraries](../General/Managing-organization-assets-libraries.md)
 
-1. In the library **Office Fonts**, upload the downloaded fonts from exercise 1. You only need to add the ttf files from the top directory of the font. If there are fonts in any sub-directories like static, you need not to add them.
-
 1. Open **PowerPoint Online**. Create a new presentation using the template **Basic presentation**. Select some text. Change the font to any of the uploaded fonts.
 
     **Important:** It can take up to 24 hours until uploaded fonts are available. If you do not see the uploaded fonts, check back later.
+
+1. Use SharePoint Online Management Shell to upload the custom fonts from the folder you created in task 1 to the library you created in task 2.
+
+    [Uploading organization fonts](../General/Uploading-organization-fonts.md)
 
 ## Exercise 5: Create a list template
 
@@ -145,3 +147,6 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 
 1. Create a new site from the template.
 1. Apply the template to the site **SharePoint Playground**.
+
+[Figure 1]:../../images/Brand-center-in-settings.png
+[figure 2]: ../../images/local-officefonts-folder.png
