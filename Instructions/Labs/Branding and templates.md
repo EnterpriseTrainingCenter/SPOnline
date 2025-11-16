@@ -16,9 +16,10 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 
 1. [Configure SharePoint branding](#exercise-1-configure-sharepoint-branding)
 1. [Create an organization images library](#exercise-2-create-an-organization-images-library)
-1. [Create an organization templates library]
-1. Manage list templates
-1. Manage web site templates
+1. [Create an organization templates library](#exercise-3-create-an-organization-templates-library)
+1. [Create an organization fonts library](#exercise-4-create-an-organization-fonts-library)
+1. [Create list templates](#exercise-5-create-a-list-template)
+1. [Create web site templates](#exercise-6-crate-a-web-site-template)
 
 ## Exercise 1: Configure SharePoint branding
 
@@ -68,6 +69,8 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
     [Managing font packages in brand center](../General/Managing-font-packages-in-brand-center.md)
 
 1. Create a theme with the name **Contoso Electronics**. As the primary color use **Light sea green**. As the secondary color use **Dark slate gray**.
+
+    [Managing themes in brand center](../General/Managing-themes-in-brand-center.md)
 
 1. Apply the theme **Contoso Electronics** and the font package **Contoso Electronics** to the site **Mark 8 Project team**.
 
