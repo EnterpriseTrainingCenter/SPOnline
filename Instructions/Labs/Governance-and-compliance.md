@@ -308,6 +308,9 @@ It may take up to a week until the labels are visible. You may revisit this exer
 1. Open OneDrive as **LynneR@\<your tenant\>**.
 1. Create a Word document or open an existing file.
 1. Click the file name at the top.
+1. Navigate to Mark 8 Project Team site.
+1. In **Site Information**, you should be able to apply a privacy setting.
+1. Try to create a new SharePoint site. You should be required to choose a privacy setting.
 
     You should be able to apply a sensitivity label and a retention label.
 
