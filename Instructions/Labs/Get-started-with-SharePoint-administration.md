@@ -92,6 +92,9 @@ From now on, you can use the user Lynne Robbins for SharePoint administration.
 ## Exercise 3: Explore cloud file storage
 
 1. Navigate to the **Documents** library on the **Campaigns - Events** team site as **Lynne Robbins**.
+
+    Note: Lynne is following that site. Therefore, you can find the site under **Following** on the SharePoint start page. Another option to find the site is using the search on the M365 Copilot page.
+
 1. In the Documents library, open **Contoso Electronics Announces Electronic Events Legal Department Moves.docx** in the Microsoft Word desktop app. Ensure, **Autosave** is **On**. Make a change to the document, e.g., on page 2, apply the style **Quote** to the last paragraph.
 
     If you are asked to activate Office, sign in using Lynne Robbins.
