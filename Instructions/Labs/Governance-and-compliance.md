@@ -156,7 +156,7 @@ In Microsoft Purview enable audit log search.
 
 1. Create an auto-labeling policy
 
-    * Info for label: **GDPR enhanced**
+    * Info to label: **GDPR enhanced**
     * Name: **Personally Identifiable Information (PII)**
     * Label: **Personally Identifiable Information (PII)**
     * Admin units: **Full directory**
