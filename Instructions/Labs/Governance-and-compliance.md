@@ -6,12 +6,12 @@
 1. [Create a data loss prevention policy](#exercise-2-create-a-data-loss-prevention-policy)
 1. [Protect sensitive data with sensitivity labels](#exercise-3-protect-sensitive-data-with-sensitivity-labels)
 1. [Data Lifecycle Management](#exercise-4-data-lifecycle-management)
-1. [Validate data loss prevention](#exercise-5-validate-data-loss-prevention) 
+1. [Validate data loss prevention](#exercise-5-validate-data-loss-prevention)
 1. [Validate information protection and retention labels](#exercise-6-validate-information-protection-and-retention-labels)
 
 ## Exercise 1: Enable audit log search
 
-In Microsoft Purview enabel audit log search.
+In Microsoft Purview enable audit log search.
 
 [Enabling audit log search](../General/Enabling-audit-log-search.md)
 
@@ -32,8 +32,8 @@ In Microsoft Purview enabel audit log search.
     * Policy settings
 
         * **Low volume of content detected GDPR enhanced** and **Low volume EU Sensitive Enhanced content found 2**
-            * Actions: 
-                * Restricts access or encrypt the content in Microsoft 365 loations.                
+            * Actions:
+                * Restricts access or encrypt the content in Microsoft 365 locations.
                     * Block people only outside of your organization.
             * User notifications
                 * On
@@ -42,7 +42,7 @@ In Microsoft Purview enabel audit log search.
                     * Owner of the SharePoint site or OneDrive account
                     * Owner of the SharePoint or OneDrive content
             * User overrides
-                * Allow users to override policy restrictions in Fabric (indlucing Power BI), Exchange, SharePoint, OneDrive, and Teams.
+                * Allow users to override policy restrictions in Fabric (including Power BI), Exchange, SharePoint, OneDrive, and Teams.
                     * Require a business justification to override
                     * Override the rule automatically if they report it as false positive
 
@@ -67,7 +67,7 @@ In Microsoft Purview enabel audit log search.
 
     [Enabling sensitivity label support in Entra ID](../General/Enabling-sensitivity-label-support-in-Entra-ID.md)
 
-1. Crate or edit the sensitivity labels without creating a policy yet.
+1. Create or edit the sensitivity labels without creating a policy yet.
 
     * Label details
         * Name and display name: **Public** (edit the existing label)
@@ -80,12 +80,10 @@ In Microsoft Purview enabel audit log search.
         * Privacy: **None**
         * Let Microsoft 365 Group owners add people outside your organization to the group as guests
     * External sharing & conditional access
-        * Control external sharing from labeld SharePoint sites: **Anyone**
+        * Control external sharing from labeled SharePoint sites: **Anyone**
     * Private teams & shared channel settings
         * Allow users to discover private teams that have this label applied
-        * Teams shared channels
-            * Private teams only
-    
+
     ![Sensitivity label public][figure 2]
     *Figure 2: Sensitivity label public*
 
@@ -103,7 +101,7 @@ In Microsoft Purview enabel audit log search.
     * Privacy & external user access
         * Privacy: **Private**
     * External sharing & conditional access
-        * Control external sharing from labeld SharePoint sites: **Only people in your organization**
+        * Control external sharing from labeled SharePoint sites: **Only people in your organization**
     * Private teams & shared channel settings
         * Allow users to discover private teams that have this label applied
         * Teams shared channels
@@ -133,7 +131,7 @@ In Microsoft Purview enabel audit log search.
     * Privacy & external user access
         * Privacy: **Private**
     * External sharing & conditional access
-        * Control external sharing from labeld SharePoint sites: **Only people in your organization**
+        * Control external sharing from labeled SharePoint sites: **Only people in your organization**
     * Private teams & shared channel settings
         * Teams shared channels
             * Internal only
@@ -202,11 +200,11 @@ In Microsoft Purview enabel audit log search.
     * Fabric and Power BI
         * Default label: Confidential
     * Name: **Contoso default**
-    
+
     ![Labeling policy Contoso default][figure 6]
     *Figure 6: Labeling policy Contoso default*
 
-    [Creating a label publishing policy ](../General/Creating-a-label-publishing-policy.md)
+    [Creating a label publishing policy](../General/Creating-a-label-publishing-policy.md)
 
 ## Exercise 4: Data Lifecycle Management
 
@@ -220,7 +218,7 @@ In Microsoft Purview enabel audit log search.
         * Setting after period: **Delete items automatically**
 
     ![Retention label Financial data][figure 7]
-    *Figure 7: Retention lable Financial data*
+    *Figure 7: Retention label Financial data*
 
     [Creating a retention label](../General/Creating-a-retention-label.md)
 
@@ -284,7 +282,7 @@ In Microsoft Purview enabel audit log search.
 
 1. In Microsoft Purview, wait until the Policy sync status for all DLP policies is **Sync completed**. This can take some time. You may want to return to this lab later, if it takes too long.
 
-1. Share both workbooks with an external user (suggestet: your own e-mail address). After a short moment, notice the icon and the quicktip (figure 8).
+1. Share both workbooks with an external user (suggested: your own e-mail address). After a short moment, notice the icon and the quicktip (figure 8).
 
     ![Contains sensitive information. Some commands aren't available.][figure 8]
     *figure 8: Contains sensitive information. Some commands aren't available.*
@@ -299,7 +297,7 @@ In Microsoft Purview enabel audit log search.
     ![Access Denied - Due to organizational policies you can't access this resource][figure 10]
     *figure 10: Due to organizational policies you can't access this resource.*
 
-    You cannot override the policy in OneDrive or SharePoint. If you want to try the override functionality, try to send the workbook with the lesser passport numbers in Outlook to an external reciepient.
+    You cannot override the policy in OneDrive or SharePoint. If you want to try the override functionality, try to send the workbook with the lesser passport numbers in Outlook to an external recipient.
 
 ## Exercise 6: Validate information protection and retention labels
 
@@ -324,4 +322,3 @@ It may take up to a week until the labels are visible. You may revisit this exer
 [figure 8]: ../../images/sensitive-content-icon-quicktip.png
 [figure 9]: ../../images/Sharing-is-limited.png
 [figure 10]: ../../images/Access-Denied-organizational-policies.png
-

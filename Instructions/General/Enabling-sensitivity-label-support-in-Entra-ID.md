@@ -7,7 +7,7 @@
     Install-Module -Name Microsoft.Graph.Beta
     ```
 
-1. Set the $MaximumFunctionCount to the maximum to ensure proper import of the Microsoft.Graph.Beta module.$
+1. Set the $MaximumFunctionCount to the maximum to ensure proper import of the Microsoft.Graph.Beta module.
 
     ```powershell
     $MaximumFunctionCount = 32768
@@ -45,7 +45,7 @@
     ```
 
     You may have to sign in again with a global administrator.
-    
+
 1. Disconnect from Microsoft Graph.
 
     ```powershell
