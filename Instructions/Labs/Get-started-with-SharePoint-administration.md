@@ -35,14 +35,14 @@ Figure 1: Site structure after exercise 5
 
 1. Install **PowerShell** (app-id: 9MZ1SNWT0N5D)from the Microsoft Store.
 
-    ![figure 2]:/images/microsoft-store-powershell.png
+    ![figure 2]
     Figure 2: PowerShell in Microsoft Store
 
     [Installing Apps from the Microsoft Store](../General/Installing-Apps-from-the-Microsoft-Store.md)
 
 1. Install **Windows Terminal** (app-id: 9N0DX20HK701) from the Microsoft Store.
 
-    ![figure 3]:/images/microsoft-store-windows-terminal.png
+    ![Windows Terminal in Microsoft Store][figure 3]
     Figure 3: Windows Terminal in Microsoft Store
 
     [Installing Apps from the Microsoft Store](../General/Installing-Apps-from-the-Microsoft-Store.md)
@@ -153,4 +153,3 @@ If time allows, install the SharePoint and OneDrive apps on your smartphone, sig
 [figure 1]:/images/Lab-Getting-started-with-SharePoint-administration-exercise-5.png
 [figure 2]:/images/microsoft-store-powershell.png
 [figure 3]:/images/microsoft-store-windows-terminal.png
-
