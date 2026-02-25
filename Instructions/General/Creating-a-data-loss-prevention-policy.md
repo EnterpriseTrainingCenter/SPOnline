@@ -26,7 +26,7 @@
     * **Conditions**
 
         Conditions are organized in groups. Each group has a **Group name**, one or more **Sensitive info types**, and a **Group operator**. The group operator can be
-        
+
         * **Any of these**
         * **All of these**
 

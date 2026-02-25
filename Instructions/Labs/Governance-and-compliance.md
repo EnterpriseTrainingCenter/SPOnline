@@ -118,8 +118,9 @@ In Microsoft Purview enable audit log search.
     * Scope: All scopes
     * Items: **Control access** and **Apply content marking**
     * Access control
-        * Let users assign permissions when thy apply the label
-        * In Outlook enforce **Do not Forward**
+        * Let users assign permissions when they apply the label
+        * In Outlook, enforce one of the following restrictions
+            **Do not Forward**
         * In Word, PowerPoint, and Excel, prompt users to specify permissions
         * Use dynamic watermarking
     * Content marking
@@ -146,31 +147,14 @@ In Microsoft Purview enable audit log search.
     * Items: **Control access**
     * Access control
         * Let users assign permissions when thy apply the label
-        * In Outlook enforce **Do not Forward**
+        * In Outlook, enforce one of the following restrictions
+            **Do not Forward**
         * In Word, PowerPoint, and Excel, prompt users to specify permissions
         * Use dynamic watermarking
     * **Auto-labeling for files and emails**: off
 
     ![Sensitivity label Personally Identifiable Information (PII)][figure 5]
     *Figure 5: Sensitivity label Personally Identifiable Information (PII)*
-
-1. Create an auto-labeling policy
-
-    * Info to label: **GDPR enhanced**
-    * Name: **Personally Identifiable Information (PII)**
-    * Label: **Personally Identifiable Information (PII)**
-    * Admin units: **Full directory**
-    * Locations: all locations
-    * Policy rules: **Advanced rules**
-    * Exchange rules: accept all defaults
-    * SharePoint sites: accept all defaults
-    * OneDrive accounts: accept all defaults
-    * Additional email settings: none
-    * Policy mode
-        * Run policy in simulation mode
-        * Automatically turn on policy if not modified after 7 days in simulation
-
-    [Creating an auto-labeling policy](../General/Creating-an-auto-labeling-policy.md)
 
 1. Create a label publishing policy and move it to the top.
 
@@ -205,6 +189,26 @@ In Microsoft Purview enable audit log search.
     *Figure 6: Labeling policy Contoso default*
 
     [Creating a label publishing policy](../General/Creating-a-label-publishing-policy.md)
+
+1. Create an auto-labeling policy
+
+    * Info to label: Categories **Enhanced**, **GDPR Enhanced**
+    * Name: **GDPR Enhanced**
+    * Label: **Personally Identifiable Information (PII)**
+    * Admin units: **Full directory**
+    * Locations: all locations
+    * Policy rules: **Advanced rules**
+    * Exchange rules: accept all defaults
+    * SharePoint sites: accept all defaults
+    * OneDrive accounts: accept all defaults
+    * Additional email settings: none
+    * Policy mode
+        * Run policy in simulation mode
+        * Automatically turn on policy if not modified after 7 days in simulation
+
+    [Creating an auto-labeling policy](../General/Creating-an-auto-labeling-policy.md)
+
+    *Note:* If you receive a client error **|Microsoft.Exchange.Management.UnifiedPolicy.UnifiedAuditLogDisabledException|Please make sure audit log search is turned on.**, wait a few minutes and try again. It may take up to 60 minutes until the audit log search is enabled after you turned it on in exercise 1. You may continue with Exercise 4 and 5 and return to this exercise later.
 
 ## Exercise 4: Data Lifecycle Management
 

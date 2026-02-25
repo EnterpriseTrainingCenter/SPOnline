@@ -7,7 +7,7 @@
 
     * To Create a blank library, cick **Blank library**.
     * To copy the structure of an existing library:
-    
+
         1. Click **From existing library**.
         1. Select an existing document library, under **Select a Team or Site**, click a site, and, under **Choose a document library from \<Sitename\>**, click a library. Click **Next**.
 
