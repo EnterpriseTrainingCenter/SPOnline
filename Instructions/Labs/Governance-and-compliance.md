@@ -1,5 +1,15 @@
 # Lab: Governance and compliance
 
+## Setup
+
+Sign in to WIN1 as Admin.
+
+All exercises are performed on WIN1.
+
+## Introduction
+
+In this lab, you will learn how to use Microsoft Purview to govern and protect your data. You will create a data loss prevention policy, create sensitivity labels and a label publishing policy, create an auto-labeling policy, and create retention labels and a retention label publishing policy. Finally, you will validate the policies you created.
+
 ## Exercises
 
 1. [Enable audit log search](#exercise-1-enable-audit-log-search)
