@@ -12,20 +12,13 @@ In this lab, you will learn how to use Microsoft Purview to govern and protect y
 
 ## Exercises
 
-1. [Enable audit log search](#exercise-1-enable-audit-log-search)
-1. [Create a data loss prevention policy](#exercise-2-create-a-data-loss-prevention-policy)
-1. [Protect sensitive data with sensitivity labels](#exercise-3-protect-sensitive-data-with-sensitivity-labels)
-1. [Data Lifecycle Management](#exercise-4-data-lifecycle-management)
-1. [Validate data loss prevention](#exercise-5-validate-data-loss-prevention)
-1. [Validate information protection and retention labels](#exercise-6-validate-information-protection-and-retention-labels)
+1. [Create a data loss prevention policy](#exercise-1-create-a-data-loss-prevention-policy)
+1. [Protect sensitive data with sensitivity labels](#exercise-2-protect-sensitive-data-with-sensitivity-labels)
+1. [Data Lifecycle Management](#exercise-3-data-lifecycle-management)
+1. [Validate data loss prevention](#exercise-4-validate-data-loss-prevention)
+1. [Validate information protection and retention labels](#exercise-5-validate-information-protection-and-retention-labels)
 
-## Exercise 1: Enable audit log search
-
-In Microsoft Purview enable audit log search.
-
-[Enabling audit log search](../General/Enabling-audit-log-search.md)
-
-## Exercise 2: Create a data loss prevention policy
+## Exercise 1: Create a data loss prevention policy
 
 1. In Microsoft Purview, create a new data loss prevention policy with the following parameters:
 
@@ -71,7 +64,7 @@ In Microsoft Purview enable audit log search.
 
 1. Move the new policy to the top (highest priority).
 
-## Exercise 3: Protect sensitive data with sensitivity labels
+## Exercise 2: Protect sensitive data with sensitivity labels
 
 1. Enable sensitivity label support in Entra ID.
 
@@ -220,7 +213,7 @@ In Microsoft Purview enable audit log search.
 
     *Note:* If you receive a client error **|Microsoft.Exchange.Management.UnifiedPolicy.UnifiedAuditLogDisabledException|Please make sure audit log search is turned on.**, wait a few minutes and try again. It may take up to 60 minutes until the audit log search is enabled after you turned it on in exercise 1. You may continue with Exercise 4 and 5 and return to this exercise later.
 
-## Exercise 4: Data Lifecycle Management
+## Exercise 3: Data Lifecycle Management
 
 1. Create a retention label without publishing the label.
 
@@ -246,7 +239,7 @@ In Microsoft Purview enable audit log search.
 
     [Publishing retention labels](../General/Publishing-retention-labels.md)
 
-## Exercise 5: Validate data loss prevention
+## Exercise 4: Validate data loss prevention
 
 1. Open **OneDrive**, sign in as **LynneR@\<your tenant\>**. Create a new Excel workbook and copy this table into it.
 
@@ -313,7 +306,7 @@ In Microsoft Purview enable audit log search.
 
     You cannot override the policy in OneDrive or SharePoint. If you want to try the override functionality, try to send the workbook with the lesser passport numbers in Outlook to an external recipient.
 
-## Exercise 6: Validate information protection and retention labels
+## Exercise 5: Validate information protection and retention labels
 
 It may take up to a week until the labels are visible. You may revisit this exercise later.
 

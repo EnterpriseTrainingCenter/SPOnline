@@ -20,10 +20,11 @@ Figure 1: Site structure after exercise 5
 ## Exercises
 
 1. [Get started with PowerShell](#exercise-1-get-started-with-powershell)
-1. [Manage the SharePoint Administrator role](#exercise-2-manage-the-sharepoint-administrator-role)
-1. [Explore cloud file storage](#exercise-3-explore-cloud-file-storage)
-1. [Explore OneDrive](#exercise-4-explore-onedrive)
-1. [Explore SharePoint integration with Teams](#exercise-5-explore-sharepoint-integration-with-teams)
+1. [Enable audit log search](#exercise-2-enable-audit-log-search)
+1. [Manage the SharePoint Administrator role](#exercise-3-manage-the-sharepoint-administrator-role)
+1. [Explore cloud file storage](#exercise-4-explore-cloud-file-storage)
+1. [Explore OneDrive](#exercise-5-explore-onedrive)
+1. [Explore SharePoint integration with Teams](#exercise-6-explore-sharepoint-integration-with-teams)
 
 ## Exercise 1: Get started with PowerShell
 
@@ -75,7 +76,13 @@ Figure 1: Site structure after exercise 5
 
     [Getting SharePoint Sites](../General/Getting-SharePoint-Sites.md)
 
-## Exercise 2: Manage the SharePoint administrator role
+## Exercise 2: Enable audit log search
+
+In Microsoft Purview enable audit log search.
+
+[Enabling audit log search](../General/Enabling-audit-log-search.md)
+
+## Exercise 3: Manage the SharePoint administrator role
 
 1. Assign the **SharePoint Administrator** role to **Lynne Robbins**.
 
@@ -89,7 +96,7 @@ Figure 1: Site structure after exercise 5
 
 From now on, you can use the user Lynne Robbins for SharePoint administration.
 
-## Exercise 3: Explore cloud file storage
+## Exercise 4: Explore cloud file storage
 
 1. Navigate to the **Documents** library on the **Campaigns - Events** team site as **Lynne Robbins**.
 
@@ -111,7 +118,7 @@ From now on, you can use the user Lynne Robbins for SharePoint administration.
 
     [Restoring items from the recycle bin](../General/Restoring-items-from-the-recycle-bin.md)
 
-## Exercise 4: Explore OneDrive
+## Exercise 5: Explore OneDrive
 
 1. As **Lynne Robbins**, access OneDrive.
 1. As **Lynne Robbins**, delete all files and folders in OneDrive and restore them using the **Restore your OneDrive** feature.
@@ -122,7 +129,7 @@ From now on, you can use the user Lynne Robbins for SharePoint administration.
 
 If time allows, install the SharePoint and OneDrive apps on your smartphone, sign in with Lynne Robbins and try to access the files in the SharePoint library and your OneDrive on your smartphone.
 
-## Exercise 5: Explore SharePoint integration with Teams
+## Exercise 6: Explore SharePoint integration with Teams
 
 1. Create a team with the name **SharePoint project** (mail nick name **SharePointProject**) and invite Megan Bowen as member.
 
