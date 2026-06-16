@@ -409,7 +409,7 @@ If you want to apply the department site design to the IT site, optionally, foll
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to <https://wwlx691952.sharepoint.com/teams/Project1Drive>.
+1. In Microsoft Edge, navigate to **https://\<your tenant name\>.sharepoint.com/teams/Project1Drive**.
 1. In OneDrive deployment project, click the *Settings* (the gear icon) and **Connect to a new Microsoft 365 group**.
 1. In the panel Associate this team site to a new Microsoft 365 Group, click **Let's get started**.
 1. In the panel Tell us about your new Microsoft 365 Group, under **Group email address**, click *Change email address* (the pencil icon) and, to the left, type Project1Drive. Under **Privacy settings**, ensure **Private - only members can access this site** is selected. Click **Connect group**.
