@@ -98,11 +98,11 @@ From now on, you can use the user Lynne Robbins for SharePoint administration.
 
 ## Exercise 4: Explore cloud file storage
 
-1. Navigate to the **Documents** library on the **Campaigns - Events** team site as **Lynne Robbins**.
+1. Navigate to the **Documents** library on the **Sales and Marketing** team site as **Lynne Robbins**.
 
     Note: Lynne is following that site. Therefore, you can find the site under **Following** on the SharePoint start page. Another option to find the site is using the search on the M365 Copilot page.
 
-1. In the Documents library, open **Contoso Electronics Announces Electronic Events Legal Department Moves.docx** in the Microsoft Word desktop app. Ensure, **Autosave** is **On**. Make a change to the document, e.g., on page 2, apply the style **Quote** to the last paragraph.
+1. In the Documents library, open **DG-2000 Product Overview.docx** in the Microsoft Word desktop app. Ensure, **Autosave** is **On**. Make a change to the document, e.g., in the first heding of page 2, format **Conotoso DG-2000** in bold letters.
 
     If you are asked to activate Office, sign in using Lynne Robbins.
 
@@ -110,11 +110,11 @@ From now on, you can use the user Lynne Robbins for SharePoint administration.
 
     Switch to the Microsoft Word desktop app and verify your change is visible. Then close Microsoft Word and the browser tab.
 
-1. Verify that the document **Contoso Electronics Announces Electronic Events Legal Department Moves.docx** has several versions. Restore version **2.0** by **Debra Berger** and verify your changes are undone.
+1. Verify that the document **DG-2000 Product Overview.docx** has several versions. Identify and restore the version before your edits. Verify your changes are undone.
 
     [Managing versions](../General/Managing-versions.md)
 
-1. Delete the document **Divisional Sales Report.docx** and restore it from the recycle bin. Verify that the document is restored.
+1. Delete the document **Branding Elements.pptx** and restore it from the recycle bin. Verify that the document is restored.
 
     [Restoring items from the recycle bin](../General/Restoring-items-from-the-recycle-bin.md)
 
@@ -139,7 +139,7 @@ If time allows, install the SharePoint and OneDrive apps on your smartphone, sig
 
     [Creating a channel](../General/Creating-a-channel.md)
 
-1. Explore the team associated SharePoint site by opening the tab **Files** in the channel **General** and then clicking **Open in SharePoint** from the ellipsis menu.
+1. Explore the team associated SharePoint site by opening the tab **Shared** in the channel **General** and then clicking **Open in SharePoint** from the ellipsis menu of the library toolbar.
 
     Verify you see two folders with the same name as the team's channels.
 
