@@ -113,7 +113,6 @@ Perform this task on WIN1.
 1. [Associate sites with the hub](#task-2-associate-sites-with-the-hub) IT department:
 
     * IT department internal
-    * IT help desk
     * OneDrive deployment project
     * SharePoint project
 
@@ -128,7 +127,6 @@ Perform this task on WIN1.
 
     * Groups and Teams (label)
         * IT internal (link to site)
-        * IT help desk (link to site)
     * Projects (label)
         * OneDrive deployment project (link to site)
         * SharePoint project (link to site)
@@ -211,7 +209,7 @@ Perform this task on WIN1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
-1. In Active sites, select **IT department internal**, **IT help desk**, **OneDrive deployment project**, and **SharePoint project**.
+1. In Active sites, select **IT department internal**, **OneDrive deployment project**, and **SharePoint project**.
 1. Click **Bulk edit**, **Hub association**.
 1. In the panel Edit hub association, under **Select a hub**, select **IT department** and click **Save**.
 
@@ -342,7 +340,6 @@ Perform this task on WIN1.
 1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/IT-internal**.  Under Display name, type **IT internal** and click **OK**.
 1. In the Edit hub navigation panel, to the right of **IT internal**, click the ellipsis and click **Make sub link**.
 1. In the Edit hub navigation panel, hover the mouse just under the **IT internal** and click the **+**.
-1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/IT-helpdesk**.  Under Display name, type **IT help desk** and click **OK**.
 1. In the Edit hub navigation panel, hover the mouse just under the **Projects** and click the **+**.
 1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/teams/Project1Drive**.  Under Display name, type **OneDrive deployment project** and click **OK**.
 1. In the Edit hub navigation panel, to the right of **OneDrive deployment project**, click the ellipsis and click **Make sub link**.
