@@ -159,6 +159,8 @@ In this lab, you will learn how to use Microsoft Purview to govern and protect y
     ![Sensitivity label Personally Identifiable Information (PII)][figure 5]
     *Figure 5: Sensitivity label Personally Identifiable Information (PII)*
 
+    [Createing a sensitivity label](../General/Creating-a-sensitivity-label.md)
+
 1. Create a label publishing policy and move it to the top.
 
     * Labels to publish
