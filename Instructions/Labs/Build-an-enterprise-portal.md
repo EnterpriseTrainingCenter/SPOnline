@@ -112,30 +112,61 @@ Perform this task on WIN1.
 1. [Register sites as hub sites](#task-1-register-sites-as-hub-sites)
 
     * Contoso home
-    * IT department
-    * Executive corner
-    * HR
+    * Work @ Contoso
 
-1. [Associate sites with the hub](#task-2-associate-sites-with-the-hub) IT department:
+1. [Associate sites with hubs](#task-2-associate-sites-with-hubs) 
 
-    * IT department internal
-    * OneDrive deployment project
-    * SharePoint project
+    Contoso home:
 
-1. [Associate hubs with the parent hub](#task-3-associate-hubs-with-a-parent-hub) Contoso home:
+        * Contoso landings
+        * Contoso Web 1
+        * Contoso Web 2
 
-    * IT department
-    * Executive corner
-    * HR
+    Work @ Contoso:
 
-1. [Edit the navigation on the top-level hub](#task-4-edit-the-navigation-on-the-top-level-hub) by adding all associated hubs under the display name Hubs.
-1. [Edit the navigation on the hub site](#task-5-edit-the-navigation-on-the-hub-site) following the structure below:
+        * Brand
+        * Digital Initiative Public Relations
+        * Executive Corner
+        * HR
+        * Leadership Team
+        * Mark 8 Project Team
+        * News @ Contoso
+        * Operations
+        * Retail
+        * Sales & Marketing
+        * U.S. Sales
 
+1. [Associate hubs with the parent hub](#task-3-associate-hubs-with-the-parent-hub) Contoso home:
+
+    * Work @ Contoso
+
+1. [Edit the navigation on the top-level hub](#task-4-edit-the-navigation-on-the-top-level-hub) following the structure below:
+
+    * Hubs (all associated hubs)
+    * Product sites (label)
+        * Contoso landings
+        * Contoso Web 1
+        * Contoso Web 2
+        
+
+1. [Edit the navigation on the hub site](#task-5-edit-the-navigation-on-the-hub-site) Work @ Contoso following the structure below:
+
+    * News (label)
+        * News @ Contoso
     * Groups and Teams (label)
-        * IT internal (link to site)
-    * Projects (label)
-        * OneDrive deployment project (link to site)
-        * SharePoint project (link to site)
+        * All company
+        * Sales and Marketing
+        * Leadership Team
+        * Digital Initiative Public Relations
+        * Mark 8 Project Team
+        * Retail
+        * U.S. Sales
+    * Departments (label)
+        * Brand
+        * Executive Corner
+        * HR
+        * Operations
+        * Sales and Marketing
     * Hubs (associated child hubs)
 
 ### Task 1: Register sites as hub sites
@@ -152,14 +183,7 @@ Perform this task on WIN1.
 1. In Active sites, select **Contoso home** and click **Hub**, **Register as hub site**.
 1. In the Register as hub site panel, accept the defaults and click **Save**.
 1. Close the panel.
-1. Repat steps 6 - 8 for the site **IT department**.
-1. In active sites, select **Executive Corner** and click **Hub**, **Change hub association**.
-1. In the panel Edit hub association, under **Select a hub**, select **None** and click **Save**.
-1. Close the panel.
-1. With Executive corner still selected, click **Hub**, **Register as hub site**.
-1. In the Register as hub site panel, accept the defaults and click **Save**.
-1. Close the panel.
-1. Repeat steps 10 - 15 for the site **HR**.
+1. Repat steps 6 - 8 for the site **Work @ Contoso**.
 
 #### PowerShell
 
@@ -176,21 +200,12 @@ Perform this task on WIN1.
     ````
 
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. Remove the current hub site association for the sites **/sites/Exec** and **/sites/HR**.
-
-    ````powershell
-    Remove-SPOHubSiteAssociation -Site "https://$tenantName.sharepoint.com/sites/exec"
-    Remove-SPOHubSiteAssociation -Site "https://$tenantName.sharepoint.com/sites/HR"
-    `````
-
-1. Register the sites **/**, **/sites/IT**, **/sites/Exec**, and **/sites/HR** as hub sites.
+1. Register the sites **/** and **/sites/Work** as hub sites.
 
     ````powershell
     $sites = @(
         '/'
-        '/sites/IT'
-        '/sites/Exec'
-        '/sites/HR'
+        '/sites/Work'
     )
     $sites | ForEach-Object {
         Register-SPOHubSite `
@@ -204,7 +219,7 @@ Perform this task on WIN1.
     Disconnect-SPOService
     ````
 
-### Task 2: Associate sites with the hub
+### Task 2: Associate sites with hubs
 
 #### Web UI
 
@@ -215,9 +230,25 @@ Perform this task on WIN1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
-1. In Active sites, select **IT department internal**, **OneDrive deployment project**, and **SharePoint project**.
+1. In Active sites, select **Contoso landings**, **Contoso Web 1**, and **Contoso Web 2**.
 1. Click **Bulk edit**, **Hub association**.
-1. In the panel Edit hub association, under **Select a hub**, select **IT department** and click **Save**.
+1. In the panel Edit hub association, under **Select a hub**, select **Contoso home** and click **Save**.
+1. In Active sites, select
+
+        * Brand
+        * Digital Initiative Public Relations
+        * Executive Corner
+        * HR
+        * Leadership Team
+        * Mark 8 Project Team
+        * News @ Contoso
+        * Operations
+        * Retail
+        * Sales & Marketing
+        * U.S. Sales
+
+1. Click **Bulk edit**, **Hub association**.
+1. In the panel Edit hub association, under **Select a hub**, select **Contoso @ work** and click **Save**.
 
 #### PowerShell
 
@@ -234,19 +265,53 @@ Perform this task on WIN1.
     ````
 
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. Associate the sites **/sites/IT-internal**, **/teams/ITHelpdesk**, **teams/Project1Drive**, and **sites/SharePointProject** with the IT hub.
+1. Associate the sites **/sites/ContosoLandings**, **/sites/ContosoWeb1**, and **/sites/ContosoWeb2** with the Contoso home hub.
 
     ````powershell
     $sites = @(
-        '/sites/IT-internal'
-        '/teams/ITHelpdesk'
-        '/teams/Project1Drive'
-        '/sites/SharePointProject'
+        '/sites/ContosoLandings'
+        '/teams/ContosoWeb1'
+        '/teams/ContosoWeb2'
     )
     $sites | ForEach-Object {
         Add-SPOHubSiteAssociation `
             -Site "https://$tenantName.sharepoint.com$PSItem" `
-            -Hubsite "https://$tenantName.sharepoint.com/sites/IT"
+            -Hubsite "https://$tenantName.sharepoint.com/"
+    }
+    ````
+
+1. Associate the sites with the Contoso @ work hub:
+
+    * /Brand
+    * /DigitalInitiativePublicRelations
+    * /Exec
+    * /HR
+    * /Leadership
+    * /Mark8ProjectTeam
+    * /News
+    * /Operations
+    * /Retail
+    * /SalesAndMarketing
+    * /USSales
+
+    ````powershell
+    $sites = @(
+        '/Brand'
+        '/DigitalInitiativePublicRelations'
+        '/Exec'
+        '/HR'
+        '/Leadership'
+        '/Mark8ProjectTeam'
+        '/News'
+        '/Operations'
+        '/Retail'
+        '/SalesAndMarketing'
+        '/USSales'
+    )
+    $sites | ForEach-Object {
+        Add-SPOHubSiteAssociation `
+            -Site "https://$tenantName.sharepoint.com$PSItem" `
+            -Hubsite "https://$tenantName.sharepoint.com/sites/Work"
     }
     ````
 
@@ -256,7 +321,7 @@ Perform this task on WIN1.
     Disconnect-SPOService
     ````
 
-### Task 3: Associate hubs with a parent hub
+### Task 3: Associate hubs with the parent hub
 
 #### Web UI
 
@@ -267,10 +332,9 @@ Perform this task on WIN1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
-1. In Active sites, select **IT department** and click **Hub**, **Edit hub site settings**.
+1. In Active sites, select **Contoso @ Work** and click **Hub**, **Edit hub site settings**.
 1. In the panel Hub site settings, under **Parent hub association**, select **Contoso home** and click **Save**.
 1. Close the panel.
-1. Repeat steps 6 - 8 for **Executive corner** and **HR**.
 
 #### PowerShell
 
@@ -287,13 +351,11 @@ Perform this task on WIN1.
     ````
 
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. Associate the hubs **/sites/IT**, **/sites/Exec**, and **sites/HR** with the hub at the root.
+1. Associate the hub **/sites/Work** with the hub at the root.
 
     ````powershell
     $sites = @(
-        '/sites/IT'
-        '/sites/Exec'
-        '/sites/HR'
+        '/sites/Work'
     )
     $target = Get-SPOHubSite -Identity "https://$tenantName.sharepoint.com"
     $sites | ForEach-Object {
@@ -321,11 +383,21 @@ Perform this task on WIN1.
 1. In active site, beside **Contoso home**, click the URL.
 1. On the site Contoso home, in the hub navigation bar, click **Add link**.
 1. In the Add panel, under **Choose an option**, select **Associated hubs**. Under Display name, type **Hubs** and click **OK**.
-1. In the Edit hub navigation panel, click **Save**.
-1. In the hub navigation bar, click **Edit**.
-1. Hover the mouse just below IT department, and click the icon *Add a link or label to navigation* [figure 1].
-1. In the fly-out Add, under **Choose an option**, ensure **Link** is selected. Under **Address**, type **https://\<your tenant\>.sharepoint.com/sites/News**. Under **Display name**, type **News @ Contoso**. Click **OK**.
-1. In Edit hub navigation, click the ellipsis right to **News @ Contoso** and click **Promote sub link**.
+1. Hover the mouse just below Hubs and click the icon *Add a link or label to navigation* [figure 1].
+1. In the fly-out Add, under **Choose an option**, click **Label**. Under **Display name**, type **Product sites**. Click **OK**.
+1. Hover the mouse just below Product sites and click the icon *Add a link or label to navigation* [figure 1].
+1. In the fly-out Add, under **Choose an option**, ensure **Link** is selected. Under **Address**, type **https://\<your tenant\>.sharepoint.com/sites/ContosoLandings**. Under **Display name**, type **Contoso landings**. Click **OK**.
+1. Click the ellipsis beside Contoso landings. In the context-menu, click **Make sub link**.
+1. Repeat steps 11 and 12 to create links to
+
+    * Contoso Web 1
+
+        https://\<your tenant\>.sharepoint.com/sites/ContosoWeb1
+
+    * Contoso Web 2
+
+        https://\<your tenant\>.sharepoint.com/sites/ContosoWeb2
+
 1. In the Edit hub navigation panel, click **Save**.
 
 ### Task 5: Edit the navigation on the hub site
@@ -337,24 +409,9 @@ Perform this task on WIN1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
-1. In active site, beside **IT department**, click the URL.
-1. On the page IT department, in the hub navigation bar, click **Add link**.
-1. In the Add panel, under **Choose an option**, select **Label**. Under Display name, type **Groups and teams** and click **OK**.
-1. In the Edit hub navigation panel, hover the mouse just under the **Group and teams** and click the **+**.
-1. In the Add panel, under **Choose an option**, select **Label**. Under Display name, type **Projects** and click **OK**.
-1. In the Edit hub navigation panel, hover the mouse just under the **Group and teams** and click the **+**.
-1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/IT-internal**.  Under Display name, type **IT internal** and click **OK**.
-1. In the Edit hub navigation panel, to the right of **IT internal**, click the ellipsis and click **Make sub link**.
-1. In the Edit hub navigation panel, hover the mouse just under the **IT internal** and click the **+**.
-1. In the Edit hub navigation panel, hover the mouse just under the **Projects** and click the **+**.
-1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/teams/Project1Drive**.  Under Display name, type **OneDrive deployment project** and click **OK**.
-1. In the Edit hub navigation panel, to the right of **OneDrive deployment project**, click the ellipsis and click **Make sub link**.
-1. In the Edit hub navigation panel, hover the mouse just under the **OneDrive deployment project** and click the **+**.
-1. In the Add panel, under **Choose an option**, ensure **Link** is selected. Under Address, type **/sites/SharePoint-project**.  Under Display name, type **SharePoint project** and click **OK**.
-1. In the Edit hub navigation panel, hover the mouse just under the **SharePoint project** and click the **+**.
-1. In the Add panel, under **Choose an option**, select **Associated child hubs**. Under Display name, type **Hubs** and click **OK**.
-1. In the Edit hub navigation panel, to the right of **Hubs**, click the ellipsis and click **Promote sub link**.
-1. In the Edit hub navigation panel, click **Save**.
+1. In active site, beside **Work @ Contoso**, click the URL.
+
+Edit the navigation bar to follow the structure from above.
 
 ## Exercise 3: Configure Viva Connections and global navigation
 
@@ -401,7 +458,7 @@ Perform this task on WIN1.
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com**.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. On Contoso home site, click the *Settings* icon and click **Manage Viva Connections**.
+1. On Contoso home site, click the *Settings* icon and click **Manage Home Site**.
 1. In the panel Manage Viva Connections, click **Create Dashboard**.
 1. Click **Add a card**.
 1. Click **News**.
