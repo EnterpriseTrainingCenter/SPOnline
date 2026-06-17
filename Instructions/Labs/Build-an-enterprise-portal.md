@@ -48,9 +48,15 @@ Perform this task on WIN1.
 
     If you do not see this command, skip to step 8.
 
-1. In the Home site panel, under **Current home site**, beside the current home site, click the **X** icon to remove it as home site. Click **Save**.
-1. In **Active Sites**, in the row of site **Contoso home**, in the column **URL**, in the context-menu of the URL, click **Copy link**.
-1. Select **Communication site** with the root URL. On the toolbar click **Replace site** (you may have to click the ellipsis to see this command).
+1. In the Home sites panel, select **Communication site** and click **Remove**. Close the Home sites panel.
+1. In SharePoint admin center, click **Active Sites**.
+1. In Active sites, select **Communication site** with the root URL.
+1. With the Communication site selected, on the toolbar, cick **Hub** and **Unregister as hub site**.
+1. In Unregister as hub site, click **OK**.
+1. Refresh the web page.
+1. In Active sites, in the row of site **Contoso home**, in the column **URL**, in the context-menu of the URL, click **Copy link**.
+1. Select **Communication site** with the root URL.
+1. On the toolbar click **Replace site** (you may have to click the ellipsis to see this command).
 1. In the panel Replace root site, under **URL of the site you want to use**, paste the copied URL of Contoso home. Click **Save**.
 
     Wait for the action to complete. This may take a minute or two.
