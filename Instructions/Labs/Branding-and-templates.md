@@ -74,7 +74,7 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 
 1. Apply the theme **Contoso Electronics** and the font package **Contoso Electronics** to the site **Mark 8 Project team**.
 
-    [Changing the look of a site](../General/Chaning-the-look-of-a-site.md)
+    [Changing the look of a site](../General/Changing-the-look-of-a-site.md)
 
 ## Exercise 2: Create an organization images library
 
