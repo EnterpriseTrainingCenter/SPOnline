@@ -32,7 +32,7 @@
     #>
     $siteScriptContent = Get-SPOSiteScriptFromWeb `
         -WebUrl:$webUrl `
-        -IncludedLists:$includedLists ´
+        -IncludedLists:$includedLists `
         -IncludeBranding:$includeBranding `
         -IncludeTheme:$includeTheme
     ````
