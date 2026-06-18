@@ -146,6 +146,9 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso
 1. From the Mark 8 Project site create a web site template. Include the list **Contoso Expense Tracker**, branding, and the theme. The name of the new template should be **Project site**.
 
 1. Create a new site from the template.
+
+    [Creating a site template](../General/Creating-a-site-template.md)
+
 1. Apply the template to the site **SharePoint Playground**.
 
 [Figure 1]:../../images/Brand-center-in-settings.png
