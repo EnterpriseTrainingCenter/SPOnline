@@ -948,7 +948,7 @@ Perform this task on WIN1.
 1. On the menu, click **File**, **Save**.
 1. On the menu, click **Run**, **Run Without Debugging**.
 
-    It make take a few minutes before a sign in window appears.
+    It may take a few minutes before a sign in window appears. The sign in window might be opened in the background. If you do not see it, check the taskbar or switch windows with **Alt**+**Tab**.
 
 1. A web browser opens, sign in as Global administrator.
 1. On Permissions requested, click **Accept**.
