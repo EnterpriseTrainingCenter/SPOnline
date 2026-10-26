@@ -1004,7 +1004,8 @@ Perform this task on WIN1.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Settings**.
 1. In Settings, click **Site creation**.
-1. In Site creation, deactivate **Users can create SharePoint sites**. Under **Create team sites under**, in the drop-down, select **/teams/**. Under **Default time zone**, select your time zone. Click **Save**.
+1. In Site creation, under **Control site creation from tools**, select **Block**. Under **Choose the SharePoint site creation experience**, select **Turn off the built-in SharePoint experience**. Under **Create team sites under**, in the drop-down, select **/teams/**. Under **Default time zone**, select your time zone. Click **Save**.
+1. Click **Site creation** again and verify that the settings are saved.
 
 #### PowerShell
 
@@ -1046,7 +1047,7 @@ Perform this task on WIN1.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
 1. On Microsoft 365 home, click the app launcher and click **SharePoint**.
 
-    Verify that there is no Create site button anymore.
+    Verify that on **Build**, the **Site** card shows the message **Site creation is unavailable due to admin settings.** and that no site can be created. The change applies after you reload the page.
 
 ## Exercise 4: Manage storage limits
 
