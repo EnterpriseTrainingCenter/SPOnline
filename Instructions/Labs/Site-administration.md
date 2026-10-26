@@ -399,7 +399,7 @@ Perform this task on WIN1.
 If you want to apply the department site design to the IT site, optionally, follow these steps:
 
 1. Open **Microsoft Edge**.
-1. Navigate to **https://\<your tenant name\>.sharepoin.com/sites/it**.
+1. Navigate to **https://\<your tenant name\>.sharepoint.com/sites/it**.
 1. On the site IT department, click the *Settings* icon (the gear icon) and **Apply a site template**.
 1. In Select a template, click **Department**.
 1. On Preview and use 'Department' template, click **Use template**.
@@ -1080,7 +1080,7 @@ Perform this task on WIN1.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select **IT department**.
-1. On the toolbar, click Storage. You might have to click the ellipsis (**...***) to see this command.
+1. On the toolbar, click **Storage**. You might have to click the *ellipsis* icon (the three dots) to see this command.
 1. On the Edit storage limit panel, under **Maximum storage for this site**, type **1** and click **Save**.
 1. Close the **Edit storage limit** panel.
 
