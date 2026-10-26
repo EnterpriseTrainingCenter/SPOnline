@@ -20,9 +20,8 @@
     Connect-MgGraph -Scopes 'RoleManagement.ReadWrite.Directory', 'User.ReadBasic.All'
     ````
 
-1. In Microsoft Edge, sign in using your Office 365 Tenant Credentials for the Global Admin.
+1. In the sign-in dialog, sign in using your Office 365 Tenant Credentials for the Global Admin.
 1. In the dialog Permissions requests, click **Accept**.
-1. Close **Microsoft Edge** and return to **Terminal**.
 1. Get the SharePoint Administrator role.
 
     ````powershell
