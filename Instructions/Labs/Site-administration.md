@@ -1082,7 +1082,7 @@ Perform this task on WIN1.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select **IT department**.
-1. On the toolbar, click **Storage**. You might have to click the *ellipsis* icon (the three dots) to see this command.
+1. On the toolbar, click Storage. You might have to click the ellipsis (**...**) to see this command.
 1. On the Edit storage limit panel, under **Maximum storage for this site**, type **1** and click **Save**.
 1. Close the **Edit storage limit** panel.
 
