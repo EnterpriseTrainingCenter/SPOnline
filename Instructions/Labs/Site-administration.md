@@ -849,7 +849,7 @@ Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
-1. In the new Microsoft Edge Guest instance, navigate to **https://www.microsoft365.com**.
+1. In the new Microsoft Edge Guest instance, navigate to **https://m365.cloud.microsoft**.
 1. On Login | Microsoft 365, click Sign in.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
 1. On Microsoft 365 home, click the app launcher and click **Outlook**.
@@ -963,7 +963,7 @@ Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
-1. In the new Microsoft Edge Guest instance, navigate to **https://www.microsoft365.com**.
+1. In the new Microsoft Edge Guest instance, navigate to **https://m365.cloud.microsoft**.
 1. On Login | Microsoft 365, click Sign in.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
 1. On Microsoft 365 home, click the app launcher and click **Outlook**.
@@ -977,7 +977,7 @@ Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
-1. In the new Microsoft Edge Guest instance, navigate to **https://www.microsoft365.com**.
+1. In the new Microsoft Edge Guest instance, navigate to **https://m365.cloud.microsoft**.
 1. On Login | Microsoft 365, click Sign in.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
 1. On Microsoft 365 home, click the app launcher and click **SharePoint**.
@@ -1042,7 +1042,7 @@ Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
 1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
-1. In the new Microsoft Edge Guest instance, navigate to **https://www.microsoft365.com**.
+1. In the new Microsoft Edge Guest instance, navigate to **https://m365.cloud.microsoft**.
 1. On Login | Microsoft 365, click Sign in.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
 1. On Microsoft 365 home, click the app launcher and click **SharePoint**.
