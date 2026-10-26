@@ -11,9 +11,9 @@ On WIN1, sign in as Administrator.
 
 If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
-If you skipped the practice [Install Visual Studio Code](Instructions/Practices/Install-Visual-Studio-Code.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Install-VSCode.ps1**.
+If you skipped the practice [Install Visual Studio Code](/Instructions/Practices/Install-Visual-Studio-Code.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Install-VSCode.ps1**.
 
-If you skipped the practice [Install Microsoft Graph Beta PowerShell module](Instructions/Practices/Install-Microsoft-Graph-Beta-PowerShell-module.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Install-GraphBeta.ps1**.
+If you skipped the practice [Install Microsoft Graph Beta PowerShell module](/Instructions/Practices/Install-Microsoft-Graph-Beta-PowerShell-module.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Install-GraphBeta.ps1**.
 
 ## Introduction
 
