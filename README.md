@@ -8,6 +8,8 @@ See also Issues, not only containing current known issues with possible solution
 
 If you are a trainer or participant of the course, you may fork this repository. Pull requests are accepted after review. Please follow our Guidelines.
 
+*Note:* Parts of these instructions were created using AI.
+
 ## Table of contents
 
 ### Practices
@@ -37,4 +39,4 @@ If you are a trainer or participant of the course, you may fork this repository.
 1. [Manage Search](Instructions/Labs/Manage-Search.md)
 1. [Governance and compliance](Instructions/Labs/Governance-and-compliance.md)
 
-(c) 2024 - 2025 Easy On - Roman Korecky EDV-Dienstleistungen
+(c) 2024 - 2026 Easy On - Roman Korecky EDV-Dienstleistungen
