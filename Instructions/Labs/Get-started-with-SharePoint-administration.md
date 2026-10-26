@@ -34,7 +34,7 @@ Figure 1: Site structure after exercise 5
 
     This task is only necessary, if you plan to install PowerShell and/or Windows Terminal with Windows PowerShell.
 
-1. Install **PowerShell** (app-id: 9MZ1SNWT0N5D)from the Microsoft Store.
+1. Install **PowerShell** (app-id: 9MZ1SNWT0N5D) from the Microsoft Store.
 
     ![figure 2]
     Figure 2: PowerShell in Microsoft Store
@@ -55,6 +55,8 @@ Figure 1: Site structure after exercise 5
 1. In **Windows PowerShell**, install the modules **Microsoft.Online.SharePoint.PowerShell**, **ExchangeOnlineManagement**, **MicrosoftTeams**, and **Microsoft.Graph**.
 
     [Installing PowerShell modules](../General/Installing-PowerShell-modules.md)
+
+    *Note:* If you are asked whether to install modules from an untrusted repository, type **A** to answer **Yes to All**. This avoids repeated prompts.
 
     Installing Microsoft.Graph will take a few minutes. You do not have to wait for the installation to complete. Instead, continue to the next task.
 
@@ -106,6 +108,8 @@ From now on, you can use the user Lynne Robbins for SharePoint administration.
 
     If you are asked to activate Office, sign in using Lynne Robbins.
 
+    If Word signs in with another account, switch the account. In Word, click **File**, **Account**, and **Switch account**, or click **Sign out** and sign in again. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+
     Switch to the browser and verify your change is visible. In the browser, make a change to the document, e.g., on page 2, in the first paragraph, change **Seattle** to **Vienna**.
 
     Switch to the Microsoft Word desktop app and verify your change is visible. Then close Microsoft Word and the browser tab.
@@ -153,7 +157,7 @@ If time allows, install the SharePoint and OneDrive apps on your smartphone, sig
 1. List the sites in your tenant and verify the Membership of the site **SharePoint Project**.
 
     Verify that Lynne Robbins is in Owner.
-    Verify that SharePoint Project members are in Site admins.
+    Verify that SharePoint Project Owners are in Site admins.
     Verify that SharePoint Project members are in Site members.
 
     Verify, that on the tab **General** under **Channel sites** there is 1 site. View the site and verify that Lynne Robbins is in Site admins and that Lynne Robbins and Patti Fernandez are in Site members.

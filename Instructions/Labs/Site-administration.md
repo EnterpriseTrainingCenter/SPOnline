@@ -11,9 +11,9 @@ On WIN1, sign in as Administrator.
 
 If you skipped Lab [Get started with SharePoint administration](/Instructions/Labs/Get-started-with-SharePoint-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Start-SharePointAndTeamsConfiguration.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
-If you skipped the practice [Install Visual Studio Code](Instructions/Practices/Install-Visual-Studio-Code.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Install-VSCode.ps1**.
+If you skipped the practice [Install Visual Studio Code](/Instructions/Practices/Install-Visual-Studio-Code.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Install-VSCode.ps1**.
 
-If you skipped the practice [Install Microsoft Graph Beta PowerShell module](Instructions/Practices/Install-Microsoft-Graph-Beta-PowerShell-module.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Install-GraphBeta.ps1**.
+If you skipped the practice [Install Microsoft Graph Beta PowerShell module](/Instructions/Practices/Install-Microsoft-Graph-Beta-PowerShell-module.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\Install-GraphBeta.ps1**.
 
 ## Introduction
 
@@ -84,9 +84,9 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 
 1. [Connect the team site OneDrive deployment project to a new Microsoft 365 group](#task-4-connect-a-team-site-to-a-new-microsoft-365-group) with the alias Project1Drive
 1. [Upgrade the Microsoft 365 group OneDrive deployment project to a team](#task-5-upgrade-a-microsoft-365-group-to-a-team)
-1. [Delete a site without a Microsoft 365 group](#task-6-delete-a-site-without-a-microsoft-365-group), SharePoint Project
+1. [Delete a site without a Microsoft 365 group](#task-6-delete-a-site-without-a-microsoft-365-group), SharePoint playground
 1. [Delete a Microsoft 365 group-connected site](#task-7-delete-a-microsoft-365-group-connected-site), OneDrive deployment project
-1. [Restore site](#task-8-restore-site) SharePoint Project
+1. [Restore site](#task-8-restore-site) SharePoint playground
 1. [Restore Microsoft 365 group OneDrive](#task-9-restore-microsoft-365-group) deployment project
 
 ![Site structure after exercise 1][figure 1]
@@ -263,6 +263,8 @@ Perform this task on WIN1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
     ````
 
+    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
+
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Create a team site **OneDrive deployment project** with the url **teams/Project1Drive**.
 
@@ -429,6 +431,8 @@ Perform this task on WIN1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
 
+    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
+
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
 1. Connect the site **OneDrive deployment project** to a new Microsoft 365 group with the same name and the alias **Project1Drive**.
@@ -461,9 +465,6 @@ Perform this task on WIN1.
 1. In Create team, on the left, click **From group**.
 1. Under Which Microsoft 365 group do you want to use?, click **OneDrive deployment project** and click **Add Team**.
 1. Click to close **Nice work!**.
-1. On the left click **Teams**.
-
-    Verify that the OneDrive deployment project is visible as a new team.
 
 #### PowerShell
 
@@ -540,6 +541,8 @@ Perform this task on WIN1.
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
+
+    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
 
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Delete the **SharePoint Playground site**.
@@ -625,6 +628,8 @@ Perform this task on WIN1.
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
+
+    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
 
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. List the deleted sites.
@@ -742,7 +747,7 @@ Perform this task on WIN1.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select **Contoso home** and click **Membership**.
 1. On the Contoso home panel, on the **Membership** tab, ensure **Site admins is selected**. Click **Add site admins**.
-1. In Add site admins to Contoso home, find and click **Joni Sherman** and click **Add (1)**.
+1. In Add site admins to Contoso home, find and click **Joni Sherman** and click **Add**.
 1. Above Add site admins to Contoso home, click the left arrow.
 
     Verify that Joni Sherman was added to the Site admins.
@@ -784,6 +789,8 @@ Perform this task on WIN1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
     ````
 
+    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
+
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Add the user as site admin to the site **Contoso home**.
 
@@ -812,9 +819,13 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
+1. In Microsoft Edge, click the profile icon in the top-right corner, click **Other profiles** and **Browse as guest**.
 1. In the new Microsoft Edge Guest instance, navigate to **https://\<your tenant\>.sharepoint.com/sites/home**.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
+1. Navigate to **https://\<your tenant\>.sharepoint.com/sites/home** again.
+
+    *Note:* After signing in, SharePoint might redirect you to the root site. Opening Contoso home again makes sure that the site settings are opened for Contoso home.
+
 1. On Contoso home, click the *Settings* icon (the gear icon) and click **Site information**.
 1. On the Site Information panel, click **View all site settings**.
 
@@ -841,8 +852,8 @@ Figure 2: Site structure after exercise 3
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
-1. In the new Microsoft Edge Guest instance, navigate to **https://www.microsoft365.com**.
+1. In Microsoft Edge, click the profile icon in the top-right corner, click **Other profiles** and **Browse as guest**.
+1. In the new Microsoft Edge Guest instance, navigate to **https://m365.cloud.microsoft**.
 1. On Login | Microsoft 365, click Sign in.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
 1. On Microsoft 365 home, click the app launcher and click **Outlook**.
@@ -941,7 +952,7 @@ Perform this task on WIN1.
 1. On the menu, click **File**, **Save**.
 1. On the menu, click **Run**, **Run Without Debugging**.
 
-    It make take a few minutes before a sign in window appears.
+    It may take a few minutes before a sign in window appears. The sign in window might be opened in the background. If you do not see it, check the taskbar or switch windows with **Alt**+**Tab**.
 
 1. A web browser opens, sign in as Global administrator.
 1. On Permissions requested, click **Accept**.
@@ -955,8 +966,8 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
-1. In the new Microsoft Edge Guest instance, navigate to **https://www.microsoft365.com**.
+1. In Microsoft Edge, click the profile icon in the top-right corner, click **Other profiles** and **Browse as guest**.
+1. In the new Microsoft Edge Guest instance, navigate to **https://m365.cloud.microsoft**.
 1. On Login | Microsoft 365, click Sign in.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
 1. On Microsoft 365 home, click the app launcher and click **Outlook**.
@@ -969,13 +980,13 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
-1. In the new Microsoft Edge Guest instance, navigate to **https://www.microsoft365.com**.
+1. In Microsoft Edge, click the profile icon in the top-right corner, click **Other profiles** and **Browse as guest**.
+1. In the new Microsoft Edge Guest instance, navigate to **https://m365.cloud.microsoft**.
 1. On Login | Microsoft 365, click Sign in.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
 1. On Microsoft 365 home, click the app launcher and click **SharePoint**.
-1. On the SharePoint start page, click **Create Site**.
-1. On Create a site: Select this site type, click **Team site**.
+1. On the SharePoint start page, in the left navigation, click **Build**.
+1. On Start building, click the card **Site**.
 1. On Select a template, click **IT help desk**.
 1. On Preview and use 'IT help desk template', click **Use template**.
 1. On Give your site a name, under **site name**, type **IT help desk**. Accept all other default values and click **Next**.
@@ -997,7 +1008,8 @@ Perform this task on WIN1.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Settings**.
 1. In Settings, click **Site creation**.
-1. In Site creation, deactivate **Users can create SharePoint sites**. Under **Create team sites under**, in the drop-down, select **/teams/**. Under **Default time zone**, select your time zone. Click **Save**.
+1. In Site creation, under **Control site creation from tools**, select **Block**. Under **Choose the SharePoint site creation experience**, select **Turn off the built-in SharePoint experience**. Under **Create team sites under**, in the drop-down, select **/teams/**. Under **Default time zone**, select your time zone. Click **Save**.
+1. Click **Site creation** again and verify that the settings are saved.
 
 #### PowerShell
 
@@ -1012,6 +1024,8 @@ Perform this task on WIN1.
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
     ````
+
+    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
 
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Disable self service site creation.
@@ -1031,13 +1045,13 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
-1. In the new Microsoft Edge Guest instance, navigate to **https://www.microsoft365.com**.
+1. In Microsoft Edge, click the profile icon in the top-right corner, click **Other profiles** and **Browse as guest**.
+1. In the new Microsoft Edge Guest instance, navigate to **https://m365.cloud.microsoft**.
 1. On Login | Microsoft 365, click Sign in.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
 1. On Microsoft 365 home, click the app launcher and click **SharePoint**.
 
-    Verify that there is no Create site button anymore.
+    Verify that on **Build**, the **Site** card shows the message **Site creation is unavailable due to admin settings.** and that no site can be created. The change applies after you reload the page.
 
 ## Exercise 4: Manage storage limits
 
@@ -1087,6 +1101,8 @@ Perform this task on WIN1.
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
     ````
+
+    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
 
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Set the storage limit of the site **IT department** to **1 GB** and the warning level to **97 %** of the storage limit.
@@ -1147,6 +1163,8 @@ Perform this task on WIN1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
     ````
 
+    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
+
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Check if the url of the site **/sites/PlaygroundSite** can be changed to **/sites/SharePoint-Playground**.
 
@@ -1200,13 +1218,12 @@ Perform this task on WIN1.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com**.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. On the site Contoso home, click **New**, **Page**.
-1. On Welcome!, click **I've done this before** and **Let's go**.
-1. On Page templates, click **Blank** and click **Create page**.
+1. On Page templates, click **Create blank**.
 1. On the new page, click in **Add a title**, type **Sorry, this site is currently not available**.
 1. In **Add your text here.**, type **An administrator made this site unavailable, because the site need maintenance or the content is outdated. Don't worry! The content is not lost and the site may be available later again.**.
 1. Ensure, **Comments** are **Off**.
 1. Click the full-width banner above the title. A floating toolbar appears. In the toolbar, the icon *Browse images*.
-1. In the image browser, click **Web search**. Search and select an appropriate image. Try to search for terms like **maintenance** or **out of order**. Click **Insert image**.
+1. In the image browser, click **Stock images**. Search and select an appropriate image. Try to search for terms like **maintenance** or **out of order**. Click **Insert image**.
 1. When you are satisfied with your page, click **Publish**.
 1. In the Help others find your page, click **Copy link to page** and save the URL anywhere, e.g., in Notepad. Remove the part behind and including the question mark.
 
@@ -1225,6 +1242,8 @@ Perform this task on WIN1.
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
+
+    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
 
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Set the no access redirect url.
@@ -1252,6 +1271,8 @@ Perform this task on WIN1.
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
+
+    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
 
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Store the site **Joni's group** in a variable
@@ -1314,6 +1335,8 @@ Perform this task on WIN1.
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
+
+    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
 
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Store the site **OneDrive deployment project** in a variable

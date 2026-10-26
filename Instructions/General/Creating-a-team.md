@@ -4,9 +4,9 @@
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://teams.microsoft.com**.
-1. In Microsoft Teams, on the left, click **Teams**.
-1. In Teams, at the top click **+** and click **Create team**.
-1. In Create a team, under Team name, type the name of the new team. Ensure the **Team type** to be **Private**. Under Name the first channel, type **General information**. Click **Create**.
+1. In Microsoft Teams, on the left, click **Chat**.
+1. In Chat, at the top, click the down chevron *New items* and click **New team**.
+1. In Create a team, under Team name, type the name of the new team. Ensure the **Team type** to be **Private**. Under Name the first channel, type **General**. Click **Create**.
 1. In Add members to SharePoint project, in **Type a name or email**, search for users or groups to add. Click **Add**.
 
 ## PowerShell

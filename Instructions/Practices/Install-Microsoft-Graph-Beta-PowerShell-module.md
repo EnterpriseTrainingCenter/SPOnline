@@ -9,7 +9,7 @@ On WIN1, install the Microsoft Graph Beta PowerShell module.
 Perform this task on WIN1.
 
 1. Sign in to **WIN1** as **Administrator**.
-1. Open **Terminal**.
+1. Run **Terminal** as **Administrator**.
 1. In Terminal, ensure **Administrator: Windows PowerShell** is shown at the top. Install the Microsoft Graph Beta PowerShell module.
 
     ````powershell

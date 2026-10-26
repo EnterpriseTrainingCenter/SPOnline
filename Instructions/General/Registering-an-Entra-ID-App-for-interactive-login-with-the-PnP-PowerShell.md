@@ -1,4 +1,4 @@
-### Task 6: Register the Entra ID App for interactive login with the PnP Powershell
+# Registering an Entra ID App for interactive login with the PnP PowerShell
 
 1. Open **PowerShell** or **Terminal**.
 1. In Windows Terminal, ensure **PowerShell** is shown at the top. You can open a new tab for PowerShell by clicking the down chevron and selecting **PowerShell**.
@@ -15,11 +15,11 @@
 
     A browser window opens.
 
-1. Sign in using your Office 365 Tenant Credentials for the Global Admin.
-1. When the message You are signed in now and can close this page appears, close the browser window and switch back to Terminal. Wait for about 30 seconds. A new browser window will open.
-1. Sign in again using your Office 365 Tenant Credentials for the Global Admin.
+1. Sign in using your Office 365 Tenant Credentials for the Global Admin. If you are asked to pick an account, select the Global Admin account.
+1. When the message You are signed in now and can close this page appears, close the browser tab and switch back to Terminal. Wait for about 30 seconds. A new browser window will open.
+1. Sign in again using your Office 365 Tenant Credentials for the Global Admin. If you are asked to pick an account, select the Global Admin account.
 1. In the dialog Permissions requested, activate **Consent on behalf of your organization** and click **Accept**.
-1. When the message You successfully provided consent now and can close this page appears, close the browser window and switch back to Terminal. After a few seconds, the command emits an AzureAppId/ClientId. Take a note or copy it to the clipboard.
+1. When the message You successfully provided consent now and can close this page appears, close the browser tab and switch back to Terminal. After a few seconds, the command emits an AzureAppId/ClientId. Take a note or copy it to the clipboard.
 1. Register the AzureAppId/ClientId as default.
 
     ````powershell

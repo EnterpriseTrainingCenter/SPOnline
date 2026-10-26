@@ -1,6 +1,6 @@
-### Task 1: Assign the SharePoint Administrator role
+# Assigning an Entra ID role
 
-#### Web UI
+## Web UI
 
 1. Open **Microsoft Edge**.
 1. Navigate to **https://admin.microsoft.com**.
@@ -11,7 +11,7 @@
 1. In Manage admin roles, click **Admin center access** and the desired role. Click **Save changes**.
 1. Close the panel **Manage admin roles**.
 
-#### PowerShell
+## PowerShell
 
 1. Open **Terminal**, **PowerShell**, or **Windows PowerShell**.
 1. Sign in to Microsoft Graph.
@@ -20,9 +20,8 @@
     Connect-MgGraph -Scopes 'RoleManagement.ReadWrite.Directory', 'User.ReadBasic.All'
     ````
 
-1. In Microsoft Edge, sign in using your Office 365 Tenant Credentials for the Global Admin.
+1. In the sign-in dialog, sign in using your Office 365 Tenant Credentials for the Global Admin.
 1. In the dialog Permissions requests, click **Accept**.
-1. Close **Microsoft Edge** and return to **Terminal**.
 1. Get the SharePoint Administrator role.
 
     ````powershell
