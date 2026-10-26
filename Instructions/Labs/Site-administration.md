@@ -1216,13 +1216,12 @@ Perform this task on WIN1.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com**.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. On the site Contoso home, click **New**, **Page**.
-1. On Welcome!, click **I've done this before** and **Let's go**.
-1. On Page templates, click **Blank** and click **Create page**.
+1. On Page templates, click **Create blank**.
 1. On the new page, click in **Add a title**, type **Sorry, this site is currently not available**.
 1. In **Add your text here.**, type **An administrator made this site unavailable, because the site need maintenance or the content is outdated. Don't worry! The content is not lost and the site may be available later again.**.
 1. Ensure, **Comments** are **Off**.
 1. Click the full-width banner above the title. A floating toolbar appears. In the toolbar, the icon *Browse images*.
-1. In the image browser, click **Web search**. Search and select an appropriate image. Try to search for terms like **maintenance** or **out of order**. Click **Insert image**.
+1. In the image browser, click **Stock images**. Search and select an appropriate image. Try to search for terms like **maintenance** or **out of order**. Click **Insert image**.
 1. When you are satisfied with your page, click **Publish**.
 1. In the Help others find your page, click **Copy link to page** and save the URL anywhere, e.g., in Notepad. Remove the part behind and including the question mark.
 
