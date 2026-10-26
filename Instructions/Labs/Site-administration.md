@@ -981,8 +981,8 @@ Perform this task on WIN1.
 1. On Login | Microsoft 365, click Sign in.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
 1. On Microsoft 365 home, click the app launcher and click **SharePoint**.
-1. On the SharePoint start page, click **Create Site**.
-1. On Create a site: Select this site type, click **Team site**.
+1. On the SharePoint start page, in the left navigation, click **Build**.
+1. On Start building, click the card **Site**.
 1. On Select a template, click **IT help desk**.
 1. On Preview and use 'IT help desk template', click **Use template**.
 1. On Give your site a name, under **site name**, type **IT help desk**. Accept all other default values and click **Next**.
