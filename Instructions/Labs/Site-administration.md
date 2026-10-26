@@ -84,9 +84,9 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 
 1. [Connect the team site OneDrive deployment project to a new Microsoft 365 group](#task-4-connect-a-team-site-to-a-new-microsoft-365-group) with the alias Project1Drive
 1. [Upgrade the Microsoft 365 group OneDrive deployment project to a team](#task-5-upgrade-a-microsoft-365-group-to-a-team)
-1. [Delete a site without a Microsoft 365 group](#task-6-delete-a-site-without-a-microsoft-365-group), SharePoint Project
+1. [Delete a site without a Microsoft 365 group](#task-6-delete-a-site-without-a-microsoft-365-group), SharePoint playground
 1. [Delete a Microsoft 365 group-connected site](#task-7-delete-a-microsoft-365-group-connected-site), OneDrive deployment project
-1. [Restore site](#task-8-restore-site) SharePoint Project
+1. [Restore site](#task-8-restore-site) SharePoint playground
 1. [Restore Microsoft 365 group OneDrive](#task-9-restore-microsoft-365-group) deployment project
 
 ![Site structure after exercise 1][figure 1]
