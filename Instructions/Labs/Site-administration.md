@@ -747,7 +747,7 @@ Perform this task on WIN1.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select **Contoso home** and click **Membership**.
 1. On the Contoso home panel, on the **Membership** tab, ensure **Site admins is selected**. Click **Add site admins**.
-1. In Add site admins to Contoso home, find and click **Joni Sherman** and click **Add (1)**.
+1. In Add site admins to Contoso home, find and click **Joni Sherman** and click **Add**.
 1. Above Add site admins to Contoso home, click the left arrow.
 
     Verify that Joni Sherman was added to the Site admins.
@@ -819,9 +819,13 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
+1. In Microsoft Edge, click the profile icon in the top-right corner, click **Other profiles** and **Browse as guest**.
 1. In the new Microsoft Edge Guest instance, navigate to **https://\<your tenant\>.sharepoint.com/sites/home**.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
+1. Navigate to **https://\<your tenant\>.sharepoint.com/sites/home** again.
+
+    *Note:* After signing in, SharePoint might redirect you to the root site. Opening Contoso home again makes sure that the site settings are opened for Contoso home.
+
 1. On Contoso home, click the *Settings* icon (the gear icon) and click **Site information**.
 1. On the Site Information panel, click **View all site settings**.
 
@@ -848,7 +852,7 @@ Figure 2: Site structure after exercise 3
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
+1. In Microsoft Edge, click the profile icon in the top-right corner, click **Other profiles** and **Browse as guest**.
 1. In the new Microsoft Edge Guest instance, navigate to **https://m365.cloud.microsoft**.
 1. On Login | Microsoft 365, click Sign in.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
@@ -962,7 +966,7 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
+1. In Microsoft Edge, click the profile icon in the top-right corner, click **Other profiles** and **Browse as guest**.
 1. In the new Microsoft Edge Guest instance, navigate to **https://m365.cloud.microsoft**.
 1. On Login | Microsoft 365, click Sign in.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
@@ -976,7 +980,7 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
+1. In Microsoft Edge, click the profile icon in the top-right corner, click **Other profiles** and **Browse as guest**.
 1. In the new Microsoft Edge Guest instance, navigate to **https://m365.cloud.microsoft**.
 1. On Login | Microsoft 365, click Sign in.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
@@ -1041,7 +1045,7 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, click the profile icon in the top-left corner, click **Other profiles** and **Browse as guest**.
+1. In Microsoft Edge, click the profile icon in the top-right corner, click **Other profiles** and **Browse as guest**.
 1. In the new Microsoft Edge Guest instance, navigate to **https://m365.cloud.microsoft**.
 1. On Login | Microsoft 365, click Sign in.
 1. Sign in as **JoniS@\<your tenant\>.onmicrosoft.com**.
