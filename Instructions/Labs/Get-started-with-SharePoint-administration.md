@@ -34,7 +34,7 @@ Figure 1: Site structure after exercise 5
 
     This task is only necessary, if you plan to install PowerShell and/or Windows Terminal with Windows PowerShell.
 
-1. Install **PowerShell** (app-id: 9MZ1SNWT0N5D)from the Microsoft Store.
+1. Install **PowerShell** (app-id: 9MZ1SNWT0N5D) from the Microsoft Store.
 
     ![figure 2]
     Figure 2: PowerShell in Microsoft Store
@@ -55,6 +55,8 @@ Figure 1: Site structure after exercise 5
 1. In **Windows PowerShell**, install the modules **Microsoft.Online.SharePoint.PowerShell**, **ExchangeOnlineManagement**, **MicrosoftTeams**, and **Microsoft.Graph**.
 
     [Installing PowerShell modules](../General/Installing-PowerShell-modules.md)
+
+    *Note:* If you are asked whether to install modules from an untrusted repository, type **A** to answer **Yes to All**. This avoids repeated prompts.
 
     Installing Microsoft.Graph will take a few minutes. You do not have to wait for the installation to complete. Instead, continue to the next task.
 
