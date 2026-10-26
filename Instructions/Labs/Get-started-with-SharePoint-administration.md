@@ -106,6 +106,8 @@ From now on, you can use the user Lynne Robbins for SharePoint administration.
 
     If you are asked to activate Office, sign in using Lynne Robbins.
 
+    If Word signs in with another account, switch the account. In Word, click **File**, **Account**, and **Switch account**, or click **Sign out** and sign in again. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
+
     Switch to the browser and verify your change is visible. In the browser, make a change to the document, e.g., on page 2, in the first paragraph, change **Seattle** to **Vienna**.
 
     Switch to the Microsoft Word desktop app and verify your change is visible. Then close Microsoft Word and the browser tab.
