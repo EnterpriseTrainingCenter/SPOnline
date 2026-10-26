@@ -2,7 +2,10 @@
 
 ## Web UI
 
-1. Open the Microsoft Purview admin center.
+1. Navigate to **https://purview.microsoft.com**.
+
+    If the dialog **Welcome to the new Microsoft Purview portal** appears, click **Get started**.
+
 1. Click **Solutions** and **Audit**.
 1. Click **Start recording user and admin activity**.
 
