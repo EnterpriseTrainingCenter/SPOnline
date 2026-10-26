@@ -465,9 +465,6 @@ Perform this task on WIN1.
 1. In Create team, on the left, click **From group**.
 1. Under Which Microsoft 365 group do you want to use?, click **OneDrive deployment project** and click **Add Team**.
 1. Click to close **Nice work!**.
-1. On the left click **Teams**.
-
-    Verify that the OneDrive deployment project is visible as a new team.
 
 #### PowerShell
 
