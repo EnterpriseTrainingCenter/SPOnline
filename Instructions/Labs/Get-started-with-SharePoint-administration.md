@@ -155,7 +155,7 @@ If time allows, install the SharePoint and OneDrive apps on your smartphone, sig
 1. List the sites in your tenant and verify the Membership of the site **SharePoint Project**.
 
     Verify that Lynne Robbins is in Owner.
-    Verify that SharePoint Project members are in Site admins.
+    Verify that SharePoint Project Owners are in Site admins.
     Verify that SharePoint Project members are in Site members.
 
     Verify, that on the tab **General** under **Channel sites** there is 1 site. View the site and verify that Lynne Robbins is in Site admins and that Lynne Robbins and Patti Fernandez are in Site members.
