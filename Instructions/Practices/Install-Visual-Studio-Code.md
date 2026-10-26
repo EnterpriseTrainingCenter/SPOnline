@@ -27,7 +27,7 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, find **Visual Studio Code** in the respository.
+1. In Terminal, find **Visual Studio Code** in the repository.
 
     ````powershell
     winget search 'Visual Studio Code'
@@ -41,4 +41,4 @@ Perform this task on WIN1.
     winget install XP9KHM4BK9FZ7Q
     ````
 
-1. On the mesage Do you agree to the terms, enter **Y**.
+1. On the message Do you agree to the terms, enter **Y**.
