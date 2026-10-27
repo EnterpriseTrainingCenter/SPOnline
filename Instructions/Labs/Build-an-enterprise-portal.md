@@ -2,7 +2,7 @@
 
 ## Setup
 
-On **WIN1**, sign in as **Administrator**.
+On **WIN1**, sign in as **Admin**.
 
 If you skipped Lab [Site administration](/Instructions/Labs/Site-administration.md), in **PowerShell** or **Windows PowerShell**, execute **C:\LabResources\Solutions\New-Sites.ps1**. If you are asked to sign in, use the global administrator credentials of your tenant.
 
