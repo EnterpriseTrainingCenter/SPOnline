@@ -251,7 +251,7 @@ Perform this task on WIN1.
         * U.S. Sales
 
 1. Click **Bulk edit**, **Hub association**.
-1. In the panel Edit hub association, under **Select a hub**, select **Contoso @ work** and click **Save**.
+1. In the panel Edit hub association, under **Select a hub**, select **Work @ Contoso** and click **Save**.
 
 #### PowerShell
 
@@ -285,7 +285,7 @@ Perform this task on WIN1.
     }
     ````
 
-1. Associate the sites with the Contoso @ work hub:
+1. Associate the sites with the Work @ Contoso hub:
 
     * /Brand
     * /DigitalInitiativePublicRelations
@@ -337,7 +337,7 @@ Perform this task on WIN1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
-1. In Active sites, select **Contoso @ Work** and click **Hub**, **Edit hub site settings**.
+1. In Active sites, select **Work @ Contoso** and click **Hub**, **Edit hub site settings**.
 1. In the panel Hub site settings, under **Parent hub association**, select **Contoso home** and click **Save**.
 1. Close the panel.
 
