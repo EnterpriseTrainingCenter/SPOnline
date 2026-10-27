@@ -52,4 +52,4 @@
 
 [New-TeamChannel (MicrosoftTeams) | Microsoft Learn](https://learn.microsoft.com/en-us/powershell/module/microsoftteams/new-teamchannel)
 
-[figure 1]:/images/teams-new-channel.jpeg
+[figure 1]:/images/Teams-new-channel.jpeg
