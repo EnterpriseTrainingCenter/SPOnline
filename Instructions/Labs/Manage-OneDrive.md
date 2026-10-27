@@ -63,7 +63,10 @@ Perform this task on WIN1.
 1. On the tab **2 Configuration settings**, click **Add settings**.
 1. On the Settings picker pane, under **Browse by category**, click **OneDrive**. Add the following settings, then close the **Settings picker**.
 
-    * Silently move Windows know folders to OneDrive
+    * Silently move Windows known folders to OneDrive
+
+        Add the first setting, containing the sub-settings **Desktop (Device)**, **Documents (Device)**, and **Pictures (Device)**.
+
     * Silently sign in users to the OneDrive sync app with their Windows credentials
     * Use OneDrive Files On-Demand
 
