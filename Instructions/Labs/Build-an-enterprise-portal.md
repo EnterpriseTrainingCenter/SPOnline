@@ -461,7 +461,7 @@ Perform this task on WIN1.
 ## Exercise 4: Configure and use the dashboard
 
 1. [Create a dashboard](#task-1-create-a-dashboard) with cards like News, Events, Assigned Tasks, Approvals, and OneDrive
-1. [Add Viva Connection web parts](#task-2-add-viva-connection-web-parts) Dashboard for Viva Connections and My Feed to the home page of the Contoso home site
+1. [Add Viva Connection web parts](#task-2-add-viva-connection-web-parts) Dashboard for Viva Connections to the home page of the Contoso home site
 
 ### Task 1: Create a dashboard
 
@@ -482,7 +482,7 @@ Perform this task on WIN1.
     * Approvals
     * OneDrive
 
-1. Click **Publish**.
+1. Click **Publish page**.
 1. Click the *Settings* icon and click **Site contents**.
 1. In Site contents, click **Site Pages**.
 
@@ -496,11 +496,10 @@ Perform this task on WIN1.
 1. In Microsoft Edge, navigate to **https://\<your tenant\>.sharepoint.com**.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
-1. On Contoso home site (ensure, you are on the empty home page of the site), in the top-right corner, click **Edit**.
-1. In the left column of the second section, click **Add a new web part in column 1** [figure 2] (hover with the mouse near the top of the section and click **+**).
-1. Find and click **Dashboard for Viva connection**.
-1. In the top-right corner, click **Republish**.
+1. On Contoso home site, in the top-right corner, click **Edit**.
+1. In an appropriate place, add a web part.
+1. Find and click **Dashboard**.
+1. In the top-right corner, click **Publish changes**.
 1. In Ready to republish?, click **Republish**.
 
 [figure 1]:/images/edit-hub-navigation.png
-[figure 2]:/images/contoso-home-site-edit-empty.png
