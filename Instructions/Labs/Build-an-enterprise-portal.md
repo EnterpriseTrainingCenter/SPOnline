@@ -390,12 +390,17 @@ Perform this task on WIN1.
 1. In active site, beside **Contoso home**, click the URL.
 1. On the site Contoso home, in the hub navigation bar, click **Add link**.
 1. In the Add panel, under **Choose an option**, select **Associated hubs**. Under Display name, type **Hubs** and click **OK**.
+1. In the Edit hub navigation panel, click **Save**.
+1. In the hub navigation bar, click **Edit** to open the Edit hub navigation panel again.
+
+    *Note:* In the current user interface, adding more entries directly after the **Associated hubs** entry creates empty ghost rows. To avoid this, save the navigation and open it again before you continue.
+
 1. Hover the mouse just below Hubs and click the icon *Add a link or label to navigation* [figure 1].
 1. In the fly-out Add, under **Choose an option**, click **Label**. Under **Display name**, type **Product sites**. Click **OK**.
 1. Hover the mouse just below Product sites and click the icon *Add a link or label to navigation* [figure 1].
 1. In the fly-out Add, under **Choose an option**, ensure **Link** is selected. Under **Address**, type **https://\<your tenant\>.sharepoint.com/sites/ContosoLandings**. Under **Display name**, type **Contoso landings**. Click **OK**.
 1. Click the ellipsis beside Contoso landings. In the context-menu, click **Make sub link**.
-1. Repeat steps 11 and 12 to create links to
+1. Repeat steps 13 and 14 to create links to
 
     * Contoso Web 1
 
