@@ -149,7 +149,6 @@ Perform this task on WIN1.
         * Contoso landings
         * Contoso Web 1
         * Contoso Web 2
-        
 
 1. [Edit the navigation on the hub site](#task-5-edit-the-navigation-on-the-hub-site) Work @ Contoso following the structure below:
 
@@ -157,7 +156,7 @@ Perform this task on WIN1.
         * News @ Contoso
     * Groups and Teams (label)
         * All company
-        * Sales and Marketing
+        * Sales & Marketing
         * Leadership Team
         * Digital Initiative Public Relations
         * Mark 8 Project Team
@@ -168,7 +167,7 @@ Perform this task on WIN1.
         * Executive Corner
         * HR
         * Operations
-        * Sales and Marketing
+        * Sales & Marketing
     * Hubs (associated child hubs)
 
 ### Task 1: Register sites as hub sites
