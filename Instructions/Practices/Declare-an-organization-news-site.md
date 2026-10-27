@@ -1,4 +1,4 @@
-# Practice: Declare an organization new site
+# Practice: Declare an organization news site
 
 ## Setup
 
