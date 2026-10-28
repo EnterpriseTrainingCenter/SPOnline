@@ -42,8 +42,6 @@ Get-SPOOrgAssetsLibrary
         -LibraryUrl $libraryUrl -OrgAssetType $orgAssetType -CdnType Public
     ```
 
-    *Note:* The cmdlet asks for a confirmation. Type **Y** and press ENTER.
-
 # Remove an organization assets library
 
 ```powershell

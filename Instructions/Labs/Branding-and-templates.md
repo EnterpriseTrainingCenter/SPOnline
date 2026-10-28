@@ -82,7 +82,7 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. The fon
 
 1. In the site **Brand Guide**, create an organization assets library for images with the name **Organization images**.
 
-    [Managing organization assets libraries](../General/Managing-organization-assets-libraries.md)
+    [Managing organization asssets libraries](../General/Managing-organization-assets-libraries.md)
 
 1. In a new tab, navigate to **https://en.wikipedia.org/wiki/Cat** and save some pictures locally in a folder named **Cats**. 
 1. Navigate to **https://en.wikipedia.org/wiki/Dog** and save some pictures locally in a folder named **Dogs**.
@@ -93,7 +93,7 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. The fon
 
 1. In the site **Brand Guide**, create an organization templates library for templates with the name **Organization templates**.
 
-    [Managing organization assets libraries](../General/Managing-organization-assets-libraries.md)
+    [Managing organization asssets libraries](../General/Managing-organization-assets-libraries.md)
 
 1. In the library **Organization templates**, create folders:
 
@@ -111,9 +111,9 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. The fon
 
 1. Copy the font files you downloaded in [Exercise 1: Configure SharePoint branding](#exercise-1-configure-sharepoint-branding) to a single folder, e.g., C:\OfficeFonts. You only need to copy the font files from the top folders of each font, not the files from sub-folders ([figure 2]).
 
-1. In the site **Brand Guide**, create an organization fonts library for fonts with the name **Office Fonts**.
+1. In the site **Brand Guide**, create an organization templates library for templates with the name **Office Fonts**.
 
-    [Managing organization assets libraries](../General/Managing-organization-assets-libraries.md)
+    [Managing organization asssets libraries](../General/Managing-organization-assets-libraries.md)
 
 1. Use SharePoint Online Management Shell to upload the custom fonts from the folder you created in task 1 to the library you created in task 2.
 
