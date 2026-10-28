@@ -400,11 +400,11 @@ Perform this task on WIN1.
 1. In Permissions, click **Check Permissions**.
 1. In Documents: Check Permissions, under **User/Group**, find and click **Irvin Sayers** and click **Check Now**.
 
-    Verify that Irvin has the Edit permission level given through the News _ Contoso Members group. Irvin also has Limited Access throguht the News _ Contoso Content scheduler Members group.
+    Verify that Irvin has the Edit permission level given through the News _ Contoso Members group. Irvin also has Limited Access through the News _ Contoso Content scheduler Members group.
 
 1. In Documents: Check Permissions, under **User/Group**, find and click **Debra Berger** and click **Check Now**.
 
-    Verify that Debra has the Edit permission level given through the News _ Contoso Members group and the Approve permission level given through the News _ Contoso Approvers group. Debra also has Limited Access throguht the News _ Contoso Content scheduler Members group.
+    Verify that Debra has the Edit permission level given through the News _ Contoso Members group and the Approve permission level given through the News _ Contoso Approvers group. Debra also has Limited Access through the News _ Contoso Content scheduler Visitors group.
 
 1. Click **Close**.
 
