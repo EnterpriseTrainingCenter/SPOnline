@@ -68,7 +68,7 @@ A site created by a user should be made unavailable. Furthermore, the site of a 
 
     | Site name                   | Site description                                                   | Site address            |
     | --------------------------- | ------------------------------------------------------------------ | ----------------------- |
-    | OneDrive deployment project | Plan, deploy, and maintain OneDrive                                | ../teams/Project1Drive  |
+    | OneDrive deployment project | Plan, deploy, and maintain OneDrive                                | ../sites/Project1Drive  |
     | SharePoint playground       | Play around with SharePoint features, not intented for production  | ../sites/PlaygroundSite |
 
     For all sites, the language is English, and the primary administrator is Lynne Robbins. Select your local time zone.
@@ -223,7 +223,7 @@ Perform this task on WIN1.
 1. In SharePoint admin center, click **Sites**, **Active sites**.
 1. In Active sites, click **Create**.
 1. In Create a site: Select the site type, click **Browse more sites**.
-1. In Other options, under **Choose a template**, ensure **Team site** is selected. Under **Site name**, type **OneDrive deployment project**. Under **Site description**, type **Plan, deploy and maintain OneDrive**. Under **Site address**, in the drop-down, select **../teams/** and, beside, type **Project1Drive**. Under **Primary administrator**, find and click **Lynne Robbins**. Click **Next**.
+1. In Other options, under **Choose a template**, ensure **Team site** is selected. Under **Site name**, type **OneDrive deployment project**. Under **Site description**, type **Plan, deploy and maintain OneDrive**. Under **Site address**, in the drop-down, ensure **../sites/** is selected and, beside, type **Project1Drive**. Under **Primary administrator**, find and click **Lynne Robbins**. Click **Next**.
 1. Under **Select a language**, ensure **English** is selected. Under **Time zone**, select your time zone. Click **Create site**.
 1. Repeat from step 6 for the site **SharePoint playground**. Take the parameters for this site from the table above.
 
@@ -266,12 +266,12 @@ Perform this task on WIN1.
     *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
 
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
-1. Create a team site **OneDrive deployment project** with the url **teams/Project1Drive**.
+1. Create a team site **OneDrive deployment project** with the url **sites/Project1Drive**.
 
     ````powershell
     # TimeZoneId 4 means Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna
     New-SPOSite `
-        -Url "https://$tenantName.sharepoint.com/teams/Project1Drive" `
+        -Url "https://$tenantName.sharepoint.com/sites/Project1Drive" `
         -Owner $owner.UserPrincipalName `
         -Title 'OneDrive deployment project' `
         -Template 'STS#3' `
@@ -411,7 +411,7 @@ If you want to apply the department site design to the IT site, optionally, foll
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to **https://\<your tenant name\>.sharepoint.com/teams/Project1Drive**.
+1. In Microsoft Edge, navigate to **https://\<your tenant name\>.sharepoint.com/sites/Project1Drive**.
 1. In OneDrive deployment project, click the *Settings* (the gear icon) and **Connect to a new Microsoft 365 group**.
 1. In the panel Associate this team site to a new Microsoft 365 Group, click **Let's get started**.
 1. In the panel Tell us about your new Microsoft 365 Group, under **Group email address**, click *Change email address* (the pencil icon) and, to the left, type Project1Drive. Under **Privacy settings**, ensure **Private - only members can access this site** is selected. Click **Connect group**.
@@ -439,7 +439,7 @@ Perform this task on WIN1.
 
     ````powershell
     Set-SPOSiteOffice365Group `
-        -Site "https://$tenantName.sharepoint.com/teams/Project1Drive" `
+        -Site "https://$tenantName.sharepoint.com/sites/Project1Drive" `
         -DisplayName 'OneDrive deployment project' `
         -Alias 'Project1Drive'
     ````
@@ -1357,7 +1357,7 @@ Perform this task on WIN1.
     ````text
     Url                                                   Owner Storage Quota
     ---                                                   ----- -------------
-    https://wwlx691952.sharepoint.com/teams/Project1Drive             1048576
+    https://wwlx691952.sharepoint.com/sites/Project1Drive             1048576
     ````
 
 1. Make the site read-only.
@@ -1377,7 +1377,7 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Microsoft Edge**.
-1. In Microsoft Edge, navigate to <https://\<your tenant\>.sharepoint.com/teams/Project1Drive>
+1. In Microsoft Edge, navigate to <https://\<your tenant\>.sharepoint.com/sites/Project1Drive>
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
     You should see a warning message at the top of the page telling you that this site is read-only at the administrator's request. Verify that you cannot add or change any content.
