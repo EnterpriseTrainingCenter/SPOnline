@@ -75,8 +75,6 @@ Perform this task on WIN1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
     ````
 
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
-
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Remove the current home site.
 
@@ -200,8 +198,6 @@ Perform this task on WIN1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
     ````
 
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
-
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Register the sites **/** and **/sites/Work** as hub sites.
 
@@ -266,8 +262,6 @@ Perform this task on WIN1.
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
     ````
-
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
 
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Associate the sites **/sites/ContosoLandings**, **/sites/ContosoWeb1**, and **/sites/ContosoWeb2** with the Contoso home hub.
@@ -354,8 +348,6 @@ Perform this task on WIN1.
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
     ````
-
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
 
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Associate the hub **/sites/Work** with the hub at the root.
