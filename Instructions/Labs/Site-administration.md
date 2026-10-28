@@ -263,8 +263,6 @@ Perform this task on WIN1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
     ````
 
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
-
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Create a team site **OneDrive deployment project** with the url **sites/Project1Drive**.
 
@@ -431,8 +429,6 @@ Perform this task on WIN1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
 
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
-
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 
 1. Connect the site **OneDrive deployment project** to a new Microsoft 365 group with the same name and the alias **Project1Drive**.
@@ -542,8 +538,6 @@ Perform this task on WIN1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
 
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
-
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Delete the **SharePoint Playground site**.
 
@@ -628,8 +622,6 @@ Perform this task on WIN1.
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
-
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
 
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. List the deleted sites.
@@ -788,8 +780,6 @@ Perform this task on WIN1.
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
     ````
-
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
 
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Add the user as site admin to the site **Contoso home**.
@@ -1025,8 +1015,6 @@ Perform this task on WIN1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
     ````
 
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
-
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Disable self service site creation.
 
@@ -1102,8 +1090,6 @@ Perform this task on WIN1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
     ````
 
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
-
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Set the storage limit of the site **IT department** to **1 GB** and the warning level to **97 %** of the storage limit.
 
@@ -1162,8 +1148,6 @@ Perform this task on WIN1.
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com/"
     ````
-
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
 
 1. Sign in using **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Check if the url of the site **/sites/PlaygroundSite** can be changed to **/sites/SharePoint-Playground**.
@@ -1243,8 +1227,6 @@ Perform this task on WIN1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
 
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
-
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Set the no access redirect url.
 
@@ -1271,8 +1253,6 @@ Perform this task on WIN1.
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
-
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
 
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Store the site **Joni's group** in a variable
@@ -1335,8 +1315,6 @@ Perform this task on WIN1.
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
-
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
 
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Store the site **OneDrive deployment project** in a variable
