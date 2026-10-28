@@ -123,6 +123,8 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. The fon
 
 ## Exercise 5: Create a list template
 
+Perform all tasks of this exercise as **Lynne Robbins** (**LynneR@\<your tenant\>.onmicrosoft.com**), including signing in to SharePoint Online in PowerShell. The list **Expense tracker** is created in the personal site of Lynne, and only Lynne can access it.
+
 1. Create a list using the **Expense tracker** in **My Lists** accepting the defaults.
 
     [Creating a list](../General/Creating-a-list.md)
