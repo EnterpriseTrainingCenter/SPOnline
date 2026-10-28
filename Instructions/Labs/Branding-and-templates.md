@@ -10,7 +10,7 @@ Perform this lab on WIN1.
 
 ## Introduction
 
-Contoso wants to use custom fonts and colors in SharePoint Online sites. Contoso also wants to provide a library of images to be used in sites and pages. Moreover, Contoso wants to provide a template for the Microsoft 365 Apps for Enterprise from a central location.
+Contoso wants to use custom fonts and colors in SharePoint Online sites. The fonts and colors are applied once at the hub site Work @ Contoso and inherited by its associated sites, like Mark 8 Project Team. Contoso also wants to provide a library of images to be used in sites and pages. Moreover, Contoso wants to provide a template for the Microsoft 365 Apps for Enterprise from a central location.
 
 ## Exercises
 
