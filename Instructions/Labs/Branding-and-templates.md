@@ -105,6 +105,8 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. The fon
 1. In **Microsoft Word**, create a new document using the template **Memo** you just created.
 1. In **Microsoft PowerPoint**, create a new document using the template **Basic presentation** you just created.
 
+    *Important:* It can take up to 24 hours until the tab **Organization** with the templates **Memo** and **Basic presentation** is available in Word and PowerPoint. If you do not see the tab, check back later.
+
 ## Exercise 4: Create an organization fonts library
 
 1. Copy the font files you downloaded in [Exercise 1: Configure SharePoint branding](#exercise-1-configure-sharepoint-branding) to a single folder, e.g., C:\OfficeFonts. You only need to copy the font files from the top folders of each font, not the files from sub-folders ([figure 2]).
