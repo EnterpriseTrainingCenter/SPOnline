@@ -32,7 +32,7 @@ Perform this task on WIN1.
             * SharePoint: **Anyone**
             * OneDrive: **Anyone**
             * More external sharing settings
-                * Allow guests to share items they don't own: **Deactivate**
+                * Allow guests to share items they don't own: **Clear**
                 * People who use a verification code must reauthenticate after this many days: **Activate** and set to **7**
     * Files and folder links
         * Choose the type of link that's selected by default when users share files and folders in SharePoint and OneDrive: **Specific people (only the people the user specifies)**
