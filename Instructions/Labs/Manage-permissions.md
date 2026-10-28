@@ -383,7 +383,7 @@ Perform this task on WIN1.
 1. In Documents, click the *Settings* icon and click **Library settings**.
 1. In the panel Library settings, click **More library settings**.
 1. Settings, under **General Settings**, click **Versioning settings**.
-1. In Versionsing settings, under **Content Approval**, click **Yes**. Under **Document Version History**, click **Create major and minor (draft) versions**. Under **Draft Item Security**, click **Only users who can edit items**. Click **OK**.
+1. In Versioning settings, under **Content Approval**, click **Yes**. Under **Document Version History**, click **Create major and minor (draft) versions**. Under **Draft Item Security**, click **Only users who can edit items**. Click **OK**.
 
 ### Task 4: Verify permissions
 
@@ -412,11 +412,11 @@ Perform this task on WIN1.
 
 If time allows, you can sign in with various users and try some operations according to the table below.
 
-| User                                   | Location                                          | Operations                                                                                                                  |
-| -------------------------------------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| AdeleV@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/work | Should have read access only                                                                                                |
-|                                        | https://\<your tenant\>.sharepoint.com/sites/news | Should have read access only                                                                                                |
-| IrvinS@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/news | Should have contribute access pages and documents, read access to Content scheduler, can only submit documents for approval |
-| DebraB@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/news | Should have contribute access to everything including the Content scheduler, can approve documents                          |
+| User                                   | Location                                          | Operations                                                                                                                     |
+| -------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| AdeleV@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/work | Should have read access only                                                                                                   |
+|                                        | https://\<your tenant\>.sharepoint.com/sites/news | Should have read access only                                                                                                   |
+| IrvinS@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/news | Should have contribute access to pages and documents, read access to Content scheduler, can only submit documents for approval |
+| DebraB@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/news | Should have contribute access to everything including the Content scheduler, can approve documents                             |
 
 [figure 1]:/images/permissions-content-scheduler.png
