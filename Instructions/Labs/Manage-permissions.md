@@ -140,7 +140,7 @@ Perform this task on WIN1.
 
 ## Exercise 2: Manage hub permissions
 
-1. [Enable hub permissions sync on the hub site](#task-1-enable-hub-permissions-sync-on-the-hub-site) Work @ Contoso and add All employees to the Hub Visitors.
+1. [Enable hub permissions sync on the hub site](#task-1-enable-hub-permissions-sync-on-the-hub-site) Work @ Contoso and add the security groups of all departments to the Hub Visitors.
 1. [Enable hub permissions sync on the associated site](#task-2-enable-hub-permissions-sync-on-the-associated-site) News @ Contoso
 1. [Verify permissions on the associated site](#task-3-verify-permissions-on-the-associated-site)
 
@@ -153,7 +153,18 @@ Perform this task on WIN1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the Work @ Contoso site, click the *Settings* icon (the gear icon) and click **Site permissions**.
 1. In the Permissions panel, click the tab **Hub**.
-1. Click the switch below **Sync hub permissions to associated sites** to change the status to **On**. Under **Hub visitors** in **Enter a name or group** find and click **All Employees**.
+1. Click the switch below **Sync hub permissions to associated sites** to change the status to **On**. Under **Hub visitors** in **Enter a name or group** find and click each of the following groups:
+
+    * **sg-Engineering**
+    * **sg-Executive**
+    * **sg-Finance**
+    * **sg-HR**
+    * **sg-IT**
+    * **sg-Legal**
+    * **sg-Operations**
+    * **sg-Retail**
+    * **sg-Sales and Marketing**
+
 1. Close the panel.
 
 ### Task 2: Enable hub permissions sync on the associated site
@@ -173,7 +184,7 @@ Perform this task on WIN1.
 1. In the Permissions panel, click the tab **Hub**.
 1. On the tab Hub, click the switch below **Sync hub permissions to this site** to change the status to **On**.
 
-    Verify that below under Hub Visitors the group sg_Executive is lested with Read permission level.
+    Verify that below under Hub visitors all the groups you added in the previous task are listed with the permission level Read.
 
 1. Close the panel.
 
