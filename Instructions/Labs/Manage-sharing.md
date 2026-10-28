@@ -21,9 +21,9 @@ After you configured the sharing settings for Contoso, you want to evaluate the 
 
 1. [Verify the sharing options of site](#task-1-verify-the-sharing-options-in-a-site) Mark 8 Project Team by trying to share a file with anyone
 1. [Modify the sharing settings of sites](#task-2-modify-the-sharing-settings-of-sites) Mark 8 Project Team and Brand to allow sharing with anyone
-1. [Share content using anyone link](#task-3-share-content-using-an-anyone-link): Compaign Sales Data.xlsx in Documents of Mark 8 Project Team
-1. [Share the folder Design in Mark 8 Project Team using an authenticating link](#task-4-share-a-folder-with-an-authenticating-link) with your personal email (preferrably a Microsoft or Entra account) with edit permissions
-1. [Share the site](#task-5-share-a-site) Brand with your personal email (peferrably a non-Microsoft or -Entra account)
+1. [Share content using anyone link](#task-3-share-content-using-an-anyone-link): Campaign Sales Data.xlsx in Documents of Mark 8 Project Team
+1. [Share the folder Design in Mark 8 Project Team using an authenticating link](#task-4-share-a-folder-with-an-authenticating-link) with your personal email (preferably a Microsoft or Entra account) with edit permissions
+1. [Share the site](#task-5-share-a-site) Brand with your personal email (preferably a non-Microsoft or -Entra account)
 
 ### Task 1: Verify the sharing options in a site
 
@@ -34,8 +34,8 @@ Perform this task on WIN1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the Mark 8 Project team site, click the *Settings* icon (the gear icon) and click **Site contents**.
 1. In Site contents, click **Documents**.
-1. In Documents, select **Compaign Sales Data.xlsx** and, on the toolbar, click **Share**.
-1. In Share "Comapaign Sa...s Data.xlsx", click *Link settings* icon (the gear icon) at the bottom.
+1. In Documents, select **Campaign Sales Data.xlsx** and, on the toolbar, click **Share**.
+1. In Share "Campaign Sa...s Data.xlsx", click *Link settings* icon (the gear icon) at the bottom.
 
     In Link settings, Anyone is disabled, despite you enabled it globally.
 
@@ -68,11 +68,11 @@ Perform this task on WIN1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the Mark 8 Project team site, click the *Settings* icon (the gear icon) and click **Site contents**.
 1. In Site contents, click **Documents**.
-1. In Documents, select **Compaign Sales Data.xlsx** and, on the toolbar, click **Share**.
-1. In Share "Comapaign Sa...s Data.xlsx", click *Link settings* icon (the gear icon) at the bottom.
+1. In Documents, select **Campaign Sales Data.xlsx** and, on the toolbar, click **Share**.
+1. In Share "Campaign Sa...s Data.xlsx", click *Link settings* icon (the gear icon) at the bottom.
 1. In Link settings, click **Anyone** and click **Apply**.
-1. In **Share "Comapaign Sa...s Data.xlsx"**, click **Copy link**.
-1. Close **Share "Comapaign Sa...s Data.xlsx"**.
+1. In **Share "Campaign Sa...s Data.xlsx"**, click **Copy link**.
+1. Close **Share "Campaign Sa...s Data.xlsx"**.
 1. In Microsoft Edge, click the ellipsis in the top-right corner and click **New InPrivate window**.
 1. In the InPrivate window of Microsoft Edge, in the address bar, paste the copied link and press ENTER.
 
@@ -102,14 +102,14 @@ Check your email for the invitation message and follow the instructions to acces
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the Brand site, click the *Settings* icon (the gear icon) and click **Site permissions**.
 1. In the Permissions panel, click **Share site**.
-1. In the Site access panel, under A**dd users, Microsoft 365 Groups, or security groups to give them access to the site**, type one of your personal email addresses. In this case a non-Microsoft or -Entra account is preferred. Click your email address to confirm. Below your email address, click the drop down (currently **Read**) and select **Edit**. Click **Share**.
+1. In the Site access panel, under **Add users, Microsoft 365 Groups, or security groups to give them access to the site**, type one of your personal email addresses. In this case a non-Microsoft or -Entra account is preferred. Click your email address to confirm. Below your email address, click the drop down (currently **Read**) and select **Edit**. Click **Add**.
 
 Check your email for the invitation message and follow the instructions to access the content. If you do not receive an email similar to [figure 2] within 5 minutes, check your Junk-E-Mail folder.
 
 ## Exercise 2: Manage shared content
 
 1. [Run a sharing report](#task-1-run-a-sharing-report) on site Mark 8 Project Team
-1. [Remove the anyone link](#task-2-remove-the-anyone-ink)
+1. [Remove the anyone link](#task-2-remove-the-anyone-link)
 1. [Delete guest users](#task-3-delete-guest-users)
 
 ### Task 1: Run a sharing report
@@ -124,9 +124,7 @@ Perform this task on WIN1.
 
     Verify that the contents you shared in this lab is listed.
 
-### Task 2: Remove the anyone ink
-
-Perform this task on WIN1.
+### Task 2: Remove the anyone link
 
 Perform this task on WIN1.
 
@@ -135,7 +133,7 @@ Perform this task on WIN1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the Mark 8 Project team site, click the *Settings* icon (the gear icon) and click **Site contents**.
 1. In Site contents, click **Documents**.
-1. In Documents, in the context-menu of  **Compaign Sales Data.xlsx** click **Manage access**.
+1. In Documents, in the context-menu of **Campaign Sales Data.xlsx** click **Manage access**.
 1. In Manage Access, click the tab **Links**.
 
     You should see the Anyone-link you created earlier.
