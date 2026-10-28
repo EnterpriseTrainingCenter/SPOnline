@@ -74,7 +74,7 @@
 1. Sign in as global administrator or SharePoint administrator.
 1. Create the site.
 
-    #### Team site
+    To create a team site:
 
     ````powershell
     $title = '' # Between the quotes, insert the site name
@@ -88,7 +88,7 @@
         -Owners:$owner
     ````
 
-    #### Communication site
+    To create a communication site:
 
     ````powershell
     $title = '' # Between the quotes, insert the site name
