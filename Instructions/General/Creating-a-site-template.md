@@ -8,8 +8,6 @@
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
 
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
-
 1. Sign in as global administrator or SharePoint administrator.
 1. Extract a site script from the web.
 
