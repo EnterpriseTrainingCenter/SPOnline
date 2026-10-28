@@ -283,7 +283,7 @@ Perform this task on WIN1.
 1. In Permissions, select **Hub Visitors**, **News _ Contoso Members**, and **News _ Contoso Visitors**. Click **Remove User Permissions**.
 1. In the message Are you sure your want to remove all permissions for the selected users and groups to "Content scheduler"?, click **OK**.
 1. In Permissions, select **News _Contoso Content scheduler Members** and click **Edit User Permissions**.
-1. In Edit Permissions, activate **Contribute - can view, add, update, and delete list items and documents.** Deactivate **Read - Can view pages and list items and download documents.** Click **OK**.
+1. In Edit Permissions, activate **Contribute - can view, add, update, and delete list items and documents.** Clear **Read - Can view pages and list items and download documents.** Click **OK**.
 
     Verify the permissions look like in [figure 1].
 
@@ -355,7 +355,7 @@ Perform this task on WIN1.
     * View Pages
     * Open
 
-    If you deactivate any of them, Approve will also gets deactivated again.
+    If you clear any of them, Approve will also get cleared again.
 
 ### Task 2: Create a SharePoint group, grant a permission level and add users
 
