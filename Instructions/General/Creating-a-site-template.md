@@ -55,8 +55,7 @@
     ````powershell
     <#
         Use Get-SPOWebTemplate to identify possible values. Common values are:
-        * 64 for a team site connected to a Microsoft 365 group
-        * STS#3 for a team site without a Microsoft 365 group
+        * STS#3 for a team site
         * SITEPAGEPUBLISHING#0 for a communiction site
     #>
     $webTemplate = 'STS#3'

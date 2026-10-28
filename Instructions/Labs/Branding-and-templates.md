@@ -82,7 +82,7 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. The fon
 
 1. In the site **Brand Guide**, create an organization assets library for images with the name **Organization images**.
 
-    [Managing organization assets libraries](../General/Managing-organization-assets-libraries.md)
+    [Managing organization asssets libraries](../General/Managing-organization-assets-libraries.md)
 
 1. In a new tab, navigate to **https://en.wikipedia.org/wiki/Cat** and save some pictures locally in a folder named **Cats**. 
 1. Navigate to **https://en.wikipedia.org/wiki/Dog** and save some pictures locally in a folder named **Dogs**.
@@ -93,7 +93,7 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. The fon
 
 1. In the site **Brand Guide**, create an organization templates library for templates with the name **Organization templates**.
 
-    [Managing organization assets libraries](../General/Managing-organization-assets-libraries.md)
+    [Managing organization asssets libraries](../General/Managing-organization-assets-libraries.md)
 
 1. In the library **Organization templates**, create folders:
 
@@ -111,7 +111,7 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. The fon
 
 1. In the site **Brand Guide**, create an organization templates library for templates with the name **Office Fonts**.
 
-    [Managing organization assets libraries](../General/Managing-organization-assets-libraries.md)
+    [Managing organization asssets libraries](../General/Managing-organization-assets-libraries.md)
 
 1. Use SharePoint Online Management Shell to upload the custom fonts from the folder you created in task 1 to the library you created in task 2.
 
@@ -141,21 +141,14 @@ Contoso wants to use custom fonts and colors in SharePoint Online sites. The fon
 
     [Creating a list template](../General/Creating-a-list-template.md)
 
-1. Create a new list using the **Contoso Expense Tracker** on **Mark 8 Project Team**.
+1. Create a new list using the **Contoso Expense Tracker** on **Mark 8 Project site**.
 
 ## Exercise 6: Create a web site template
 
-1. From the site **Mark 8 Project Team** create a web site template. Include the list **Contoso Expense Tracker**, branding, and the theme. The name of the new template should be **Project site**. Use the web template **64** (Team site).
+1. From the Mark 8 Project site create a web site template. Include the list **Contoso Expense Tracker**, branding, and the theme. The name of the new template should be **Project site**.
 
-    [Creating a site template](../General/Creating-a-site-template.md)
-
-1. Create a new site with the name **Project Alpha** from the template **Project site**.
-
-    [Creating a site](../General/Creating-a-site.md)
-
-1. Apply the template **Project site** to the site **SharePoint Playground**.
-
-    [Applying a site template](../General/Applying-a-site-template.md)
+1. Create a new site from the template.
+1. Apply the template to the site **SharePoint Playground**.
 
 [Figure 1]:../../images/Brand-center-in-settings.png
 [figure 2]: ../../images/local-officefonts-folder.png
