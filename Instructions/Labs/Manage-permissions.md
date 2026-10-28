@@ -140,7 +140,18 @@ Perform this task on WIN1.
 
 ## Exercise 2: Manage hub permissions
 
-1. [Enable hub permissions sync on the hub site](#task-1-enable-hub-permissions-sync-on-the-hub-site) Work @ Contoso and add the groups sg-Engineering, sg-Executive, sg-Finance, sg-HR, sg-IT, sg-Legal, sg-Operations, sg-Retail, and sg-Sales and Marketing to the Hub Visitors.
+1. [Enable hub permissions sync on the hub site](#task-1-enable-hub-permissions-sync-on-the-hub-site) Work @ Contoso and add the following groups to the Hub Visitors:
+
+    * sg-Engineering
+    * sg-Executive
+    * sg-Finance
+    * sg-HR
+    * sg-IT
+    * sg-Legal
+    * sg-Operations
+    * sg-Retail
+    * sg-Sales and Marketing
+
 1. [Enable hub permissions sync on the associated site](#task-2-enable-hub-permissions-sync-on-the-associated-site) News @ Contoso
 1. [Verify permissions on the associated site](#task-3-verify-permissions-on-the-associated-site)
 
