@@ -149,7 +149,7 @@ In this lab, you will learn how to use Microsoft Purview to govern and protect y
     * Scope: **Files & other data assets** and **Emails**
     * Items: **Control access**
     * Access control
-        * Let users assign permissions when thy apply the label
+        * Let users assign permissions when they apply the label
         * In Outlook, enforce one of the following restrictions
             **Do not Forward**
         * In Word, PowerPoint, and Excel, prompt users to specify permissions
@@ -159,7 +159,7 @@ In this lab, you will learn how to use Microsoft Purview to govern and protect y
     ![Sensitivity label Personally Identifiable Information (PII)][figure 5]
     *Figure 5: Sensitivity label Personally Identifiable Information (PII)*
 
-    [Createing a sensitivity label](../General/Creating-a-sensitivity-label.md)
+    [Creating a sensitivity label](../General/Creating-a-sensitivity-label.md)
 
 1. Create a label publishing policy and move it to the top.
 
@@ -177,7 +177,7 @@ In this lab, you will learn how to use Microsoft Purview to govern and protect y
     * Email
         * Default label: Same as document
         * Require users to apply a label to their emails
-        * Email inherits hightest priority label from attachments
+        * Email inherits highest priority label from attachments
             * Automatically apply label
     * Meetings
         * Default label: Confidential
@@ -296,7 +296,7 @@ In this lab, you will learn how to use Microsoft Purview to govern and protect y
     ![Contains sensitive information. Some commands aren't available.][figure 8]
     *figure 8: Contains sensitive information. Some commands aren't available.*
 
-    If click the **Share** command, you receive a message like in figure 9.
+    If you click the **Share** command, you receive a message like in figure 9.
 
     ![Sharing is limited on this item][figure 9]
     *figure 9: Sharing is limited on this item.*
