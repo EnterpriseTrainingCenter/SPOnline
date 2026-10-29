@@ -193,7 +193,9 @@ Perform this task on WIN1.
 1. In the left navigation click **Home**.
 1. On the home page, click the *Settings* icon (the gear icon) and click **Site permissions**.
 1. In the Permissions panel, click the tab **Hub**.
-1. On the tab Hub, click the switch below **Sync hub permissions to this site** to change the status to **On**.
+1. On the tab Hub, click the switch below **Sync hub permissions to this site** to change the status to **Off** and click it again to change the status to **On**.
+
+    *Note:* In most tenants, the switch is already **On** when you open the tab. Turning it off and on again ensures that the hub permissions are synchronized to the site.
 
     Verify that below under Hub visitors all the groups you added in the previous task are listed with the permission level Read.
 
