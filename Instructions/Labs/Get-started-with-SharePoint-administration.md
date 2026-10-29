@@ -65,17 +65,6 @@ Figure 1: Site structure after exercise 5
     [Importing PowerShell modules](../General/Importing-PowerShell-modules.md)
     [Getting PowerShell commands](../General/Getting-PowerShell-commands.md)
 
-1. In **Windows PowerShell**, test the connection to SharePoint Online using the SharePoint Online module.
-
-    [Connecting to and disconnecting from SharePoint Online using Microsoft.Online.SharePoint.PowerShell](../General/Connecting-to-and-disconnecting-from-SharePoint-Online-using-Microsoft.Online.SharePoint.PowerShell.md)
-
-    *Note:* If the connection fails with the error *Unable to load DLL 'msalruntime'* or *No valid OAuth 2.0 authentication session exists*, apply this workaround: Close **Windows PowerShell** and reopen it as Administrator. Then uninstall the module and install the version **16.0.27612.12000** instead. Afterwards, test the connection again. The problem is caused by a packaging error in version 16.0.27709.12000 ([Connect-SPOService fails with "Unable to load DLL 'msalruntime'" in Microsoft.Online.SharePoint.PowerShell 16.0.27709.12000](https://github.com/SharePoint/sp-dev-docs/issues/11061)).
-
-    ````powershell
-    Uninstall-Module -Name Microsoft.Online.SharePoint.PowerShell -AllVersions -Force
-    Install-Module -Name Microsoft.Online.SharePoint.PowerShell -RequiredVersion 16.0.27612.12000
-    ````
-
 1. Register an Entra ID App for interactive login with the PnP Powershell.
 
     [Registering an Entra ID App for interactive login with the PnP Powershell](../General/Registering-an-Entra-ID-App-for-interactive-login-with-the-PnP-PowerShell.md)
@@ -83,6 +72,13 @@ Figure 1: Site structure after exercise 5
 1. List the SharePoint sites in your tenant using the PnP PowerShell module and the SharePoint Online module.
 
     [Getting SharePoint Sites](../General/Getting-SharePoint-Sites.md)
+
+    *Note:* Using the SharePoint Online module, if the connection fails with the error *Unable to load DLL 'msalruntime'* or *No valid OAuth 2.0 authentication session exists*, apply this workaround: Close **Windows PowerShell** and reopen it as Administrator. Then uninstall the module and install the version **16.0.27612.12000** instead. Afterwards, test the connection again. The problem is caused by a packaging error in version 16.0.27709.12000 ([Connect-SPOService fails with "Unable to load DLL 'msalruntime'" in Microsoft.Online.SharePoint.PowerShell 16.0.27709.12000](https://github.com/SharePoint/sp-dev-docs/issues/11061)).
+
+    ````powershell
+    Uninstall-Module -Name Microsoft.Online.SharePoint.PowerShell -AllVersions -Force
+    Install-Module -Name Microsoft.Online.SharePoint.PowerShell -RequiredVersion 16.0.27612.12000
+    ````
 
 ## Exercise 2: Enable audit log search
 
