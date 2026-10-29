@@ -22,7 +22,9 @@ Contoso wants to customize the search by adding definitions for acronyms, promot
 
     [Assigning an Entra ID role](../General/Assigning-an-Entra-ID-role.md).
 
-1. Sign out of Microsoft 365 Admin center and sign in again as **lynner@<your tenant>.onmicrosoft.com**.
+1. Sign out of Microsoft 365 admin center and sign in again as **lynner@\<your tenant\>.onmicrosoft.com**.
+
+    *Important:* Switching accounts using the avatar is not sufficient. In the sign-in dialog, click **Sign in with a different account**, enter the password, and complete multifactor authentication. The new role may take a few minutes to become effective.
 
 ## Exercise 2: Customize Microsoft Search
 
@@ -42,10 +44,12 @@ Contoso wants to customize the search by adding definitions for acronyms, promot
     | ----------------- | ----------------------------------------------------------------------------------------------------------------------- |
     | Title             | VPN Connection Procedure                                                                                                |
     | URL               | https://\<your tenant\>.sharepoint.com/sites/SalesAndMarketing/SitePages/New-VPN-Connection-Procedure.aspx              |
-    | Description       | If you remote access to corporate resources, you need to check out Marketing's new simplified VPN connection procedure.​ |
+    | Description       | If you remote access to corporate resources, you need to check out Marketing's new simplified VPN connection procedure.  |
     | Keywords          | connection; home office; remote; remote connection; remote work                                                         |
     | Reserved keywords | vpn; virtual private network                                                                                            |
     | Categories        | IT; Instruction                                                                                                         |
+
+    *Note:* In the fields **Keywords**, **Reserved keywords**, and **Categories**, the semicolons in the table separate the individual entries. Type each entry, press ENTER, and do not type the semicolon.
 
     [Managing bookmarks in search](../General/Managing-bookmarks-in-search.md)
 
