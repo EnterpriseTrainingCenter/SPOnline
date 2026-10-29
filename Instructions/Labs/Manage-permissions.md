@@ -112,8 +112,8 @@ Perform this task on WIN1.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Active sites**.
 1. In Active sites, select the site **News @ Contoso** and click **Membership**.
-1. In the Work @ Contoso panel, on the Membership tab, click **Add site admins**.
-1. In Add site admins to Work @ Contoso, find and click **Lynne Robbins**. Click **Add (1)**.
+1. In the News @ Contoso panel, on the Membership tab, click **Add site admins**.
+1. In Add site admins to News @ Contoso, find and click **Lynne Robbins**. Click **Add (1)**.
 1. Close the panel.
 1. In Active sites, in the row of News @ Contoso, in the column **URL**, click **../sites/News**.
 1. In the site News @ Contoso, click the icon *Settings* and click **Site permissions**.
