@@ -28,7 +28,7 @@ Contoso wants to use SharePoint as advanced document management systems. For thi
 
 1. [Configure term store permissions](#task-1-configure-term-store-permissions) by adding Lynne Robbins as admin
 1. [Add a term group](#task-2-add-a-term-group) Sales and grant the group Sales and Marketing members the Contribute permission
-1. [Add a term set](#task-3-add-a-term-set) Region to the term group Sales and add terms:
+1. [Add a term set](#task-3-add-a-term-set) Regions to the term group Sales and add terms:
 
     * Europe
         * Central Europe
@@ -40,7 +40,7 @@ Contoso wants to use SharePoint as advanced document management systems. For thi
         * Canada
         * USA
 
-1. [Add a managed metadata column](#task-4-add-a-managed-metadata-column) for the Region term set to the documents library in the site U.S. Sales. Only terms in the North America region should be selectable.
+1. [Add a managed metadata column](#task-4-add-a-managed-metadata-column) for the Regions term set to the documents library in the site U.S. Sales. Only terms in the North America region should be selectable.
 1. [Add terms to documents](#task-5-add-terms-to-documents) in the folder Signed Agreements in Sales West of the document library in site U.S. Sales
 
     | Document                      | Region |
@@ -60,7 +60,7 @@ Perform this task on WIN1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In Microsoft 365 admin center, click **Show all** and **SharePoint**.
 1. In SharePoint admin center, click **Content services** and **Term store**.
-1. In Term store, with **Taxononmy** selected in the left pane, in the right pane, beside **Admins**, click **Edit**.
+1. In Term store, with **Taxonomy** selected in the left pane, in the right pane, beside **Admins**, click **Edit**.
 1. In the Edit term store admins panel, find and click **Lynne Robbins** and click **Save**.
 
 ### Task 2: Add a term group
@@ -91,7 +91,7 @@ Perform this task on WIN1.
 1. Beside **Europe**, click the ellipsis and click **Add term**. Enter **North Europe**. Repeat this step to add the terms **West Europe**, **Central Europe**, **South Europe** and **East Europe**.
 1. Select **Europe** and click the tab **Usage settings**.
 1. On the tab Usage settings, beside **Available for Tagging** click **Edit**.
-1. In the panel Available for tagging, deactivate **Enable** and cick **Save**.
+1. In the panel Available for tagging, deactivate **Enable** and click **Save**.
 
 Repeat from step 10 for the term **North America.**
 
@@ -107,7 +107,7 @@ Perform this task on WIN1.
 1. In Documents, click **Add column**.
 1. In the Create a column fly-out, click **Managed metadata** and **Next**.
 1. In the Create a column panel, under **Name**, type **Region**. Under **Term set or term**, click **Select**.
-1. In the Select term set or term panel, expand **Sales**, **Region** and select **North America**. Click **Save**.
+1. In the Select term set or term panel, expand **Sales**, **Regions** and select **North America**. Click **Save**.
 1. In the **Create a column** panel, click **Save**.
 
 ### Task 5: Add terms to documents
@@ -157,16 +157,16 @@ Perform this task on WIN1.
 1. In Content type gallery, click **Create content type**.
 1. In the Create content type panel, under **Name**, type **Sales document**. Under **Description**, type **Based on the Document content type, adds a managed metadata column for the sales region**. Under **Category**, click **Create a new category**. Under **Category name**, type **Sales Content Types**. Under **Parent content type**, under **Parent category**, select **Document Content Types**. Under **Content Type**, select **Document**. Click **Create**.
 1. In Sales document, click **Add site column** and **Create new site column**
-1. In the Create new site column panel, under **Name**, type **Sales Region**. Under **Description**, type **Select from the Region term set**. Under **Category**, click **Create a new category**. Under **New category name**, type **Sales columns**. Under **Type**, select **Managed Metadata**. Under **Select term set**, click **Select**.
+1. In the Create new site column panel, under **Name**, type **Sales Region**. Under **Description**, type **Select from the Regions term set**. Under **Category**, click **Create a new category**. Under **New category name**, type **Sales columns**. Under **Type**, select **Managed Metadata**. Under **Select term set**, click **Select**.
 1. In the Manage term set panel, expand **Sales**, select **Regions** and click **Save**.
 1. In the **Create new site column** panel, click **Save**.
 1. In **Sales document**, click **Publish**.
 1. In the panel Manage Publishing, ensure **Publish** or **Republish** is selected and click **Save**.
 1. Click **Content type gallery**.
 1. In Content type gallery, click **Create content type**.
-1. In the Create content type panel, under **Name**, type **Sales contract**. Under **Description**, type **Based on the Sales document content type, adds a currency column Value**. Under **Category**, ensure **Use an existing category** is selected. Under **Name**, select **Sales Content Types**. Under **Parent content type**, under **Parent category**, select **Sales Content Types**. Under **Content Type**, ensue **Sales document** is selected. Click **Create**.
+1. In the Create content type panel, under **Name**, type **Sales contract**. Under **Description**, type **Based on the Sales document content type, adds a currency column Value**. Under **Category**, ensure **Use an existing category** is selected. Under **Name**, select **Sales Content Types**. Under **Parent content type**, under **Parent category**, select **Sales Content Types**. Under **Content Type**, ensure **Sales document** is selected. Click **Create**.
 1. In Sales contract, click **Add site column** and **Create new site column**
-1. In the Create new site column panel, under **Name**, type **Value**. Under **Description**, type **Total monetary value of the sales contract**. Under **Category**, ensue **Use existing category is selected**. Under **Category**, select **Sales columns**. Under **Type**, select **Currency**. Click **Save**.
+1. In the Create new site column panel, under **Name**, type **Value**. Under **Description**, type **Total monetary value of the sales contract**. Under **Category**, ensure **Use existing category is selected**. Under **Category**, select **Sales columns**. Under **Type**, select **Currency**. Click **Save**.
 1. In **Sales document**, click **Publish**.
 1. In the panel Manage Publishing, ensure **Publish** or **Republish** is selected and click **Save**.
 
