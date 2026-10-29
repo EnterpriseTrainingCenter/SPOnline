@@ -14,10 +14,11 @@ Perform this task on WIN1.
 
 1. Sign in to **WIN1** as **Administrator**.
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and click **Windows PowerShell**.
-1. Connect to Sharepoint Online.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top.
+1. Connect to SharePoint Online.
 
     ````powershell
+    Import-Module Microsoft.Online.SharePoint.PowerShell
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````

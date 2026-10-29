@@ -1,8 +1,9 @@
 # Creating a site template
 
-1. In Windows PowerShell, connect to Sharepoint Online.
+1. In Windows PowerShell, connect to SharePoint Online.
 
     ````powershell
+    Import-Module Microsoft.Online.SharePoint.PowerShell
     
     $tenantName = '' # Between the quotes insert your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"

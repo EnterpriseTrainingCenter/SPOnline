@@ -1,3 +1,4 @@
+Import-Module Microsoft.Online.SharePoint.PowerShell
 # Uploading organization fonts
 
 1. In Windows PowerShell, connect to SharePoint online.

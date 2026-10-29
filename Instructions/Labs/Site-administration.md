@@ -232,8 +232,7 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and **Windows PowerShell**.
-1. Ensure **Windows Powershell** is shown at the top. Import modules **Microsoft.Graph.Authentication**, **Microsoft.Graph.Users**.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top. Import modules **Microsoft.Graph.Authentication**, **Microsoft.Graph.Users**.
 
     ````powershell
     Import-Module Microsoft.Graph.Authentication, Microsoft.Graph.Users
@@ -422,10 +421,11 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and click **Windows PowerShell**.
-1. Connect to Sharepoint Online.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top.
+1. Connect to SharePoint Online.
 
     ````powershell
+    Import-Module Microsoft.Online.SharePoint.PowerShell
     
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
@@ -533,10 +533,11 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and click **Windows PowerShell**.
-1. Connect to Sharepoint Online.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top.
+1. Connect to SharePoint Online.
 
     ````powershell
+    Import-Module Microsoft.Online.SharePoint.PowerShell
     
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
@@ -620,10 +621,11 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and click **Windows PowerShell**.
-1. Connect to Sharepoint Online.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top.
+1. Connect to SharePoint Online.
 
     ````powershell
+    Import-Module Microsoft.Online.SharePoint.PowerShell
     
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
@@ -757,8 +759,7 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and **Windows PowerShell**.
-1. Ensure **Windows Powershell** is shown at the top. Import modules **Microsoft.Graph.Authentication**, **Microsoft.Graph.Users**.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top. Import modules **Microsoft.Graph.Authentication**, **Microsoft.Graph.Users**.
 
     ````powershell
     Import-Module Microsoft.Graph.Authentication, Microsoft.Graph.Users
@@ -1016,8 +1017,7 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and **Windows PowerShell**.
-1. Ensure **Windows Powershell** is shown at the top. Sign in to SharePoint.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top. Sign in to SharePoint.
 
     ````powershell
     Import-Module Microsoft.Online.SharePoint.PowerShell
@@ -1093,8 +1093,7 @@ Repeat from step 6 for other sites. For bulk changes of storage limits, PowerShe
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and **Windows PowerShell**.
-1. Ensure **Windows Powershell** is shown at the top. Sign in to SharePoint.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top. Sign in to SharePoint.
 
     ````powershell
     Import-Module Microsoft.Online.SharePoint.PowerShell
@@ -1154,8 +1153,7 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and **Windows PowerShell**.
-1. Ensure **Windows Powershell** is shown at the top. Sign in to SharePoint.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top. Sign in to SharePoint.
 
     ````powershell
     Import-Module Microsoft.Online.SharePoint.PowerShell
@@ -1234,10 +1232,11 @@ Note: In a real-world scenario, you should configure the permissions for the pag
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and click **Windows PowerShell**.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top.
 1. Connect to SharePoint Online.
 
     ````powershell
+    Import-Module Microsoft.Online.SharePoint.PowerShell
     
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
@@ -1263,10 +1262,11 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and click **Windows PowerShell**.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top.
 1. Connect to SharePoint Online.
 
     ````powershell
+    Import-Module Microsoft.Online.SharePoint.PowerShell
     
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
@@ -1327,10 +1327,11 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and click **Windows PowerShell**.
-1. Connect to Sharepoint Online.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top.
+1. Connect to SharePoint Online.
 
     ````powershell
+    Import-Module Microsoft.Online.SharePoint.PowerShell
     
     $tenantName = 'wwlx421595' # Replace wwlx421595 with your tenant name
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"

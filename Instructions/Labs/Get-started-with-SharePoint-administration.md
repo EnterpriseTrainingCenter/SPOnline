@@ -60,12 +60,7 @@ Figure 1: Site structure after exercise 5
 
     Installing Microsoft.Graph will take a few minutes. You do not have to wait for the installation to complete. Instead, continue to the next task.
 
-1. In **PowerShell**, import the modules **ExchangeOnlineManagement**, **PnP.PowerShell** and **MicrosoftTeams**. List the commands of each module.
-
-    [Importing PowerShell modules](../General/Importing-PowerShell-modules.md)
-    [Getting PowerShell commands](../General/Getting-PowerShell-commands.md)
-
-1. In **Windows PowerShell**, import the modules **ExchangeOnlineManagement**, **Microsoft.Online.SharePoint.PowerShell** and **MicrosoftTeams**. List the commands of each module.
+1. In **PowerShell**, import the modules **ExchangeOnlineManagement**, **Microsoft.Online.SharePoint.PowerShell**, **PnP.PowerShell** and **MicrosoftTeams**. List the commands of each module.
 
     [Importing PowerShell modules](../General/Importing-PowerShell-modules.md)
     [Getting PowerShell commands](../General/Getting-PowerShell-commands.md)

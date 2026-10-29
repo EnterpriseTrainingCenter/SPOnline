@@ -1,3 +1,4 @@
+Import-Module Microsoft.Online.SharePoint.PowerShell
 # Managing organization assets libraries
 
 1. In Windows PowerShell, connect to SharePoint online.
