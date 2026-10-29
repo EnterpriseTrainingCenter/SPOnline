@@ -24,8 +24,6 @@ Perform this task on WIN1.
     Connect-SPOService -Url "https://$tenantName-admin.sharepoint.com"
     ````
 
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
-
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. Enable the private and public CDN for your tenant.
 

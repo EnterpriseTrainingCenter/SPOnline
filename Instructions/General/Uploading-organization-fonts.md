@@ -8,10 +8,8 @@ Import-Module Microsoft.Online.SharePoint.PowerShell
     Connect-SPOService -Url "https://$tenant-admin.sharepoint.com/"
     ```
 
-    *Note:* In recent versions of the **Microsoft.Online.SharePoint.PowerShell** module, the file **msalruntime.dll** is missing, and `Connect-SPOService` fails with the error *Unable to load DLL 'msalruntime'*. As a workaround, add the parameter `-UseSystemBrowser $true` to the `Connect-SPOService` command.
-
 1. Sign in.
-1. Upload the organization fonts.
+1. Upload the organization fonts. Sign in again, if required.
 
     ```powershell
      # Between the quotes insert the URL of the organization font library
@@ -26,7 +24,7 @@ Import-Module Microsoft.Online.SharePoint.PowerShell
     Set-SPOCustomFontCatalog -LibraryUrl $libraryUrl -FontFolder $fontFolder
     ```
 
-1. Sign in again, if required.
+    *Note:* If the command fails with the error *Access to the registry key 'HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\StrongName\Verification\\\*,\*' is denied* or *No valid OAuth 2.0 authentication session exists*, apply this workaround: Close **Windows PowerShell** and reopen it as Administrator. Connect to SharePoint online again and run the command.
 
 ## References
 

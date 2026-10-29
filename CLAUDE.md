@@ -122,7 +122,7 @@ Perform this task on WIN1.
   - `In SharePoint admin center, click **Active sites**.`
   - `In Create Group, under **Name**, type **News _ Contoso Approvers**. Click **Create**.`
 - Multiple clicks in one path: `click **Show all** and **SharePoint**` or `click **Sites**, **Active sites**`.
-- Verbs: *click*, *type*, *select*, *activate*/*deactivate* (checkboxes, switches), *find and click* (people pickers/search), *navigate to*, *execute* (scripts).
+- Verbs: *click*, *type*, *select*, *activate* (checkboxes, switches), *deactivate* (switches), *clear* (checkboxes), *find and click* (people pickers/search), *navigate to*, *execute* (scripts).
 - Icons without text are in italics with a hint: `click the *Settings* icon (the gear icon)`.
 - Window/dialog names in the location part are **not** bold; names of message boxes are quoted verbatim without quotes: `In the message box Remove as site owners?, click **Remove**.`
 

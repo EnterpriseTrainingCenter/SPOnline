@@ -140,7 +140,18 @@ Perform this task on WIN1.
 
 ## Exercise 2: Manage hub permissions
 
-1. [Enable hub permissions sync on the hub site](#task-1-enable-hub-permissions-sync-on-the-hub-site) Work @ Contoso and add All employees to the Hub Visitors.
+1. [Enable hub permissions sync on the hub site](#task-1-enable-hub-permissions-sync-on-the-hub-site) Work @ Contoso and add the following groups to the Hub Visitors:
+
+    * sg-Engineering
+    * sg-Executive
+    * sg-Finance
+    * sg-HR
+    * sg-IT
+    * sg-Legal
+    * sg-Operations
+    * sg-Retail
+    * sg-Sales and Marketing
+
 1. [Enable hub permissions sync on the associated site](#task-2-enable-hub-permissions-sync-on-the-associated-site) News @ Contoso
 1. [Verify permissions on the associated site](#task-3-verify-permissions-on-the-associated-site)
 
@@ -153,7 +164,18 @@ Perform this task on WIN1.
 1. Sign in as **LynneR@\<your tenant\>.onmicrosoft.com**.
 1. In the Work @ Contoso site, click the *Settings* icon (the gear icon) and click **Site permissions**.
 1. In the Permissions panel, click the tab **Hub**.
-1. Click the switch below **Sync hub permissions to associated sites** to change the status to **On**. Under **Hub visitors** in **Enter a name or group** find and click **All Employees**.
+1. Click the switch below **Sync hub permissions to associated sites** to change the status to **On**. Under **Hub visitors** in **Enter a name or group** find and click each of the following groups:
+
+    * **sg-Engineering**
+    * **sg-Executive**
+    * **sg-Finance**
+    * **sg-HR**
+    * **sg-IT**
+    * **sg-Legal**
+    * **sg-Operations**
+    * **sg-Retail**
+    * **sg-Sales and Marketing**
+
 1. Close the panel.
 
 ### Task 2: Enable hub permissions sync on the associated site
@@ -173,7 +195,7 @@ Perform this task on WIN1.
 1. In the Permissions panel, click the tab **Hub**.
 1. On the tab Hub, click the switch below **Sync hub permissions to this site** to change the status to **On**.
 
-    Verify that below under Hub Visitors the group sg_Executive is lested with Read permission level.
+    Verify that below under Hub visitors all the groups you added in the previous task are listed with the permission level Read.
 
 1. Close the panel.
 
@@ -203,8 +225,8 @@ Perform this task on WIN1.
 
     | Group                                     |              |
     | ------------------------------------------| ------------ |
-    | News _ Contoso Content scheduler Members  | Irvin Sayers |
-    | News _ Contoso Content scheduler Visitors | Debra Berger |
+    | News _ Contoso Content scheduler Members  | Debra Berger |
+    | News _ Contoso Content scheduler Visitors | Irvin Sayers |
 
 1. [Verify permissions on the list](#task-5-verify-permissions-on-the-list)
 
@@ -261,7 +283,7 @@ Perform this task on WIN1.
 1. In Permissions, select **Hub Visitors**, **News _ Contoso Members**, and **News _ Contoso Visitors**. Click **Remove User Permissions**.
 1. In the message Are you sure your want to remove all permissions for the selected users and groups to "Content scheduler"?, click **OK**.
 1. In Permissions, select **News _Contoso Content scheduler Members** and click **Edit User Permissions**.
-1. In Edit Permissions, activate **Contribute - can view, add, update, and delete list items and documents.** Deactivate **Read - Can view pages and list items and download documents.** Click **OK**.
+1. In Edit Permissions, activate **Contribute - can view, add, update, and delete list items and documents.** Clear **Read - Can view pages and list items and download documents.** Click **OK**.
 
     Verify the permissions look like in [figure 1].
 
@@ -278,11 +300,11 @@ Perform this task on WIN1.
 1. In People and Groups, in the left navigation, click **Groups** or **More...**
 1. Click **News _ Contoso Content scheduler Members**.
 1. In News _ Contoso Content scheduler Members, click **New**.
-1. In Share 'News @ Contoso', find and click **Irvin Sayers** and click **Share**.
+1. In Share 'News @ Contoso', find and click **Debra Berger** and click **Share**.
 1. In News _ Contoso Content scheduler Members, click click **Groups** or **More...**
 1. Click **News _ Contoso Content scheduler Visitors**.
 1. In News _ Contoso Content scheduler Visitors, click **New**.
-1. In Share 'News @ Contoso', find and click **Debra Berger** and click **Share**.
+1. In Share 'News @ Contoso', find and click **Irvin Sayers** and click **Share**.
 
 ### Task 5: Verify permissions on the list
 
@@ -298,11 +320,11 @@ Perform this task on WIN1.
 1. In Permissions, on the ribbon, click **Check Permissions**.
 1. In Content scheduler: Check Permissions, find and click **Debra Berger**. Click **Check Now**.
 
-    Verify that Debra has the permission level Read given through the "News _ Contoso Content scheduler Visitors" group.
+    Verify that Debra has the permission level Contribute given through the "News _ Contoso Content scheduler Members" group.
 
 1. In Content scheduler: Check Permissions, find and click **Irvin Sayers**. Click **Check Now**.
 
-    Verify that Irvin has the permission level Contribute given through the "News _ Contoso Content scheduler Members" group.
+    Verify that Irvin has the permission level Read given through the "News _ Contoso Content scheduler Visitors" group.
 
 1. Click **Close**
 
@@ -333,7 +355,7 @@ Perform this task on WIN1.
     * View Pages
     * Open
 
-    If you deactivate any of them, Approve will also gets deactivated again.
+    If you clear any of them, Approve will also get cleared again.
 
 ### Task 2: Create a SharePoint group, grant a permission level and add users
 
@@ -361,7 +383,7 @@ Perform this task on WIN1.
 1. In Documents, click the *Settings* icon and click **Library settings**.
 1. In the panel Library settings, click **More library settings**.
 1. Settings, under **General Settings**, click **Versioning settings**.
-1. In Versionsing settings, under **Content Approval**, click **Yes**. Under **Document Version History**, click **Create major and minor (draft) versions**. Under **Draft Item Security**, click **Only users who can edit items**. Click **OK**.
+1. In Versioning settings, under **Content Approval**, click **Yes**. Under **Document Version History**, click **Create major and minor (draft) versions**. Under **Draft Item Security**, click **Only users who can edit items**. Click **OK**.
 
 ### Task 4: Verify permissions
 
@@ -378,11 +400,11 @@ Perform this task on WIN1.
 1. In Permissions, click **Check Permissions**.
 1. In Documents: Check Permissions, under **User/Group**, find and click **Irvin Sayers** and click **Check Now**.
 
-    Verify that Irvin has the Edit permission level given through the News _ Contoso Members group. Irvin also has Limited Access throguht the News _ Contoso Content scheduler Members group.
+    Verify that Irvin has the Edit permission level given through the News _ Contoso Members group. Irvin also has Limited Access through the News _ Contoso Content scheduler Visitors group.
 
 1. In Documents: Check Permissions, under **User/Group**, find and click **Debra Berger** and click **Check Now**.
 
-    Verify that Debra has the Edit permission level given through the News _ Contoso Members group and the Approve permission level given through the News _ Contoso Approvers group. Debra also has Limited Access throguht the News _ Contoso Content scheduler Members group.
+    Verify that Debra has the Edit permission level given through the News _ Contoso Members group and the Approve permission level given through the News _ Contoso Approvers group. Debra also has Limited Access through the News _ Contoso Content scheduler Members group.
 
 1. Click **Close**.
 
@@ -390,11 +412,11 @@ Perform this task on WIN1.
 
 If time allows, you can sign in with various users and try some operations according to the table below.
 
-| User                                   | Location                                          | Operations                                                                                                                  |
-| -------------------------------------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| AdeleV@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/work | Should have read access only                                                                                                |
-|                                        | https://\<your tenant\>.sharepoint.com/sites/news | Should have read access only                                                                                                |
-| IrvinS@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/news | Should have contribute access pages and documents, read access to Content scheduler, can only submit documents for approval |
-| IrvinS@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/news | Should have contribute access to everything including the Content scheduler, can approve documents                          |
+| User                                   | Location                                          | Operations                                                                                                                     |
+| -------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| AdeleV@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/work | Should have read access only                                                                                                   |
+|                                        | https://\<your tenant\>.sharepoint.com/sites/news | Should have read access only                                                                                                   |
+| IrvinS@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/news | Should have contribute access to pages and documents, read access to Content scheduler, can only submit documents for approval |
+| DebraB@\<your tenant\>.onmicrosoft.com | https://\<your tenant\>.sharepoint.com/sites/news | Should have contribute access to everything including the Content scheduler, can approve documents                             |
 
 [figure 1]:/images/permissions-content-scheduler.png
