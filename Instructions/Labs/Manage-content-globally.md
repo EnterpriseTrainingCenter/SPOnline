@@ -167,7 +167,7 @@ Perform this task on WIN1.
 1. In the Create content type panel, under **Name**, type **Sales contract**. Under **Description**, type **Based on the Sales document content type, adds a currency column Value**. Under **Category**, ensure **Use an existing category** is selected. Under **Name**, select **Sales Content Types**. Under **Parent content type**, under **Parent category**, select **Sales Content Types**. Under **Content Type**, ensure **Sales document** is selected. Click **Create**.
 1. In Sales contract, click **Add site column** and **Create new site column**
 1. In the Create new site column panel, under **Name**, type **Value**. Under **Description**, type **Total monetary value of the sales contract**. Under **Category**, ensure **Use existing category is selected**. Under **Category**, select **Sales columns**. Under **Type**, select **Currency**. Click **Save**.
-1. In **Sales document**, click **Publish**.
+1. In **Sales contract**, click **Publish**.
 1. In the panel Manage Publishing, ensure **Publish** or **Republish** is selected and click **Save**.
 
 ### Task 3: Add content types to a library
@@ -188,7 +188,7 @@ Perform this task on WIN1.
 
     In Content type gallery of U.S. Sales, ensure Sales document and Sales contract are listed.
 
-1. In Content type gallery, glick U.S. Sales to return to the site home page.
+1. In Content type gallery, click U.S. Sales to return to the site home page.
 1. On the U.S. Sales site, click the *Settings* icon (the gear icon) and **Site contents**.
 1. In Contents, click **Documents**.
 1. In Documents, click **Add column**.
