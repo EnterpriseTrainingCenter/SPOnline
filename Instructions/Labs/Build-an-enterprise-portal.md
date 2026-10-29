@@ -66,8 +66,7 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and **Windows PowerShell**.
-1. Ensure **Windows Powershell** is shown at the top. Sign in to SharePoint.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top. Sign in to SharePoint.
 
     ````powershell
     Import-Module Microsoft.Online.SharePoint.PowerShell
@@ -191,8 +190,7 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and **Windows PowerShell**.
-1. Ensure **Windows Powershell** is shown at the top. Sign in to SharePoint.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top. Sign in to SharePoint.
 
     ````powershell
     Import-Module Microsoft.Online.SharePoint.PowerShell
@@ -258,8 +256,7 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and **Windows PowerShell**.
-1. Ensure **Windows Powershell** is shown at the top. Sign in to SharePoint.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top. Sign in to SharePoint.
 
     ````powershell
     Import-Module Microsoft.Online.SharePoint.PowerShell
@@ -346,8 +343,7 @@ Perform this task on WIN1.
 Perform this task on WIN1.
 
 1. Open **Terminal**.
-1. In Terminal, click the down chevron and **Windows PowerShell**.
-1. Ensure **Windows Powershell** is shown at the top. Sign in to SharePoint.
+1. In Terminal, ensure **Windows PowerShell** or **PowerShell** is shown at the top. Sign in to SharePoint.
 
     ````powershell
     Import-Module Microsoft.Online.SharePoint.PowerShell

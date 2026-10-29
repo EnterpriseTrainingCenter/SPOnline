@@ -47,6 +47,7 @@
 1. Sign in to SharePoint using SharePoint Online module.
 
     ````powershell
+    Import-Module Microsoft.Online.SharePoint.PowerShell
     $tenant = '' # Between the quotes, insert your tenant name
     Connect-SPOService -Url "https://$tenant-admin.sharepoint.com"
     ````

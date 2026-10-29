@@ -6,7 +6,7 @@ If you skipped Lab [Get started with SharePoint administration](/Instructions/La
 
 ## Task
 
-Configure the global sharing settings for Sharepoint and OneDrive as follows:
+Configure the global sharing settings for SharePoint and OneDrive as follows:
 
 * Allow sharing to anyone
 * Guests must sign in using the same account to which sharing invitations are sent
